@@ -1,6 +1,6 @@
 # LuxurEat Static WordPress Theme
 
-This package wraps the static bilingual LuxurEat prototype from https://github.com/errpenk/CNWeb_Prototyping as a WordPress theme.
+This package wraps the static bilingual LuxurEat website source from https://github.com/errpenk/luxureat-website-source as a WordPress theme.
 
 ## Install
 
