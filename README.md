@@ -11,8 +11,8 @@ This package wraps the static bilingual LuxurEat website source from https://git
 ## Routes
 
 - `/` serves the Chinese home page.
-- Other routes use query URLs such as `/?luxureat_path=zh/caviar` and `/?luxureat_path=en`, so the site works even when the host does not forward pretty permalinks to WordPress.
-- Pretty routes such as `/zh/` and `/en/caviar/` are still registered and can work after the host rewrite layer is configured.
+- Default Chinese routes use root-level pretty URLs such as `/caviar/`, `/rituals/`, and `/contact/`.
+- English routes use `/en/`, `/en/caviar/`, and the rest of the `/en/.../` namespace.
 
 ## Notes
 

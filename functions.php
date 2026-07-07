@@ -21,6 +21,8 @@ function luxureat_static_aliases() {
         'journal.html' => 'zh/journal',
         'gifting' => 'zh/gifting',
         'gifting.html' => 'zh/gifting',
+        'certification' => 'zh/certification',
+        'certification.html' => 'zh/certification',
         'contact' => 'zh/contact',
         'contact.html' => 'zh/contact',
         'bag' => 'zh/bag',
@@ -40,15 +42,35 @@ function luxureat_static_normalize_path($path) {
     return $path ? $path : '';
 }
 
+function luxureat_static_pretty_paths() {
+    return array(
+        'zh' => '/',
+        'zh/caviar' => '/caviar/',
+        'zh/rituals' => '/rituals/',
+        'zh/journal' => '/journal/',
+        'zh/gifting' => '/gifting/',
+        'zh/certification' => '/certification/',
+        'zh/contact' => '/contact/',
+        'zh/bag' => '/bag/',
+        'en' => '/en/',
+        'en/caviar' => '/en/caviar/',
+        'en/rituals' => '/en/rituals/',
+        'en/journal' => '/en/journal/',
+        'en/gifting' => '/en/gifting/',
+        'en/contact' => '/en/contact/',
+        'en/private' => '/en/private/',
+        'en/bag' => '/en/bag/',
+    );
+}
+
 function luxureat_static_url($path = 'zh', $suffix = '') {
     $path = luxureat_static_normalize_path($path);
     $suffix = is_string($suffix) ? $suffix : '';
+    $pretty_paths = luxureat_static_pretty_paths();
 
-    if ($path === '' || $path === 'zh') {
-        $url = home_url('/');
-    } else {
-        $url = add_query_arg('luxureat_path', $path, home_url('/'));
-    }
+    $url = isset($pretty_paths[$path])
+        ? home_url($pretty_paths[$path])
+        : home_url('/' . $path . '/');
 
     return $url . $suffix;
 }

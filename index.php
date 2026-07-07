@@ -12,8 +12,16 @@ if ($path === '' || $path === '__home') {
 }
 
 if (isset($aliases[$path])) {
-    wp_safe_redirect(luxureat_static_url($aliases[$path]), 301);
-    exit;
+    $target_path = $aliases[$path];
+    $pretty_paths = luxureat_static_pretty_paths();
+    $canonical_request_path = isset($pretty_paths[$target_path]) ? trim($pretty_paths[$target_path], '/') : '';
+
+    if ($canonical_request_path === $path) {
+        $path = $target_path;
+    } else {
+        wp_safe_redirect(luxureat_static_url($target_path), 301);
+        exit;
+    }
 }
 
 if (!isset($routes[$path])) {
