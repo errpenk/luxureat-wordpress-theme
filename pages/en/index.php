@@ -85,6 +85,7 @@
         ::-webkit-scrollbar-thumb { background: #353535; }
     </style>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="antialiased selection:bg-primary selection:text-on-primary">

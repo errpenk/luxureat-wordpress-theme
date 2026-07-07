@@ -125,6 +125,7 @@
     }
   </style>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="selection:bg-primary/30">

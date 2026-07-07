@@ -92,6 +92,7 @@
             },
         }
     }catch(_e){}</script>
+
 <?php wp_head(); ?>
 </head><body class="font-body-md">
 <header class="lux-header">

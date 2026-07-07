@@ -112,6 +112,7 @@
         }
     </script>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="text-on-surface">

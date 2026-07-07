@@ -135,6 +135,7 @@
         }
     </style>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="bg-background text-on-background">

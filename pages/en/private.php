@@ -147,6 +147,7 @@
                 to { opacity: 1; }
             }
         </style>
+
 <?php wp_head(); ?>
 </head>
 <body class="font-body-md selection:bg-primary/30">

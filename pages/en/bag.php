@@ -137,6 +137,7 @@
         }
     </style>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="font-body-md text-body-md overflow-x-hidden">

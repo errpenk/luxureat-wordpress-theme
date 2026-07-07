@@ -143,6 +143,7 @@
         }
     </style>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="font-body-md">

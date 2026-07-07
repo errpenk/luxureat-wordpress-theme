@@ -124,6 +124,7 @@
         }
     </script>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">

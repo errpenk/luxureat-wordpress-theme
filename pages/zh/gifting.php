@@ -105,6 +105,7 @@
         } catch (_e) {}
     </script>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">

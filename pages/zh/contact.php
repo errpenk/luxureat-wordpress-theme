@@ -130,6 +130,7 @@
       }
     </script>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="font-body-md text-body-md selection:bg-primary/30">

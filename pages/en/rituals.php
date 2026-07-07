@@ -106,6 +106,7 @@
         .glass-panel { background: rgba(26, 26, 26, 0.4); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.05); }
     </style>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="antialiased min-h-screen flex flex-col">

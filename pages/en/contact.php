@@ -152,6 +152,7 @@
         }
     </style>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">

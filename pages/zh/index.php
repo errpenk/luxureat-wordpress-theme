@@ -59,6 +59,7 @@
     }
 </style>
 
+
 <?php wp_head(); ?>
 </head>
 <body class="antialiased bg-background text-on-background selection:bg-primary selection:text-on-primary">
