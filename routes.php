@@ -10,6 +10,7 @@ return array(
     'zh/bag' => 'pages/zh/bag.php',
     'en' => 'pages/en/index.php',
     'en/caviar' => 'pages/en/caviar.php',
+    'en/products' => 'pages/en/products.php',
     'en/rituals' => 'pages/en/rituals.php',
     'en/journal' => 'pages/en/journal.php',
     'en/gifting' => 'pages/en/gifting.php',

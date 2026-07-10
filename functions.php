@@ -54,6 +54,7 @@ function luxureat_static_pretty_paths() {
         'zh/bag' => '/bag/',
         'en' => '/en/',
         'en/caviar' => '/en/caviar/',
+        'en/products' => '/en/products/',
         'en/rituals' => '/en/rituals/',
         'en/journal' => '/en/journal/',
         'en/gifting' => '/en/gifting/',
