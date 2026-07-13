@@ -135,7 +135,7 @@
 <div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="A macro photograph of a laboratory setting for luxury food testing, featuring high-end glass instruments and a professional, sterile atmosphere. Soft cool-toned lighting highlights the precision of scientific research within a high-contrast minimalist dark environment. The background is slightly out of focus to emphasize a sense of professional authority and exclusive heritage." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-008.jpg'); ?>')"></div>
 <div class="relative z-20 text-center px-margin-mobile">
 <p class="font-label-lg text-label-lg text-primary uppercase tracking-[0.3em] mb-4">Quality &amp; Certification</p>
-<h1 class="zh-display-title text-on-surface mb-8">品质承诺与权威认证</h1>
+<h1 class="zh-display-title zh-glass-title mb-8">品质承诺与<br/>权威认证</h1>
 <div class="w-24 h-px bg-primary mx-auto"></div>
 </div>
 

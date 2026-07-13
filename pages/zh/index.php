@@ -100,6 +100,14 @@
 </div>
 </div>
 </header>
+<section class="lux-latest-event">
+<div class="lux-latest-event-inner">
+<h2>最新活动</h2>
+<figure class="lux-event-frame">
+<img alt="Marca China 2026 Private Label Fair Guangzhou event poster" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/marca-china-2026.jpeg'); ?>"/>
+</figure>
+</div>
+</section>
 <!-- 2. Strategic Categories (Commerce Focused) -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
