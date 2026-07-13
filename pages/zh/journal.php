@@ -99,7 +99,8 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a class="active" href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
   <div class="lux-actions">
-    <a href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>">购物袋</a>
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>" aria-label="购物袋"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="个人登录"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a class="active" href="#">ZH</a><span>/</span><a class="" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">EN</a></span>
     <button class="lux-menu" type="button" data-open="关闭" data-closed="菜单" aria-expanded="false">菜单</button>
   </div>
@@ -111,7 +112,7 @@
 <!-- Hero Section -->
 <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0 transition-all duration-1000 opacity-100">
-<div class="w-full h-full bg-cover bg-center grayscale opacity-60 scale-105 transition-transform duration-10000 ease-linear" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQgDIJSTHb0B75pAIsExk7vkK4ZIThWWWS-C7WOLkGBtDR6Y8ahH7FiCjrjEurvEunCNNByjfspddM9jYWob8oW-DnQ8S1yWqOT1ewQ3De2vBm2lPfn4G7tj1rEPtDuHCIJZXPzUYRVZCiHAYG8pfOeaRc1soYaTFVWCJtPZaoreU2tgdONESDs2yJ4gk9ossBqu5dYskWNsYdoms3ouluPgBn6-_1rkfiVb248kClMX1VhsUuFV8KU0z8dg4dk-O_xvafQ2IV1ho')">
+<div class="w-full h-full bg-cover bg-center grayscale opacity-60 scale-105 transition-transform duration-10000 ease-linear" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-011.jpg'); ?>')">
 </div>
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
@@ -136,7 +137,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center transition-all duration-1000 opacity-100">
 <div class="lg:col-span-7 article-card lux-reader-card group cursor-pointer">
 <div class="aspect-[16/10] overflow-hidden mb-8 border border-white/5 lux-reader-media">
-<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7anz-XTzA8rUvCwVCN3tnA2c2twxLvw5xTeZY8fdjIZx32wdxnrD3FxOkWKlNvm-lgNGcFXJCyBj6zyugVzHui1X1JEmJm2xV1CW1pVSRih5-WGvyDCI05Ag5b61L7EC6aMY72hjaavZ8QDnbAnLP8g_Ld-MkMHDgHqV6-zNhyFZDw_IcQgZ44UN1BVPwAqB8BghU0PrSUYfiL-_Yq2tfmk0qAvC5_uurJz-kivVfokBHxreXKApDBA_qKdUTevydltWgjTFXeRo">
+<img class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-032.jpg'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-harvest">阅读详情</button>
 </div>
 </div>
@@ -161,14 +162,14 @@
 <h3 class="font-headline-md text-headline-md text-on-surface">时令随笔</h3>
 </div>
 <div class="hidden md:block">
-<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">浏览往期</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#" data-reader-archive>浏览往期</a>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-gutter transition-all duration-1000 opacity-100">
 <!-- Article 1 -->
 <article class="article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media">
-<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQy_7QgEhJXRb9TVE_qzhuDOz-7NCGBa_j5-U9QAjY-RgkJ2ZQHX_5SO79aYEFnsmh__rooT1ufKKtESdCxIDI6AKK5cskDxVD5oMSArK_A-w8eZYyBq6M901sPa1EICBL1VKmnbf8fDFvZoZ_WKcozP-dEw8yZPP_5H1A26D2NuC1k-Y5wKcxiXZD1R99ifx-tOOWICpWqnVpIrkftwymdfHoUs6G_63VZqke4f15-qB_VQ2iKl62ZxITlbpb4UVfs_kj11XG2E8">
+<img class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-026.jpg'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-truffle">阅读详情</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">寻味溯源</span>
@@ -181,7 +182,7 @@
 <!-- Article 2 -->
 <article class="article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media">
-<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAg7keSD5fHP8vQ477QdjOPGaMu0dEKrV3C-or5erPbi9FooRm3f-gqK9jsQmWVqRty8-JYMdaGQrZH09RfQKdhEbCW7r-8kA8Ow2g38LJWJSt-uLuompA3zl2DjXfylHLAFug2zSiBkisJovH4dz3kyg_RpayvCeghiRuxKbORpOPhWFWBW2M-d8RxRYsW9DZDxi0dPc5YtudATgrihhdU45o2T_6ZdY5FNOBxb3IaJRenUHk_a_444WorRvwedmX_ZWSCN4tQMM">
+<img class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-003.jpg'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-service">阅读详情</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">精致生活</span>
@@ -194,7 +195,7 @@
 <!-- Article 3 -->
 <article class="article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media">
-<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfbNuFAT9ZgIgOwkTaahfs0NsdQcBPQoxt-Ged22Ov4fxMRtVjhrlsSuvUvYzVnOnp1iayJXEui5QoYCH-gS85o09LHojk52rTWmcSRnQwnYDsBoE3T0gHFRY5J-HQn-deQqgNVuoCv6DxPqMp14M5CCpsJPaZZkTOA6uS8vrXJIEQRaae53cX__4tffkuuhWlz0MBpR7xO85jaPBJguBeZGYyP5rtfOFtBKVwS_-3WLRaNHYRm0aaKqUj-aYT5d412hKENpYGiok">
+<img class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-048.jpg'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-malossol">阅读详情</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">匠心工艺</span>
@@ -250,9 +251,10 @@
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>一场关于味觉的奥德赛，通过可持续发展的实践与毫不妥协的质量标准，为您搜寻世间罕有的绝世美味。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">小红书</a><button type="button" data-footer-modal="wechat">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">微博</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:15721452475">15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LUXUREAT MAISON. 已获 CITES & FDA 认证.</div>
 </footer>
+
 <?php wp_footer(); ?>
 </body></html>

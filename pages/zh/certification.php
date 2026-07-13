@@ -120,7 +120,8 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a class="active" href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
   <div class="lux-actions">
-    <a href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>">购物袋</a>
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>" aria-label="购物袋"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="个人登录"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a class="active" href="#">ZH</a><span>/</span><a class="" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">EN</a></span>
     <button class="lux-menu" type="button" data-open="关闭" data-closed="菜单" aria-expanded="false">菜单</button>
   </div>
@@ -131,7 +132,7 @@
 <!-- Hero Section -->
 <header class="relative h-[819px] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 lux-hero-fade-both z-10"></div>
-<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="A macro photograph of a laboratory setting for luxury food testing, featuring high-end glass instruments and a professional, sterile atmosphere. Soft cool-toned lighting highlights the precision of scientific research within a high-contrast minimalist dark environment. The background is slightly out of focus to emphasize a sense of professional authority and exclusive heritage." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADwWdrVYVRUkrlBm4W9LycdW_xNkYRwFyp73MClJI2A9wIndxAASUdmSBqgw-5w7wLCbcID5DEwutPNDv5D9wi9GrQOlW6wOEWICxWUQom4_MEzkhgA4CfvcVoZNRwlnAfMSzJqL0T-80HyzxCJEPLVJvj3V0Wgwf1rgIp8RF0HXI1aqalnAmgfM7xMSV18pld6Bp2BHfP6Oy1nBWmi7zDZly36ZnoaF4FmxOI4xCHypTTtiwins2yjgU7irJaRA2IzgHpoj7CuKI')"></div>
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="A macro photograph of a laboratory setting for luxury food testing, featuring high-end glass instruments and a professional, sterile atmosphere. Soft cool-toned lighting highlights the precision of scientific research within a high-contrast minimalist dark environment. The background is slightly out of focus to emphasize a sense of professional authority and exclusive heritage." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-008.jpg'); ?>')"></div>
 <div class="relative z-20 text-center px-margin-mobile">
 <p class="font-label-lg text-label-lg text-primary uppercase tracking-[0.3em] mb-4">Quality &amp; Certification</p>
 <h1 class="font-display-lg text-display-lg text-on-surface mb-8">品质承诺与权威认证</h1>
@@ -163,7 +164,7 @@
 </div>
 </div>
 <div class="order-1 md:order-2 aspect-square bg-surface-container-low border border-outline-variant/30 flex items-center justify-center p-12 overflow-hidden group">
-<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Close-up shot of an official CITES certification document for luxury caviar, showing intricate stamps and holographic security features. The document is laid on a dark graphite surface with dramatic, focused spotlighting that emphasizes its legal and premium value. High-contrast minimalism style with gold and teal accents in the lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKZ99-RWoZLnaiVsz-XGqeYQjBTsoe7WuY3psMv33dFrCEyh88AIJcUjFGkfPmD4KSUKYVM1dP8kTOiXYV7aQxvgcj_HuXgGiGbyy1DC1-ECH3qXfD2ZPiO3k4rndXn3IOYjPPd0At6_ik_4Ad3uaE34iBUdLqjUEJE0_J0YjE_ZDa3om0BY10qL8kVEUS0G6H-9kUirZ6JWf4vB4N5_dl4Uax6feJb67a0MMim24mo5lEK7YPaoChv7WHINpZNDtd8UgbtOjvkwA')"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Close-up shot of an official CITES certification document for luxury caviar, showing intricate stamps and holographic security features. The document is laid on a dark graphite surface with dramatic, focused spotlighting that emphasizes its legal and premium value. High-contrast minimalism style with gold and teal accents in the lighting." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-009.jpg'); ?>')"></div>
 </div>
 </section>
 <!-- Cold Chain Logistics -->
@@ -193,7 +194,7 @@
 <!-- Food Safety Section -->
 <section class="grid grid-cols-1 md:grid-cols-2 gap-section-gap items-center mb-section-gap transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] bg-surface-container-low border border-outline-variant/30 overflow-hidden relative">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="High-resolution photography of a pristine luxury food processing facility, showing stainless steel surfaces and high-tech equipment. The environment is illuminated by clean, clinical white lighting with deep shadows, reflecting an Italian excellence and high-contrast minimalism. A masked specialist is visible in the background, reinforcing HACCP standards." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAlpnjcj_T355fOOeGmQE6Q8vx-acAslPVeNMjKhBdt9Uq-uyUNN8AJ53-nFsbQEO-ZwOB65EoLdrq0QgMLu7SUoGQFbDOsReNq3Vyiv83dYMUxu-N5dnFOrv_cxoTsxO7v-fet2M14WupqnTmvBW-MJDE8dojxpuOs5MomO4Ad_lNksAse_uTg4Dfh6MHsCT3s37EdfvS8e9P7A-u0SyoHw6RDl4z9tnJDHNg5ambCIK9qIZlMTVNHauuRF4KUdzCb66MUywkovc')"></div>
+<div class="absolute inset-0 bg-cover bg-center" data-alt="High-resolution photography of a pristine luxury food processing facility, showing stainless steel surfaces and high-tech equipment. The environment is illuminated by clean, clinical white lighting with deep shadows, reflecting an Italian excellence and high-contrast minimalism. A masked specialist is visible in the background, reinforcing HACCP standards." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-004.jpg'); ?>')"></div>
 <div class="absolute bottom-8 left-8 p-6 bg-surface/60 backdrop-blur-md border border-white/10 max-w-xs">
 <p class="font-label-lg text-label-lg text-primary uppercase mb-2">Purity Standard</p>
 <p class="font-body-md text-body-md">每一克产品都经过12道严苛的人工与科学筛查。</p>
@@ -306,9 +307,10 @@
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>一场关于味觉的奥德赛，通过可持续发展的实践与毫不妥协的质量标准，为您搜寻世间罕有的绝世美味。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">小红书</a><button type="button" data-footer-modal="wechat">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">微博</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:15721452475">15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LUXUREAT MAISON. 已获 CITES & FDA 认证.</div>
 </footer>
+
 <?php wp_footer(); ?>
 </body></html>

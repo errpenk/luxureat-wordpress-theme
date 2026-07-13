@@ -160,7 +160,8 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
   <div class="lux-actions">
-    <a href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>">Shopping Bag</a>
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="Account sign in"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a class="" href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">ZH</a><span>/</span><a class="active" href="#">EN</a></span>
     <button class="lux-menu" type="button" data-open="Close" data-closed="Menu" aria-expanded="false">Menu</button>
   </div>
@@ -174,7 +175,7 @@
 <section class="relative w-full min-h-[60vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop overflow-hidden">
 <!-- Background Imagery -->
 <div class="absolute inset-0 z-0">
-<div class="bg-cover bg-center w-full h-full opacity-40" data-alt="A highly atmospheric, dark and moody close-up photograph of a luxury concierge desk. The scene features a heavy slab of black marble, illuminated by a single, focused warm spotlight that highlights a subtle gold-rimmed pen and thick, textured cotton paper. The background fades into deep absolute black shadows. The aesthetic is extremely high-end, minimalist, and evokes exclusivity and bespoke Italian craftsmanship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBE2kiv0wrknqzvXmDfr7JGTBcOCswFPRM37AD1qUYhjlgMVWHD93EyzGO_lV0Q-oPm4F0BgQQIFrej_GO5ObbfB5DFVcGREoOIxGHGWMTenMxyxI94dd1y1dz3NcPu9GHesarnhjjoHoqWTGYt2-uNKxljtJGopFhjzFHw2_W9EXZulN6muDqO_DhhdGM0SDazjPQ_L9FMAkPTglu_dZet6NYgwcT0_JR_Pu05BG1Cp574tsXdHXg4gk13VJwShbG7ozS0Ydtbibc')"></div>
+<div class="bg-cover bg-center w-full h-full opacity-40" data-alt="A highly atmospheric, dark and moody close-up photograph of a luxury concierge desk. The scene features a heavy slab of black marble, illuminated by a single, focused warm spotlight that highlights a subtle gold-rimmed pen and thick, textured cotton paper. The background fades into deep absolute black shadows. The aesthetic is extremely high-end, minimalist, and evokes exclusivity and bespoke Italian craftsmanship." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-024.jpg'); ?>')"></div>
 <!-- Gradient Overlay for legibility -->
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
@@ -243,25 +244,36 @@
 <!-- Global Presence -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-white/5">
 <h2 class="font-headline-md text-headline-md text-center text-on-surface mb-16 tracking-wide">Global Presence</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-<div class="flex flex-col items-center gap-4 group cursor-default">
-<span class="material-symbols-outlined text-secondary/70 text-4xl mb-2 group-hover:text-primary-container transition-colors duration-500">location_city</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Milan</h3>
-<p class="font-body-md text-label-sm text-on-surface-variant uppercase tracking-widest">Headquarters</p>
-<a class="font-body-md text-body-md text-on-surface mt-2 hover:text-primary-container transition-colors" href="mailto:china@luxureat.com">china@luxureat.com</a>
-</div>
-<div class="flex flex-col items-center gap-4 group cursor-default">
-<span class="material-symbols-outlined text-secondary/70 text-4xl mb-2 group-hover:text-primary-container transition-colors duration-500">business</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">New York</h3>
-<p class="font-body-md text-label-sm text-on-surface-variant uppercase tracking-widest">North America</p>
-<a class="font-body-md text-body-md text-on-surface mt-2 hover:text-primary-container transition-colors" href="mailto:china@luxureat.com">china@luxureat.com</a>
-</div>
-<div class="flex flex-col items-center gap-4 group cursor-default">
-<span class="material-symbols-outlined text-secondary/70 text-4xl mb-2 group-hover:text-primary-container transition-colors duration-500">apartment</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Shanghai</h3>
-<p class="font-body-md text-label-sm text-on-surface-variant uppercase tracking-widest">Asia Pacific</p>
-<a class="font-body-md text-body-md text-on-surface mt-2 hover:text-primary-container transition-colors" href="mailto:china@luxureat.com">china@luxureat.com</a>
-</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+<article class="lux-footprint-card glass-panel p-6 text-left">
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">local_dining</span><strong>Italy</strong><small>Truffleat Srl</small></div>
+<p>Via Tuscania 9, 01028 Orte (VT)</p>
+<p>Legal Office: Via Tiberina km 9.2, 00060 Riano (RM)</p>
+<a href="mailto:info@truffleat.com">info@truffleat.com</a>
+<a href="tel:+393515111273">+39 351 5111273</a>
+<a href="https://www.truffleat.com" target="_blank" rel="noopener">www.truffleat.com</a>
+</article>
+<article class="lux-footprint-card glass-panel p-6 text-left">
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">location_city</span><strong>United States</strong><small>Seattle · Luxureat LLC</small></div>
+<p>605 Center Rd Apt A203<br>Everett, WA 98204, USA</p>
+<a href="mailto:info@luxureat.com">info@luxureat.com</a>
+<a href="tel:+14256266318">+1 425 626 6318</a>
+<p>George Ugolini — Manager &amp; USA Headquarters Manager</p>
+</article>
+<article class="lux-footprint-card glass-panel p-6 text-left">
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">temple_buddhist</span><strong>Thailand</strong><small>Bangkok · Truffleat Co., Ltd</small></div>
+<p>11 Narathiwat Ratchanakarin Soi 8, Thung Wat Don, Sathon, Bangkok 10120, Thailand</p>
+<a href="mailto:info@truffle.co.th">info@truffle.co.th</a>
+<a href="tel:+6626799441">+66 2 679 9441</a>
+<a href="https://wa.me/66811331337" target="_blank" rel="noopener">WhatsApp: +66 811 331 337</a>
+</article>
+<article class="lux-footprint-card glass-panel p-6 text-left">
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">account_balance</span><strong>China</strong><small>Shanghai · LuxurEat China Ltd</small></div>
+<p>Sala 505, Building A, 389, Lianming Road, Minhang District, Shanghai</p>
+<p>Yuan Pengfei</p>
+<a href="mailto:china@luxureat.com">china@luxureat.com</a>
+<a href="tel:+8615721452475">+86 15721452475</a>
+</article>
 </div>
 </section>
 </main>
@@ -291,9 +303,10 @@
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>An odyssey of taste, sourcing the rarest delicacies through sustainable practices and uncompromising quality standards.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">Rednote</a><button type="button" data-footer-modal="wechat">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">Weibo</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:15721452475">15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LuxurEat Maison. CITES & FDA Certified.</div>
 </footer>
+
 <?php wp_footer(); ?>
 </body></html>

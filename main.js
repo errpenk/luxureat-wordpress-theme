@@ -1,3 +1,6 @@
+const luxAssetBase = new URL(".", document.currentScript?.src || location.href);
+const luxAsset = (path) => new URL(path, luxAssetBase).href;
+
 const luxNav = document.querySelector(".lux-nav");
 const luxMenu = document.querySelector(".lux-menu");
 
@@ -166,6 +169,40 @@ function initLuxCaviarControls() {
 initLuxCaviarControls();
 
 (() => {
+  const prefetched = new Set();
+
+  const hrefFor = (anchor) => {
+    const href = anchor?.getAttribute?.("href");
+    if (!href || href.startsWith("#") || anchor.target || anchor.hasAttribute("download")) return "";
+
+    const url = new URL(href, location.href);
+    if (url.origin !== location.origin || url.protocol !== "http:" && url.protocol !== "https:") return "";
+    if (url.pathname === location.pathname && url.search === location.search) return "";
+    if (!url.pathname.endsWith("/") && !url.pathname.endsWith(".html")) return "";
+
+    url.hash = "";
+    return url.href;
+  };
+
+  const prefetch = (target) => {
+    const anchor = target?.closest?.("a[href]");
+    const href = hrefFor(anchor);
+    if (!href || prefetched.has(href)) return;
+
+    prefetched.add(href);
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.as = "document";
+    link.href = href;
+    document.head.appendChild(link);
+  };
+
+  document.addEventListener("pointerover", (event) => prefetch(event.target), { passive: true });
+  document.addEventListener("focusin", (event) => prefetch(event.target));
+  document.addEventListener("touchstart", (event) => prefetch(event.target), { passive: true });
+})();
+
+(() => {
   const key = `luxureatScroll:${location.pathname}`;
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
@@ -206,119 +243,284 @@ initLuxCaviarControls();
 })();
 
 function initLuxReader() {
-  const triggers = document.querySelectorAll("[data-reader-open]");
+  const triggers = document.querySelectorAll("[data-reader-open], [data-reader-archive]");
   if (!triggers.length) return;
 
+  const articleImage = (file) => luxAsset(`assets/article-images/${file}`);
   const images = {
-    harvest: "https://lh3.googleusercontent.com/aida-public/AB6AXuC7anz-XTzA8rUvCwVCN3tnA2c2twxLvw5xTeZY8fdjIZx32wdxnrD3FxOkWKlNvm-lgNGcFXJCyBj6zyugVzHui1X1JEmJm2xV1CW1pVSRih5-WGvyDCI05Ag5b61L7EC6aMY72hjaavZ8QDnbAnLP8g_Ld-MkMHDgHqV6-zNhyFZDw_IcQgZ44UN1BVPwAqB8BghU0PrSUYfiL-_Yq2tfmk0qAvC5_uurJz-kivVfokBHxreXKApDBA_qKdUTevydltWgjTFXeRo",
-    truffle: "https://lh3.googleusercontent.com/aida-public/AB6AXuBQy_7QgEhJXRb9TVE_qzhuDOz-7NCGBa_j5-U9QAjY-RgkJ2ZQHX_5SO79aYEFnsmh__rooT1ufKKtESdCxIDI6AKK5cskDxVD5oMSArK_A-w8eZYyBq6M901sPa1EICBL1VKmnbf8fDFvZoZ_WKcozP-dEw8yZPP_5H1A26D2NuC1k-Y5wKcxiXZD1R99ifx-tOOWICpWqnVpIrkftwymdfHoUs6G_63VZqke4f15-qB_VQ2iKl62ZxITlbpb4UVfs_kj11XG2E8",
-    service: "https://lh3.googleusercontent.com/aida-public/AB6AXuAAg7keSD5fHP8vQ477QdjOPGaMu0dEKrV3C-or5erPbi9FooRm3f-gqK9jsQmWVqRty8-JYMdaGQrZH09RfQKdhEbCW7r-8kA8Ow2g38LJWJSt-uLuompA3zl2DjXfylHLAFug2zSiBkisJovH4dz3kyg_RpayvCeghiRuxKbORpOPhWFWBW2M-d8RxRYsW9DZDxi0dPc5YtudATgrihhdU45o2T_6ZdY5FNOBxb3IaJRenUHk_a_444WorRvwedmX_ZWSCN4tQMM",
-    malossol: "https://lh3.googleusercontent.com/aida-public/AB6AXuDfbNuFAT9ZgIgOwkTaahfs0NsdQcBPQoxt-Ged22Ov4fxMRtVjhrlsSuvUvYzVnOnp1iayJXEui5QoYCH-gS85o09LHojk52rTWmcSRnQwnYDsBoE3T0gHFRY5J-HQn-deQqgNVuoCv6DxPqMp14M5CCpsJPaZZkTOA6uS8vrXJIEQRaae53cX__4tffkuuhWlz0MBpR7xO85jaPBJguBeZGYyP5rtfOFtBKVwS_-3WLRaNHYRm0aaKqUj-aYT5d412hKENpYGiok",
-    champagne: "https://lh3.googleusercontent.com/aida-public/AB6AXuBoPRwxvQOmHqNT232yA2aUY2zRh1_cnBBvXcKRHewJ4aG_PfIFz8MXLQLsJiLIyUXslsOfWrXxfollJKQF6lQZQfCsqqVLbIZiJHunsWkso0aiISFUQcyq8_4wO9J3Gt25hLpv-iiHdTqLalW-P_sHArq8JlUO0ycSBH8zid4OLED2c4J6FFIv6GMMsKRoK5L5dWur-IHLjpXYq8hv7Zw8bHiNvjDBEhV7eZA6fU9Hu0wvOQ4k0uci3OHhrWTZdOOQ4ZT-wkRW13Y",
-    spoon: "https://lh3.googleusercontent.com/aida-public/AB6AXuAZQcq4hfiLU3hNPVytnsfWjFbSXPVMC0ZEe6Jo0kK6b7vRdcaEs3ISV22gseD6C-hcP_-8Er8ha6yZzwUFvnUXMiye9wgrs0mVPIJCsgrJ4hqtlDG_lMYdPdnPPpHg_rQ4kSoSoMBKB0vJwAV_7niM0AX1Yc-AEeuvZl8k8cuLTBQZHKeAPPZLu6dE00svFteMahQNJ-2gt8rqXByzIrJgj0kF-BM29DieNSBStG8btLmXTHvM3d1vdSLqFMsjHj7m8DVKZCXWZE8",
-    ice: "https://lh3.googleusercontent.com/aida-public/AB6AXuCbRm7T-vUyLcLqFrQuOXykQjzwhdpDRZMcSbGFjeVpdb76MZnZ28gQBKlrdLjIc_T6WjQjfb9fKyBVe5FExMY-kpE-b4sG25R8qhkpNGJAlJP28iPnyPtCbQYT5ZdpDuLAhtScGkzGtfa55QEl-UcC8bncCNITmhCjb8RDhdB8hzDBWSWgpLLudYILlxAIcaXTQ2fMzaUXyQJZUcPC8Rg_RqNGkNslWq8L7t_OuWsc9fIRvbrYWlI1r5EErsUZte_sRwyldQQwu0Q",
+    harvest: articleImage("harvest-hero.jpg"),
+    harvestDetail: articleImage("harvest-detail.jpg"),
+    truffle: articleImage("truffle-hero.jpg"),
+    service: articleImage("service-hero.jpg"),
+    malossol: articleImage("malossol-hero.jpg"),
+    champagne: articleImage("champagne-hero.jpg"),
+    spoon: articleImage("mother-of-pearl-hero.jpg"),
+    ice: articleImage("ice-server-hero.jpg"),
+    temperature: articleImage("temperature-hero.jpg"),
+    table: articleImage("table-hero.jpg"),
+    vodka: articleImage("vodka-hero.jpg"),
+    blini: articleImage("blini-hero.jpg"),
   };
   const articles = {
     "zh-harvest": {
       lang: "zh", eyebrow: "品牌传承", title: "采撷之艺", meta: "MASTERCLASS · 2024年10月",
       image: images.harvest,
-      intro: "鱼子酱的采撷不是速度，而是判断。盐渍大师在温度、颗粒张力与成熟度之间寻找那个极窄的窗口。",
+      media: [images.harvestDetail, images.temperature, images.table],
+      intro: "鱼子酱的采撷不是速度，而是判断。盐渍大师在温度、颗粒张力、成熟度与批次香气之间寻找那个极窄的窗口；窗口一旦错过，再昂贵的器具与服务都无法弥补。",
       sections: [
-        ["鲟鱼的尊贵传承", "每一批鱼子酱都从产地记录开始，成熟度、粒径与油脂感决定它是否进入 LuxurEat 的精选序列。"],
-        ["Malossol 的克制", "低盐不是噱头，而是保留矿物感与乳香的方式。盐只负责托起风味，不掩盖鱼卵本身。"],
+        ["鲟鱼的尊贵传承", ["每一批鱼子酱都从产地记录开始。我们关注的不只是鱼种名称，而是水域、饲养周期、成熟度、粒径、油脂比例与开罐后的第一层气味。只有这些指标同时稳定，鱼卵才会进入 LuxurEat 的精选序列。", "在真正的品鉴里，奢华不是强烈，而是清晰。优质鱼卵入口即化，却仍保留轻微的颗粒张力；海洋感在前段出现，随后是奶油、坚果与细微矿物的长尾。"]],
+        ["Malossol 的克制", ["低盐不是噱头，而是对原料的信任。盐只负责托起风味，不应遮住鱼卵自身的乳香与海洋深度。越低的盐分，越要求冷链、成熟度和装罐时机足够准确。", "我们的开罐服务会记录每一次温度变化与品鉴反馈。它们像一份安静的档案，让下一次宴席仍能复现同样的稳定度。"]],
+        ["餐桌上的最后判断", ["鱼子酱离开冷库后，真正的考验才开始。银灰、琥珀或深金色的颗粒需要在柔和光线下观察，过强的灯会误导色泽判断，过热的室温会让油脂过快释放。", "因此，我们更偏爱慢而准确的服务节奏：先看色泽，再闻开罐后的海风气息，最后以贝母匙送入口中，让风味在舌面自然展开。"]],
       ],
+      quote: "采撷的本质，是在最短的时间里做最慢的判断。",
       related: ["zh-service", "zh-malossol", "zh-champagne"],
     },
     "zh-truffle": {
       lang: "zh", eyebrow: "寻味溯源", title: "追求卓越：阿尔巴黄金", meta: "ATLAS · 皮埃蒙特",
       image: images.truffle,
-      intro: "阿尔巴白松露的价值来自短暂季节与不可复制的土壤气息，它适合作为鱼子酱菜单的香气延伸。",
-      sections: [["产地筛选", "我们关注采收时间、湿度与香气完整度，只保留能在餐桌上清晰表达产区的批次。"]],
+      media: [images.table, images.harvestDetail, images.service],
+      intro: "阿尔巴白松露的价值来自短暂季节、湿润土壤与不可复制的森林气息。它不是鱼子酱的替代，而是菜单里另一种关于稀缺、时间与产地的表达。",
+      sections: [
+        ["产地筛选", ["我们关注采收时间、湿度与香气完整度，只保留能在餐桌上清晰表达产区的批次。真正优秀的白松露不需要夸张的用量，几片薄刨就能让热度、脂肪与谷物香气重新排序。", "鱼子酱与松露的共同点，是它们都不适合被复杂烹饪遮盖。最好的菜单通常很安静，只让温度、质地与香气互相回应。"]],
+        ["香气的边界", ["白松露的香气具有穿透力，因此它需要被放在菜单的正确位置。过早出现会压住鱼子酱的细腻盐感，过晚出现则失去作为高峰的意义。", "我们的服务顺序会把鱼子酱作为冷感开场，把松露放在温热段落，让海洋与森林之间形成自然过渡。"]],
+        ["从皮埃蒙特到餐桌", ["每一次运输都以湿度、温度与包装透气性为核心。香气是活的，它会随着时间衰减，也会因为错误的密封方式变得沉闷。", "因此，LuxurEat 只把它作为少量高规格菜单的季节延伸，而不是全年可复制的陈列商品。"]],
+      ],
+      quote: "越珍贵的香气，越需要留白。",
       related: ["zh-harvest", "zh-service", "zh-malossol"],
     },
     "zh-service": {
       lang: "zh", eyebrow: "精致生活", title: "味觉传承：现代侍酒服务", meta: "COURSE · 服务礼仪",
       image: images.service,
-      intro: "真正好的服务，是让器具、温度与酒款都退到幕后，只留下鱼子酱的第一口冲击。",
-      sections: [["贝母匙", "贝母不带金属气味，能保护鱼子酱脆弱的原色原味，是餐桌上最小但最关键的器具。"]],
+      media: [images.champagne, images.spoon, images.table],
+      intro: "真正好的服务，是让器具、温度与酒款都退到幕后，只留下鱼子酱的第一口冲击。服务不应该抢戏，它的存在感来自准确，而不是装饰。",
+      sections: [
+        ["贝母匙", ["贝母不带金属气味，能保护鱼子酱脆弱的原色原味，是餐桌上最小但最关键的器具。它轻、温润、不会改变尾韵，也不会在入口时留下氧化感。", "我们会在开罐前确认每一支匙面的完整度。细小裂纹或粗糙边缘都会影响颗粒完整性，这些细节在普通餐桌上容易被忽略，却会直接改变第一口的质地。"]],
+        ["香槟与温度", ["酒款应当刷新味蕾，而不是主导风味。年份干型香槟、低温伏特加或极简矿物水都可以成立，前提是它们把注意力还给鱼子酱。", "温度则更像一条隐形边界：太冷会压住乳香，太暖会让油脂失控。理想服务不是固定数字，而是冷链、室温与开罐时间之间的平衡。"]],
+        ["现代服务的克制", ["我们减少无意义的仪式动作，只保留真正会影响味觉的步骤。罐体如何放置、何时打开、怎样分勺、何时补冰，每一步都有理由。", "当服务完成，客人记住的不是服务员的动作，而是鱼子酱在舌面上清晰展开的那一秒。"]],
+      ],
+      quote: "服务的最高级，是让人忘记服务本身。",
       related: ["zh-champagne", "zh-mother-of-pearl", "zh-harvest"],
     },
     "zh-malossol": {
       lang: "zh", eyebrow: "匠心工艺", title: "盐的科学：轻盐渍大师课", meta: "CRAFT · Malossol",
       image: images.malossol,
-      intro: "低于 3% 的盐分让海洋感、坚果香与奶油质地自然展开，考验的是原料与师傅的稳定度。",
-      sections: [["低盐的边界", "盐分越克制，对冷链、成熟度和装罐时间的要求越高。"]],
+      media: [images.harvestDetail, images.temperature, images.ice],
+      intro: "低于 3% 的盐分让海洋感、坚果香与奶油质地自然展开。它听起来简单，真正困难的是让每一罐都在低盐状态下仍然稳定、清澈、完整。",
+      sections: [
+        ["低盐的边界", ["盐分越克制，对冷链、成熟度和装罐时间的要求越高。重盐可以遮盖缺陷，Malossol 则会放大一切：好的会更清晰，不稳定也会更明显。", "这也是为什么我们把盐看成结构，而不是调味。它不是为了让鱼子酱变咸，而是帮助颗粒在时间中保持形状、弹性与香气秩序。"]],
+        ["大师的手感", ["盐渍大师不会只依赖仪器。触感、光泽、颗粒滚动的速度与开罐气味，都会参与判断。经验不是玄学，它是长期记录后的快速识别。", "每一批鱼卵都有微小差异，真正的技术不是把它们压成一样，而是在允许差异存在的前提下，保持 LuxurEat 应有的干净尾韵。"]],
+        ["冷链之后", ["低盐鱼子酱离不开冷链，但冷链不是终点。运输、静置、开罐、分食都可能改变最终感受。", "我们因此把服务建议写进产品档案，让餐厅与私人客户都能理解：一罐鱼子酱的价值，只有在正确打开时才算真正完成。"]],
+      ],
+      quote: "盐越少，要求越多。",
       related: ["zh-harvest", "zh-service", "zh-champagne"],
     },
     "zh-champagne": {
       lang: "zh", eyebrow: "配餐艺术", title: "香槟之韵", meta: "PAIRING · Brut",
       image: images.champagne,
-      intro: "年份干型香槟用酸度与气泡清理味蕾，让鱼子酱的油脂感变得更轻、更清晰。",
-      sections: [["选择方式", "优先选择酸度明亮、桶味克制的酒款，让酒体承担刷新口腔的角色。"]],
+      media: [images.table, images.service, images.blini],
+      intro: "年份干型香槟用酸度与气泡清理味蕾，让鱼子酱的油脂感变得更轻、更清晰。它不是为了制造庆祝感，而是为了在每一勺之间重置口腔。",
+      sections: [
+        ["选择方式", ["优先选择酸度明亮、桶味克制的酒款，让酒体承担刷新口腔的角色。过重的烘烤香会压住鱼子酱的矿物尾韵，过甜则会让海洋感显得迟钝。", "Blanc de Blancs 通常更锋利，适合结构清晰的 Beluga；陈年香槟则带来坚果与烘焙层次，适合油脂更饱满的 Oscetra。"]],
+        ["气泡的作用", ["细密气泡像微小的刷子，清理舌面上的油脂，让下一口鱼子酱重新出现颗粒感。好的配酒不增加复杂度，而是让复杂度被看见。", "因此，我们会避免把香槟倒得过满。低温、少量、多次补杯，往往比一次完整倒满更适合鱼子酱服务。"]],
+        ["安静的高峰", ["香槟与鱼子酱的组合已经足够完整，不需要太多配菜。若要加入 blini 或 crème fraîche，也应当保持轻薄，作为质地承托，而不是新的主角。"]],
+      ],
+      quote: "最好的气泡，不是为了喧哗，而是为了让下一口更清楚。",
       related: ["zh-mother-of-pearl", "zh-harvest", "zh-service"],
     },
     "zh-mother-of-pearl": {
       lang: "zh", eyebrow: "品鉴器具", title: "贝母触感", meta: "SERVICE · Spoon",
       image: images.spoon,
-      intro: "白贝母匙避免金属氧化味，是保护鱼子酱风味最简单也最有效的选择。",
-      sections: [["为什么不用金属", "银器会带来明显的金属尾韵，尤其会破坏低盐鱼子酱的细腻乳香。"]],
+      media: [images.harvestDetail, images.service, images.table],
+      intro: "白贝母匙避免金属氧化味，是保护鱼子酱风味最简单也最有效的选择。它看似只是器具，实际决定了入口前最后一厘米是否干净。",
+      sections: [
+        ["为什么不用金属", ["银器会带来明显的金属尾韵，尤其会破坏低盐鱼子酱的细腻乳香。金属的冷硬触感也容易让颗粒在送入口中前受到不必要的挤压。", "贝母匙的价值在于中性。它不抢味、不导热过快、不留下气味，只负责把鱼子酱完整地从罐中带到舌面。"]],
+        ["匙面的弧度", ["匙面不宜过深，过深会让鱼卵堆叠受压；也不宜过平，过平会让分勺动作变得粗糙。理想弧度应当让颗粒自然停留，轻轻滑落。", "在私人品鉴中，我们更建议小匙慢食。每一口的量少一点，层次反而更完整。"]],
+        ["仪式的温度", ["贝母不是为了制造古典感，而是为了让现代服务回到准确。真正的仪式感，来自每一个动作都能解释为什么存在。"]],
+      ],
+      quote: "器具越安静，风味越响亮。",
       related: ["zh-service", "zh-champagne", "zh-harvest"],
     },
     "zh-ice-server": {
       lang: "zh", eyebrow: "品鉴器具", title: "现代主义银质冰镇座", meta: "SERVICE · Ice",
       image: images.ice,
-      intro: "双层冰镇座负责稳定温度，让开罐后的香气缓慢释放，而不是迅速失衡。",
-      sections: [["温度控制", "碎冰承托罐体，避免直接冻结鱼卵，同时让服务过程保持在理想区间。"]],
+      media: [images.temperature, images.champagne, images.table],
+      intro: "双层冰镇座负责稳定温度，让开罐后的香气缓慢释放，而不是迅速失衡。它把冷变成可控的背景，而不是压住风味的力量。",
+      sections: [
+        ["温度控制", ["碎冰承托罐体，避免直接冻结鱼卵，同时让服务过程保持在理想区间。冰镇座的任务不是越冷越好，而是在开罐后给鱼子酱一个稳定、缓慢的环境。", "当罐体表面出现轻微凝霜，服务员会检查罐底是否与碎冰直接贴合。若接触过紧，局部冻结会让颗粒变硬；若离冰过远，油脂会提前松散。"]],
+        ["桌面秩序", ["银质或玻璃冰镇座应保持低姿态，不能遮挡客人观察鱼卵色泽。我们更重视器具的比例、反光和触感，而不是夸张造型。", "它位于餐桌中央，却不应成为中心；中心永远是开罐后那一层清冷、带海风的香气。"]],
+        ["服务节奏", ["从冰箱到桌面，从开罐到分勺，所有动作都服务于同一个目标：让每一口都保持接近第一口的状态。"]],
+      ],
+      quote: "冷不是目的，稳定才是。",
       related: ["zh-harvest", "zh-mother-of-pearl", "zh-service"],
+    },
+    "zh-breath": {
+      lang: "zh", eyebrow: "品鉴仪式", title: "呼吸律动", meta: "RITUAL · Rest",
+      image: images.champagne,
+      media: [images.ice, images.table, images.harvestDetail],
+      intro: "开罐后的几分钟，是香气从冷藏状态回到餐桌状态的缓慢苏醒。所谓“呼吸”，不是让鱼子酱升温，而是让被低温收住的香气重新变得可读。",
+      sections: [
+        ["静置的意义", ["让鱼子酱在低温中短暂呼吸，海洋感与奶油感会更清晰，而不是被冰冷压住。刚打开的罐体通常只有非常干净的盐水气息，几分钟后才会出现坚果、乳脂与矿物尾韵。", "这段等待不需要仪式化表演，只需要安静。过度搅动、频繁开合或长时间暴露都会打乱颗粒表面油脂的状态。"]],
+        ["五分钟的尺度", ["五分钟不是绝对规则，而是一个足够安全的服务窗口。室温偏高时应缩短，私人品鉴人数较少时可以分批开罐，避免最后几勺失去紧致感。", "我们会观察罐面光泽：当颗粒开始呈现轻微的湿润反光，香气也从单纯的冷盐感转为更圆润的乳香。"]],
+        ["入口之前", ["呼吸完成后，不要立刻混入配菜。先用贝母匙品尝一小口原味，再决定是否加入香槟、blini 或 crème fraîche。只有先听见鱼子酱本身，配餐才有意义。"]],
+      ],
+      quote: "真正的醒味，是等待，而不是加热。",
+      related: ["zh-ice-server", "zh-champagne", "zh-palate"],
+    },
+    "zh-hand-warm": {
+      lang: "zh", eyebrow: "品鉴仪式", title: "虎口仪式", meta: "RITUAL · Warmth",
+      image: images.spoon,
+      media: [images.harvestDetail, images.temperature, images.service],
+      intro: "把少量鱼子酱置于虎口，用体温轻微唤醒，是最私密也最古老的品鉴方式。它绕开餐具，让温度、皮肤与香气直接建立关系。",
+      sections: [
+        ["温度与肌理", ["短暂升温会放大坚果香、海洋盐感与颗粒张力，让第一口更完整。体温不是为了把鱼子酱变热，而是把被冷藏压住的油脂轻轻打开。", "理想动作很简单：少量放置，停留片刻，直接入口。不要用手背摩擦，也不要让颗粒停留过久。"]],
+        ["为什么是虎口", ["虎口处温度稳定，气味干扰较少，也方便观察颗粒在皮肤上的光泽。优质鱼卵应当保持完整形态，不应快速塌陷或渗出浑浊液体。", "这一步常用于判断批次状态。它比餐桌陈列更直接，也更诚实。"]],
+        ["私享的边界", ["虎口品鉴适合小范围专业品鉴，并不适合所有正式宴会。LuxurEat 会根据场景决定是否引导这一动作，让仪式服务于体验，而不是为了仪式而仪式。"]],
+      ],
+      quote: "手的温度，是最小也最准确的醒味器。",
+      related: ["zh-breath", "zh-mother-of-pearl", "zh-palate"],
+    },
+    "zh-palate": {
+      lang: "zh", eyebrow: "品鉴仪式", title: "舌尖绽放", meta: "RITUAL · Palate",
+      image: images.harvest,
+      media: [images.harvestDetail, images.malossol, images.spoon],
+      intro: "不要急于咀嚼。用舌尖轻压，让鱼卵自然破裂，风味会更像一道缓慢展开的曲线，而不是一瞬间被打碎的盐味。",
+      sections: [
+        ["入口节奏", ["从矿物感、乳香到海洋尾韵，真正的层次来自克制的动作。鱼子酱入口后先停在舌面，用上颚轻轻压开，让颗粒一颗颗释放。", "快速咀嚼会让所有层次同时出现，也同时消失。慢一点，才会分辨出前段的清冷、中段的奶油感和最后的坚果香。"]],
+        ["风味曲线", ["优质鱼子酱的尾韵应当干净，不黏腻、不腥重。它会留下海洋与矿物的长度，而不是过度盐感。", "当香槟或伏特加加入时，它们的作用是清理口腔，让下一勺重新开始，而不是把上一勺的余味强行盖掉。"]],
+        ["最后一口", ["真正好的品鉴不会越吃越重。最后一口仍应保持清晰，甚至比第一口更平静。那说明温度、器具、分量与节奏都没有失控。"]],
+      ],
+      quote: "最奢侈的一口，往往不是最多的一口。",
+      related: ["zh-hand-warm", "zh-breath", "zh-service"],
     },
     "en-harvest": {
       lang: "en", eyebrow: "Maison Heritage", title: "The Art of the Harvest", meta: "MASTERCLASS · October 2024",
       image: images.harvest,
-      intro: "Caviar harvesting is an act of judgment: temperature, pearl tension, maturity, and salting must meet in a narrow window.",
-      sections: [["The Heritage of the Sturgeon", "Every selection begins with traceability, maturity, pearl size, and the clean mineral finish that defines true service quality."], ["The Malossol Method", "Low salt supports flavor without covering the roe's natural creaminess and oceanic depth."]],
+      media: [images.harvestDetail, images.temperature, images.table],
+      intro: "Caviar harvesting is an act of judgment. Temperature, pearl tension, maturity, salting, and aroma must meet in a narrow window; once that window closes, no amount of service theatre can restore the first truth of the roe.",
+      sections: [
+        ["The Heritage of the Sturgeon", ["Every selection begins with traceability. We study water source, age, maturity, pearl size, oil ratio, and the first aroma released after opening. Only when those signals align does a lot enter the LuxurEat selection.", "In true tasting, luxury is not intensity but clarity. The best pearls dissolve quickly while keeping a delicate tension; ocean salinity appears first, followed by cream, hazelnut, and a long mineral finish."]],
+        ["The Malossol Method", ["Low salt is not a slogan. It is a vote of confidence in the roe. Salt should lift the flavor, not hide it. The lower the salt, the more the cold chain, timing, and maturity must be exact.", "Every opening service is recorded with temperature notes and tasting feedback. Those quiet records allow the next dinner to repeat the same stability."]],
+        ["The Last Judgment at the Table", ["Once caviar leaves the cellar, the final test begins. Grey, amber, or deep golden pearls must be observed under soft light; harsh light can distort color, while a warm room can loosen the oils too quickly.", "Our preferred service rhythm is slow and precise: observe the color, smell the first marine note, then use mother-of-pearl to let the flavor unfold naturally."]],
+      ],
+      quote: "Harvesting is the fastest moment that still requires the slowest judgment.",
       related: ["en-service", "en-malossol", "en-champagne"],
     },
     "en-truffle": {
       lang: "en", eyebrow: "Sourcing", title: "Sourcing Excellence: The Alba Gold", meta: "ATLAS · Piedmont",
       image: images.truffle,
-      intro: "Alba truffles carry a short season and unmistakable soil perfume, making them a natural aromatic extension of a caviar menu.",
-      sections: [["Source Discipline", "Harvest timing, humidity, and intact aroma decide whether a lot belongs on a LuxurEat table."]],
+      media: [images.table, images.harvestDetail, images.service],
+      intro: "Alba white truffle is shaped by a short season, damp soil, and an unmistakable forest perfume. It is not a replacement for caviar, but another way of speaking about rarity, origin, and time.",
+      sections: [
+        ["Source Discipline", ["Harvest timing, humidity, and intact aroma decide whether a lot belongs on a LuxurEat table. Great white truffle does not require excess; a few thin shavings can reorder heat, fat, and grain into a new architecture.", "Caviar and truffle share one important rule: neither should be buried under complex cooking. The strongest menus stay quiet enough for temperature, texture, and aroma to answer one another."]],
+        ["The Boundary of Aroma", ["White truffle is powerful, so placement matters. Served too early, it can mute caviar's delicate salinity; served too late, it loses its role as a seasonal peak.", "We often use caviar as the cold opening and truffle as a warmer passage, allowing ocean and forest to meet without collision."]],
+        ["From Piedmont to Service", ["Transport is built around humidity, temperature, and breathable packaging. Aroma is alive: it fades with time and turns flat under the wrong seal.", "For that reason, LuxurEat treats Alba truffle as a seasonal extension for selected menus, not a permanent decorative item."]],
+      ],
+      quote: "The rarer the aroma, the more silence it needs.",
       related: ["en-harvest", "en-service", "en-malossol"],
     },
     "en-service": {
       lang: "en", eyebrow: "Epicurean Life", title: "A Legacy of Taste: Modern Service", meta: "COURSE · Service",
       image: images.service,
-      intro: "Great service lets the vessel, temperature, and wine step back so the first spoon of caviar can speak clearly.",
-      sections: [["Mother-of-Pearl", "Mother-of-pearl brings no metallic note, preserving the fragile texture and clean finish of the roe."]],
+      media: [images.champagne, images.spoon, images.table],
+      intro: "Great service lets the vessel, temperature, and wine step back so the first spoon of caviar can speak clearly. Service should not perform luxury; it should make precision feel effortless.",
+      sections: [
+        ["Mother-of-Pearl", ["Mother-of-pearl brings no metallic note, preserving the fragile texture and clean finish of the roe. It is light, neutral, and gentle enough to carry pearls without bruising them before the first taste.", "Before service, we inspect every spoon surface. A tiny crack or rough edge can disturb the pearl structure, and those small defects become visible on the palate."]],
+        ["Wine and Temperature", ["Wine should refresh, not dominate. Vintage brut Champagne, ice-cold vodka, or clean mineral water can all work when they return attention to the roe.", "Temperature is the invisible border. Too cold and the cream is hidden; too warm and the oils lose discipline. Ideal service is the balance between cold chain, room temperature, and opening time."]],
+        ["The Restraint of Modern Service", ["We remove gestures that do not affect taste and keep only those that matter: how the tin rests, when it opens, how the spoon divides, when the ice is refreshed.", "When service succeeds, the guest remembers not the motion but the second when the roe opens cleanly on the palate."]],
+      ],
+      quote: "The highest service is the one you stop noticing.",
       related: ["en-champagne", "en-mother-of-pearl", "en-harvest"],
     },
     "en-malossol": {
       lang: "en", eyebrow: "Craftsmanship", title: "The Science of Salt: Malossol Mastery", meta: "CRAFT · Malossol",
       image: images.malossol,
-      intro: "Less than 3% salt exposes the roe's marine depth, nutty notes, and creamy texture, demanding better raw material and handling.",
-      sections: [["The Edge of Low Salt", "The less salt you use, the more cold-chain discipline and timing matter."]],
+      media: [images.harvestDetail, images.temperature, images.ice],
+      intro: "Less than 3% salt exposes the roe's marine depth, nutty notes, and creamy texture. It sounds simple; the difficulty is making every tin stable, clear, and intact at that low level of intervention.",
+      sections: [
+        ["The Edge of Low Salt", ["The less salt you use, the more cold-chain discipline and timing matter. Heavy salt can conceal weakness; Malossol reveals everything, both excellence and instability.", "We think of salt as structure rather than seasoning. Its role is not to make caviar salty, but to help the pearls keep form, tension, and aromatic order through time."]],
+        ["The Master's Hand", ["A salter does not rely on instruments alone. Touch, gloss, the way pearls roll, and the first smell of a tin all participate in the judgment. Experience is not mysticism; it is pattern recognition built from years of records.", "Each batch carries slight differences. The craft is not to flatten them into sameness, but to preserve a clean LuxurEat finish while letting origin remain visible."]],
+        ["After the Cold Chain", ["Low-salt caviar depends on cold chain, but cold chain is not the end. Transport, resting, opening, and serving all shape the final taste.", "For that reason, service guidance belongs inside the product story. A tin reaches its value only when it is opened correctly."]],
+      ],
+      quote: "The less salt you use, the more discipline you owe the roe.",
       related: ["en-harvest", "en-service", "en-champagne"],
     },
     "en-champagne": {
       lang: "en", eyebrow: "Pairing", title: "Champagne", meta: "PAIRING · Brut",
       image: images.champagne,
-      intro: "Vintage brut Champagne brings acidity and fine bubbles that refresh the palate between rich, saline tastes.",
-      sections: [["How to Choose", "Favor bright acidity and restrained oak so the wine cleanses rather than competes."]],
+      media: [images.table, images.service, images.blini],
+      intro: "Vintage brut Champagne brings acidity and fine bubbles that refresh the palate between rich, saline tastes. It is not simply celebratory; it resets the mouth between each spoonful.",
+      sections: [
+        ["How to Choose", ["Favor bright acidity and restrained oak so the wine cleanses rather than competes. Heavy toast can flatten caviar's mineral finish, while sweetness can make its marine clarity feel dull.", "Blanc de Blancs is often sharper and works beautifully with structured Beluga. Aged Champagne brings nutty and brioche notes that can suit richer Oscetra."]],
+        ["The Work of Bubbles", ["Fine bubbles act like small brushes across the palate, lifting oil and returning definition to the next pearl. Good pairing does not add complexity; it makes complexity easier to read.", "For that reason, we pour modestly and refill often. Low temperature, small pours, and quiet pacing serve caviar better than a glass filled too early."]],
+        ["A Quiet Peak", ["Caviar and Champagne already form a complete gesture. If blini or crème fraîche enters the service, it should be thin and neutral, a support for texture rather than a new center of attention."]],
+      ],
+      quote: "The best bubbles do not speak louder; they make the next taste clearer.",
       related: ["en-mother-of-pearl", "en-harvest", "en-service"],
     },
     "en-mother-of-pearl": {
       lang: "en", eyebrow: "Service Ware", title: "Mother-of-Pearl Spoon", meta: "SERVICE · Spoon",
       image: images.spoon,
-      intro: "Mother-of-pearl is the simplest way to protect the roe from metallic flavors during service.",
-      sections: [["Why Not Metal", "Silver can leave an oxidative finish that overwhelms low-salt caviar's creamy delicacy."]],
+      media: [images.harvestDetail, images.service, images.table],
+      intro: "Mother-of-pearl is the simplest way to protect the roe from metallic flavors during service. It may appear ornamental, but it decides whether the last centimeter before tasting remains clean.",
+      sections: [
+        ["Why Not Metal", ["Silver can leave an oxidative finish that overwhelms low-salt caviar's creamy delicacy. Metal also introduces a hard coldness that can disturb the pearls before they reach the palate.", "Mother-of-pearl is valuable because it stays neutral. It does not steal flavor, conduct heat too quickly, or leave scent behind. It simply carries the roe intact."]],
+        ["The Shape of the Spoon", ["The bowl should not be too deep, which compresses pearls, nor too flat, which makes portioning rough. The ideal curve lets the pearls rest and slide with almost no pressure.", "For private tastings, we prefer smaller spoons. A modest first bite often reveals more detail than a dramatic serving."]],
+        ["The Temperature of Ritual", ["Mother-of-pearl is not nostalgia. It is a way for modern service to stay accurate. True ritual is made of actions that can explain why they exist."]],
+      ],
+      quote: "The quieter the utensil, the louder the flavor.",
       related: ["en-service", "en-champagne", "en-harvest"],
     },
     "en-ice-server": {
       lang: "en", eyebrow: "Service Ware", title: "Modern Silver Ice Server", meta: "SERVICE · Ice",
       image: images.ice,
-      intro: "A double-walled server stabilizes temperature after opening, keeping the tasting ritual calm and precise.",
-      sections: [["Temperature Control", "Crushed ice supports the tin without freezing the roe, preserving texture through service."]],
+      media: [images.temperature, images.champagne, images.table],
+      intro: "A double-walled server stabilizes temperature after opening, keeping the tasting ritual calm and precise. It turns cold into a controlled background rather than a force that suppresses aroma.",
+      sections: [
+        ["Temperature Control", ["Crushed ice supports the tin without freezing the roe, preserving texture through service. The goal is not maximum cold, but a slow and stable environment after opening.", "When light frost appears on the tin, service checks whether the base touches the ice too tightly. Excess contact can harden pearls; too little contact lets oils loosen too fast."]],
+        ["Order on the Table", ["A silver or glass server should stay low enough for guests to observe color. We value proportion, reflection, and touch more than theatrical form.", "It may sit at the center of the table, but it should never become the center of the experience. The center remains the clean marine aroma released at opening."]],
+        ["The Rhythm of Service", ["From refrigerator to table, from opening to portioning, each movement protects a single goal: every spoon should feel close to the first spoon."]],
+      ],
+      quote: "Cold is not the purpose. Stability is.",
       related: ["en-harvest", "en-mother-of-pearl", "en-service"],
+    },
+    "en-breath": {
+      lang: "en", eyebrow: "Tasting Ritual", title: "Breathing Rhythm", meta: "RITUAL · Rest",
+      image: images.champagne,
+      media: [images.ice, images.table, images.harvestDetail],
+      intro: "The first minutes after opening let the aroma move from cellar-cold to table-ready. Breathing does not mean warming the caviar; it means letting aroma become readable again.",
+      sections: [
+        ["Why Rest Matters", ["A brief rest keeps the roe cold while allowing cream, brine, and minerality to become legible. A freshly opened tin often begins with clean saline air; after a few minutes, nut, cream, and mineral length begin to emerge.", "This waiting period needs no theatrical gesture. Excess stirring, repeated opening, or long exposure can disturb the oils at the surface of the pearls."]],
+        ["The Scale of Five Minutes", ["Five minutes is not a law; it is a safe service window. In a warm room it should shorten, and in a small private tasting the tin can be opened in stages to protect the final spoon.", "We watch the surface gloss. When the pearls begin to show a gentle wet reflection, the aroma usually shifts from cold salinity toward rounder cream."]],
+        ["Before the First Bite", ["After the rest, do not rush into accompaniments. Taste the roe alone first with mother-of-pearl, then decide whether Champagne, blini, or crème fraîche has a role. Pairing matters only after the caviar itself has been heard."]],
+      ],
+      quote: "True awakening is waiting, not warming.",
+      related: ["en-ice-server", "en-champagne", "en-palate"],
+    },
+    "en-hand-warm": {
+      lang: "en", eyebrow: "Tasting Ritual", title: "The Hand Ritual", meta: "RITUAL · Warmth",
+      image: images.spoon,
+      media: [images.harvestDetail, images.temperature, images.service],
+      intro: "A small spoonful on the back of the hand warms gently, revealing texture before the first taste. It bypasses the utensil and lets temperature, skin, and aroma meet directly.",
+      sections: [
+        ["Temperature and Texture", ["A controlled touch of warmth opens nutty notes, ocean salinity, and pearl tension. The point is not to heat caviar, but to loosen the oils held tight by cold storage.", "The gesture should stay simple: a small portion, a short pause, and a direct taste. Do not rub the pearls or leave them exposed too long."]],
+        ["Why the Hand", ["The back of the hand offers stable warmth and little aromatic interference. It also allows the taster to observe gloss and structure before tasting.", "This step is often used to assess a batch. It is more direct than table presentation and more honest than decorative ritual."]],
+        ["The Boundary of Privacy", ["The hand ritual belongs to small expert tastings and does not suit every formal dinner. LuxurEat introduces it only when the setting supports the experience."]],
+      ],
+      quote: "The hand is the smallest and most precise warmer.",
+      related: ["en-breath", "en-mother-of-pearl", "en-palate"],
+    },
+    "en-palate": {
+      lang: "en", eyebrow: "Tasting Ritual", title: "Palate Release", meta: "RITUAL · Palate",
+      image: images.harvest,
+      media: [images.harvestDetail, images.malossol, images.spoon],
+      intro: "Do not rush to chew. Let the pearls break slowly against the palate so the finish can unfold as a curve rather than a single burst of salt.",
+      sections: [
+        ["Pacing the First Bite", ["Minerality, cream, and marine length appear most clearly when the gesture stays restrained. Let the caviar rest on the tongue, then press it lightly against the palate so each pearl releases in sequence.", "Fast chewing makes every layer arrive at once and disappear at once. Slow down, and you can read the cool opening, the creamy middle, and the nutty finish."]],
+        ["The Flavor Curve", ["Excellent caviar should finish cleanly, without heaviness or fishiness. It leaves length, mineral air, and a marine memory rather than blunt salinity.", "When Champagne or vodka enters, its purpose is to clear the palate and let the next spoon begin again, not erase the previous one."]],
+        ["The Last Spoon", ["A great tasting does not become heavier as it goes. The final spoon should remain clear, sometimes even calmer than the first. That means temperature, tool, portion, and pace stayed under control."]],
+      ],
+      quote: "The most luxurious bite is rarely the largest one.",
+      related: ["en-hand-warm", "en-breath", "en-service"],
     },
   };
 
@@ -326,8 +528,19 @@ function initLuxReader() {
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
   }[char]));
   const labels = () => document.documentElement.lang?.startsWith("zh")
-    ? { back: "返回", close: "关闭", related: "延伸阅读", read: "阅读详情", note: "品鉴笔记", noteText: "温度、器具与节奏共同决定入口的第一层印象；真正的奢华来自克制而准确的服务。" }
-    : { back: "Back", close: "Close", related: "Further Reading", read: "Read Details", note: "Tasting Notes", noteText: "Temperature, service ware, and pacing shape the first impression; luxury is restraint made precise." };
+    ? { back: "返回", close: "关闭", related: "延伸阅读", read: "阅读详情", archive: "往期随笔", note: "品鉴笔记", noteText: "温度、器具与节奏共同决定入口的第一层印象；真正的奢华来自克制而准确的服务。" }
+    : { back: "Back", close: "Close", related: "Further Reading", read: "Read Details", archive: "Archive", note: "Tasting Notes", noteText: "Temperature, service ware, and pacing shape the first impression; luxury is restraint made precise." };
+  const archiveGroups = () => document.documentElement.lang?.startsWith("zh")
+    ? [
+      ["品牌与产地", ["zh-harvest", "zh-truffle"]],
+      ["服务与工艺", ["zh-service", "zh-malossol"]],
+      ["品鉴仪式", ["zh-champagne", "zh-mother-of-pearl", "zh-ice-server", "zh-breath", "zh-hand-warm", "zh-palate"]],
+    ]
+    : [
+      ["Maison & Origin", ["en-harvest", "en-truffle"]],
+      ["Service & Craft", ["en-service", "en-malossol"]],
+      ["Tasting Ritual", ["en-champagne", "en-mother-of-pearl", "en-ice-server", "en-breath", "en-hand-warm", "en-palate"]],
+    ];
 
   const reader = document.createElement("div");
   reader.className = "lux-reader";
@@ -344,10 +557,55 @@ function initLuxReader() {
   document.body.appendChild(reader);
 
   const body = reader.querySelector(".lux-reader-body");
+  const panel = reader.querySelector(".lux-reader-panel");
   const backButton = reader.querySelector("[data-reader-back]");
   const closeButtons = reader.querySelectorAll("[data-reader-close]");
   let currentId = "";
   const stack = [];
+  const syncReaderTop = () => {
+    panel.classList.toggle("is-at-top", body.scrollTop <= 4);
+  };
+
+  const showReader = (copy) => {
+    reader.hidden = false;
+    document.body.classList.add("lux-reader-open");
+    backButton.hidden = stack.length === 0;
+    backButton.textContent = copy.back;
+    reader.querySelector(".lux-reader-close").textContent = copy.close;
+    body.focus();
+    body.scrollTop = 0;
+    syncReaderTop();
+  };
+
+  const renderArchive = (push) => {
+    if (push && currentId) stack.push(currentId);
+    currentId = "__archive";
+    const copy = labels();
+    const groups = archiveGroups();
+    const allLabel = document.documentElement.lang?.startsWith("zh") ? "全部内容" : "All Collections";
+    const items = groups.flatMap(([title, ids]) => ids.map((id) => ({ id, title })));
+    body.innerHTML = `
+      <article class="lux-reader-archive">
+        <div class="lux-reader-archive-head">
+          <h2>${escapeHtml(copy.archive)}</h2>
+          <div class="lux-reader-archive-tabs">
+            <button type="button" class="is-active" data-reader-archive-filter="all">${escapeHtml(allLabel)}</button>
+            ${groups.map(([title]) => `<button type="button" data-reader-archive-filter="${escapeHtml(title)}">${escapeHtml(title)}</button>`).join("")}
+          </div>
+        </div>
+        <div class="lux-reader-archive-grid">
+          ${items.map(({ id, title }) => {
+            const item = articles[id];
+            return item ? `
+              <button type="button" class="lux-reader-archive-card" data-reader-archive-item="${escapeHtml(id)}" data-reader-archive-category="${escapeHtml(title)}">
+                <span class="lux-reader-archive-media"><img src="${escapeHtml(item.image)}" alt=""><span class="lux-reader-archive-cta">${copy.read}</span></span>
+                <span class="lux-reader-archive-copy"><span>${escapeHtml(item.eyebrow)}</span><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.meta)}</small></span>
+              </button>` : "";
+          }).join("")}
+        </div>
+      </article>`;
+    showReader(copy);
+  };
 
   const render = (id, push) => {
     const article = articles[id];
@@ -355,9 +613,26 @@ function initLuxReader() {
     if (push && currentId) stack.push(currentId);
     currentId = id;
     const copy = labels();
-    const articleSections = article.sections.length > 1 ? article.sections : [...article.sections, [copy.note, copy.noteText]];
-    const media = article.related.map((relatedId) => articles[relatedId]?.image).filter(Boolean);
-    const contentImages = [media[0] || article.image, media[1] || article.image];
+    const articleSections = article.sections.length ? article.sections : [[copy.note, copy.noteText]];
+    const contentImages = Array.from(new Set([
+      ...(article.media || []),
+      ...article.related.map((relatedId) => articles[relatedId]?.image).filter(Boolean),
+      article.image,
+    ].filter(Boolean)));
+    const paragraphs = (content) => (Array.isArray(content) ? content : [content])
+      .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+      .join("");
+    const sectionHtml = articleSections.map(([heading, content], index) => {
+      const image = contentImages[index % contentImages.length] || article.image;
+      const copyHtml = `<div><h3>${escapeHtml(heading)}</h3>${paragraphs(content)}</div>`;
+      if (index === 0) {
+        return `<section class="lux-reader-section lux-reader-section-split">${copyHtml}<figure><img src="${escapeHtml(image)}" alt=""></figure></section>`;
+      }
+      if (index === 1) {
+        return `<section class="lux-reader-section">${copyHtml}<figure class="lux-reader-wide-image"><img src="${escapeHtml(image)}" alt=""></figure></section>`;
+      }
+      return `<section class="lux-reader-section lux-reader-section-split lux-reader-section-reverse"><figure><img src="${escapeHtml(image)}" alt=""></figure>${copyHtml}</section>`;
+    }).join("");
 
     body.innerHTML = `
       <article class="lux-reader-layout">
@@ -370,18 +645,12 @@ function initLuxReader() {
         </section>
         <div class="lux-reader-copy">
           <p class="lux-reader-intro">${escapeHtml(article.intro)}</p>
-          <section class="lux-reader-section lux-reader-section-split">
-            <div>
-              <h3>${escapeHtml(articleSections[0][0])}</h3>
-              <p>${escapeHtml(articleSections[0][1])}</p>
-            </div>
-            <figure><img src="${escapeHtml(contentImages[0])}" alt=""></figure>
+          ${sectionHtml}
+          <section class="lux-reader-immersive" style="background-image:url('${escapeHtml(contentImages[2] || article.image)}')">
+            <span>${escapeHtml(copy.note)}</span>
+            <strong>${escapeHtml(article.quote || copy.noteText)}</strong>
           </section>
-          <section class="lux-reader-section">
-            <h3>${escapeHtml(articleSections[1][0])}</h3>
-            <p>${escapeHtml(articleSections[1][1])}</p>
-            <figure class="lux-reader-wide-image"><img src="${escapeHtml(contentImages[1])}" alt=""></figure>
-          </section>
+          ${article.quote ? `<blockquote class="lux-reader-quote">${escapeHtml(article.quote)}</blockquote>` : ""}
           <section class="lux-reader-related">
             <div class="lux-reader-related-head">
               <h3>${copy.related}</h3>
@@ -404,13 +673,7 @@ function initLuxReader() {
         </div>
       </article>`;
 
-    reader.hidden = false;
-    document.body.classList.add("lux-reader-open");
-    backButton.hidden = stack.length === 0;
-    backButton.textContent = copy.back;
-    reader.querySelector(".lux-reader-close").textContent = copy.close;
-    body.focus();
-    body.scrollTop = 0;
+    showReader(copy);
   };
 
   const open = (id) => {
@@ -426,18 +689,43 @@ function initLuxReader() {
   };
 
   document.addEventListener("click", (event) => {
+    const archive = event.target.closest("[data-reader-archive]");
+    if (archive) {
+      event.preventDefault();
+      stack.length = 0;
+      currentId = "";
+      renderArchive(false);
+      return;
+    }
     const trigger = event.target.closest("[data-reader-open]");
     if (!trigger || !articles[trigger.dataset.readerOpen]) return;
     event.preventDefault();
     open(trigger.dataset.readerOpen);
   });
   body.addEventListener("click", (event) => {
+    const archived = event.target.closest("[data-reader-archive-item]");
+    if (archived) {
+      render(archived.dataset.readerArchiveItem, true);
+      return;
+    }
     const related = event.target.closest("[data-reader-related]");
     if (related) render(related.dataset.readerRelated, true);
+    const archiveFilter = event.target.closest("[data-reader-archive-filter]");
+    if (archiveFilter) {
+      const filter = archiveFilter.dataset.readerArchiveFilter || "all";
+      body.querySelectorAll("[data-reader-archive-filter]").forEach((button) => {
+        button.classList.toggle("is-active", button === archiveFilter);
+      });
+      body.querySelectorAll("[data-reader-archive-category]").forEach((card) => {
+        card.hidden = filter !== "all" && card.dataset.readerArchiveCategory !== filter;
+      });
+    }
   });
+  body.addEventListener("scroll", syncReaderTop, { passive: true });
   backButton.addEventListener("click", () => {
     const previous = stack.pop();
-    if (previous) render(previous, false);
+    if (previous === "__archive") renderArchive(false);
+    else if (previous) render(previous, false);
   });
   closeButtons.forEach((button) => button.addEventListener("click", close));
   document.addEventListener("keydown", (event) => {
@@ -504,48 +792,26 @@ function initLuxInfoPopovers() {
 
 function initLuxProductDetails() {
   const triggers = document.querySelectorAll("[data-product-open]");
-  const images = {
-    beluga: "https://lh3.googleusercontent.com/aida-public/AB6AXuACJOnyTg87lVs0EJCu5fRU4HTMa17EXiWif-_i75wx6YuLlPpTlUwQiwdFkPLBhE5gXWVrGU04jUdKhTd3PZyQ8bpW4mSkIcPhMfmwfLClntQ4vY6NJOAkUb1bivTdXI2YitlmukK1D3dGNNAc9g0rboUlkemDceyJT1Btw5n3mxvGXpJcax2iqf2VFHX_HTTpZ0_isZ13U-FDO7Je8sxIZsTLFEBEIacseGoW2VqzxbwZ1rF1OohLNzwRwOuv7bjFFmj_ZFkv0MI",
-    oscetra: "https://lh3.googleusercontent.com/aida-public/AB6AXuBw_tDFhLpvYsM-QXpGZ1LlENLhyBbuXDFWoGotLU0shCFfsNIC3PfJmEYbC2sjUwEwrJvOFjhPdv3klNWbI3lo9ggNI9xeczWfnQCahE6pVj58uH2z_J8upHhFnzGm0rbGwDAy-H5sFaPfBzB98QvxUPHEq9JCsuO_rAtoOX11FRMIlt1iaeib6XCJ1IpoX2K9ihttS8BLMf5ZZVkr_nWpd-9xRNwnOOT38v50QuJ8jz1PhP-YouPd4QkysuGMfZM1pXUKiQDfGt8",
-    spoon: "https://lh3.googleusercontent.com/aida-public/AB6AXuB2P5yZoNq2-PBMLXeFcbruH1kXuUuYjkMfzKDIKD21IWS8cj0gPO1qmelr-FXL-acV_eTP1vy8o3A4GM_cEf7CbFJBvIC-lHvsziLOZ3iplbm7luEgBN6adnsaNysgBmwJOBwEXJi6SIVoBYAIc4NI1mnCc3W5B4wVTHPQtpnMbcldWMuiDawngtY4iNSVWWR0hreOxU8Hly_d_-706XymQuHqyuDgiHCwEVt1PrdI5fL_9VifYaPDt2uoGGeMYzvCFBOq47acuNM",
-    champagne: "https://lh3.googleusercontent.com/aida-public/AB6AXuDAdvQdleYAsN8UYpwdMZHwnWbgcUDtdpGFWKWXj6I4SEE02s8aPf4txi8Rpn1-chBzWrO8914w5sx-2WEDKip-qC5r2bPujAoMIpbq3nWejA1XxdaO5pHuXsnPvkQPugM0_E-Vvl6d6b_YNERpu69jkWlW40vMcDgKuRh5rduZrycRhd_o3nUIJ0a5sm0gSODr_UOnhAj09zHnvw2DNfjnxNATC4OJ7w87gZJg5AhNewIQ_wKbxqHKc_mx-71usoOmX0uisxRI5Tw",
-    ice: "https://lh3.googleusercontent.com/aida-public/AB6AXuCbRm7T-vUyLcLqFrQuOXykQjzwhdpDRZMcSbGFjeVpdb76MZnZ28gQBKlrdLjIc_T6WjQjfb9fKyBVe5FExMY-kpE-b4sG25R8qhkpNGJAlJP28iPnyPtCbQYT5ZdpDuLAhtScGkzGtfa55QEl-UcC8bncCNITmhCjb8RDhdB8hzDBWSWgpLLudYILlxAIcaXTQ2fMzaUXyQJZUcPC8Rg_RqNGkNslWq8L7t_OuWsc9fIRvbrYWlI1r5EErsUZte_sRwyldQQwu0Q",
-    truffle: "https://lh3.googleusercontent.com/aida-public/AB6AXuBQy_7QgEhJXRb9TVE_qzhuDOz-7NCGBa_j5-U9QAjY-RgkJ2ZQHX_5SO79aYEFnsmh__rooT1ufKKtESdCxIDI6AKK5cskDxVD5oMSArK_A-w8eZYyBq6M901sPa1EICBL1VKmnbf8fDFvZoZ_WKcozP-dEw8yZPP_5H1A26D2NuC1k-Y5wKcxiXZD1R99ifx-tOOWICpWqnVpIrkftwymdfHoUs6G_63VZqke4f15-qB_VQ2iKl62ZxITlbpb4UVfs_kj11XG2E8",
-  };
-  const galleries = {
-    beluga: [
-      images.beluga,
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCDKyZdxU0kGF8Vd-zMlJdzsTr4siYTL8YgOEAlYupJwzsaN5mzFBD-W_ipZxBtWxInFokoDgH7cm7h5-5QPLGoSz0vpME_P6a0qrr-Y2y2VakxcC3vg1EYL-3UDQPI2nYhxCq34ENlKNl-kNGcA5waTnTOm8fxAxjpJJWFQhjCZ50Ik9jZhh_NSGXX3ZlXzw_kTgXFOcEWhH_a2_7GLr7-x_Z81gogm3T6Cs5jofzP_2_UFZ86UPvvHCja9qW79efyY2ZcXBFvjUk",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAQG35wvIpjHg3dO9aAqS8DyvQTpm_WWe89Uo6iHhEKHas-8N69c_tKuMELvL0NFW0qe67sWPKN_oBqBfGL00mRsknlGPt-R0KXIgMB1bGemgFMJMROABnT66UaotrHNezYujj8ApVJUUurxkjkr9U6J4ThUGrsXg5252uPdSK34NlDj31o4BeSdPRJcrjgm8cA693wzq1WFWmmuYFd4Dt69JkeOLzViDCDn8NGdxRv6m4qijpjT2ZpSdk60u9WeLKAu1emAC3IBMk",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD5nzBWcTBNa6X7Vo61aOmU6wugtUwUu3Gxb-wumiWYodKCw7DoMFVY0oZp2_gA9lXB2c3ov0s9_wLPVff3abDSnJqJwABLZLr-lzdZfje7C-bzA7X_1_FiZr8UXnGHayvNtRxUUvJZKH41bzMCyD1PpXNgvYfArVffkYZQxflAXDhlv_A-jHthPCAJo7c5x5Xyg3ZLNg1HnEn31SkcIeVImzSOChtyArtj500F3ExSkBvUurl8uz1Xj4mwR5vFVyZ9OK99lCIxNno",
-    ],
-    oscetra: [images.oscetra, images.beluga, images.truffle],
-    spoon: [images.spoon, images.beluga, "https://lh3.googleusercontent.com/aida-public/AB6AXuAmATWC8-Wd1yng8-EUZvY9jZdTbpQu8tpAT7VeRaUsiwM4pzEOdMprJ1hiPv2A9b38FvL6BbqVHvfmTqFd2P_m8v_67SspNoJGljgNeheLHNuZcld5f0GRwAXic62Ux6qt_SFlmjTwHP0sWBO7ftycDJ3-jXA_MW_dII9WLKFtSn7nhavfVil7EeusjZa8Jsq4AAPjVhCLEQ9FNt4oOkZWX9LAQRra1szFveLxJiZfHSIo_bv_fQc5KPBixeFnT1tuaDTEPlE4pis"],
-    champagne: [images.champagne, images.beluga],
-    ice: [images.ice, images.champagne, images.spoon],
-    truffle: [images.truffle, images.oscetra],
-  };
-  const products = {
-    "zh-imperial-beluga": { title: "至臻帝王鲟鱼子酱", eyebrow: "Rare Harvest", desc: "源自帝王鲟的银灰色大颗粒，入口即化，呈现奶油、海洋与矿物的长尾。", price: "¥2,480", unit: "30G", image: images.beluga, id: "imperial-beluga-30g", subtitle: "Imperial Beluga / 30g", currency: "¥", amount: 2480, specs: ["Huso Huso", "3.2 - 3.5 MM", "Pearl Grey", "奶油/海洋/矿物"] },
-    "zh-royal-oscetra": { title: "皇家奥西特拉鱼子酱", eyebrow: "Nutty Reserve", desc: "金棕色鱼子带来紧实颗粒感与烘焙坚果香，是进阶品鉴与商务宴请的稳妥选择。", price: "¥1,280", unit: "30G", image: images.oscetra, id: "royal-oscetra-30g", subtitle: "Royal Oscetra / 30g", currency: "¥", amount: 1280, specs: ["Acipenser Gueldenstaedtii", "2.8 - 3.1 MM", "Amber Gold", "坚果/黄油/海盐"] },
-    "zh-mother-of-pearl": { title: "手工打磨珍珠母贝匙", eyebrow: "Service Ware", desc: "非金属贝母材质避免氧化味，保护鱼子酱最细腻的乳香与矿物尾韵。", price: "¥1,280", unit: "Set", image: images.spoon, id: "zh-spoons", subtitle: "经典对装", currency: "¥", amount: 1280, specs: ["Mother-of-Pearl", "Pair Set", "Hand Polished", "无金属气味"] },
-    "zh-champagne": { title: "Krug 陈年香槟", eyebrow: "Pairing", desc: "以明亮酸度和细腻气泡刷新味蕾，适合作为鱼子酱品鉴的经典搭配。", price: "¥2,850", unit: "Bottle", image: images.champagne, id: "zh-champagne", subtitle: "Grand Cuvée 171ème Édition", currency: "¥", amount: 2850, specs: ["Brut", "Grand Cuvée", "Chilled", "酸度/气泡/清爽"] },
-    "zh-ice-server": { title: "现代主义银质冰镇座", eyebrow: "Service Ware", desc: "双层冰镇结构稳定开罐后的服务温度，让鱼子酱保持清晰弹性。", price: "¥12,400", unit: "Piece", image: images.ice, id: "zh-ice-server", subtitle: "纯银工艺", currency: "¥", amount: 12400, specs: ["Silver", "Double Wall", "Crushed Ice", "稳定温控"] },
-    "en-imperial-beluga": { title: "Imperial Beluga Caviar", eyebrow: "Rare Harvest", desc: "Large steel-grey pearls from Huso Huso sturgeon, with a creamy finish and long oceanic minerality.", price: "$350", unit: "30G", image: images.beluga, id: "imperial-beluga-30g", subtitle: "Maison Reserve / 30g", currency: "$", amount: 350, specs: ["Huso Huso", "3.2 - 3.5 MM", "Pearl Grey", "Cream / Ocean / Mineral"] },
-    "en-royal-oscetra": { title: "Royal Oscetra Caviar", eyebrow: "Nutty Reserve", desc: "Golden-brown pearls with firm texture, toasted nut complexity, and a long savory finish.", price: "$180", unit: "30G", image: images.oscetra, id: "royal-oscetra-30g", subtitle: "Royal Oscetra / 30g", currency: "$", amount: 180, specs: ["Acipenser Gueldenstaedtii", "2.8 - 3.1 MM", "Amber Gold", "Nut / Butter / Sea Salt"] },
-    "en-mother-of-pearl": { title: "Mother-of-Pearl Spoon", eyebrow: "Service Ware", desc: "A non-reactive spoon that preserves the roe's clean flavor without metallic notes.", price: "$45", unit: "Set", image: images.spoon, id: "en-spoons", subtitle: "Hand-Crafted / Artisan", currency: "$", amount: 45, specs: ["Mother-of-Pearl", "Pair Set", "Hand Polished", "No Metallic Note"] },
-    "en-champagne": { title: "Maison Vintage Brut", eyebrow: "Pairing", desc: "Bright acidity and fine bubbles refresh the palate between rich caviar tastings.", price: "$320", unit: "Bottle", image: images.champagne, id: "en-champagne", subtitle: "Grand Cru / 2012", currency: "$", amount: 320, specs: ["Brut", "Grand Cru", "Chilled", "Acidity / Bubbles"] },
-    "en-truffle": { title: "Truffle Pairing Set", eyebrow: "Pairing", desc: "A dark, aromatic pairing set for menus that extend beyond the first spoon of caviar.", price: "$185", unit: "Set", image: images.truffle, id: "en-truffle-set", subtitle: "Winter Black / White Alba", currency: "$", amount: 185, specs: ["Winter Black", "White Alba", "Gift Set", "Aromatic Finish"] },
-  };
+  const productData = window.LUXUREAT_PRODUCT_DATA || {};
+  const galleries = productData.galleries || {};
+  const products = productData.products || {};
   const hash = location.hash || "";
   if (!triggers.length && !hash.startsWith("#product-")) return;
+  if (!Object.keys(products).length) return;
 
   const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
   }[char]));
+  const formatMoney = (currency, amount) => `${currency}${amount.toLocaleString(undefined, {
+    minimumFractionDigits: currency === "$" ? 2 : 0,
+    maximumFractionDigits: currency === "$" ? 2 : 0,
+  })}`;
   const copy = () => document.documentElement.lang?.startsWith("zh")
-    ? { close: "关闭", add: "加入购物袋", qty: "数量", specs: ["鲟鱼品种 SPECIES", "颗粒直径 SIZE", "珍珠色泽 COLOR", "味觉特征 PROFILE"], story: "传承与自然的洗礼", note: "LuxurEat 以冷链、批次记录与开罐服务标准确保每一次品鉴都保持稳定、清晰且可追溯。" }
-    : { close: "Close", add: "Add to Cart", qty: "Qty", specs: ["Species", "Pearl Size", "Color", "Profile"], story: "Heritage & Origin", note: "LuxurEat protects every tasting with cold-chain handling, batch records, and precise opening standards." };
+    ? { back: "返回", close: "关闭", add: "加入购物袋", detail: "查看详情", qty: "数量", remove: "移除", recent: "最近浏览过", specs: ["鲟鱼品种 SPECIES", "颗粒直径 SIZE", "珍珠色泽 COLOR", "味觉特征 PROFILE"], story: "传承与自然的洗礼", note: "LuxurEat 以冷链、批次记录与开罐服务标准确保每一次品鉴都保持稳定、清晰且可追溯。" }
+    : { back: "Back", close: "Close", add: "Add to Cart", detail: "View Details", qty: "Qty", remove: "Remove", recent: "Recently Viewed", specs: ["Species", "Pearl Size", "Color", "Profile"], story: "Heritage & Origin", note: "LuxurEat protects every tasting with cold-chain handling, batch records, and precise opening standards." };
+  const totalLabel = (quantity) => document.documentElement.lang?.startsWith("zh") ? `${quantity}件总价` : `${quantity}-item total`;
+  const maxQuantity = () => window.LuxureatBag?.maxQuantity || 99;
+  const clampQuantity = (quantity) => Math.min(maxQuantity(), Math.max(1, Number(quantity) || 1));
   const galleryFor = (product) => {
     if (product.id.includes("beluga")) return galleries.beluga;
     if (product.id.includes("oscetra")) return galleries.oscetra;
@@ -559,17 +825,64 @@ function initLuxProductDetails() {
   const detail = document.createElement("div");
   detail.className = "lux-product-detail";
   detail.hidden = true;
-  detail.innerHTML = `<div class="lux-product-backdrop" data-product-close></div><section class="lux-product-panel" role="dialog" aria-modal="true" aria-labelledby="lux-product-title"><button class="lux-product-close" type="button" data-product-close></button><div class="lux-product-body" tabindex="-1"></div></section>`;
+  detail.innerHTML = `<div class="lux-product-backdrop" data-product-close></div><section class="lux-product-panel" role="dialog" aria-modal="true" aria-labelledby="lux-product-title"><button class="lux-product-back" type="button" data-product-back hidden></button><button class="lux-product-close" type="button" data-product-close></button><div class="lux-product-body" tabindex="-1"></div></section>`;
   document.body.appendChild(detail);
   const body = detail.querySelector(".lux-product-body");
+  const backButton = detail.querySelector(".lux-product-back");
   const closeButton = detail.querySelector(".lux-product-close");
   let openedByPush = false;
+  let currentProductId = "";
+  const productStack = [];
+
+  const updateSelectedTotal = (quantity) => {
+    const labels = copy();
+    const addButton = detail.querySelector(".lux-product-purchase [data-bag-add]");
+    const total = detail.querySelector("[data-product-total]");
+    const amount = Number(addButton?.dataset.bagPrice || 0);
+    if (!total || !amount || quantity <= 1) {
+      if (total) total.hidden = true;
+      return;
+    }
+    total.hidden = false;
+    total.textContent = `${totalLabel(quantity)}: ${formatMoney(addButton.dataset.bagCurrency || "$", amount * quantity)}`;
+  };
+  const syncSelectedQuantity = (quantity) => {
+    const next = clampQuantity(quantity);
+    const output = detail.querySelector("[data-product-quantity-value]");
+    const addButton = detail.querySelector(".lux-product-purchase [data-bag-add]");
+    const minus = detail.querySelector('[data-product-quantity="-1"]');
+    const plus = detail.querySelector('[data-product-quantity="1"]');
+    if (output) {
+      output.value = String(next);
+      output.textContent = String(next);
+    }
+    if (addButton) addButton.dataset.bagQuantity = String(next);
+    if (minus) minus.disabled = next <= 1;
+    if (plus) plus.disabled = next >= maxQuantity();
+    updateSelectedTotal(next);
+  };
+
+  const updateProductBagState = () => {
+    const product = products[currentProductId];
+    const state = detail.querySelector("[data-product-cart-state]");
+    if (!product || !state) return;
+    const labels = copy();
+    const quantity = window.LuxureatBag?.items().find((item) => item.id === product.id)?.quantity || 0;
+    state.hidden = !quantity;
+    const text = state.querySelector("[data-product-cart-text]");
+    const total = quantity > 1 ? ` · ${totalLabel(quantity)}: ${formatMoney(product.currency, product.amount * quantity)}` : "";
+    if (text) text.textContent = document.documentElement.lang?.startsWith("zh") ? `已加入购物袋：${quantity}${total}` : `In Cart: ${quantity}${total}`;
+  };
 
   const render = (id, push) => {
     const product = products[id];
     if (!product) return;
+    if (push && !detail.hidden && currentProductId && currentProductId !== id) productStack.push(currentProductId);
+    currentProductId = id;
     const labels = copy();
     const galleryImages = Array.from(new Set(galleryFor(product).filter(Boolean)));
+    const prefix = id.startsWith("zh-") ? "zh-" : "en-";
+    const recommendations = Object.entries(products).filter(([key]) => key !== id && key.startsWith(prefix)).slice(0, 4);
     body.innerHTML = `
       <article>
         <section class="lux-product-hero">
@@ -583,7 +896,7 @@ function initLuxProductDetails() {
             <span>${escapeHtml(product.eyebrow)}</span>
             <h2 id="lux-product-title">${escapeHtml(product.title)}</h2>
             <p>${escapeHtml(product.desc)}</p>
-            <strong>${escapeHtml(product.price)} <small>/ ${escapeHtml(product.unit)}</small></strong>
+            <strong class="lux-product-price">${escapeHtml(product.price)} <small>/ ${escapeHtml(product.unit)}</small><em data-product-total hidden></em></strong>
             <div class="lux-product-purchase">
               <div class="lux-product-qty" aria-label="${escapeHtml(labels.qty)}">
                 <button type="button" data-product-quantity="-1" aria-label="${escapeHtml(labels.qty)} -">−</button>
@@ -591,6 +904,10 @@ function initLuxProductDetails() {
                 <button type="button" data-product-quantity="1" aria-label="${escapeHtml(labels.qty)} +">+</button>
               </div>
               <button type="button" data-bag-add data-bag-quantity="1" data-bag-id="${escapeHtml(product.id)}" data-bag-title="${escapeHtml(product.title)}" data-bag-subtitle="${escapeHtml(product.subtitle)}" data-bag-price="${escapeHtml(product.amount)}" data-bag-currency="${escapeHtml(product.currency)}" data-bag-image="${escapeHtml(product.image)}">${labels.add}</button>
+            </div>
+            <div class="lux-product-cart-state" data-product-cart-state hidden>
+              <span data-product-cart-text></span>
+              <button type="button" data-bag-remove="${escapeHtml(product.id)}">${escapeHtml(labels.remove)}</button>
             </div>
           </div>
         </section>
@@ -601,8 +918,32 @@ function initLuxProductDetails() {
           <h3>${labels.story}</h3>
           <p>${escapeHtml(product.desc)} ${escapeHtml(labels.note)}</p>
         </section>
+        ${recommendations.length ? `<section class="lux-product-recent">
+          <div class="lux-product-recent-inner">
+          <h3>${escapeHtml(labels.recent)}</h3>
+          <div class="lux-product-recent-grid">
+            ${recommendations.map(([key, item]) => `<article class="lux-product-recent-card">
+              <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}">
+              <strong>${escapeHtml(item.title)}</strong>
+              <small>${escapeHtml(item.price)} / ${escapeHtml(item.unit)}</small>
+              <div class="lux-product-recent-actions">
+                <button type="button" data-bag-add data-bag-quantity="1" data-bag-id="${escapeHtml(item.id)}" data-bag-title="${escapeHtml(item.title)}" data-bag-subtitle="${escapeHtml(item.subtitle)}" data-bag-price="${escapeHtml(item.amount)}" data-bag-currency="${escapeHtml(item.currency)}" data-bag-image="${escapeHtml(item.image)}">${escapeHtml(labels.add)}</button>
+                <button type="button" data-product-open="${escapeHtml(key)}">${escapeHtml(labels.detail)}</button>
+              </div>
+            </article>`).join("")}
+          </div>
+          <div class="lux-product-recent-nav">
+            <button type="button" data-product-recent-scroll="-1" aria-label="${escapeHtml(labels.back)}">←</button>
+            <button type="button" data-product-recent-scroll="1" aria-label="${escapeHtml(labels.detail)}">→</button>
+          </div>
+          </div>
+        </section>` : ""}
       </article>`;
+    backButton.textContent = labels.back;
+    backButton.hidden = !productStack.length;
     closeButton.textContent = labels.close;
+    syncSelectedQuantity(1);
+    updateProductBagState();
     detail.hidden = false;
     document.body.classList.add("lux-reader-open");
     body.focus();
@@ -613,6 +954,20 @@ function initLuxProductDetails() {
     }
   };
   detail.addEventListener("click", (event) => {
+    const productBack = event.target.closest("[data-product-back]");
+    if (productBack) {
+      const previous = productStack.pop();
+      if (previous) {
+        render(previous, false);
+        history.replaceState({ luxProduct: previous }, "", `#product-${previous}`);
+      }
+      return;
+    }
+    const recentScroll = event.target.closest("[data-product-recent-scroll]");
+    if (recentScroll) {
+      detail.querySelector(".lux-product-recent-grid")?.scrollBy({ left: Number(recentScroll.dataset.productRecentScroll) * 320, behavior: "smooth" });
+      return;
+    }
     const galleryButton = event.target.closest("[data-product-gallery]");
     if (galleryButton) {
       const thumbImage = galleryButton.querySelector("img");
@@ -627,21 +982,20 @@ function initLuxProductDetails() {
     }
     const button = event.target.closest("[data-product-quantity]");
     if (!button) return;
+    if (button.disabled) return;
     const output = detail.querySelector("[data-product-quantity-value]");
-    const addButton = detail.querySelector("[data-bag-add]");
-    const next = Math.max(1, Number(output?.value || output?.textContent || 1) + Number(button.dataset.productQuantity));
-    if (output) {
-      output.value = String(next);
-      output.textContent = String(next);
-    }
-    if (addButton) addButton.dataset.bagQuantity = String(next);
+    syncSelectedQuantity(Number(output?.value || output?.textContent || 1) + Number(button.dataset.productQuantity));
   });
   const close = () => {
     detail.hidden = true;
     document.body.classList.remove("lux-reader-open");
     if (openedByPush) history.replaceState(null, "", `${location.pathname}${location.search}`);
     openedByPush = false;
+    currentProductId = "";
+    productStack.length = 0;
   };
+
+  document.addEventListener("lux-bag-change", updateProductBagState);
 
   document.addEventListener("click", (event) => {
     const trigger = event.target.closest("[data-product-open]");
@@ -740,11 +1094,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 (() => {
   const key = "luxureatBag";
+  const maxQuantity = 99;
+  const clampQuantity = (quantity) => Math.min(maxQuantity, Math.max(1, Number(quantity) || 1));
 
   const read = () => {
     try {
       const items = JSON.parse(localStorage.getItem(key) || "[]");
-      return Array.isArray(items) ? items : [];
+      return Array.isArray(items) ? items.map((item) => ({ ...item, quantity: clampQuantity(item.quantity) })) : [];
     } catch (_) {
       return [];
     }
@@ -753,6 +1109,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const save = (items) => {
     localStorage.setItem(key, JSON.stringify(items));
     renderBag();
+    document.dispatchEvent?.(new CustomEvent("lux-bag-change"));
     return items;
   };
 
@@ -763,10 +1120,11 @@ document.addEventListener("DOMContentLoaded", () => {
     price: Number(product.price) || 0,
     currency: product.currency || "$",
     image: product.image || "",
-    quantity: Math.max(1, Number(product.quantity) || 1),
+    quantity: clampQuantity(product.quantity),
   });
 
   const api = {
+    maxQuantity,
     items: read,
     add(product) {
       const next = cleanProduct(product || {});
@@ -775,7 +1133,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const items = read();
       const existing = items.find((item) => item.id === next.id);
       if (existing) {
-        existing.quantity += next.quantity;
+        existing.quantity = clampQuantity(existing.quantity + next.quantity);
       } else {
         items.push(next);
       }
@@ -783,8 +1141,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     change(id, delta) {
       const items = read()
-        .map((item) => item.id === id ? { ...item, quantity: item.quantity + delta } : item)
-        .filter((item) => item.quantity > 0);
+        .map((item) => item.id === id ? { ...item, quantity: clampQuantity(item.quantity + delta) } : item);
       return save(items);
     },
     remove(id) {
@@ -834,11 +1191,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const locale = () => document.documentElement.lang?.startsWith("zh") ? "zh" : "en";
+  const detailProductId = (item, lang) => {
+    const id = item.id || "";
+    if (id.includes("imperial-beluga")) return `${lang}-imperial-beluga`;
+    if (id.includes("royal-oscetra")) return `${lang}-royal-oscetra`;
+    if (id.includes("spoon")) return `${lang}-mother-of-pearl`;
+    if (id.includes("champagne")) return `${lang}-champagne`;
+    if (id.includes("ice-server")) return "zh-ice-server";
+    if (id.includes("truffle")) return "en-truffle";
+    return "";
+  };
 
-  const itemHtml = (item, lang) => `
-    <div class="flex flex-col md:flex-row gap-6 p-6 border border-outline-variant/30 bg-surface-container-lowest group" data-bag-item="${escapeHtml(item.id)}">
-      <div class="w-full md:w-48 h-48 overflow-hidden bg-surface-container">
+  const itemHtml = (item, lang) => {
+    const quantity = clampQuantity(item.quantity);
+    const lineTotal = quantity > 1 ? `<small class="lux-bag-line-total">${lang === "zh" ? `${item.quantity}件总价` : `${item.quantity}-item total`} ${money(item.currency, item.price * quantity)}</small>` : "";
+    const detailId = detailProductId(item, lang);
+    const minDisabled = quantity <= 1 ? " disabled aria-disabled=\"true\"" : "";
+    const maxDisabled = quantity >= maxQuantity ? " disabled aria-disabled=\"true\"" : "";
+    return `
+    <div class="lux-bag-item flex flex-col md:flex-row gap-6 p-6 border border-outline-variant/30 bg-surface-container-lowest group" data-bag-item="${escapeHtml(item.id)}">
+      <div class="lux-bag-image w-full md:w-48 h-48 overflow-hidden bg-surface-container">
         ${item.image ? `<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}">` : ""}
+        ${detailId ? `<button class="lux-bag-detail" type="button" data-product-open="${escapeHtml(detailId)}">${lang === "zh" ? "查看详情" : "View Details"}</button>` : ""}
       </div>
       <div class="flex-1 flex flex-col justify-between">
         <div class="flex justify-between gap-6 items-start">
@@ -846,15 +1220,15 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3 class="font-headline-sm text-headline-sm mb-1">${escapeHtml(item.title)}</h3>
             <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4">${escapeHtml(item.subtitle)}</p>
           </div>
-          <span class="font-headline-sm text-headline-sm text-primary whitespace-nowrap">${money(item.currency, item.price)}</span>
+          <span class="lux-bag-price font-headline-sm text-headline-sm text-primary whitespace-nowrap">${money(item.currency, item.price)}${lineTotal}</span>
         </div>
         <div class="flex justify-between items-end mt-8">
           <div class="flex items-center gap-4">
             <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">${lang === "zh" ? "数量" : "Qty"}</span>
             <div class="flex items-center border border-outline-variant/30">
-              <button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high transition-colors" data-bag-change="-1" data-bag-id="${escapeHtml(item.id)}" type="button"><span class="material-symbols-outlined text-sm">remove</span></button>
-              <span class="w-12 text-center font-label-lg">${item.quantity}</span>
-              <button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high transition-colors" data-bag-change="1" data-bag-id="${escapeHtml(item.id)}" type="button"><span class="material-symbols-outlined text-sm">add</span></button>
+              <button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high transition-colors" data-bag-change="-1" data-bag-id="${escapeHtml(item.id)}" type="button"${minDisabled}><span class="material-symbols-outlined text-sm">remove</span></button>
+              <span class="w-12 text-center font-label-lg">${quantity}</span>
+              <button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high transition-colors" data-bag-change="1" data-bag-id="${escapeHtml(item.id)}" type="button"${maxDisabled}><span class="material-symbols-outlined text-sm">add</span></button>
             </div>
           </div>
           <button class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-2 font-label-sm uppercase tracking-widest" data-bag-remove="${escapeHtml(item.id)}" type="button">
@@ -864,11 +1238,19 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     </div>`;
+  };
 
   const updateNavCount = () => {
-    document.querySelectorAll(".lux-actions a[href*='bag']").forEach((link) => {
-      link.dataset.bagLabel ||= link.textContent.trim().replace(/\s*\(\d+\)$/, "");
+    document.querySelectorAll(".lux-actions .lux-bag-link").forEach((link) => {
       const count = api.count();
+      const badge = link.querySelector("[data-bag-count]");
+      if (badge) {
+        badge.textContent = count ? String(count) : "";
+        badge.hidden = count === 0;
+        return;
+      }
+
+      link.dataset.bagLabel ||= link.textContent.trim().replace(/\s*\(\d+\)$/, "");
       link.textContent = count ? `${link.dataset.bagLabel} (${count})` : link.dataset.bagLabel;
     });
   };
@@ -906,6 +1288,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const changeButton = event.target.closest("[data-bag-change]");
     if (changeButton) {
+      if (changeButton.disabled) return;
       api.change(changeButton.dataset.bagId, Number(changeButton.dataset.bagChange));
       return;
     }
@@ -915,4 +1298,163 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("DOMContentLoaded", renderBag);
+})();
+
+(() => {
+  const icons = {
+    x: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>',
+    mail: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>',
+    lock: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>',
+    logIn: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg>',
+    logOut: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></svg>',
+    userPlus: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>',
+    circle: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle></svg>',
+    message: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>',
+  };
+
+  const isZh = () => document.documentElement.lang?.toLowerCase().startsWith("zh") || location.pathname.includes("/zh/");
+  const copy = () => isZh() ? {
+    close: "关闭",
+    signIn: "登录账号",
+    create: "创建账号",
+    subtitleSignIn: "欢迎回到您的 LuxurEat 账户。",
+    subtitleCreate: "创建您的 LuxurEat 账户。",
+    email: "电子邮箱",
+    password: "密码",
+    remember: "记住我",
+    forgot: "忘记密码？",
+    divider: "或使用以下方式登录",
+    signOut: "退出登录",
+  } : {
+    close: "Close",
+    signIn: "Sign In",
+    create: "Create Account",
+    subtitleSignIn: "Welcome back to your LuxurEat account.",
+    subtitleCreate: "Create your LuxurEat account.",
+    email: "Email Address",
+    password: "Password",
+    remember: "Remember Me",
+    forgot: "Forgot Password?",
+    divider: "Or Sign In With",
+    signOut: "Sign Out",
+  };
+
+  const modalHtml = () => {
+    const text = copy();
+    return `
+    <div class="lux-account-modal" data-account-modal aria-hidden="true">
+      <div class="lux-account-dialog" role="dialog" aria-modal="true" aria-labelledby="lux-account-title">
+        <button class="lux-account-close" type="button" data-account-close aria-label="${text.close}">${icons.x}</button>
+        <section class="lux-account-form">
+          <header class="lux-account-head">
+            <span class="lux-account-icon" data-account-icon>${icons.logIn}</span>
+            <h2 id="lux-account-title" data-account-title>${text.signIn}</h2>
+            <p data-account-subtitle>${text.subtitleSignIn}</p>
+          </header>
+          <form>
+            <label class="lux-account-field">
+              <span>${text.email}</span>
+              <div class="lux-account-input">${icons.mail}<input type="email" placeholder="concierge@luxureat.com" autocomplete="email"></div>
+            </label>
+            <label class="lux-account-field">
+              <span>${text.password}</span>
+              <div class="lux-account-input">${icons.lock}<input type="password" placeholder="••••••••" autocomplete="current-password"></div>
+            </label>
+            <div class="lux-account-row">
+              <label><input type="checkbox"><span>${text.remember}</span></label>
+              <a href="contact.html">${text.forgot}</a>
+            </div>
+            <button class="lux-account-submit" type="submit" data-account-submit>${icons.logIn}<span>${text.signIn}</span></button>
+          </form>
+          <div class="lux-account-divider">${text.divider}</div>
+          <div class="lux-account-social">
+            <button type="button">${icons.circle}Google</button>
+            <button type="button">${icons.message}WeChat</button>
+          </div>
+          <button class="lux-account-toggle" type="button" data-account-toggle>${icons.userPlus}<span>${text.create}</span></button>
+          <button class="lux-account-logout" type="button">${icons.logOut}<span>${text.signOut}</span></button>
+        </section>
+      </div>
+    </div>`;
+  };
+
+  let lastFocus = null;
+
+  const modal = () => document.querySelector("[data-account-modal]");
+
+  const ensureModal = () => {
+    if (!modal()) document.body.insertAdjacentHTML("beforeend", modalHtml());
+    return modal();
+  };
+
+  const setOpen = (open) => {
+    const node = ensureModal();
+    node.classList.toggle("is-open", open);
+    node.setAttribute("aria-hidden", String(!open));
+    document.body.style.overflow = open ? "hidden" : "";
+    if (open) {
+      lastFocus = document.activeElement;
+      requestAnimationFrame(() => node.querySelector("input")?.focus());
+    } else {
+      lastFocus?.focus?.();
+    }
+  };
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("[data-account-open]")) {
+      setOpen(true);
+      return;
+    }
+    if (event.target.closest("[data-account-close]") || event.target === modal()) {
+      setOpen(false);
+      return;
+    }
+    if (event.target.closest("[data-account-toggle]")) {
+      const node = ensureModal();
+      const title = node.querySelector("[data-account-title]");
+      const subtitle = node.querySelector("[data-account-subtitle]");
+      const toggle = node.querySelector("[data-account-toggle]");
+      const submit = node.querySelector("[data-account-submit]");
+      const headerIcon = node.querySelector("[data-account-icon]");
+      const text = copy();
+      const creating = title.textContent === text.signIn;
+      title.textContent = creating ? text.create : text.signIn;
+      subtitle.textContent = creating ? text.subtitleCreate : text.subtitleSignIn;
+      headerIcon.innerHTML = creating ? icons.userPlus : icons.logIn;
+      toggle.innerHTML = creating ? `${icons.logIn}<span>${text.signIn}</span>` : `${icons.userPlus}<span>${text.create}</span>`;
+      submit.innerHTML = creating ? `${icons.userPlus}<span>${text.create}</span>` : `${icons.logIn}<span>${text.signIn}</span>`;
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal()?.classList.contains("is-open")) setOpen(false);
+  });
+})();
+
+(() => {
+  const icons = {
+    mail: '<svg class="lux-lucide lux-inline-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>',
+    phone: '<svg class="lux-lucide lux-inline-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.91.33 1.8.62 2.65a2 2 0 0 1-.45 2.11L8 9.71a16 16 0 0 0 6.29 6.29l1.23-1.23a2 2 0 0 1 2.11-.45c.85.29 1.74.5 2.65.62A2 2 0 0 1 22 16.92z"></path></svg>',
+    message: '<svg class="lux-lucide lux-inline-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>',
+    external: '<svg class="lux-lucide lux-inline-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>',
+    shield: '<svg class="lux-lucide lux-inline-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>',
+    file: '<svg class="lux-lucide lux-inline-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>',
+    truck: '<svg class="lux-lucide lux-inline-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>',
+  };
+
+  const prependIcon = (node, icon) => {
+    if (!node || node.classList.contains("lux-with-icon")) return;
+    node.classList.add("lux-with-icon");
+    node.insertAdjacentHTML("afterbegin", icon);
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".lux-footer a[href^='mailto:']").forEach((node) => prependIcon(node, icons.mail));
+    document.querySelectorAll(".lux-footer a[href^='tel:']").forEach((node) => prependIcon(node, icons.phone));
+    document.querySelectorAll(".lux-footer-social a").forEach((node) => prependIcon(node, icons.external));
+    document.querySelectorAll(".lux-footer [data-footer-modal='wechat']").forEach((node) => prependIcon(node, icons.message));
+    document.querySelectorAll(".lux-footer [data-footer-modal='privacy']").forEach((node) => prependIcon(node, icons.shield));
+    document.querySelectorAll(".lux-footer [data-footer-modal='terms']").forEach((node) => prependIcon(node, icons.file));
+    document.querySelectorAll(".lux-footer [data-footer-modal='shipping']").forEach((node) => prependIcon(node, icons.truck));
+  });
 })();

@@ -131,7 +131,8 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
   <div class="lux-actions">
-    <a href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>">Shopping Bag</a>
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="Account sign in"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a class="" href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">ZH</a><span>/</span><a class="active" href="#">EN</a></span>
     <button class="lux-menu" type="button" data-open="Close" data-closed="Menu" aria-expanded="false">Menu</button>
   </div>
@@ -143,7 +144,7 @@
 <!-- Hero Section -->
 <section class="relative w-full min-h-[70vh] flex items-center justify-center border-b border-white/5 overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center opacity-40" data-alt="A highly atmospheric, dark and moody macro photograph of an opulent table setting. In focus is an open, matte black caviar tin with subtle gold trim. Surrounding it are exquisite mother-of-pearl spoons and a fleeting glimpse of a crisp Tiffany blue silk ribbon resting on dark, heavily textured slate. The lighting is cinematic, with soft rim lights highlighting the pearls of caviar, embodying extreme luxury and high-contrast minimalism." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACj45Bif56FyFgQnuuc1kiyxJiCR0NdDNSlyTitpWjHAsANGhjcQWc0CR5BZsUT-89o5OvAWYU8otRJNYPOjUz5_Lw_9kuvELRpJ9ybJTffVKZLFYalKycjZ1ze2ZURcG-G7XHFB02JHxQjUzqgHQPhjCL5Pugr8HBCjk5Jdwda7c-81v13CeoXFJYtqd7kEdN04lW99AgKB5vZmC2cRm0dA5QUmwx9w1hOBp7GYboqFQbSDhjKScPFnnKv4_SrekEjeXTPnEs9mU')"></div>
+<div class="w-full h-full bg-cover bg-center opacity-40" data-alt="A highly atmospheric, dark and moody macro photograph of an opulent table setting. In focus is an open, matte black caviar tin with subtle gold trim. Surrounding it are exquisite mother-of-pearl spoons and a fleeting glimpse of a crisp Tiffany blue silk ribbon resting on dark, heavily textured slate. The lighting is cinematic, with soft rim lights highlighting the pearls of caviar, embodying extreme luxury and high-contrast minimalism." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-007.jpg'); ?>')"></div>
 <!-- Gradient overlay for text readability -->
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
@@ -169,7 +170,7 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter auto-rows-fr">
 <!-- Featured Item (Spans 2 columns on desktop) -->
 <div class="md:col-span-2 group relative overflow-hidden bg-surface-container-low border border-white/5 min-h-[400px] flex flex-col justify-end p-8">
-<div class="absolute inset-0 bg-cover bg-center img-reveal z-0" data-alt="A pristine, eye-level studio shot of a massive, multi-tiered black luxury gift box, open to reveal three distinct tins of different caviar varieties resting on crushed ice. Beside them sits a set of crystal vodka flutes. The background is pure, deep black. The lighting is precise, creating subtle reflections on the crystal and highlighting the rich textures of the packaging. Minimalist, architectural composition." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6_4LJSgbksLqlpc3bcG3UmA0w8_Kl_W3Qj5Xqc-J6idwMwiX4K1vIhCL_eOqy9uUf68tv5v3xg5vxu86fTHl2c0pHjQgd6R_NFcwPOJL0ivS6uoNO8uEs2T6_aPmcKJILBqDHZUSaQ-Iwh0N5FTELAdUWuHnOQLCtkIcpfqjIk_lTFva_csJNfqcga1iWl6DQxTADJ3NV2774_w8DB1GqszeU4VLx4s3ll1vvBEs9Ws_EgfjtL8ePH2mjRrsspF4D1c-281MfuNM')"></div>
+<div class="absolute inset-0 bg-cover bg-center img-reveal z-0" data-alt="A pristine, eye-level studio shot of a massive, multi-tiered black luxury gift box, open to reveal three distinct tins of different caviar varieties resting on crushed ice. Beside them sits a set of crystal vodka flutes. The background is pure, deep black. The lighting is precise, creating subtle reflections on the crystal and highlighting the rich textures of the packaging. Minimalist, architectural composition." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-023.jpg'); ?>')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent z-10"></div>
 <div class="relative z-20">
 <span class="inline-block px-3 py-1 border border-primary/30 text-primary font-body-md text-label-sm uppercase tracking-widest mb-4">The Grand Reserve</span>
@@ -180,7 +181,7 @@
 </div>
 <!-- Standard Item -->
 <div class="group relative overflow-hidden bg-surface-container-low border border-white/5 min-h-[400px] flex flex-col justify-end p-8">
-<div class="absolute inset-0 bg-cover bg-center img-reveal z-0" data-alt="A top-down, tightly cropped shot of a single, sleek matte black rectangular presentation box containing one tin of premium Oscietra caviar and a single tasting spoon. The box is subtly debossed with a geometric pattern. The lighting casts long, dramatic shadows across a dark slate surface, emphasizing exclusivity and modern minimalism." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCI50MSpxsulUtRdxLWpqKRtJLdPPmIKK8eJutySmbtZMd4Ftrq6E-8T9xBi38vawX9u5WjANXwih3SQBPgnVR89FZBLy04DhCGdC1VRs06uQaN-XpYx_vHJbSvd7jrVn9Dq_YaEU2_9VD_-2rtBVudlkpSX4WeB0XbU6VxdLFM1Eu-OWNxV9OtbEOwOvmWthpr2Zcu1KvGnkzR6R3BsVzx-v5xXihAMQZAsSbbmYGdnMYrBrFJGQmeQrMRixoxn8UgVog-bBAeM3E')"></div>
+<div class="absolute inset-0 bg-cover bg-center img-reveal z-0" data-alt="A top-down, tightly cropped shot of a single, sleek matte black rectangular presentation box containing one tin of premium Oscietra caviar and a single tasting spoon. The box is subtly debossed with a geometric pattern. The lighting casts long, dramatic shadows across a dark slate surface, emphasizing exclusivity and modern minimalism." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-035.jpg'); ?>')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent z-10"></div>
 <div class="relative z-20">
 <h3 class="font-headline-md text-headline-sm text-on-surface mb-2 font-display">The Initiation</h3>
@@ -190,7 +191,7 @@
 </div>
 <!-- Standard Item -->
 <div class="group relative overflow-hidden bg-surface-container-low border border-white/5 min-h-[400px] flex flex-col justify-end p-8">
-<div class="absolute inset-0 bg-cover bg-center img-reveal z-0" data-alt="A close-up shot focusing on the intricate customization of a luxury gift box. We see a person wearing a pristine white glove carefully sliding a custom-engraved gold plaque into a designated slot on a textured black box. The depth of field is shallow, blurring out the background to focus entirely on the craftsmanship and personalization process. High-end, gallery-like lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRaCEYPbDOk-7sit4LaFoKzSUPecMRdLYdEQpx-5LSixbvNEUvHYKMCqqm0HTq8Nt30YXuTgWenH8YqL_6aw-twgv9mI24KvjGyb31TheAf5FoyxLp-BacE8WSJ21E5oGjXBO-j-NJ1lJVo6pinjFaNnoUN90-fYQTPVq5PYqAqMxVrxpCTa9TpKbc99u_rfHOP0sGqZ5rV8ZorGeiTodiMJwVxi5_6Nfl2Oh63PbmpLK5CKv8N1BeR4HQMWoNmQf11HTN74i9Va4')"></div>
+<div class="absolute inset-0 bg-cover bg-center img-reveal z-0" data-alt="A close-up shot focusing on the intricate customization of a luxury gift box. We see a person wearing a pristine white glove carefully sliding a custom-engraved gold plaque into a designated slot on a textured black box. The depth of field is shallow, blurring out the background to focus entirely on the craftsmanship and personalization process. High-end, gallery-like lighting." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-045.jpg'); ?>')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent z-10"></div>
 <div class="relative z-20">
 <h3 class="font-headline-md text-headline-sm text-on-surface mb-2 font-display">Bespoke Engraving</h3>
@@ -210,7 +211,7 @@
                         </button>
 </div>
 <div class="hidden md:block absolute right-0 top-0 bottom-0 w-1/2 z-0">
-<div class="w-full h-full bg-cover bg-center img-reveal" data-alt="A highly stylized, symmetrical architectural composition showing rows of identical, immaculate black caviar tins lined up perfectly on long, dark glass shelves inside a climate-controlled vault. The lighting is cool and clinical yet extremely luxurious, emphasizing pristine inventory and scale. Subtle reflections create a sense of infinite depth." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXzT9S2pvtc0hXakKNG86KpiMMvcSwVVZdgoZyI7fUTykd20scQKyEdOuYBmOnrrDh-3KQN34_jA7oV9FBE-Gkxmd6YHccyAKoZuuaKeI8EeJztI7eYtHMMSMjKABrtzdXprOtlmjUI6HNuoNbhqn0ApB4gqWNDBu0LggP3KTzIxl0jUGos1qS1-zuUktr9g0rM2JmL9EOH7aI1uF-kEBkns7X1noXuo-7fJQWci3gCXpagRClMZBjf6LTk37JOl_QrSmkg3WtSIk')"></div>
+<div class="w-full h-full bg-cover bg-center img-reveal" data-alt="A highly stylized, symmetrical architectural composition showing rows of identical, immaculate black caviar tins lined up perfectly on long, dark glass shelves inside a climate-controlled vault. The lighting is cool and clinical yet extremely luxurious, emphasizing pristine inventory and scale. Subtle reflections create a sense of infinite depth." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-047.jpg'); ?>')"></div>
 <div class="absolute inset-0 bg-gradient-to-r from-surface-container-low to-transparent"></div>
 </div>
 </div>
@@ -245,7 +246,7 @@
 </ul>
 </div>
 <a class="lux-partner-card w-full md:w-7/12 order-1 md:order-2" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">
-<span class="lux-partner-card-bg" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLtj8_-kH0C2D9jsYEVVTyu5RoaJqJbyKt-I-cjbB2BHpOXUy8OdVqa3kgmhIglNa89ERezAio1UNfuLqEUhHdxu6Uk7tMEmIy_7OFRqT_fHePhYQFc_cwegtT-oyQYb7p_OGxfKNDMbWHKWySbYBfC7E2-OFCd2rZQwlyODXK4H3rHXZJECH-KWHpK5v88-bwpDPlCVPY1F8AsNZhIUKObfzy5NcEVbayPz-1BLZOfS1Vcjs6SKQMH_IRs');"></span>
+<span class="lux-partner-card-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-050.jpg'); ?>');"></span>
 <span class="lux-partner-card-content">
 <strong>Reference Plan</strong>
 <em>Contact Us</em>
@@ -265,9 +266,10 @@
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>An odyssey of taste, sourcing the rarest delicacies through sustainable practices and uncompromising quality standards.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">Rednote</a><button type="button" data-footer-modal="wechat">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">Weibo</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:15721452475">15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LuxurEat Maison. CITES & FDA Certified.</div>
 </footer>
+
 <?php wp_footer(); ?>
 </body></html>

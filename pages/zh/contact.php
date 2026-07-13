@@ -138,7 +138,8 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a class="active" href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
   <div class="lux-actions">
-    <a href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>">购物袋</a>
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>" aria-label="购物袋"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="个人登录"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a class="active" href="#">ZH</a><span>/</span><a class="" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">EN</a></span>
     <button class="lux-menu" type="button" data-open="关闭" data-closed="菜单" aria-expanded="false">菜单</button>
   </div>
@@ -149,7 +150,7 @@
 <main>
 <!-- Hero Section -->
 <section class="lux-dark-photo-block lux-photo-fade-bottom lux-bright-photo relative h-[60vh] flex items-center justify-center overflow-hidden">
-<div class="lux-dark-photo-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBE2kiv0wrknqzvXmDfr7JGTBcOCswFPRM37AD1qUYhjlgMVWHD93EyzGO_lV0Q-oPm4F0BgQQIFrej_GO5ObbfB5DFVcGREoOIxGHGWMTenMxyxI94dd1y1dz3NcPu9GHesarnhjjoHoqWTGYt2-uNKxljtJGopFhjzFHw2_W9EXZulN6muDqO_DhhdGM0SDazjPQ_L9FMAkPTglu_dZet6NYgwcT0_JR_Pu05BG1Cp574tsXdHXg4gk13VJwShbG7ozS0Ydtbibc')"></div>
+<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-024.jpg'); ?>')"></div>
 
 <div class="relative z-10 text-center space-y-4">
 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-widest uppercase">联系我们</h1>
@@ -201,7 +202,7 @@
 <div class="space-y-4">
 <h3 class="font-headline-sm text-secondary uppercase tracking-wider">客户服务 CONTACT</h3>
 <p class="font-body-md text-on-surface/70 leading-relaxed">
-                                电话: <a class="inline text-on-surface hover:text-primary" href="tel:15721452475">15721452475</a><br>
+                                电话: <a class="inline text-on-surface hover:text-primary" href="tel:+8615721452475">+86 15721452475</a><br>
                                 邮箱: <a class="inline text-on-surface hover:text-primary" href="mailto:china@luxureat.com">china@luxureat.com</a><br>
                                 工作时间: 周一至周五 09:00 - 18:00
                             </p>
@@ -246,10 +247,10 @@
                         </p>
 <div class="flex gap-4">
 <div class="h-24 w-1/3 overflow-hidden rounded">
-<div class="w-full h-full bg-cover bg-center" data-alt="Close up of a luxury hotel lobby with minimalist dark marble floors and warm ambient lighting, representing a premium B2B partnership setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6saEECdsrKK2WGHbaGlrwOJe83ITQRnVxHTpAXlre3Ib2YzPY_PV_gn-z2NKrv8aZvug4g2qwt6M8EZcnXEDgbo2N3v4CtQatqb348GG8YtmyJKkNJQVexJ0t1-7eNJirbB4a6p_Qijt9uJ_wYEBX7YbIpmbg766J1__HtcKO_gZgNAyJCCIhcFBQ6co0Wm2ixwoqIRSDixkRgij5cAe13O6f71msNjrb7nFL4ygiAuTRJyBpO02WNcXaO_T9UUeQ9N2WIWeX3dA')"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Close up of a luxury hotel lobby with minimalist dark marble floors and warm ambient lighting, representing a premium B2B partnership setting." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-031.jpg'); ?>')"></div>
 </div>
 <div class="h-24 w-1/3 overflow-hidden rounded">
-<div class="w-full h-full bg-cover bg-center" data-alt="A sophisticated corporate gift box featuring a gold logo on a matte black texture, surrounded by high-end packaging materials." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAid-od7ot0ef7LzZs30UrI-RFkArVZ3_xlD4gFX8MJSTnd5B0RF4wkBXJkXfb3PqBlsBZr9XmdC0jhvBP3xOnve5bAXwm7qUr7UndFTPbd6qbK5-aEE3Xvo5wuG-nbDpiksFT5AmblsSjkCjYLaezvw7sWkDxscK4K3cQyXkKgk69Mk3ZrxFOFqixfxXO52tZow5UG525mA5Lw1BdC1lyTJCbVHu1gQGjyyYzLPe9BTDSfNbHmqrZV-um96sl981vPmuq-OlMPsMw')"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A sophisticated corporate gift box featuring a gold logo on a matte black texture, surrounded by high-end packaging materials." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-015.jpg'); ?>')"></div>
 </div>
 <div class="h-24 w-1/3 overflow-hidden rounded flex items-center justify-center bg-on-surface/5 border border-on-surface/10">
 <span class="text-label-sm text-on-surface/40 uppercase">View Port</span>
@@ -267,17 +268,40 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center space-y-16">
 <div class="space-y-4">
 <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface tracking-tighter">全球足迹</h2>
-<p class="font-body-md text-on-surface/40 uppercase tracking-widest">Shanghai • Paris • Tokyo • New York</p>
+<p class="font-body-md text-on-surface/40 uppercase tracking-widest">Italy • United States • Thailand • China</p>
 </div>
-<div class="relative h-[400px] w-full flex items-center justify-center">
-<div class="absolute inset-0 grayscale opacity-20 hover:opacity-40 transition-opacity duration-1000" data-alt="A stylized minimalist world map with glowing dots indicating major global luxury capitals like Shanghai, Paris, and New York, rendered in dark tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAjqYcv3I7k2-MFXKOhWNYhR731YYGK61NfiJyLCErgj9dgt5RHZu8-wlX4MdXt-xfdFaHifkI3psY_6lNHNyx03REfPQscj1NweP8Qx3xm8ZHOQ_k4bmIpFuCqCZ3mWFb0Ftvppha6NLTj8t6FNI6sYcmZk92JMjoUXRWadZtl9PgDZNHXC1W7zcfwL4PZFymmJ5WKEbmQkZD9b2Q8XZE91utyy0Q2h96yifHJqyCB-YLLfrIHmO_LK6f3I7zDrL-jdDN5XCptGhY')"></div>
-<div class="relative z-10 glass-panel px-12 py-8 max-w-md">
-<p class="font-body-lg text-primary mb-2">LUXUREAT 授权精品店</p>
-<p class="font-body-md text-on-surface/70">寻找您附近的品鉴中心，体验现场开罐的醇厚质感。</p>
-<div class="mt-6 flex justify-center gap-4">
-<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform" data-icon="location_on">location_on</span>
-<span class="font-label-lg tracking-widest text-on-surface">门店检索 LOCATOR</span>
-</div>
+<div class="lux-footprint-stage relative min-h-[520px] w-full flex items-center justify-center py-12">
+<div class="absolute inset-0 bg-cover bg-center" data-footprint-bg data-alt="A stylized minimalist world map with glowing dots indicating major global luxury capitals like Shanghai, Paris, and New York, rendered in dark tones." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-016.jpg'); ?>')"></div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 w-full">
+<article class="lux-footprint-card glass-panel p-6 text-left">
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">local_dining</span><strong>Italy</strong><small>Truffleat Srl</small></div>
+<p>Via Tuscania 9, 01028 Orte (VT)</p>
+<p>Legal Office: Via Tiberina km 9.2, 00060 Riano (RM)</p>
+<a href="mailto:info@truffleat.com">info@truffleat.com</a>
+<a href="tel:+393515111273">+39 351 5111273</a>
+<a href="https://www.truffleat.com" target="_blank" rel="noopener">www.truffleat.com</a>
+</article>
+<article class="lux-footprint-card glass-panel p-6 text-left">
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">location_city</span><strong>United States</strong><small>Seattle · Luxureat LLC</small></div>
+<p>605 Center Rd Apt A203<br>Everett, WA 98204, USA</p>
+<a href="mailto:info@luxureat.com">info@luxureat.com</a>
+<a href="tel:+14256266318">+1 425 626 6318</a>
+<p>George Ugolini — Manager &amp; USA Headquarters Manager</p>
+</article>
+<article class="lux-footprint-card glass-panel p-6 text-left">
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">temple_buddhist</span><strong>Thailand</strong><small>Bangkok · Truffleat Co., Ltd</small></div>
+<p>11 Narathiwat Ratchanakarin Soi 8, Thung Wat Don, Sathon, Bangkok 10120, Thailand</p>
+<a href="mailto:info@truffle.co.th">info@truffle.co.th</a>
+<a href="tel:+6626799441">+66 2 679 9441</a>
+<a href="https://wa.me/66811331337" target="_blank" rel="noopener">WhatsApp: +66 811 331 337</a>
+</article>
+<article class="lux-footprint-card glass-panel p-6 text-left">
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">account_balance</span><strong>China</strong><small>Shanghai · LuxurEat China Ltd</small></div>
+<p>Sala 505, Building A, 389, Lianming Road, Minhang District, Shanghai</p>
+<p>Yuan Pengfei</p>
+<a href="mailto:china@luxureat.com">china@luxureat.com</a>
+<a href="tel:+8615721452475">+86 15721452475</a>
+</article>
 </div>
 </div>
 </div>
@@ -308,9 +332,10 @@
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>一场关于味觉的奥德赛，通过可持续发展的实践与毫不妥协的质量标准，为您搜寻世间罕有的绝世美味。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">小红书</a><button type="button" data-footer-modal="wechat">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">微博</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:15721452475">15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LUXUREAT MAISON. 已获 CITES & FDA 认证.</div>
 </footer>
+
 <?php wp_footer(); ?>
 </body></html>

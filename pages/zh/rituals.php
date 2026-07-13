@@ -143,7 +143,8 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a class="active" href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
   <div class="lux-actions">
-    <a href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>">购物袋</a>
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>" aria-label="购物袋"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="个人登录"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a class="active" href="#">ZH</a><span>/</span><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">EN</a></span>
     <button class="lux-menu" type="button" data-open="关闭" data-closed="菜单" aria-expanded="false">菜单</button>
   </div>
@@ -155,7 +156,7 @@
 <!-- Hero Section -->
 <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center scale-110" data-alt="A cinematic, high-contrast close-up shot of glossy black caviar grains resting on a mother-of-pearl spoon. The lighting is dramatic and moody, highlighting the iridescent textures of the spoon and the liquid sheen of the sturgeon roe. Deep shadows surround the subject, creating an atmosphere of intense luxury and culinary reverence. The overall palette is dominated by obsidian blacks, shimmering whites, and subtle cool tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBa7Oj2ngaBTd8Iwa6hlnDzlR0Ah9moJQm14y2JXwigY8KO1vo7EkCO0DxTOFWi3DnYQFE0QmMHVCzPIz1ras61KUDWb9x-bj83Kj-me7Hkpmf4FvyQmm8Kil2U4IXASh6UsnD97ybCsVGRrcZ9ktrA2BYqCEyy7gVCEzsPg7SnUZIdNOSxSbXPYqh9XATJWkbNbOeirxIXxGfWMfAuDRvDomkxMTU7bB-eUvi1m2VTltb3ifRAgqa0XDNH5LOzG5kLO6jwYNJu1ag')"></div>
+<div class="w-full h-full bg-cover bg-center scale-110" data-alt="A cinematic, high-contrast close-up shot of glossy black caviar grains resting on a mother-of-pearl spoon. The lighting is dramatic and moody, highlighting the iridescent textures of the spoon and the liquid sheen of the sturgeon roe. Deep shadows surround the subject, creating an atmosphere of intense luxury and culinary reverence. The overall palette is dominated by obsidian blacks, shimmering whites, and subtle cool tones." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-028.jpg'); ?>')"></div>
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
 <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop">
@@ -186,7 +187,7 @@
                     </p>
 </div>
 <div class="md:col-span-6 md:col-start-7 relative reveal-on-scroll active">
-<div class="aspect-[4/5] bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl" data-alt="A vintage-inspired editorial photograph of an artisan's hands carefully inspecting golden and black sturgeon caviar in a minimalist, dimly lit Italian workshop. The aesthetic is clean and architectural, with soft directional lighting emphasizing the textures of the roe. The color palette is low-saturation, focusing on charcoal, graphite, and pale gold highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYgBK4VOpBPwSsJ8wL_Kn-YBt0tCxs9hZo8QuGiixjvAXDz0PuRavmTfjPM6bb1_mF-hllFDuAEOGE9r5hO9wr_BcBjnJbk6YxSEHb50GJy0rzXYXBkY2X4XCzD-ZrIVvgxiadoMHajM87OzsBEhbE6hyHMC6QSvL7VZCoxjbJF-_2I2ma-iERxPz-vPS4hJn127YN1bVc-6c6_RWHT2IM2Bz2puj0U5NHpuPTfWTzLVqCmGkglpznJBaedJ0YXlucbc8srgLxPMg')"></div>
+<div class="aspect-[4/5] bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl" data-alt="A vintage-inspired editorial photograph of an artisan's hands carefully inspecting golden and black sturgeon caviar in a minimalist, dimly lit Italian workshop. The aesthetic is clean and architectural, with soft directional lighting emphasizing the textures of the roe. The color palette is low-saturation, focusing on charcoal, graphite, and pale gold highlights." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-013.jpg'); ?>')"></div>
 <div class="absolute -bottom-10 -left-10 w-64 h-64 border-l border-b border-primary/20 -z-10"></div>
 </div>
 </div>
@@ -201,7 +202,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
 <div class="reveal-on-scroll lux-reader-card group cursor-pointer active">
 <div class="overflow-hidden mb-8 border border-outline-variant/10 lux-reader-media">
-<div class="aspect-video bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A high-end luxury setup featuring a crystal glass of premium vintage champagne next to an open tin of caviar. The bubbles in the champagne are captured in sharp detail, shimmering against a dark charcoal background. The composition is asymmetrical and balanced, evoking the feeling of an exclusive private club. Lighting is focused and theatrical." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoPRwxvQOmHqNT232yA2aUY2zRh1_cnBBvXcKRHewJ4aG_PfIFz8MXLQLsJiLIyUXslsOfWrXxfollJKQF6lQZQfCsqqVLbIZiJHunsWkso0aiISFUQcyq8_4wO9J3Gt25hLpv-iiHdTqLalW-P_sHArq8JlUO0ycSBH8zid4OLED2c4J6FFIv6GMMsKRoK5L5dWur-IHLjpXYq8hv7Zw8bHiNvjDBEhV7eZA6fU9Hu0wvOQ4k0uci3OHhrWTZdOOQ4ZT-wkRW13Y')"></div>
+<div class="aspect-video bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A high-end luxury setup featuring a crystal glass of premium vintage champagne next to an open tin of caviar. The bubbles in the champagne are captured in sharp detail, shimmering against a dark charcoal background. The composition is asymmetrical and balanced, evoking the feeling of an exclusive private club. Lighting is focused and theatrical." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-029.jpg'); ?>')"></div>
 <button type="button" class="lux-reader-cta" data-reader-open="zh-champagne">阅读详情</button>
 </div>
 <h3 class="font-headline-sm text-headline-sm mb-4">香槟之韵</h3>
@@ -211,7 +212,7 @@
 </div>
 <div class="reveal-on-scroll lux-reader-card group cursor-pointer md:mt-24 active">
 <div class="overflow-hidden mb-8 border border-outline-variant/10 lux-reader-media">
-<div class="aspect-video bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="Close-up of a handcrafted mother-of-pearl spoon resting on a dark slate surface. The iridescent colors of the shell glow under a soft spotlight, contrasting with the matte texture of the stone. A single cluster of caviar pearls rests on the spoon. The image captures a sense of quiet elegance and ritual." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZQcq4hfiLU3hNPVytnsfWjFbSXPVMC0ZEe6Jo0kK6b7vRdcaEs3ISV22gseD6C-hcP_-8Er8ha6yZzwUFvnUXMiye9wgrs0mVPIJCsgrJ4hqtlDG_lMYdPdnPPpHg_rQ4kSoSoMBKB0vJwAV_7niM0AX1Yc-AEeuvZl8k8cuLTBQZHKeAPPZLu6dE00svFteMahQNJ-2gt8rqXByzIrJgj0kF-BM29DieNSBStG8btLmXTHvM3d1vdSLqFMsjHj7m8DVKZCXWZE8')"></div>
+<div class="aspect-video bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="Close-up of a handcrafted mother-of-pearl spoon resting on a dark slate surface. The iridescent colors of the shell glow under a soft spotlight, contrasting with the matte texture of the stone. A single cluster of caviar pearls rests on the spoon. The image captures a sense of quiet elegance and ritual." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-014.jpg'); ?>')"></div>
 <button type="button" class="lux-reader-cta" data-reader-open="zh-mother-of-pearl">阅读详情</button>
 </div>
 <h3 class="font-headline-sm text-headline-sm mb-4">贝母触感</h3>
@@ -236,8 +237,8 @@
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[300px]">
-<div class="md:col-span-2 md:row-span-2 bg-surface-container-high p-12 flex flex-col justify-end relative overflow-hidden group reveal-on-scroll lux-reader-card active">
-<div class="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700 bg-cover bg-center" data-alt="Macro photography of ice crystals forming on a dark metal surface, representing the perfect temperature control for caviar service. The aesthetic is cold, sharp, and luxurious." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuArTA1mThEQlgdeKhq1a1qk7BY1FOECljmMEQfow2mbJ-16zYvs7dwl6eCJBRVdHYePXDlrlbjx0P6W1fLwVMNFaj_pbhC0BoTOEH3bTI2TaSSms-d0eCsWci2zeN3jdYy0VT6HvU3aJxAD7NDrt94Nt2AZAg8CHN1OOpUnSTGRjsHHFxEBW7-tKOeRWC7Vp81Lyul15F6QZ_nmXjIBFIPABRiSKs_p0dgCt6dr7V7dxAPgrY1D-XnEQ1lgPePLR8I2lOAomEZLb5k')"></div>
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-high p-12 flex flex-col justify-end relative overflow-hidden group reveal-on-scroll lux-reader-card cursor-pointer active" data-reader-open="zh-ice-server">
+<div class="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700 bg-cover bg-center" data-alt="Macro photography of ice crystals forming on a dark metal surface, representing the perfect temperature control for caviar service. The aesthetic is cold, sharp, and luxurious." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-019.jpg'); ?>')"></div>
 <button type="button" class="lux-reader-cta" data-reader-open="zh-ice-server">阅读详情</button>
 <div class="relative z-10">
 <span class="font-display-lg text-primary/30 text-[100px] leading-none block mb-4">01</span>
@@ -245,40 +246,43 @@
 <p class="font-body-md text-body-md text-on-surface-variant">将罐体置于碎冰之上，保持在-2°C至2°C之间。这是开启“黑金”之门的第一把钥匙。</p>
 </div>
 </div>
-<div class="md:col-span-2 lux-dark-photo-block flex items-center p-12 reveal-on-scroll active">
-<div class="lux-dark-photo-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoPRwxvQOmHqNT232yA2aUY2zRh1_cnBBvXcKRHewJ4aG_PfIFz8MXLQLsJiLIyUXslsOfWrXxfollJKQF6lQZQfCsqqVLbIZiJHunsWkso0aiISFUQcyq8_4wO9J3Gt25hLpv-iiHdTqLalW-P_sHArq8JlUO0ycSBH8zid4OLED2c4J6FFIv6GMMsKRoK5L5dWur-IHLjpXYq8hv7Zw8bHiNvjDBEhV7eZA6fU9Hu0wvOQ4k0uci3OHhrWTZdOOQ4ZT-wkRW13Y')"></div>
-<div class="flex-1">
+<div class="md:col-span-2 lux-dark-photo-block lux-reader-card group flex items-center p-12 reveal-on-scroll cursor-pointer active" data-reader-open="zh-breath">
+<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-029.jpg'); ?>')"></div>
+<button type="button" class="lux-reader-cta" data-reader-open="zh-breath">阅读详情</button>
+<div class="lux-ceremony-copy flex-1">
 <span class="font-label-lg text-primary block mb-2">02</span>
 <h4 class="font-headline-sm text-headline-sm mb-2">呼吸律动</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">开罐后静置5分钟，让沉睡的香气在空气中缓慢苏醒。</p>
 </div>
-<span class="material-symbols-outlined text-primary text-5xl opacity-20">airwave</span>
+<span class="lux-ceremony-copy material-symbols-outlined text-primary text-5xl opacity-20">airwave</span>
 </div>
-<div class="md:col-span-1 lux-dark-photo-block p-8 flex flex-col justify-between reveal-on-scroll active">
-<div class="lux-dark-photo-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZQcq4hfiLU3hNPVytnsfWjFbSXPVMC0ZEe6Jo0kK6b7vRdcaEs3ISV22gseD6C-hcP_-8Er8ha6yZzwUFvnUXMiye9wgrs0mVPIJCsgrJ4hqtlDG_lMYdPdnPPpHg_rQ4kSoSoMBKB0vJwAV_7niM0AX1Yc-AEeuvZl8k8cuLTBQZHKeAPPZLu6dE00svFteMahQNJ-2gt8rqXByzIrJgj0kF-BM29DieNSBStG8btLmXTHvM3d1vdSLqFMsjHj7m8DVKZCXWZE8')"></div>
-<div>
+<div class="md:col-span-1 lux-dark-photo-block lux-reader-card group p-8 flex flex-col justify-between reveal-on-scroll cursor-pointer active" data-reader-open="zh-hand-warm">
+<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-014.jpg'); ?>')"></div>
+<button type="button" class="lux-reader-cta" data-reader-open="zh-hand-warm">阅读详情</button>
+<div class="lux-ceremony-copy">
 <span class="font-label-lg text-primary block mb-2">03</span>
 <h4 class="font-headline-sm text-headline-sm mb-2">虎口仪式</h4>
 </div>
-<p class="font-label-sm text-on-surface-variant">放置于虎口处，利用体温轻微加热。这是最古老也最奢华的私享方式。</p>
+<p class="lux-ceremony-copy font-label-sm text-on-surface-variant">放置于虎口处，利用体温轻微加热。这是最古老也最奢华的私享方式。</p>
 </div>
-<div class="md:col-span-1 lux-dark-photo-block border border-primary/20 p-8 flex flex-col justify-between transition-colors duration-500 reveal-on-scroll active">
-<div class="lux-dark-photo-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBa7Oj2ngaBTd8Iwa6hlnDzlR0Ah9moJQm14y2JXwigY8KO1vo7EkCO0DxTOFWi3DnYQFE0QmMHVCzPIz1ras61KUDWb9x-bj83Kj-me7Hkpmf4FvyQmm8Kil2U4IXASh6UsnD97ybCsVGRrcZ9ktrA2BYqCEyy7gVCEzsPg7SnUZIdNOSxSbXPYqh9XATJWkbNbOeirxIXxGfWMfAuDRvDomkxMTU7bB-eUvi1m2VTltb3ifRAgqa0XDNH5LOzG5kLO6jwYNJu1ag')"></div>
-<div>
+<div class="md:col-span-1 lux-dark-photo-block lux-reader-card group border border-primary/20 p-8 flex flex-col justify-between transition-colors duration-500 reveal-on-scroll cursor-pointer active" data-reader-open="zh-palate">
+<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-028.jpg'); ?>')"></div>
+<button type="button" class="lux-reader-cta" data-reader-open="zh-palate">阅读详情</button>
+<div class="lux-ceremony-copy">
 <span class="font-label-lg text-primary block mb-2">04</span>
 <h4 class="font-headline-sm text-headline-sm mb-2">舌尖绽放</h4>
 </div>
-<p class="font-label-sm text-on-surface-variant">用舌尖轻压，感受那一瞬间的破裂与随即涌出的深海醇香。</p>
+<p class="lux-ceremony-copy font-label-sm text-on-surface-variant">用舌尖轻压，感受那一瞬间的破裂与随即涌出的深海醇香。</p>
 </div>
 </div>
 </section>
 <!-- CTA Section -->
 <section class="lux-full-bleed lux-dark-photo-block lux-photo-fade-bottom py-section-gap relative overflow-hidden">
-<div class="lux-dark-photo-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDI95D4H3N8ISKIn4CP30WZlSRdlqhBKd1IC9yMCpcWcUEiTE_G45g5Zf4VUb20pB7OGvmHXAnaODY726JGfvja-8jDMQCUHIOcNzpFcBsWLlP5iW4sPVMgoK4VuTDRgyiiUhfcr4nxfqktFMW8sCTg_DbyE1nMiymFoecp9UXVThav8CYMi8lSk0YEWWyOVwXsfO8lREh3v5J0ffp2Ljo2TTZN4IPABAJjTvFenRYkegjwNBWbd0n2Pkbz6IHWD4pbQNGsr_leyxw')"></div>
+<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-044.jpg'); ?>')"></div>
 <div class="relative z-10 text-center px-margin-mobile">
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-10">去购物</h2>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-10">即刻购买</h2>
 <a class="inline-flex px-12 py-4 border border-primary text-primary font-label-lg uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all duration-500 group active:scale-95" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">
-	                    去购物
+	                    系列产品
 	</a>
 </div>
 </section>
@@ -326,9 +330,10 @@
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>一场关于味觉的奥德赛，通过可持续发展的实践与毫不妥协的质量标准，为您搜寻世间罕有的绝世美味。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">小红书</a><button type="button" data-footer-modal="wechat">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">微博</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:15721452475">15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LUXUREAT MAISON. 已获 CITES & FDA 认证.</div>
 </footer>
+
 <?php wp_footer(); ?>
 </body></html>

@@ -145,7 +145,8 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
   <div class="lux-actions">
-    <a href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>">Shopping Bag</a>
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="Account sign in"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a class="" href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>">ZH</a><span>/</span><a class="active" href="#">EN</a></span>
     <button class="lux-menu" type="button" data-open="Close" data-closed="Menu" aria-expanded="false">Menu</button>
   </div>
@@ -165,7 +166,7 @@
 <!-- Main Item -->
 <div class="flex flex-col md:flex-row gap-8 pb-12 border-b border-outline-variant/20 animate-fade-in">
 <div class="w-full md:w-64 h-64 overflow-hidden rounded-lg group">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuIaDKHvPm2bVWMCIAerG66EHNY1XJYgrtUaDLqW34Rccailt7o0rVlGjxXzUZWD58ytf2RSucNJFlYPL5DIfhgoEcGe2aJ8IrTAAm0sRECqfSPOB1dET-iAHC9Cm9WFVYDaP-6eydqzr0SlSmJ1F0Yi3nScfpW22UxGYkuCFIcnVtfVD-VrYpq79Qe1ulmTk5F6_EVHIk2TCN1jvpo3kWt099sI-SAVBwzSAdnczK4dMjMloqhiiDIwg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-001.jpg'); ?>">
 </div>
 <div class="flex-1 flex flex-col justify-between py-2">
 <div class="flex justify-between items-start">
@@ -238,7 +239,7 @@
 </aside>
 </div>
 <!-- Recommendations Section -->
-<section class="mt-section-gap">
+<section class="lux-bag-recommendations mt-section-gap">
 <div class="flex justify-between items-end mb-12">
 <div>
 <h2 class="font-headline-md text-headline-md mb-2">Enhance the Experience</h2>
@@ -252,7 +253,7 @@
 <!-- Rec 1 -->
 <div class="group cursor-pointer">
 <div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-low">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A macro photograph of an iridescent mother-of-pearl spoon resting on a dark slate surface, with soft light highlighting its pearlescent textures. The aesthetic is extremely high-end, minimalist, and captured in a dark studio setting. The colors are deep blacks, cool grays, and shimmering whites. Elegant and luxurious product photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLiKj1lyxIcfhzCyrvd1p9MamekqMqLH49yai788c0ZDr4bYUuzjbw8IhPREWInCygYZxv1k3vT4xcF9_ENh757KzvioFAe8u3geKj1xg2Z2Gopb_SZO_5Wu2kq7MrPRygJm72_Sjci-j61ALVnPIHRlFWbk6n5gR739Q9sLw2TB7epKLhHzXZaGdgiNB0QR4i4FIrsvjJGd0bZhr6-KX3stghLcfe4Nq7oHKqot4yXxFH-AdISnlJ91DCWCm-YGgkAIaZO7mXQp0')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A macro photograph of an iridescent mother-of-pearl spoon resting on a dark slate surface, with soft light highlighting its pearlescent textures. The aesthetic is extremely high-end, minimalist, and captured in a dark studio setting. The colors are deep blacks, cool grays, and shimmering whites. Elegant and luxurious product photography." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-037.jpg'); ?>')"></div>
 <div class="absolute top-4 left-4">
 <span class="bg-surface/80 backdrop-blur-md px-3 py-1 font-label-sm text-label-sm text-secondary uppercase border border-secondary/20">Essential</span>
 </div>
@@ -268,7 +269,7 @@
 <!-- Rec 2 -->
 <div class="group cursor-pointer">
 <div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-low">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A chilled bottle of vintage prestige cuvée champagne in a polished silver ice bucket. Condensation beads on the dark glass of the bottle. The scene is lit with warm, dramatic spots against an absolute black background. Professional luxury lifestyle photography, emphasizing craftsmanship and celebration. Global high-end aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6qgBEDF6jg05563knHSsOsFKxknzrIyOH2cvAYdKwUG-hdfMHtdJM59lm5Bbywh9fgpME6vKv5aR_jwSIEItzKYvVgNNRnhqJ_Dq-AzP8gg8_PxuEzOPgNBrQE8HGgKhNZW9_fs5ykrOVeBJ5SnLnfaFa1vYg39ahQt2rrRgIJ3zypEXrBYTpJd4m7zibCzB7PJcPmp0a--FcU2jBASH9WWhQjJ6wfjyryNEuq2xwFHUl7o0YOxxNePVYiH6881vqPT2-WpLO1Fc')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A chilled bottle of vintage prestige cuvée champagne in a polished silver ice bucket. Condensation beads on the dark glass of the bottle. The scene is lit with warm, dramatic spots against an absolute black background. Professional luxury lifestyle photography, emphasizing craftsmanship and celebration. Global high-end aesthetic." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-002.jpg'); ?>')"></div>
 <div class="absolute top-4 left-4">
 <span class="bg-surface/80 backdrop-blur-md px-3 py-1 font-label-sm text-label-sm text-secondary uppercase border border-secondary/20">The Pairing</span>
 </div>
@@ -284,7 +285,7 @@
 <!-- Rec 3 -->
 <div class="group cursor-pointer">
 <div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-low">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A luxury gourmet gift set presented in a matte black wooden box with gold foil lettering. Inside, small jars of premium truffles and gold-leaf sea salt are nestled in dark velvet padding. Soft, sophisticated lighting highlights the premium packaging and the gold accents. Minimalist and ultra-premium product photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtcw9DWoHPdoDeKxG8bC2mGolZXk32wkuW9a8ApH5B29xlzUBgsZHP4cC5eIl3ufvqmciF2C_3U9tVigcq8LHVkRyq6Y5_2M0-gYRxRAvMkWMVDP2fXdPj7F3h8O3FgMwhmQZXaiNxyWgu-owVz6QZCxK3Xs5nPPegd10R4mOI7SHMtH1DlPlCo69l9Bx9q5LMPdVjGAfkkM0sSijoXfCIUsFiWpLkPw0anO_jh81lgMmC0OvSTB5TCxZEHW-6x_SzsLPCtNJKI94')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A luxury gourmet gift set presented in a matte black wooden box with gold foil lettering. Inside, small jars of premium truffles and gold-leaf sea salt are nestled in dark velvet padding. Soft, sophisticated lighting highlights the premium packaging and the gold accents. Minimalist and ultra-premium product photography." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-049.jpg'); ?>')"></div>
 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-3">
 <button type="button" class="px-6 py-3 border border-white text-white font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-bag-add data-bag-id="en-truffle-set" data-bag-title="Truffle Pairing Set" data-bag-subtitle="Winter Black / White Alba" data-bag-price="185" data-bag-currency="$">Add to List</button>
 <button type="button" class="px-6 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-product-open="en-truffle">View Details</button>
@@ -333,9 +334,10 @@
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>An odyssey of taste, sourcing the rarest delicacies through sustainable practices and uncompromising quality standards.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">Rednote</a><button type="button" data-footer-modal="wechat">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">Weibo</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:15721452475">15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LuxurEat Maison. CITES & FDA Certified.</div>
 </footer>
+
 <?php wp_footer(); ?>
 </body></html>

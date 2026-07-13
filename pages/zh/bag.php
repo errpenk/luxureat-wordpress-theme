@@ -132,7 +132,8 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
   <div class="lux-actions">
-    <a href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>">购物袋</a>
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>" aria-label="购物袋"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="个人登录"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a class="active" href="#">ZH</a><span>/</span><a class="" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>">EN</a></span>
     <button class="lux-menu" type="button" data-open="关闭" data-closed="菜单" aria-expanded="false">菜单</button>
   </div>
@@ -152,7 +153,7 @@
 <!-- Shopping Item 1 -->
 <div class="flex flex-col md:flex-row gap-6 p-6 ghost-border bg-surface-container-lowest hover:border-primary/40 transition-all duration-500 group duration-1000 opacity-100 translate-y-0">
 <div class="w-full md:w-48 h-48 overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0" data-alt="Close up high-resolution shot of premium Imperial Beluga Caviar in a dark obsidian tin. The glossy black pearls of caviar reflect soft studio lighting against a dark, minimalist background. The lighting is dramatic and luxurious, emphasizing the 'black gold' texture of the harvest." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACXS3UvpDtOu5PkEa0HkJLQSv4y_kXrDAFBn2CilEA7GCHVv8pN0ynCjAbSPF6q4K-PkbD_mI47mL2gLCnWdTxbGm-dOoQmw3YtDuSs30UsDXRiN3tlM2LSeua6u1re9BTkmcvEUHqYXkjVjRtPMJzcIFLUM9kZLPd9s4Yznzjb6P6ParINFSEgh19rJ1lCcoBLEz406Ql5U6g4I-xu5GRAmZGbjIMjrffTzTAAv3ImfpWJbuCOXZvi6lcfedCdN7RhLFemarp1-A">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0" data-alt="Close up high-resolution shot of premium Imperial Beluga Caviar in a dark obsidian tin. The glossy black pearls of caviar reflect soft studio lighting against a dark, minimalist background. The lighting is dramatic and luxurious, emphasizing the 'black gold' texture of the harvest." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-006.jpg'); ?>">
 </div>
 <div class="flex-1 flex flex-col justify-between">
 <div class="flex justify-between items-start">
@@ -221,7 +222,7 @@
 </div>
 </div>
 <!-- Recommended Section -->
-<section class="mt-section-gap mb-section-gap transition-all duration-1000 opacity-100 translate-y-0">
+<section class="lux-bag-recommendations mt-section-gap mb-section-gap transition-all duration-1000 opacity-100 translate-y-0">
 <div class="flex justify-between items-end mb-12">
 <h3 class="font-headline-md text-headline-md uppercase tracking-wider">为您推荐</h3>
 <a class="font-label-lg text-label-lg text-primary border-b border-primary/20 pb-1 hover:border-primary transition-all" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">浏览全部</a>
@@ -230,7 +231,7 @@
 <!-- Recommended Item 1 -->
 <div class="group cursor-pointer">
 <div class="aspect-square bg-surface-container overflow-hidden mb-6 ghost-border relative">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A pair of hand-crafted mother of pearl spoons for caviar serving. The iridescent spoons glow with a soft pearlescent sheen against a pitch-black velvet background. Minimalist composition with focus on the organic texture of the shell. Luxurious and high-contrast photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2P5yZoNq2-PBMLXeFcbruH1kXuUuYjkMfzKDIKD21IWS8cj0gPO1qmelr-FXL-acV_eTP1vy8o3A4GM_cEf7CbFJBvIC-lHvsziLOZ3iplbm7luEgBN6adnsaNysgBmwJOBwEXJi6SIVoBYAIc4NI1mnCc3W5B4wVTHPQtpnMbcldWMuiDawngtY4iNSVWWR0hreOxU8Hly_d_-706XymQuHqyuDgiHCwEVt1PrdI5fL_9VifYaPDt2uoGGeMYzvCFBOq47acuNM">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A pair of hand-crafted mother of pearl spoons for caviar serving. The iridescent spoons glow with a soft pearlescent sheen against a pitch-black velvet background. Minimalist composition with focus on the organic texture of the shell. Luxurious and high-contrast photography." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-022.jpg'); ?>">
 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-3">
 <button type="button" class="px-6 py-3 border border-white text-white font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-bag-add data-bag-id="zh-spoons" data-bag-title="手工打磨珍珠母贝匙" data-bag-subtitle="经典对装" data-bag-price="1280" data-bag-currency="¥">加入清单</button>
 <button type="button" class="px-6 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-product-open="zh-mother-of-pearl">查看详情</button>
@@ -243,7 +244,7 @@
 <!-- Recommended Item 2 -->
 <div class="group cursor-pointer">
 <div class="aspect-square bg-surface-container overflow-hidden mb-6 ghost-border relative">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A chilled bottle of premium vintage Champagne sitting in a brushed silver ice bucket. Condensation drops on the glass bottle, reflecting the dim atmospheric lighting of a luxury lounge. The label is visible but slightly blurred to emphasize the mood. Dark, moody, high-end Italian photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAdvQdleYAsN8UYpwdMZHwnWbgcUDtdpGFWKWXj6I4SEE02s8aPf4txi8Rpn1-chBzWrO8914w5sx-2WEDKip-qC5r2bPujAoMIpbq3nWejA1XxdaO5pHuXsnPvkQPugM0_E-Vvl6d6b_YNERpu69jkWlW40vMcDgKuRh5rduZrycRhd_o3nUIJ0a5sm0gSODr_UOnhAj09zHnvw2DNfjnxNATC4OJ7w87gZJg5AhNewIQ_wKbxqHKc_mx-71usoOmX0uisxRI5Tw">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A chilled bottle of premium vintage Champagne sitting in a brushed silver ice bucket. Condensation drops on the glass bottle, reflecting the dim atmospheric lighting of a luxury lounge. The label is visible but slightly blurred to emphasize the mood. Dark, moody, high-end Italian photography style." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-042.jpg'); ?>">
 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-3">
 <button type="button" class="px-6 py-3 border border-white text-white font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-bag-add data-bag-id="zh-champagne" data-bag-title="Krug 陈年香槟" data-bag-subtitle="Grand Cuvée 171ème Édition" data-bag-price="2850" data-bag-currency="¥">加入清单</button>
 <button type="button" class="px-6 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-product-open="zh-champagne">查看详情</button>
@@ -256,7 +257,7 @@
 <!-- Recommended Item 3 -->
 <div class="group cursor-pointer">
 <div class="aspect-square bg-surface-container overflow-hidden mb-6 ghost-border relative">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A minimalist solid silver caviar server with a double-walled ice chamber. The sleek, modern design features clean lines and a polished chrome finish. Set against a dark, moody stone surface with soft highlighting on the metallic edges. Architectural and refined luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbRm7T-vUyLcLqFrQuOXykQjzwhdpDRZMcSbGFjeVpdb76MZnZ28gQBKlrdLjIc_T6WjQjfb9fKyBVe5FExMY-kpE-b4sG25R8qhkpNGJAlJP28iPnyPtCbQYT5ZdpDuLAhtScGkzGtfa55QEl-UcC8bncCNITmhCjb8RDhdB8hzDBWSWgpLLudYILlxAIcaXTQ2fMzaUXyQJZUcPC8Rg_RqNGkNslWq8L7t_OuWsc9fIRvbrYWlI1r5EErsUZte_sRwyldQQwu0Q">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A minimalist solid silver caviar server with a double-walled ice chamber. The sleek, modern design features clean lines and a polished chrome finish. Set against a dark, moody stone surface with soft highlighting on the metallic edges. Architectural and refined luxury aesthetic." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-039.jpg'); ?>">
 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-3">
 <button type="button" class="px-6 py-3 border border-white text-white font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-bag-add data-bag-id="zh-ice-server" data-bag-title="现代主义银质冰镇座" data-bag-subtitle="纯银工艺" data-bag-price="12400" data-bag-currency="¥">加入清单</button>
 <button type="button" class="px-6 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-product-open="zh-ice-server">查看详情</button>
@@ -319,9 +320,10 @@
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>一场关于味觉的奥德赛，通过可持续发展的实践与毫不妥协的质量标准，为您搜寻世间罕有的绝世美味。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">小红书</a><button type="button" data-footer-modal="wechat">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">微博</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:15721452475">15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LUXUREAT MAISON. 已获 CITES & FDA 认证.</div>
 </footer>
+
 <?php wp_footer(); ?>
 </body></html>

@@ -93,7 +93,8 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="active" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
   <div class="lux-actions">
-    <a href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>">Shopping Bag</a>
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="Account sign in"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a class="" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">ZH</a><span>/</span><a class="active" href="#">EN</a></span>
     <button class="lux-menu" type="button" data-open="Close" data-closed="Menu" aria-expanded="false">Menu</button>
   </div>
@@ -104,7 +105,7 @@
 <!-- 1. Hero Section -->
 <header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="Premium Caviar Close-up" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI95D4H3N8ISKIn4CP30WZlSRdlqhBKd1IC9yMCpcWcUEiTE_G45g5Zf4VUb20pB7OGvmHXAnaODY726JGfvja-8jDMQCUHIOcNzpFcBsWLlP5iW4sPVMgoK4VuTDRgyiiUhfcr4nxfqktFMW8sCTg_DbyE1nMiymFoecp9UXVThav8CYMi8lSk0YEWWyOVwXsfO8lREh3v5J0ffp2Ljo2TTZN4IPABAJjTvFenRYkegjwNBWbd0n2Pkbz6IHWD4pbQNGsr_leyxw">
+<img alt="Premium Caviar Close-up" class="w-full h-full object-cover opacity-60" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-044.jpg'); ?>">
 <div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
 </div>
 <div class="relative z-10 text-center max-w-4xl px-margin-mobile fade-in-up">
@@ -135,7 +136,7 @@
 <!-- Caviar -->
 <div class="group relative overflow-hidden aspect-[4/5] flex flex-col justify-end p-12">
 <div class="absolute inset-0 z-0">
-<img alt="Royal Caviar" class="w-full h-full object-cover img-reveal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI95D4H3N8ISKIn4CP30WZlSRdlqhBKd1IC9yMCpcWcUEiTE_G45g5Zf4VUb20pB7OGvmHXAnaODY726JGfvja-8jDMQCUHIOcNzpFcBsWLlP5iW4sPVMgoK4VuTDRgyiiUhfcr4nxfqktFMW8sCTg_DbyE1nMiymFoecp9UXVThav8CYMi8lSk0YEWWyOVwXsfO8lREh3v5J0ffp2Ljo2TTZN4IPABAJjTvFenRYkegjwNBWbd0n2Pkbz6IHWD4pbQNGsr_leyxw">
+<img alt="Royal Caviar" class="w-full h-full object-cover img-reveal" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-044.jpg'); ?>">
 <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
 </div>
 <div class="relative z-10">
@@ -147,7 +148,7 @@
 <!-- Truffles -->
 <div class="group relative overflow-hidden aspect-[4/5] flex flex-col justify-end p-12">
 <div class="absolute inset-0 z-0">
-<img alt="The Alba Gold" class="w-full h-full object-cover img-reveal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPd_KrrjfmxCr271fu_M4zM0JchZgO2RLuqMIWwWOKcRxFcKNTfm3OgPFww5haYy0vhZUs5q7R4oG_mkK6SvbkZCGqIRbeN_dWT7n-xpzfD5mOMnmJI8Zl4GnmFUzlOvM0gDDAOSeZXeSaLuoMsNGWhg-9_EjMY3vpJHPuYRHO3wWK7WzNh-UvaJvUy4ONyTvNA8iIkXJyeVIzyu_aqvIgMt15Wq6OddayyD3KMvmjanknfxGpSqTRwbhcXMZQ-KF3Kyf9zbqIMAc">
+<img alt="The Alba Gold" class="w-full h-full object-cover img-reveal" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-038.jpg'); ?>">
 <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
 </div>
 <div class="relative z-10">
@@ -161,7 +162,7 @@
 <!-- 3. Heritage Storytelling -->
 <section class="relative min-h-[80vh] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="Heritage Ritual" class="w-full h-full object-cover opacity-30 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI95D4H3N8ISKIn4CP30WZlSRdlqhBKd1IC9yMCpcWcUEiTE_G45g5Zf4VUb20pB7OGvmHXAnaODY726JGfvja-8jDMQCUHIOcNzpFcBsWLlP5iW4sPVMgoK4VuTDRgyiiUhfcr4nxfqktFMW8sCTg_DbyE1nMiymFoecp9UXVThav8CYMi8lSk0YEWWyOVwXsfO8lREh3v5J0ffp2Ljo2TTZN4IPABAJjTvFenRYkegjwNBWbd0n2Pkbz6IHWD4pbQNGsr_leyxw">
+<img alt="Heritage Ritual" class="w-full h-full object-cover opacity-30 grayscale" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-044.jpg'); ?>">
 <div class="absolute inset-0 bg-background/60"></div>
 </div>
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
@@ -183,7 +184,7 @@
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row gap-20 items-center">
 <div class="w-full md:w-1/2 order-2 md:order-1">
-<img alt="Bespoke Gifting" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6dsr2Sp7bmSLQxYBh_fI2l8UJ7PJ104eLKOuja92mILvWVe6EYyMz0txyuUp4VVo5w9DESXOwzYUGdEken0VaiTcoAZ6O0qIVbHGCknL-xNjKjSZjC07NjprR0_Y-gMT0Y8RF6B4Ik4qhHnBODgf3X3pBZw2B5b9aO3Uuyme6DCFS5v7o3RtgwW6AK8tn5_9bSYRhamp4ehRL34AFRYGBqkZqmoMJ4U6kZYxfiFo-J-B0Bdp6i0jTTqTDyDQvSCEBJW_LhUo54bU">
+<img alt="Bespoke Gifting" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-001.jpg'); ?>">
 </div>
 <div class="w-full md:w-1/2 order-1 md:order-2">
 <span class="text-primary text-[11px] uppercase tracking-[0.4em] mb-6 block">Concierge &amp; Gifting</span>
@@ -222,9 +223,10 @@
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>An odyssey of taste, sourcing the rarest delicacies through sustainable practices and uncompromising quality standards.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">Rednote</a><button type="button" data-footer-modal="wechat">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">Weibo</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:15721452475">15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LuxurEat Maison. CITES & FDA Certified.</div>
 </footer>
+
 <?php wp_footer(); ?>
 </body></html>

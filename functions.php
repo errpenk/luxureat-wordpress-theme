@@ -108,9 +108,17 @@ function luxureat_static_assets() {
     );
 
     wp_enqueue_script(
+        'luxureat-product-data',
+        $theme_uri . '/assets/data/products.js',
+        array(),
+        filemtime($theme_dir . '/assets/data/products.js'),
+        true
+    );
+
+    wp_enqueue_script(
         'luxureat-main',
         $theme_uri . '/main.js',
-        array(),
+        array('luxureat-product-data'),
         filemtime($theme_dir . '/main.js'),
         true
     );

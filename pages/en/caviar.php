@@ -133,7 +133,8 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
   <div class="lux-actions">
-    <a href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>">Shopping Bag</a>
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="Account sign in"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a class="" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">ZH</a><span>/</span><a class="active" href="#">EN</a></span>
     <button class="lux-menu" type="button" data-open="Close" data-closed="Menu" aria-expanded="false">Menu</button>
   </div>
@@ -145,7 +146,7 @@
 <!-- Hero Section -->
 <section class="relative h-screen min-h-[800px] flex flex-col justify-end overflow-hidden">
 <div class="absolute inset-0 z-0 stagger-in" style="opacity: 0;">
-<img class="w-full h-full object-cover hero-mask" data-alt="A cinematic, ultra-high-definition close-up of Imperial Beluga caviar. The large, glossy, steel-grey pearls are piled elegantly onto a translucent white mother-of-pearl spoon. In the dark, moody background, two dimly lit candles and a bottle of luxury champagne are visible through a soft bokeh effect. The lighting is sophisticated and low-key, highlighting the oily sheen of the caviar as 'black gold' against an absolute black environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDKyZdxU0kGF8Vd-zMlJdzsTr4siYTL8YgOEAlYupJwzsaN5mzFBD-W_ipZxBtWxInFokoDgH7cm7h5-5QPLGoSz0vpME_P6a0qrr-Y2y2VakxcC3vg1EYL-3UDQPI2nYhxCq34ENlKNl-kNGcA5waTnTOm8fxAxjpJJWFQhjCZ50Ik9jZhh_NSGXX3ZlXzw_kTgXFOcEWhH_a2_7GLr7-x_Z81gogm3T6Cs5jofzP_2_UFZ86UPvvHCja9qW79efyY2ZcXBFvjUk">
+<img class="w-full h-full object-cover hero-mask" data-alt="A cinematic, ultra-high-definition close-up of Imperial Beluga caviar. The large, glossy, steel-grey pearls are piled elegantly onto a translucent white mother-of-pearl spoon. In the dark, moody background, two dimly lit candles and a bottle of luxury champagne are visible through a soft bokeh effect. The lighting is sophisticated and low-key, highlighting the oily sheen of the caviar as 'black gold' against an absolute black environment." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-034.jpg'); ?>">
 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 </div>
 <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full pb-32 stagger-in" style="opacity: 0;">
@@ -190,7 +191,7 @@
 <div class="lg:col-span-1"></div>
 <div class="lg:col-span-6">
 <div class="relative aspect-[4/5] bg-surface-container-low overflow-hidden group">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A minimalist architectural shot of an Imperial Beluga caviar tin resting on a slab of dark, polished nero marquina marble. Beside it, a single mother-of-pearl spoon is placed with precision. The scene is shot with high-contrast studio lighting that creates sharp highlights on the gold-toned tin and deep shadows on the marble, evoking a gallery-like atmosphere in a luxury noir style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQG35wvIpjHg3dO9aAqS8DyvQTpm_WWe89Uo6iHhEKHas-8N69c_tKuMELvL0NFW0qe67sWPKN_oBqBfGL00mRsknlGPt-R0KXIgMB1bGemgFMJMROABnT66UaotrHNezYujj8ApVJUUurxkjkr9U6J4ThUGrsXg5252uPdSK34NlDj31o4BeSdPRJcrjgm8cA693wzq1WFWmmuYFd4Dt69JkeOLzViDCDn8NGdxRv6m4qijpjT2ZpSdk60u9WeLKAu1emAC3IBMk">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A minimalist architectural shot of an Imperial Beluga caviar tin resting on a slab of dark, polished nero marquina marble. Beside it, a single mother-of-pearl spoon is placed with precision. The scene is shot with high-contrast studio lighting that creates sharp highlights on the gold-toned tin and deep shadows on the marble, evoking a gallery-like atmosphere in a luxury noir style." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-010.jpg'); ?>">
 <div class="absolute bottom-8 right-8 bg-black/80 backdrop-blur-md p-6 border-t-[0.5px] border-secondary">
 <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Reserve Batch No.</p>
 <p class="font-display-lg text-headline-md text-on-surface">HE-0824</p>
@@ -209,7 +210,7 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="text-center group">
 <div class="mb-8 aspect-square lux-dark-photo-block flex items-center justify-center border-[0.5px] border-outline-variant group-hover:border-primary transition-colors duration-500">
-<div class="lux-dark-photo-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoPRwxvQOmHqNT232yA2aUY2zRh1_cnBBvXcKRHewJ4aG_PfIFz8MXLQLsJiLIyUXslsOfWrXxfollJKQF6lQZQfCsqqVLbIZiJHunsWkso0aiISFUQcyq8_4wO9J3Gt25hLpv-iiHdTqLalW-P_sHArq8JlUO0ycSBH8zid4OLED2c4J6FFIv6GMMsKRoK5L5dWur-IHLjpXYq8hv7Zw8bHiNvjDBEhV7eZA6fU9Hu0wvOQ4k0uci3OHhrWTZdOOQ4ZT-wkRW13Y')"></div>
+<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-029.jpg'); ?>')"></div>
 <span class="material-symbols-outlined text-6xl text-primary font-thin">wine_bar</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm mb-2">Vintage Champagne</h3>
@@ -217,7 +218,7 @@
 </div>
 <div class="text-center group">
 <div class="mb-8 aspect-square lux-dark-photo-block flex items-center justify-center border-[0.5px] border-outline-variant group-hover:border-primary transition-colors duration-500">
-<div class="lux-dark-photo-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5nzBWcTBNa6X7Vo61aOmU6wugtUwUu3Gxb-wumiWYodKCw7DoMFVY0oZp2_gA9lXB2c3ov0s9_wLPVff3abDSnJqJwABLZLr-lzdZfje7C-bzA7X_1_FiZr8UXnGHayvNtRxUUvJZKH41bzMCyD1PpXNgvYfArVffkYZQxflAXDhlv_A-jHthPCAJo7c5x5Xyg3ZLNg1HnEn31SkcIeVImzSOChtyArtj500F3ExSkBvUurl8uz1Xj4mwR5vFVyZ9OK99lCIxNno')"></div>
+<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-041.jpg'); ?>')"></div>
 <span class="material-symbols-outlined text-6xl text-primary font-thin">liquor</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm mb-2">Premium Vodka</h3>
@@ -225,7 +226,7 @@
 </div>
 <div class="text-center group">
 <div class="mb-8 aspect-square lux-dark-photo-block flex items-center justify-center border-[0.5px] border-outline-variant group-hover:border-primary transition-colors duration-500">
-<div class="lux-dark-photo-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmATWC8-Wd1yng8-EUZvY9jZdTbpQu8tpAT7VeRaUsiwM4pzEOdMprJ1hiPv2A9b38FvL6BbqVHvfmTqFd2P_m8v_67SspNoJGljgNeheLHNuZcld5f0GRwAXic62Ux6qt_SFlmjTwHP0sWBO7ftycDJ3-jXA_MW_dII9WLKFtSn7nhavfVil7EeusjZa8Jsq4AAPjVhCLEQ9FNt4oOkZWX9LAQRra1szFveLxJiZfHSIo_bv_fQc5KPBixeFnT1tuaDTEPlE4pis')"></div>
+<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-018.jpg'); ?>')"></div>
 <span class="material-symbols-outlined text-6xl text-primary font-thin">spa</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm mb-2">Mother-of-Pearl</h3>
@@ -240,10 +241,10 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
 <div class="order-2 lg:order-1 grid grid-cols-2 gap-4">
 <div class="aspect-[3/4] overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="A detailed close-up of a carved mother-of-pearl spoon resting on a dark linen napkin. The iridescence of the shell is captured with soft, directional lighting against a deep charcoal background, showcasing the artisanal craftsmanship and organic textures of luxury service-ware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmATWC8-Wd1yng8-EUZvY9jZdTbpQu8tpAT7VeRaUsiwM4pzEOdMprJ1hiPv2A9b38FvL6BbqVHvfmTqFd2P_m8v_67SspNoJGljgNeheLHNuZcld5f0GRwAXic62Ux6qt_SFlmjTwHP0sWBO7ftycDJ3-jXA_MW_dII9WLKFtSn7nhavfVil7EeusjZa8Jsq4AAPjVhCLEQ9FNt4oOkZWX9LAQRra1szFveLxJiZfHSIo_bv_fQc5KPBixeFnT1tuaDTEPlE4pis">
+<img class="w-full h-full object-cover" data-alt="A detailed close-up of a carved mother-of-pearl spoon resting on a dark linen napkin. The iridescence of the shell is captured with soft, directional lighting against a deep charcoal background, showcasing the artisanal craftsmanship and organic textures of luxury service-ware." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-018.jpg'); ?>">
 </div>
 <div class="aspect-[3/4] overflow-hidden mt-12">
-<img class="w-full h-full object-cover" data-alt="An assortment of luxury caviar tins in gold and silver, arranged artistically on a black marble surface with scattered mother-of-pearl spoons and crystal glassware. The composition uses high-contrast Luminous Noir styling, emphasizing the premium packaging and the 'Ritual of Service' theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5nzBWcTBNa6X7Vo61aOmU6wugtUwUu3Gxb-wumiWYodKCw7DoMFVY0oZp2_gA9lXB2c3ov0s9_wLPVff3abDSnJqJwABLZLr-lzdZfje7C-bzA7X_1_FiZr8UXnGHayvNtRxUUvJZKH41bzMCyD1PpXNgvYfArVffkYZQxflAXDhlv_A-jHthPCAJo7c5x5Xyg3ZLNg1HnEn31SkcIeVImzSOChtyArtj500F3ExSkBvUurl8uz1Xj4mwR5vFVyZ9OK99lCIxNno">
+<img class="w-full h-full object-cover" data-alt="An assortment of luxury caviar tins in gold and silver, arranged artistically on a black marble surface with scattered mother-of-pearl spoons and crystal glassware. The composition uses high-contrast Luminous Noir styling, emphasizing the premium packaging and the 'Ritual of Service' theme." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-041.jpg'); ?>">
 </div>
 </div>
 <div class="order-1 lg:order-2 space-y-8 lg:pl-12">
@@ -295,9 +296,10 @@
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>An odyssey of taste, sourcing the rarest delicacies through sustainable practices and uncompromising quality standards.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">Rednote</a><button type="button" data-footer-modal="wechat">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">Weibo</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:15721452475">15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LuxurEat Maison. CITES & FDA Certified.</div>
 </footer>
+
 <?php wp_footer(); ?>
 </body></html>
