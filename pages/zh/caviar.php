@@ -113,7 +113,7 @@
 <!-- Hero / Header Section -->
 <section class="lux-full-bleed lux-dark-photo-block lux-photo-fade-bottom flex flex-col items-start justify-end gap-4 pt-32 pb-16 px-margin-mobile md:px-margin-desktop min-h-[520px]">
 <div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-044.jpg'); ?>')"></div>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">顶级系列产品</h1>
+<h1 class="zh-display-title text-on-surface">产品全览</h1>
 
 <div class="flex flex-col md:flex-row md:items-end justify-between w-full gap-4 mt-4">
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl text-left">

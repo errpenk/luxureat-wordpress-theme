@@ -153,7 +153,7 @@
 <div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-024.jpg'); ?>')"></div>
 
 <div class="relative z-10 text-center space-y-4">
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-widest uppercase">联系我们</h1>
+<h1 class="zh-display-title text-primary">联系我们</h1>
 <p class="font-body-lg text-on-surface/60 max-w-2xl mx-auto px-margin-mobile">
                     探索顶级鱼子酱的世界，我们的品鉴专家随时为您提供咨询。
                 </p>
