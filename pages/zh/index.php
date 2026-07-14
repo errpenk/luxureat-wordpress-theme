@@ -239,7 +239,7 @@
   <div class="lux-footer-bottom">© 2024 LUXUREAT MAISON. 已获 CITES & FDA 认证.</div>
 </footer>
 
-<script src="../latest-event.js?v=20260714-template2"></script>
+
 <script src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/articles.js?v=20260714-data-sync1'); ?>"></script>
 <?php wp_footer(); ?>
 </body></html>

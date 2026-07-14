@@ -122,6 +122,14 @@ function luxureat_static_assets() {
         filemtime($theme_dir . '/main.js'),
         true
     );
+
+    wp_enqueue_script(
+        'luxureat-latest-event',
+        $theme_uri . '/latest-event.js',
+        array(),
+        filemtime($theme_dir . '/latest-event.js'),
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'luxureat_static_assets');
 
