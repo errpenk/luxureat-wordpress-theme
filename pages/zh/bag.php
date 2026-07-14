@@ -149,39 +149,7 @@
 </header>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 <!-- Left Side: Product List -->
-<div class="lg:col-span-8 space-y-gutter" data-bag-list data-bag-locale="zh" data-bag-shipping="200">
-<!-- Shopping Item 1 -->
-<div class="flex flex-col md:flex-row gap-6 p-6 ghost-border bg-surface-container-lowest hover:border-primary/40 transition-all duration-500 group duration-1000 opacity-100 translate-y-0">
-<div class="w-full md:w-48 h-48 overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0" data-alt="Close up high-resolution shot of premium Imperial Beluga Caviar in a dark obsidian tin. The glossy black pearls of caviar reflect soft studio lighting against a dark, minimalist background. The lighting is dramatic and luxurious, emphasizing the 'black gold' texture of the harvest." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-006.jpg'); ?>">
-</div>
-<div class="flex-1 flex flex-col justify-between">
-<div class="flex justify-between items-start">
-<div>
-<h3 class="font-headline-sm text-headline-sm mb-1 uppercase tracking-wider">至臻帝王鲟鱼子酱</h3>
-<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4">Imperial Beluga Caviar - 250g</p>
-<span class="font-label-sm text-label-sm border border-outline-variant/50 px-2 py-0.5 text-on-surface-variant">2024 春季新采</span>
-</div>
-<span class="font-headline-sm text-headline-sm text-primary">¥ 18,800</span>
-</div>
-<div class="flex justify-between items-end mt-8">
-<div class="flex items-center gap-4">
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">数量</span>
-<div class="flex items-center border border-outline-variant/30">
-<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
-<span class="w-12 text-center font-label-lg">1</span>
-<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
-</div>
-</div>
-<button class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-2 font-label-sm uppercase tracking-widest">
-<span class="material-symbols-outlined text-lg">delete</span>
-<span class="">移除</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Empty state placeholder or more items could go here -->
-</div>
+<div class="lg:col-span-8 space-y-gutter" data-bag-list data-bag-locale="zh" data-bag-shipping="200"></div>
 <!-- Right Side: Summary Section -->
 <div class="lg:col-span-4">
 <div class="sticky top-32 glass-panel p-8 ghost-border">
@@ -189,11 +157,11 @@
 <div class="space-y-4 mb-8">
 <div class="flex justify-between font-body-md">
 <span class="text-on-surface-variant">商品小计</span>
-<span class="" data-bag-subtotal>¥ 18,800</span>
+<span class="" data-bag-subtotal>¥0</span>
 </div>
 <div class="flex justify-between font-body-md">
 <span class="text-on-surface-variant">专业全程冷链配送</span>
-<span class="" data-bag-shipping-total>¥ 200</span>
+<span class="" data-bag-shipping-total>¥0</span>
 </div>
 <div class="flex flex-col gap-2 pt-2 text-primary">
 <div class="flex items-center gap-2">
@@ -203,7 +171,7 @@
 </div>
 <div class="border-t border-outline-variant/20 pt-4 mt-6 flex justify-between items-end">
 <span class="font-label-lg text-label-lg uppercase tracking-widest">应付总额</span>
-<span class="font-headline-md text-headline-md text-primary" data-bag-total>¥ 19,000</span>
+<span class="font-headline-md text-headline-md text-primary" data-bag-total>¥0</span>
 </div>
 </div>
 <div class="space-y-4">
@@ -221,99 +189,16 @@
 </div>
 </div>
 </div>
-<!-- Recommended Section -->
 <section class="lux-bag-recommendations mt-section-gap mb-section-gap transition-all duration-1000 opacity-100 translate-y-0">
 <div class="flex justify-between items-end mb-12">
 <h3 class="font-headline-md text-headline-md uppercase tracking-wider">为您推荐</h3>
 <a class="font-label-lg text-label-lg text-primary border-b border-primary/20 pb-1 hover:border-primary transition-all" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">浏览全部</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Recommended Item 1 -->
-<div class="group cursor-pointer">
-<div class="aspect-square bg-surface-container overflow-hidden mb-6 ghost-border relative">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A pair of hand-crafted mother of pearl spoons for caviar serving. The iridescent spoons glow with a soft pearlescent sheen against a pitch-black velvet background. Minimalist composition with focus on the organic texture of the shell. Luxurious and high-contrast photography." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-022.jpg'); ?>">
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-3">
-<button type="button" class="px-6 py-3 border border-white text-white font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-bag-add data-bag-id="zh-spoons" data-bag-title="手工打磨珍珠母贝匙" data-bag-subtitle="经典对装" data-bag-price="1280" data-bag-currency="¥">加入清单</button>
-<button type="button" class="px-6 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-product-open="zh-mother-of-pearl">查看详情</button>
-</div>
-</div>
-<h4 class="font-label-lg text-label-lg uppercase tracking-widest mb-1 group-hover:text-primary transition-colors">手工打磨珍珠母贝匙</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">经典对装</p>
-<span class="font-body-md text-primary">¥ 1,280</span>
-</div>
-<!-- Recommended Item 2 -->
-<div class="group cursor-pointer">
-<div class="aspect-square bg-surface-container overflow-hidden mb-6 ghost-border relative">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A chilled bottle of premium vintage Champagne sitting in a brushed silver ice bucket. Condensation drops on the glass bottle, reflecting the dim atmospheric lighting of a luxury lounge. The label is visible but slightly blurred to emphasize the mood. Dark, moody, high-end Italian photography style." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-042.jpg'); ?>">
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-3">
-<button type="button" class="px-6 py-3 border border-white text-white font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-bag-add data-bag-id="zh-champagne" data-bag-title="Krug 陈年香槟" data-bag-subtitle="Grand Cuvée 171ème Édition" data-bag-price="2850" data-bag-currency="¥">加入清单</button>
-<button type="button" class="px-6 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-product-open="zh-champagne">查看详情</button>
-</div>
-</div>
-<h4 class="font-label-lg text-label-lg uppercase tracking-widest mb-1 group-hover:text-primary transition-colors">Krug 陈年香槟</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">Grand Cuvée 171ème Édition</p>
-<span class="font-body-md text-primary">¥ 2,850</span>
-</div>
-<!-- Recommended Item 3 -->
-<div class="group cursor-pointer">
-<div class="aspect-square bg-surface-container overflow-hidden mb-6 ghost-border relative">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A minimalist solid silver caviar server with a double-walled ice chamber. The sleek, modern design features clean lines and a polished chrome finish. Set against a dark, moody stone surface with soft highlighting on the metallic edges. Architectural and refined luxury aesthetic." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-039.jpg'); ?>">
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-3">
-<button type="button" class="px-6 py-3 border border-white text-white font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-bag-add data-bag-id="zh-ice-server" data-bag-title="现代主义银质冰镇座" data-bag-subtitle="纯银工艺" data-bag-price="12400" data-bag-currency="¥">加入清单</button>
-<button type="button" class="px-6 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-product-open="zh-ice-server">查看详情</button>
-</div>
-</div>
-<h4 class="font-label-lg text-label-lg uppercase tracking-widest mb-1 group-hover:text-primary transition-colors">现代主义银质冰镇座</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">纯银工艺</p>
-<span class="font-body-md text-primary">¥ 12,400</span>
-</div>
 </div>
 </section>
 </main>
 <!-- Footer -->
-
-<script>
-        // Micro-interactions
-        document.addEventListener('DOMContentLoaded', () => {
-            const buttons = document.querySelectorAll('button');
-            buttons.forEach(btn => {
-                btn.addEventListener('mousedown', () => {
-                    btn.classList.add('scale-95');
-                });
-                btn.addEventListener('mouseup', () => {
-                    btn.classList.remove('scale-95');
-                });
-                btn.addEventListener('mouseleave', () => {
-                    btn.classList.remove('scale-95');
-                });
-            });
-
-            // Smooth reveal animation for sections
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('opacity-100', 'translate-y-0');
-                        entry.target.classList.remove('opacity-0', 'translate-y-10');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('section, .p-6').forEach(el => {
-                el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-                observer.observe(el);
-            });
-        });
-    </script>
-
-
-
-
-
-
 
 <footer class="lux-footer">
   <div class="lux-footer-grid">

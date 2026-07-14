@@ -117,7 +117,7 @@
             Sourcing the world's most coveted delicacies for the discerning epicurean.
         </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-<a class="px-10 py-4 border border-secondary text-secondary uppercase text-[11px] tracking-[0.3em] hover:bg-secondary hover:text-background transition-all duration-500" href="<?php echo esc_url(luxureat_static_url('en/caviar', '#product-en-imperial-beluga')); ?>" data-product-open="en-imperial-beluga">
+<a class="px-10 py-4 border border-secondary text-secondary uppercase text-[11px] tracking-[0.3em] hover:bg-secondary hover:text-background transition-all duration-500" href="<?php echo esc_url(luxureat_static_url('en/products', '#product-en-imperial-beluga')); ?>">
                 Explore the Collection
             </a>
 </div>
@@ -130,22 +130,7 @@
 </div>
 </div>
 </header>
-<section class="lux-latest-event">
-<div class="lux-latest-event-inner">
-<figure class="lux-event-frame">
-<img alt="Marca China 2026 Private Label Fair Guangzhou event poster" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/marca-china-2026.jpeg'); ?>"/>
-</figure>
-<div class="lux-event-copy">
-<h2>Italian luxury taste meets Guangzhou.</h2>
-<p>On September 8-9, 2026, <strong class="lux-event-brand">LuxurEat</strong> will present <strong class="lux-event-brand">TrufflEat</strong>, <strong class="lux-event-brand">CaviarEat</strong>, <strong class="lux-event-brand">TinCaviar</strong>, and more at <strong>MARCA CHINA Private Label Fair</strong>.</p>
-<p>With authentic Italian flavor and global supply capability, we bring buyers more possibilities.</p>
-<a class="lux-event-meta" href="https://maps.apple.com/?q=Poly%20World%20Trade%20Expo%20Centre%2C%20Guangzhou" target="_blank" rel="noopener" title="Open map directions"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>Poly World Trade Expo Centre, Guangzhou</a>
-<a class="lux-event-meta" href="<?php echo esc_url(get_template_directory_uri() . '/assets/marca-china-2026.ics'); ?>" title="Add to calendar"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>September 8-9, 2026</a>
-<p><strong>The Luxury of Taste, Made in Italy.</strong></p>
-<p>We look forward to meeting you in Guangzhou.</p>
-</div>
-</div>
-</section>
+<section class="lux-latest-event" data-latest-event></section>
 <!-- 2. Product Categories -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
@@ -158,7 +143,7 @@
 <div class="relative z-10">
 <h3 class="font-headline text-4xl text-on-surface mb-4">Royal Caviar</h3>
 <p class="text-on-surface-variant text-base font-light mb-8 max-w-xs">A symphony of oceanic depth and buttery finish.</p>
-<a class="inline-block text-[11px] uppercase tracking-[0.3em] text-primary border-b border-primary/40 pb-2 hover:border-primary transition-all" href="<?php echo esc_url(luxureat_static_url('en/caviar', '#product-en-imperial-beluga')); ?>" data-product-open="en-imperial-beluga">Shop Caviar</a>
+<a class="inline-block text-[11px] uppercase tracking-[0.3em] text-primary border-b border-primary/40 pb-2 hover:border-primary transition-all" href="<?php echo esc_url(luxureat_static_url('en/products', '#product-en-imperial-beluga')); ?>">Shop Caviar</a>
 </div>
 </div>
 <!-- Truffles -->
@@ -244,5 +229,7 @@
   <div class="lux-footer-bottom">© 2024 LuxurEat Maison. CITES & FDA Certified.</div>
 </footer>
 
+<script src="../latest-event.js?v=20260714-template2"></script>
+<script src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/articles.js?v=20260714-data-sync1'); ?>"></script>
 <?php wp_footer(); ?>
 </body></html>

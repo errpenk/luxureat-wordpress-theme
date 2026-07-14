@@ -162,44 +162,7 @@
 </header>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
 <!-- Shopping Bag List -->
-<div class="lg:col-span-8 space-y-12" data-bag-list data-bag-locale="en" data-bag-shipping="20">
-<!-- Main Item -->
-<div class="flex flex-col md:flex-row gap-8 pb-12 border-b border-outline-variant/20 animate-fade-in">
-<div class="w-full md:w-64 h-64 overflow-hidden rounded-lg group">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-001.jpg'); ?>">
-</div>
-<div class="flex-1 flex flex-col justify-between py-2">
-<div class="flex justify-between items-start">
-<div>
-<p class="font-label-sm text-label-sm text-secondary mb-2 uppercase tracking-widest">Huso Huso</p>
-<h2 class="font-headline-md text-headline-md mb-2">Imperial Beluga Caviar - 250g</h2>
-<p class="text-on-surface-variant font-body-md">Sustainably harvested. Hand-selected for grain size and color.</p>
-</div>
-<p class="font-headline-sm text-headline-sm text-on-surface">$2,480</p>
-</div>
-<div class="flex items-center justify-between mt-8">
-<div class="flex items-center border border-outline-variant/30 rounded-full px-4 py-2">
-<button class="hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-sm" data-icon="remove">remove</span>
-</button>
-<span class="mx-6 font-label-lg text-label-lg">1</span>
-<button class="hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
-</button>
-</div>
-<button class="flex items-center gap-2 text-on-surface-variant hover:text-error transition-colors font-label-sm uppercase tracking-tighter">
-<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
-                                Remove
-                            </button>
-</div>
-</div>
-</div>
-<!-- Shipping Message -->
-<div class="glass-panel p-6 flex items-center gap-4 border-l-4 border-secondary">
-<span class="material-symbols-outlined text-secondary" data-icon="ac_unit">ac_unit</span>
-<p class="font-body-md text-on-surface-variant">Your order is eligible for temperature-controlled express courier with <span class="text-secondary font-medium">Professional Cold-Chain Shipping</span>.</p>
-</div>
-</div>
+<div class="lg:col-span-8 space-y-12" data-bag-list data-bag-locale="en" data-bag-shipping="20"></div>
 <!-- Order Summary -->
 <aside class="lg:col-span-4 sticky top-32">
 <div class="glass-panel p-10 flex flex-col gap-8">
@@ -207,11 +170,11 @@
 <div class="space-y-4">
 <div class="flex justify-between text-on-surface-variant font-body-md">
 <span class="">Subtotal</span>
-<span class="" data-bag-subtotal>$2,480.00</span>
+<span class="" data-bag-subtotal>$0.00</span>
 </div>
 <div class="flex justify-between text-on-surface-variant font-body-md">
 <span class="">Shipping &amp; Handling</span>
-<span class="" data-bag-shipping-total>$20.00</span>
+<span class="" data-bag-shipping-total>$0.00</span>
 </div>
 <div class="flex justify-between text-on-surface-variant font-body-md">
 <span class="">Estimated Tax</span>
@@ -220,7 +183,7 @@
 </div>
 <div class="flex justify-between items-end border-t border-outline-variant/20 pt-6">
 <span class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface">Total</span>
-<span class="font-headline-md text-headline-md text-secondary" data-bag-total>$2,500.00</span>
+<span class="font-headline-md text-headline-md text-secondary" data-bag-total>$0.00</span>
 </div>
 <div class="space-y-4 mt-4">
 <button class="primary-btn w-full py-5 font-label-lg text-label-lg uppercase tracking-[0.2em] rounded-none">
@@ -238,7 +201,6 @@
 </div>
 </aside>
 </div>
-<!-- Recommendations Section -->
 <section class="lux-bag-recommendations mt-section-gap">
 <div class="flex justify-between items-end mb-12">
 <div>
@@ -250,84 +212,10 @@
 </a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Rec 1 -->
-<div class="group cursor-pointer">
-<div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-low">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A macro photograph of an iridescent mother-of-pearl spoon resting on a dark slate surface, with soft light highlighting its pearlescent textures. The aesthetic is extremely high-end, minimalist, and captured in a dark studio setting. The colors are deep blacks, cool grays, and shimmering whites. Elegant and luxurious product photography." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-037.jpg'); ?>')"></div>
-<div class="absolute top-4 left-4">
-<span class="bg-surface/80 backdrop-blur-md px-3 py-1 font-label-sm text-label-sm text-secondary uppercase border border-secondary/20">Essential</span>
-</div>
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-3">
-<button type="button" class="px-6 py-3 border border-white text-white font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-bag-add data-bag-id="en-spoons" data-bag-title="Mother-of-Pearl Spoon" data-bag-subtitle="Hand-Crafted / Artisan" data-bag-price="45" data-bag-currency="$">Add to List</button>
-<button type="button" class="px-6 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-product-open="en-mother-of-pearl">View Details</button>
-</div>
-</div>
-<h3 class="font-headline-sm text-headline-sm mb-1 group-hover:text-primary transition-colors">Mother-of-Pearl Spoon</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase mb-2">Hand-Crafted / Artisan</p>
-<p class="font-body-md text-on-surface">$45</p>
-</div>
-<!-- Rec 2 -->
-<div class="group cursor-pointer">
-<div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-low">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A chilled bottle of vintage prestige cuvée champagne in a polished silver ice bucket. Condensation beads on the dark glass of the bottle. The scene is lit with warm, dramatic spots against an absolute black background. Professional luxury lifestyle photography, emphasizing craftsmanship and celebration. Global high-end aesthetic." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-002.jpg'); ?>')"></div>
-<div class="absolute top-4 left-4">
-<span class="bg-surface/80 backdrop-blur-md px-3 py-1 font-label-sm text-label-sm text-secondary uppercase border border-secondary/20">The Pairing</span>
-</div>
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-3">
-<button type="button" class="px-6 py-3 border border-white text-white font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-bag-add data-bag-id="en-champagne" data-bag-title="Maison Vintage Brut" data-bag-subtitle="Grand Cru / 2012" data-bag-price="320" data-bag-currency="$">Add to List</button>
-<button type="button" class="px-6 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-product-open="en-champagne">View Details</button>
-</div>
-</div>
-<h3 class="font-headline-sm text-headline-sm mb-1 group-hover:text-primary transition-colors">Maison Vintage Brut</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase mb-2">Grand Cru / 2012</p>
-<p class="font-body-md text-on-surface">$320</p>
-</div>
-<!-- Rec 3 -->
-<div class="group cursor-pointer">
-<div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-low">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A luxury gourmet gift set presented in a matte black wooden box with gold foil lettering. Inside, small jars of premium truffles and gold-leaf sea salt are nestled in dark velvet padding. Soft, sophisticated lighting highlights the premium packaging and the gold accents. Minimalist and ultra-premium product photography." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-049.jpg'); ?>')"></div>
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-3">
-<button type="button" class="px-6 py-3 border border-white text-white font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-bag-add data-bag-id="en-truffle-set" data-bag-title="Truffle Pairing Set" data-bag-subtitle="Winter Black / White Alba" data-bag-price="185" data-bag-currency="$">Add to List</button>
-<button type="button" class="px-6 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest bg-black/20 backdrop-blur-sm" data-product-open="en-truffle">View Details</button>
-</div>
-</div>
-<h3 class="font-headline-sm text-headline-sm mb-1 group-hover:text-primary transition-colors">Truffle Pairing Set</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase mb-2">Winter Black / White Alba</p>
-<p class="font-body-md text-on-surface">$185</p>
-</div>
 </div>
 </section>
 </main>
 <!-- Footer -->
-
-<script>
-        // Micro-interactions
-        document.querySelectorAll('button, a').forEach(el => {
-            el.addEventListener('mousedown', () => {
-                el.style.transform = 'scale(0.98)';
-            });
-            el.addEventListener('mouseup', () => {
-                el.style.transform = 'scale(1)';
-            });
-            el.addEventListener('mouseleave', () => {
-                el.style.transform = 'scale(1)';
-            });
-        });
-
-        // Simple scroll effect for Nav
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 20) {
-                nav.classList.add('shadow-xl');
-            } else {
-                nav.classList.remove('shadow-xl');
-            }
-        });
-    </script>
-
-
-
-
 
 <footer class="lux-footer">
   <div class="lux-footer-grid">

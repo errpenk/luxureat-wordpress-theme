@@ -100,22 +100,7 @@
 </div>
 </div>
 </header>
-<section class="lux-latest-event">
-<div class="lux-latest-event-inner">
-<figure class="lux-event-frame">
-<img alt="Marca China 2026 Private Label Fair Guangzhou event poster" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/marca-china-2026.jpeg'); ?>"/>
-</figure>
-<div class="lux-event-copy">
-<h2>意大利奢味，广州相见。</h2>
-<p>2026年9月8日至9日，<strong class="lux-event-brand">LuxurEat</strong> 将携旗下 <strong class="lux-event-brand">TrufflEat</strong>、<strong class="lux-event-brand">CaviarEat</strong>、<strong class="lux-event-brand">TinCaviar</strong> 等品牌亮相 <strong>MARCA CHINA 广州国际自有品牌展</strong>。</p>
-<p>以纯正意大利风味与全球化供应能力，为买家提供更多可能。</p>
-<a class="lux-event-meta" href="https://maps.apple.com/?q=Poly%20World%20Trade%20Expo%20Centre%2C%20Guangzhou" target="_blank" rel="noopener" title="打开地图导航"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>广州保利世贸博览馆</a>
-<a class="lux-event-meta" href="<?php echo esc_url(get_template_directory_uri() . '/assets/marca-china-2026.ics'); ?>" title="添加到日历"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>2026年9月8–9日</a>
-<p><strong>The Luxury of Taste, Made in Italy.</strong></p>
-<p>期待与您在广州见面！</p>
-</div>
-</div>
-</section>
+<section class="lux-latest-event" data-latest-event></section>
 <!-- 2. Strategic Categories (Commerce Focused) -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -137,7 +122,7 @@
 <span class="text-primary text-[10px] uppercase tracking-[0.3em] mb-2 block">顶级海味</span>
 <h3 class="font-display text-3xl text-on-surface mb-4">皇室鱼子酱</h3>
 <p class="text-on-surface-variant text-sm font-light mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">深海气息与黄油质感交织出的宏大乐章。</p>
-<a class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-primary bg-primary px-6 py-3" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '#product-zh-imperial-beluga')); ?>" data-product-open="zh-imperial-beluga">立即选购</a>
+<a class="lux-core-shop inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-background border border-white/20 bg-white/10 backdrop-blur px-6 py-3 hover:bg-white hover:text-background transition-colors" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '#product-zh-imperial-beluga')); ?>" data-product-open="zh-imperial-beluga">立即选购</a>
 </div>
 </div>
 <!-- Truffles -->
@@ -148,15 +133,18 @@
 <span class="text-secondary text-[10px] uppercase tracking-[0.3em] mb-2 block">大地之钻</span>
 <h3 class="font-display text-3xl text-on-surface mb-4">阿尔巴之金</h3>
 <p class="text-on-surface-variant text-sm font-light mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">源自皮埃蒙特中心地带的珍稀“白钻石”。</p>
-<a class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-background border border-white/20 bg-white/10 backdrop-blur px-6 py-3 hover:bg-white hover:text-background transition-colors" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '#product-zh-royal-oscetra')); ?>" data-product-open="zh-royal-oscetra">立即选购</a>
+<a class="lux-core-shop inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-background border border-white/20 bg-white/10 backdrop-blur px-6 py-3 hover:bg-white hover:text-background transition-colors" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '#product-zh-royal-oscetra')); ?>" data-product-open="zh-royal-oscetra">立即选购</a>
 </div>
 </div>
-<!-- Gifting (Business CTA) -->
-<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container flex flex-col justify-center items-center p-12 text-center border border-white/5">
-<span class="material-symbols-outlined text-5xl text-primary mb-6">card_giftcard</span>
-<h3 class="font-display text-3xl text-on-surface mb-4">商业礼赠</h3>
-<p class="text-on-surface-variant text-sm font-light mb-8">为您显赫的商务场合提供量身定制的珍礼方案。</p>
-<a class="w-full py-4 border border-primary text-primary uppercase text-[11px] font-bold tracking-[0.3em] hover:bg-primary hover:text-on-primary transition-all" href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">咨询方案</a>
+<!-- Service Ware -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="Modern Silver Ice Server" class="w-full h-full object-cover img-reveal opacity-80" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-039.jpg'); ?>"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="text-primary text-[10px] uppercase tracking-[0.3em] mb-2 block">侍酒器具</span>
+<h3 class="font-display text-3xl text-on-surface mb-4">冰镇银座</h3>
+<p class="text-on-surface-variant text-sm font-light mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">稳定开罐后的低温服务，让每一匙保持清晰弹性。</p>
+<a class="lux-core-shop inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-background border border-white/20 bg-white/10 backdrop-blur px-6 py-3 hover:bg-white hover:text-background transition-colors" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '#product-zh-ice-server')); ?>" data-product-open="zh-ice-server">立即选购</a>
 </div>
 </div>
 </section>
@@ -190,10 +178,6 @@
 <div class="relative">
 <div class="aspect-square bg-surface-container rounded-sm overflow-hidden shadow-2xl">
 <img alt="Heritage Ritual" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-044.jpg'); ?>"/>
-</div>
-<div class="absolute -bottom-10 -left-10 bg-background p-10 border border-white/5 hidden lg:block max-w-[240px] shadow-2xl">
-<p class="text-[10px] uppercase tracking-[0.2em] text-secondary mb-2">EST. 1924</p>
-<p class="text-xs font-light leading-relaxed text-on-surface-variant">关于时间、温度与技艺的微妙平衡，确保每一次品鉴都是一场深刻而珍稀的仪式。</p>
 </div>
 </div>
 </div>
@@ -255,5 +239,7 @@
   <div class="lux-footer-bottom">© 2024 LUXUREAT MAISON. 已获 CITES & FDA 认证.</div>
 </footer>
 
+<script src="../latest-event.js?v=20260714-template2"></script>
+<script src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/articles.js?v=20260714-data-sync1'); ?>"></script>
 <?php wp_footer(); ?>
 </body></html>
