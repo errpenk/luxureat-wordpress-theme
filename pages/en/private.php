@@ -110,7 +110,7 @@
             box-shadow: 0 0 40px 0 rgba(157, 245, 236, 0.05);
         }
         .grain-overlay {
-            background-image: url("<?php echo esc_url(get_template_directory_uri() . '/assets/images/carbon-fibre.png'); ?>");
+            background-image: url("<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/carbon-fibre.png'); ?>");
             opacity: 0.03;
             pointer-events: none;
         }
@@ -152,7 +152,7 @@
 </head>
 <body class="font-body-md selection:bg-primary/30">
 <header class="lux-header">
-  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
+  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
   <div class="lux-actions">
     <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
@@ -169,7 +169,7 @@
 <!-- Hero Section -->
 <section class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center brightness-50" data-alt="A moody, high-contrast close-up of premium Beluga caviar glistening like dark diamonds under a single dramatic spotlight. The background is an absolute, velvety black, creating a sense of profound luxury and exclusivity. Subtle mist and cold condensation add to the atmospheric, luminous noir aesthetic." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-036.jpg'); ?>')"></div>
+<div class="w-full h-full bg-cover bg-center brightness-50" data-alt="A moody, high-contrast close-up of premium Beluga caviar glistening like dark diamonds under a single dramatic spotlight. The background is an absolute, velvety black, creating a sense of profound luxury and exclusivity. Subtle mist and cold condensation add to the atmospheric, luminous noir aesthetic." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-036.jpg'); ?>')"></div>
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
 <div class="relative z-10 text-center px-margin-mobile md:px-0 max-w-4xl mx-auto">
@@ -217,7 +217,7 @@
 </div>
 <div class="lg:col-span-6 lg:col-start-7 relative opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">
 <div class="aspect-[4/5] relative overflow-hidden group">
-<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A professional sommelier or concierge in a dark, tailored suit, wearing white gloves, carefully inspecting a golden tin of caviar. The setting is a dim, wood-paneled private cellar with warm, focused lighting. The image captures a moment of extreme precision and quiet luxury, embodying the 'ritual of selection'." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-020.jpg'); ?>')"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A professional sommelier or concierge in a dark, tailored suit, wearing white gloves, carefully inspecting a golden tin of caviar. The setting is a dim, wood-paneled private cellar with warm, focused lighting. The image captures a moment of extreme precision and quiet luxury, embodying the 'ritual of selection'." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-020.jpg'); ?>')"></div>
 <div class="absolute inset-0 border border-outline-variant/30 pointer-events-none"></div>
 </div>
 <!-- Decorative element -->
@@ -235,7 +235,7 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter h-auto md:h-[800px]">
 <!-- Item 1 -->
 <div class="md:col-span-2 group relative overflow-hidden flex flex-col justify-end p-12 border border-outline-variant/20 hover:border-primary/40 transition-colors duration-500 opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 brightness-75" data-alt="Ultra-premium white Alba truffles resting on a bed of dark soil in a minimalist ceramic dish. The lighting is soft and directional, highlighting the intricate marbling of the truffles. The atmosphere is quiet, reverent, and sophisticated, using a dark gray and black color palette." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-040.jpg'); ?>')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 brightness-75" data-alt="Ultra-premium white Alba truffles resting on a bed of dark soil in a minimalist ceramic dish. The lighting is soft and directional, highlighting the intricate marbling of the truffles. The atmosphere is quiet, reverent, and sophisticated, using a dark gray and black color palette." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-040.jpg'); ?>')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
 <div class="relative z-10 space-y-4">
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary border border-primary/30 px-3 py-1">Rare Harvest</span>
@@ -246,7 +246,7 @@
 </div>
 <!-- Item 2 -->
 <div class="group relative overflow-hidden flex flex-col justify-end p-8 border border-outline-variant/20 hover:border-primary/40 transition-colors duration-500 opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 brightness-50" data-alt="A macro shot of rare golden Almas caviar pearls. Each pearl glows with a metallic, golden luster against a deep onyx background. The image is clean, sharp, and exudes an air of untouchable luxury, suitable for an elite concierge service." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-027.jpg'); ?>')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 brightness-50" data-alt="A macro shot of rare golden Almas caviar pearls. Each pearl glows with a metallic, golden luster against a deep onyx background. The image is clean, sharp, and exudes an air of untouchable luxury, suitable for an elite concierge service." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-027.jpg'); ?>')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 <div class="relative z-10 space-y-4">
 <h3 class="font-headline-sm text-headline-sm text-on-surface">Imperial Golden Osetra</h3>
@@ -256,7 +256,7 @@
 </div>
 <!-- Item 3 -->
 <div class="group relative overflow-hidden flex flex-col justify-end p-8 border border-outline-variant/20 hover:border-primary/40 transition-colors duration-500 opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 brightness-50" data-alt="A sleek, black-on-black gift set featuring a matte lacquer box with gold foil LuxurEat branding. Inside, a silver spoon and a crystal bowl sit ready for service. The overall vibe is modern, architectural, and extremely high-end." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-033.jpg'); ?>')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 brightness-50" data-alt="A sleek, black-on-black gift set featuring a matte lacquer box with gold foil LuxurEat branding. Inside, a silver spoon and a crystal bowl sit ready for service. The overall vibe is modern, architectural, and extremely high-end." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-033.jpg'); ?>')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 <div class="relative z-10 space-y-4">
 <h3 class="font-headline-sm text-headline-sm text-on-surface">Curated Gift Tiers</h3>
@@ -371,13 +371,16 @@
 
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>An odyssey of taste, sourcing the rarest delicacies through sustainable practices and uncompromising quality standards.</p></div>
+    <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>An odyssey of taste, sourcing the rarest delicacies through sustainable practices and uncompromising quality standards.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">Rednote</a><button type="button" data-footer-modal="wechat">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">Weibo</a></div>
     <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LuxurEat Maison. CITES & FDA Certified.</div>
 </footer>
+
+
+
 
 <?php wp_footer(); ?>
 </body></html>

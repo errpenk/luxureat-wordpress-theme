@@ -115,21 +115,14 @@ function luxureat_static_assets() {
         true
     );
 
-    wp_enqueue_script(
-        'luxureat-main',
-        $theme_uri . '/main.js',
-        array('luxureat-product-data'),
-        filemtime($theme_dir . '/main.js'),
-        true
-    );
-
-    wp_enqueue_script(
-        'luxureat-latest-event',
-        $theme_uri . '/latest-event.js',
-        array(),
-        filemtime($theme_dir . '/latest-event.js'),
-        true
-    );
+    wp_enqueue_script('luxureat-event-data', $theme_uri . '/assets/data/events.js', array(), filemtime($theme_dir . '/assets/data/events.js'), true);
+    wp_enqueue_script('luxureat-journal-data', $theme_uri . '/assets/data/journal.js', array(), filemtime($theme_dir . '/assets/data/journal.js'), true);
+    wp_enqueue_script('luxureat-brand-data', $theme_uri . '/assets/data/brand.js', array(), filemtime($theme_dir . '/assets/data/brand.js'), true);
+    wp_enqueue_script('luxureat-core', $theme_uri . '/assets/js/core.js', array(), filemtime($theme_dir . '/assets/js/core.js'), true);
+    wp_enqueue_script('luxureat-products', $theme_uri . '/assets/js/products.js', array('luxureat-product-data'), filemtime($theme_dir . '/assets/js/products.js'), true);
+    wp_enqueue_script('luxureat-events', $theme_uri . '/assets/js/events.js', array('luxureat-event-data'), filemtime($theme_dir . '/assets/js/events.js'), true);
+    wp_enqueue_script('luxureat-journal', $theme_uri . '/assets/js/journal.js', array('luxureat-journal-data', 'luxureat-event-data'), filemtime($theme_dir . '/assets/js/journal.js'), true);
+    wp_enqueue_script('luxureat-brand', $theme_uri . '/assets/js/brand.js', array('luxureat-brand-data'), filemtime($theme_dir . '/assets/js/brand.js'), true);
 }
 add_action('wp_enqueue_scripts', 'luxureat_static_assets');
 

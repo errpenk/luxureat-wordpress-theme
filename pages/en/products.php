@@ -96,7 +96,7 @@
 <?php wp_head(); ?>
 </head><body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container flex flex-col min-h-screen">
 <header class="lux-header">
-  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
+  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
   <div class="lux-actions">
     <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
@@ -112,7 +112,7 @@
 <main class="lux-products-main flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col gap-section-gap">
 <!-- Hero / Header Section -->
 <section class="lux-full-bleed lux-dark-photo-block lux-photo-fade-bottom lux-bright-photo flex flex-col items-start justify-end gap-4 pt-32 pb-16 px-margin-mobile md:px-margin-desktop min-h-[520px]">
-<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-044.jpg'); ?>')"></div>
+<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-044.jpg'); ?>')"></div>
 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">Premium Products</h1>
 
 <div class="flex flex-col md:flex-row md:items-end justify-between w-full gap-4 mt-4">
@@ -167,7 +167,7 @@
 </section>
 <!-- Rituals / Pairing Banner -->
 <section class="lux-full-bleed lux-dark-photo-block lux-photo-fade-bottom py-20 px-margin-mobile md:px-margin-desktop flex items-center justify-center mt-12">
-<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-029.jpg'); ?>')"></div>
+<div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-029.jpg'); ?>')"></div>
 <div class="relative z-10 text-center flex flex-col items-center gap-6 max-w-3xl">
 <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary">Rituals</h3>
 <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -200,13 +200,16 @@
 
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>A tasting odyssey sourced with sustainable practice and uncompromising standards.</p></div>
+    <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>A tasting odyssey sourced with sustainable practice and uncompromising standards.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">Rednote</a><button type="button" data-footer-modal="wechat">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">Weibo</a></div>
     <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LUXUREAT MAISON. CITES & FDA certified.</div>
 </footer>
+
+
+
 
 <?php wp_footer(); ?>
 </body></html>

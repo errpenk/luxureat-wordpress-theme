@@ -110,7 +110,7 @@
 </head>
 <body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">
 <header class="lux-header">
-  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
+  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a class="active" href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a class="" href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
   <div class="lux-actions">
     <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>" aria-label="购物袋"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
@@ -125,7 +125,7 @@
 <!-- Corporate Hero Section -->
 <section class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center opacity-30" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-007.jpg'); ?>')"></div>
+<div class="w-full h-full bg-cover bg-center opacity-30" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-007.jpg'); ?>')"></div>
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
 <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-5xl mx-auto flex flex-col items-center gap-8">
@@ -137,7 +137,7 @@
 </div>
 </section>
 <!-- Core Business Services -->
-<section class="w-full bg-surface-container-lowest py-section-gap border-y border-white/5">
+<section class="w-full lux-muted-block py-section-gap border-y border-white/5">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="lux-card-photo lux-card-photo-one p-10 border border-white/5 bg-surface-container flex flex-col items-start gap-6 hover:border-primary/30 transition-all group">
@@ -190,7 +190,7 @@
 <!-- Set 1 -->
 <div class="group">
 <div class="relative aspect-[4/5] overflow-hidden bg-surface-container-low mb-6">
-<img alt="Premium Gift Set" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-023.jpg'); ?>"/>
+<img alt="Premium Gift Set" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-023.jpg'); ?>"/>
 <div class="absolute top-4 left-4">
 <span class="px-3 py-1 bg-background/80 backdrop-blur text-[10px] text-primary uppercase tracking-widest border border-primary/20">Best Seller</span>
 </div>
@@ -205,7 +205,7 @@
 <!-- Set 2 -->
 <div class="group">
 <div class="relative aspect-[4/5] overflow-hidden bg-surface-container-low mb-6">
-<img alt="Starter Gift Set" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-035.jpg'); ?>"/>
+<img alt="Starter Gift Set" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-035.jpg'); ?>"/>
 </div>
 <h4 class="text-label-lg font-bold text-on-surface uppercase tracking-widest mb-2">序章 · 经典礼盒</h4>
 <p class="text-label-sm text-on-surface-variant mb-4">Oscietra 精选 50g 伴手礼盒</p>
@@ -217,7 +217,7 @@
 <!-- Set 3 -->
 <div class="group">
 <div class="relative aspect-[4/5] overflow-hidden bg-surface-container-low mb-6">
-<img alt="Bespoke Set" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-045.jpg'); ?>"/>
+<img alt="Bespoke Set" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-045.jpg'); ?>"/>
 </div>
 <h4 class="text-label-lg font-bold text-on-surface uppercase tracking-widest mb-2">铭刻 · 专属私享</h4>
 <p class="text-label-sm text-on-surface-variant mb-4">定制金属铭牌 + 50g 鱼子酱</p>
@@ -229,7 +229,7 @@
 <!-- Set 4 -->
 <div class="group">
 <div class="relative aspect-[4/5] overflow-hidden bg-surface-container-low mb-6">
-<img alt="Bulk Supply" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-047.jpg'); ?>"/>
+<img alt="Bulk Supply" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-047.jpg'); ?>"/>
 </div>
 <h4 class="text-label-lg font-bold text-on-surface uppercase tracking-widest mb-2">甄选 · 餐饮供应</h4>
 <p class="text-label-sm text-on-surface-variant mb-4">多种级别鱼子酱散装/大桶装</p>
@@ -241,7 +241,7 @@
 <!-- Set 5 -->
 <div class="group">
 <div class="relative aspect-[4/5] overflow-hidden bg-surface-container-low mb-6">
-<img alt="Daily Table Gift Set" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-001.jpg'); ?>"/>
+<img alt="Daily Table Gift Set" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-001.jpg'); ?>"/>
 </div>
 <h4 class="text-label-lg font-bold text-on-surface uppercase tracking-widest mb-2">日常 · 私享餐桌</h4>
 <p class="text-label-sm text-on-surface-variant mb-4">Oscietra 30g + 贝母匙双人分享装</p>
@@ -284,7 +284,7 @@
 </div>
 </div>
 <a class="lux-partner-card lg:w-1/2" href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">
-<span class="lux-partner-card-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-050.jpg'); ?>');"></span>
+<span class="lux-partner-card-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-050.jpg'); ?>');"></span>
 <span class="lux-partner-card-content">
 <strong>参考方案</strong>
 <em>立即咨询</em>
@@ -300,13 +300,16 @@
 
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>一场关于味觉的奥德赛，通过可持续发展的实践与毫不妥协的质量标准，为您搜寻世间罕有的绝世美味。</p></div>
+    <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>一场关于味觉的奥德赛，通过可持续发展的实践与毫不妥协的质量标准，为您搜寻世间罕有的绝世美味。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">品鉴艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">品牌志</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">小红书</a><button type="button" data-footer-modal="wechat">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">微博</a></div>
     <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LUXUREAT MAISON. 已获 CITES & FDA 认证.</div>
 </footer>
+
+
+
 
 <?php wp_footer(); ?>
 </body></html>

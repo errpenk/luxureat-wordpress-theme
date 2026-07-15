@@ -17,5 +17,5 @@ This package wraps the static bilingual LuxurEat website source from https://git
 ## Notes
 
 - The current version prioritizes visual fidelity and static routing.
-- Local assets, `integration.css`, `latest-event.js`, and `main.js` are loaded through WordPress theme APIs.
-- Photographic assets live in `assets/images/`; product copy and gallery data live in `assets/data/products.js`.
+- Local assets and domain scripts are loaded through WordPress theme APIs.
+- Products, events, journal, and brand content each have dedicated data, script, and media locations under `assets/`.

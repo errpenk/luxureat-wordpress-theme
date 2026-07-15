@@ -148,7 +148,7 @@
 </head>
 <body class="font-body-md">
 <header class="lux-header">
-  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
+  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
   <div class="lux-actions">
     <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
@@ -163,7 +163,7 @@
 <!-- Hero Section -->
 <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0 transition-all duration-1000 opacity-100">
-<div class="w-full h-full bg-cover bg-center grayscale opacity-60 scale-105 transition-transform duration-10000 ease-linear" data-alt="A cinematic, high-contrast black and white photograph of an artisanal caviar harvest. A pair of gloved hands gently handles a shimmering heap of dark, lustrous beluga sturgeon roe in a professional stainless steel kitchen. The lighting is dramatic, highlighting the individual pearls with sharp crystalline reflections, creating a mood of intense focus and timeless epicurean craftsmanship. The environment is dark and atmospheric, focusing purely on the ritual of the harvest." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-011.jpg'); ?>')">
+<div class="w-full h-full bg-cover bg-center grayscale opacity-60 scale-105 transition-transform duration-10000 ease-linear" data-alt="A cinematic, high-contrast black and white photograph of an artisanal caviar harvest. A pair of gloved hands gently handles a shimmering heap of dark, lustrous beluga sturgeon roe in a professional stainless steel kitchen. The lighting is dramatic, highlighting the individual pearls with sharp crystalline reflections, creating a mood of intense focus and timeless epicurean craftsmanship. The environment is dark and atmospheric, focusing purely on the ritual of the harvest." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/lux-011.jpg'); ?>')">
 </div>
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
@@ -181,13 +181,14 @@
 </div>
 </section>
 <!-- Main Content Grid -->
+<section class="lux-recent-events" id="recent-events" data-recent-events></section>
 <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-section-gap">
 <!-- Featured Article -->
 <section class="mb-section-gap" id="featured">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center transition-all duration-1000 opacity-100">
 <div class="lg:col-span-7 article-card lux-reader-card group cursor-pointer">
 <div class="aspect-[16/10] overflow-hidden mb-8 border border-white/5 lux-reader-media">
-<img class="w-full h-full object-cover" data-alt="A close-up, noir-style photograph of a silver tasting spoon lifting a small mound of glistening Ossetra caviar. The background is a deep, velvety black with soft bokeh light reflecting off the spoon's polished surface. The lighting is moody and directional, emphasizing the texture and depth of the caviar pearls against the pristine silver. A whisper of Tiffany Blue light catches the edge of the spoon, adding a modern luxury touch." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-032.jpg'); ?>">
+<img class="w-full h-full object-cover" data-alt="A close-up, noir-style photograph of a silver tasting spoon lifting a small mound of glistening Ossetra caviar. The background is a deep, velvety black with soft bokeh light reflecting off the spoon's polished surface. The lighting is moody and directional, emphasizing the texture and depth of the caviar pearls against the pristine silver. A whisper of Tiffany Blue light catches the edge of the spoon, adding a modern luxury touch." src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/lux-032.jpg'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="en-harvest">Read Details</button>
 </div>
 </div>
@@ -205,20 +206,20 @@
 </div>
 </section>
 <!-- Secondary Grid -->
-<section class="mb-section-gap">
-<div class="flex justify-between items-end mb-16 border-b border-outline-variant/30 pb-8 transition-all duration-1000 opacity-100">
+<section class="lux-journal-season mb-section-gap" id="seasonal-notes">
+<div class="lux-journal-season-head transition-all duration-1000 opacity-100">
 <div>
 <h3 class="font-headline-md text-headline-md text-on-surface">Seasonal Observations</h3>
 </div>
 <div class="hidden md:block">
-<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#" data-reader-archive>View Archive</a>
+<a class="lux-narrative-link" href="#" data-reader-archive>View Archive<span class="material-symbols-outlined">arrow_forward</span></a>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-gutter transition-all duration-1000 opacity-100">
+<div class="lux-journal-season-grid transition-all duration-1000 opacity-100">
 <!-- Article 1 -->
-<article class="article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
+<article class="lux-journal-season-card article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media">
-<img class="w-full h-full object-cover" data-alt="An atmospheric, architectural shot of a minimalist truffle storage cellar in Italy. Shelves of weathered dark wood hold rows of rough, earthy black winter truffles. The lighting is cool and low-key, with dramatic shadows that highlight the unique, brain-like texture of the fungi. The palette is dominated by dark charcoal, deep browns, and a subtle Tiffany Blue accent light on the far wall." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-026.jpg'); ?>">
+<img class="w-full h-full object-cover" data-alt="An atmospheric, architectural shot of a minimalist truffle storage cellar in Italy. Shelves of weathered dark wood hold rows of rough, earthy black winter truffles. The lighting is cool and low-key, with dramatic shadows that highlight the unique, brain-like texture of the fungi. The palette is dominated by dark charcoal, deep browns, and a subtle Tiffany Blue accent light on the far wall." src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/products/lux-026.jpg'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="en-truffle">Read Details</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">Sourcing</span>
@@ -229,9 +230,9 @@
 <div class="w-full h-[1px] bg-outline-variant/30 origin-left scale-x-100"></div>
 </article>
 <!-- Article 2 -->
-<article class="article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
+<article class="lux-journal-season-card article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media">
-<img class="w-full h-full object-cover" data-alt="A high-end, editorial flat-lay of a luxury dinner table set with minimalist black ceramic plates and crystal glassware. A small tin of LuxurEat caviar sits at the center, its lid slightly ajar to reveal the dark pearls. The lighting is soft and ambient, casting long, elegant shadows. The style is 'Luminous Noir', creating a sophisticated and exclusive dining atmosphere for elite connoisseurs." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-003.jpg'); ?>">
+<img class="w-full h-full object-cover" data-alt="A high-end, editorial flat-lay of a luxury dinner table set with minimalist black ceramic plates and crystal glassware. A small tin of LuxurEat caviar sits at the center, its lid slightly ajar to reveal the dark pearls. The lighting is soft and ambient, casting long, elegant shadows. The style is 'Luminous Noir', creating a sophisticated and exclusive dining atmosphere for elite connoisseurs." src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/lux-003.jpg'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="en-service">Read Details</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">Epicurean Life</span>
@@ -242,9 +243,9 @@
 <div class="w-full h-[1px] bg-outline-variant/30 origin-left scale-x-100"></div>
 </article>
 <!-- Article 3 -->
-<article class="article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
+<article class="lux-journal-season-card article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media">
-<img class="w-full h-full object-cover" data-alt="A portrait of a master salt artisan in a dimly lit, high-tech curing room. The artisan is meticulously inspecting a batch of sturgeon roe, with focus and precision. The lighting highlights the fine details of the artisan's face and the delicate nature of the caviar. The aesthetic is clean and professional, using a low-saturation palette with deep shadows and surgical-grade lighting focus." src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lux-048.jpg'); ?>">
+<img class="w-full h-full object-cover" data-alt="A portrait of a master salt artisan in a dimly lit, high-tech curing room. The artisan is meticulously inspecting a batch of sturgeon roe, with focus and precision. The lighting highlights the fine details of the artisan's face and the delicate nature of the caviar. The aesthetic is clean and professional, using a low-saturation palette with deep shadows and surgical-grade lighting focus." src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/lux-048.jpg'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="en-malossol">Read Details</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">Craftsmanship</span>
@@ -297,7 +298,7 @@
 
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/luxureat-logo.png'); ?>" alt="LuxurEat"><p>An odyssey of taste, sourcing the rarest delicacies through sustainable practices and uncompromising quality standards.</p></div>
+    <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>An odyssey of taste, sourcing the rarest delicacies through sustainable practices and uncompromising quality standards.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">Rednote</a><button type="button" data-footer-modal="wechat">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">Weibo</a></div>
     <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
@@ -305,6 +306,11 @@
   <div class="lux-footer-bottom">© 2024 LuxurEat Maison. CITES & FDA Certified.</div>
 </footer>
 
-<script src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/articles.js?v=20260714-data-sync1'); ?>"></script>
+
+
+
+
+
+
 <?php wp_footer(); ?>
 </body></html>
