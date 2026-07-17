@@ -149,7 +149,7 @@
 <body class="font-body-md">
 <header class="lux-header">
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
-  <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
+  <nav class="lux-nav" aria-label="navigation"><a class="" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">About Us</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Recipe Art</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/news', '')); ?>">Brand News</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Quality &amp; Certification</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
   <div class="lux-actions">
     <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
     <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="Account sign in"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
@@ -181,7 +181,7 @@
 </div>
 </section>
 <!-- Main Content Grid -->
-<section class="lux-recent-events" id="recent-events" data-recent-events></section>
+<section class="lux-about-story" id="about-us" data-about-story></section>
 <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-section-gap">
 <!-- Featured Article -->
 <section class="mb-section-gap" id="featured">
@@ -193,10 +193,11 @@
 </div>
 </div>
 <div class="lg:col-span-5 lg:pl-12">
-<span class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-4 block">Maison Heritage</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 leading-tight">The Art of the Harvest</h2>
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-4 block">Brand Heritage</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 leading-tight">The Way of True Flavor</h2>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                        The ritual of the sturgeon harvest is a sacred tradition passed through generations of master salters. At LuxurEat, we treat every grain as a gemstone, preserving the delicate balance of minerality and creaminess that defines true excellence.
+                        Honoring Italian craftsmanship, selecting outstanding seasonal ingredients, and protecting flavor and quality through natural methods, LuxurEat expresses respect for the land, nature, and the future through responsible sourcing and packaging.<br><br>
+                        LuxurEat is rooted in tradition, guided by selection, oriented toward health, and accountable to sustainability. From premium ingredients to preparation and packaging, every step remains faithful to Italian food culture while respecting the future of nature and its ingredients.
                     </p>
 <a class="inline-flex items-center gap-4 group font-label-lg text-label-lg uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#" data-reader-open="en-harvest">
                         Read Narrative
@@ -299,13 +300,12 @@
 <footer class="lux-footer">
   <div class="lux-footer-grid">
     <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>An odyssey of taste, sourcing the rarest delicacies through sustainable practices and uncompromising quality standards.</p></div>
-    <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/caviar', '')); ?>">Caviar</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Rituals</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">Journal</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a><a href="<?php echo esc_url(luxureat_static_url('en/private', '')); ?>">Private Selection</a></nav>
+    <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/news', '')); ?>">Brand News</a><a class="" href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Quality &amp; Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">Rednote</a><button type="button" data-footer-modal="wechat">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">Weibo</a></div>
     <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2024 LuxurEat Maison. CITES & FDA Certified.</div>
 </footer>
-
 
 
 

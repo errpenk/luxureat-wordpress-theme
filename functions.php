@@ -27,8 +27,12 @@ function luxureat_static_aliases() {
         'contact.html' => 'zh/contact',
         'bag' => 'zh/bag',
         'bag.html' => 'zh/bag',
-        'private-selection' => 'en/private',
-        'private-selection.html' => 'en/private',
+        'en/caviar' => 'en/products',
+        'en/caviar.html' => 'en/products',
+        'en/private' => 'en/gifting',
+        'en/private.html' => 'en/gifting',
+        'private-selection' => 'en/gifting',
+        'private-selection.html' => 'en/gifting',
         'product-imperial-beluga' => 'zh/caviar',
         'product-imperial-beluga.html' => 'zh/caviar',
     );
@@ -53,13 +57,12 @@ function luxureat_static_pretty_paths() {
         'zh/contact' => '/contact/',
         'zh/bag' => '/bag/',
         'en' => '/en/',
-        'en/caviar' => '/en/caviar/',
         'en/products' => '/en/products/',
         'en/rituals' => '/en/rituals/',
         'en/journal' => '/en/journal/',
         'en/gifting' => '/en/gifting/',
+        'en/certification' => '/en/certification/',
         'en/contact' => '/en/contact/',
-        'en/private' => '/en/private/',
         'en/bag' => '/en/bag/',
     );
 }
@@ -106,6 +109,7 @@ function luxureat_static_assets() {
         array(),
         filemtime($theme_dir . '/integration.css')
     );
+
 
     wp_enqueue_script(
         'luxureat-product-data',

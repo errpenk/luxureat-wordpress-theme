@@ -12,7 +12,7 @@ This package wraps the static bilingual LuxurEat website source from https://git
 
 - `/` serves the Chinese home page.
 - Default Chinese routes use root-level pretty URLs such as `/caviar/`, `/rituals/`, and `/contact/`.
-- English routes use `/en/`, `/en/caviar/`, and the rest of the `/en/.../` namespace.
+- English routes use `/en/`, `/en/products/`, and the rest of the `/en/.../` namespace.
 
 ## Notes
 
