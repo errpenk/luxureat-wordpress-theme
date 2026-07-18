@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>品牌新闻 | LUXUREAT</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260718-performance'); ?>">
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300;6..96,400;6..96,500;6..96,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
   
@@ -12,8 +12,9 @@
 <?php wp_head(); ?>
 </head>
 <body class="lux-news-page bg-[#131313] text-[#e5e2e1] font-[Montserrat]">
+<!-- lux:header:start -->
 <header class="lux-header">
-  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
+  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">食谱艺术</a><a class="active" href="<?php echo esc_url(luxureat_static_url('zh/news', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
   <div class="lux-actions">
     <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>" aria-label="购物袋"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
@@ -22,9 +23,10 @@
     <button class="lux-menu" type="button" data-open="关闭" data-closed="菜单" aria-expanded="false">菜单</button>
   </div>
 </header>
+<!-- lux:header:end -->
 <main>
-  <section class="relative min-h-[62vh] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image:url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/brand-news-global.png'); ?>')"></div>
+  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image:url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/brand-news-global.webp'); ?>')"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-[#131313]"></div>
     <div class="relative z-10 max-w-4xl px-6 text-center">
       <span class="block mb-6 text-[12px] uppercase tracking-[0.35em] text-[#9df5ec] font-semibold">LuxurEat NEWS</span>
@@ -34,19 +36,23 @@
   </section>
   <section class="lux-recent-events" id="recent-events" data-recent-events></section>
 </main>
+<!-- lux:footer:start -->
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>一场关于味觉的奥德赛，通过可持续发展的实践与毫不妥协的质量标准，为您搜寻世间罕有的绝世美味。</p></div>
+    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat China以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/news', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
-    <div class="lux-footer-social"><a href="https://xhslink.com/m/6Jn3PRYzjAy" target="_blank" rel="noopener">小红书</a><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener">微博</a></div>
-    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="tel:+8615721452475">+86 15721452475</a></div>
+    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
+    <div><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">china@luxureat.com</a><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">roberto@truffleat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
-  <div class="lux-footer-bottom">© 2024 LUXUREAT MAISON. 已获 CITES & FDA 认证.</div>
+  <div class="lux-footer-bottom">2026 LUXUREAT CHINA.</div>
 </footer>
+<!-- lux:footer:end -->
+<!-- lux:scripts:start -->
 
 
 
 
+<!-- lux:scripts:end -->
 <?php wp_footer(); ?>
 </body>
 </html>
