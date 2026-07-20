@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Brand News | LUXUREAT</title>
-  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260718-performance'); ?>">
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-layout-fix'); ?>">
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300;6..96,400;6..96,500;6..96,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
   
@@ -29,9 +29,9 @@
     <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image:url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/brand-news-global.webp'); ?>')"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-[#131313]"></div>
     <div class="relative z-10 max-w-4xl px-6 text-center">
-      <span class="block mb-6 text-[12px] uppercase tracking-[0.35em] text-[#9df5ec]">Maison News</span>
+      <span class="lux-hero-kicker">Follow our latest updates</span>
       <h1 class="mb-8 font-['Bodoni_Moda'] text-6xl md:text-8xl font-light text-[#e5e2e1]">Brand News</h1>
-      <p class="mx-auto max-w-2xl text-lg font-light leading-relaxed text-[#bdc9c7]">Follow LuxurEat exhibitions, brand partnerships, and developments across global markets.</p>
+      <p class="lux-page-hero-subtitle lux-hero-support mx-auto max-w-2xl">Follow LuxurEat exhibitions, brand partnerships, and developments across global markets.</p>
     </div>
   </section>
   <section class="lux-recent-events" id="recent-events" data-recent-events></section>

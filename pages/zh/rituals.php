@@ -5,7 +5,7 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260718-performance'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-layout-fix'); ?>">
 <style>
         body {
             background-color: #000000;
@@ -67,8 +67,9 @@
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
 <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop">
+<span class="lux-hero-kicker">汇集意大利特色食谱，一同体验多元的舌尖滋味</span>
 <h1 class="zh-display-title text-white mb-6">食谱艺术</h1>
-<p class="lux-page-hero-subtitle max-w-2xl mx-auto tracking-wide">
+<p class="lux-page-hero-subtitle lux-hero-support max-w-2xl mx-auto tracking-wide">
                     从一份食谱开始，让LuxurEat的精选食材成为餐桌上的主角。无论是松露的浓郁香气、鱼子酱的细腻层次，还是意大利面的纯正风味，每一款产品都能为日常料理增添更精致的表达。通过简单的烹饪方式，将意大利美食传统带入每一次用餐，让优质食材、经典配方与现代生活自然相遇。
                 </p>
 <div class="mt-12 flex justify-center">

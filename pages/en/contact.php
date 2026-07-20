@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Contact the Concierge - LuxurEat Maison</title>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260718-performance'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-layout-fix'); ?>">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
@@ -84,8 +84,9 @@
 <div class="lux-dark-photo-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/contact-hero-consulting.webp'); ?>')"></div>
 
 <div class="relative z-10 text-center space-y-4">
+<span class="lux-hero-kicker">Together, from this moment forward</span>
 <h1 class="zh-display-title text-secondary">Contact Us</h1>
-<p class="lux-page-hero-subtitle max-w-2xl mx-auto px-margin-mobile">
+<p class="lux-page-hero-subtitle lux-hero-support max-w-2xl mx-auto px-margin-mobile">
                     Explore exceptional caviar with guidance from our tasting specialists.
                 </p>
 </div>

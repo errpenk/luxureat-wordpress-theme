@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>LuxurEat - Rituals &amp; Culture</title>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260718-performance'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-layout-fix'); ?>">
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
@@ -38,8 +38,9 @@
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
 <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop">
+<span class="lux-hero-kicker">A collection of Italian specialty recipes for a diverse journey of taste</span>
 <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">Recipe Art</h1>
-<p class="lux-page-hero-subtitle max-w-2xl mx-auto tracking-wide">Begin with a recipe and let LuxurEat ingredients take center stage. From the deep aroma of truffle and the delicate layers of caviar to the authentic character of Italian pasta, every product brings refinement to everyday cooking. Simple techniques carry Italian food traditions into every meal, where exceptional ingredients, classic recipes, and modern life meet naturally.</p>
+<p class="lux-page-hero-subtitle lux-hero-support max-w-2xl mx-auto tracking-wide">Begin with a recipe and let LuxurEat ingredients take center stage. From the deep aroma of truffle and the delicate layers of caviar to the authentic character of Italian pasta, every product brings refinement to everyday cooking. Simple techniques carry Italian food traditions into every meal, where exceptional ingredients, classic recipes, and modern life meet naturally.</p>
 <div class="mt-12 flex justify-center"><div class="w-px h-24 bg-gradient-to-b from-primary to-transparent"></div></div>
 </div>
 </section>

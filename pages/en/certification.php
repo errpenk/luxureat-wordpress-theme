@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Quality &amp; Certification | LuxurEat Maison</title>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260718-performance'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-layout-fix'); ?>">
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,900&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
@@ -41,9 +41,9 @@
 <div class="absolute inset-0 lux-hero-fade-both z-10"></div>
 <div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="LuxurEat quality certifications and international standards" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/cert-market-access.webp'); ?>')"></div>
 <div class="relative z-20 text-center px-margin-mobile">
-<p class="font-label-lg text-label-lg text-primary uppercase tracking-[0.3em] mb-4">Quality &amp; Certification</p>
+<p class="lux-hero-kicker">Strict standards, meticulous craftsmanship, assurance at every step</p>
 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">A Promise of Quality<br/><span class="text-secondary">Backed by Certification</span></h1>
-<p class="lux-cert-hero-note"><strong>China market compliance:</strong> products entering China complete the registrations, import documentation, and Chinese labels required for their specific category. Market-access status, certifications, and suitable channels must be verified in the relevant product documents and labels.</p>
+<p class="lux-cert-hero-note lux-hero-support"><strong>China market compliance:</strong> products entering China complete the registrations, import documentation, and Chinese labels required for their specific category. Market-access status, certifications, and suitable channels must be verified in the relevant product documents and labels.</p>
 <div class="w-24 h-px bg-primary mx-auto"></div>
 </div>
 
