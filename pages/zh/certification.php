@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>品质与认证 | LuxurEat Maison</title>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-gallery-fix'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-brand-suffix'); ?>">
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,900&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
@@ -57,7 +57,7 @@
 </div>
 <h2 class="font-headline-lg text-headline-lg mb-8">责任采购与全球合规</h2>
 <div class="space-y-6 text-on-surface-variant font-body-lg text-body-lg">
-<p class="">LuxurEat 将传统、创新与可持续性落实到每一次采购。CITES 确保鲟鱼子酱来源合法且全程可追溯；Demeter、USDA Organic 与 EU Organic 则表达我们对土地、生态系统及负责任生产方式的尊重。</p>
+<p class="">LuxurEat（露意膳） 将传统、创新与可持续性落实到每一次采购。CITES 确保鲟鱼子酱来源合法且全程可追溯；Demeter、USDA Organic 与 EU Organic 则表达我们对土地、生态系统及负责任生产方式的尊重。</p>
 <p class="">OU Kosher、Halal 与 Vegan 标识回应不同文化与饮食选择，让意大利美食传统以更包容、更可靠的方式进入全球市场。</p>
 <ul class="space-y-4 pt-4">
 <li class="flex items-start gap-4">
@@ -81,7 +81,7 @@
 <div class="lux-cert-system-overlay" aria-hidden="true"></div>
 <div class="max-w-3xl mx-auto text-center mb-16">
 <h2 class="font-headline-lg text-headline-lg mb-6">全球品质体系：从产地到市场</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">以传统为根、创新为向、可持续性为责，LuxurEat 以相互衔接的国际标准守护原料、生产、供应链与市场准入。</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">以传统为根、创新为向、可持续性为责，LuxurEat（露意膳） 以相互衔接的国际标准守护原料、生产、供应链与市场准入。</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="lux-card-photo lux-card-photo-one p-8 border border-outline-variant/30 bg-surface text-center hover:border-primary transition-colors">
@@ -196,12 +196,12 @@
 <!-- lux:footer:start -->
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat China以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
+    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat China（露意膳）以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/news', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
     <div><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">china@luxureat.com</a><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">roberto@truffleat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
-  <div class="lux-footer-bottom">2026 LUXUREAT CHINA.</div>
+  <div class="lux-footer-bottom">2026 LUXUREAT CHINA（露意膳）.</div>
 </footer>
 <!-- lux:footer:end -->
 <!-- lux:scripts:start -->

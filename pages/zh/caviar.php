@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-gallery-fix'); ?>">
+<!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-brand-suffix'); ?>">
 
 <?php wp_head(); ?>
 </head><body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container flex flex-col min-h-screen">
@@ -80,7 +80,7 @@
 <div class="relative z-10 text-center flex flex-col items-center gap-6 max-w-3xl">
 <h3 class="font-display-lg text-display-lg-mobile md:text-display-lg text-secondary mb-10">食谱艺术</h3>
 <p class="lux-page-hero-subtitle">
-                     从早餐、第一道主食到甜点，以LuxurEat鱼子酱、松露与精选食材构筑意大利餐桌，让每一道食谱兼具本味、技法与优雅。
+                     从早餐、第一道主食到甜点，以LuxurEat（露意膳）鱼子酱、松露与精选食材构筑意大利餐桌，让每一道食谱兼具本味、技法与优雅。
                  </p>
 <a class="mt-4 border-b border-primary text-primary pb-1 uppercase tracking-widest font-label-lg text-label-lg hover:opacity-70 transition-opacity" href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">探索食谱艺术</a>
 </div>
@@ -110,12 +110,12 @@
 <!-- lux:footer:start -->
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat China以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
+    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat China（露意膳）以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/news', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
     <div><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">china@luxureat.com</a><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">roberto@truffleat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
-  <div class="lux-footer-bottom">2026 LUXUREAT CHINA.</div>
+  <div class="lux-footer-bottom">2026 LUXUREAT CHINA（露意膳）.</div>
 </footer>
 <!-- lux:footer:end -->
 <!-- lux:scripts:start -->

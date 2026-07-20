@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Brand News | LUXUREAT</title>
-  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-gallery-fix'); ?>">
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-brand-suffix'); ?>">
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300;6..96,400;6..96,500;6..96,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
   
@@ -31,7 +31,7 @@
     <div class="relative z-10 max-w-4xl px-6 text-center">
       <span class="lux-hero-kicker">Follow our latest updates</span>
       <h1 class="mb-8 font-['Bodoni_Moda'] text-6xl md:text-8xl font-light text-[#e5e2e1]">Brand News</h1>
-      <p class="lux-page-hero-subtitle lux-hero-support mx-auto max-w-2xl">Follow LuxurEat exhibitions, brand partnerships, and developments across global markets.</p>
+      <p class="lux-page-hero-subtitle lux-hero-support mx-auto max-w-2xl">Follow LuxurEat（露意膳） exhibitions, brand partnerships, and developments across global markets.</p>
     </div>
   </section>
   <section class="lux-recent-events" id="recent-events" data-recent-events></section>
@@ -39,12 +39,12 @@
 <!-- lux:footer:start -->
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>Beyond importing, we are committed to defining a new standard for premium Italian gastronomy in China.<br>Rooted in authentic flavor and guided by quality and safety, LuxurEat China brings Italian food culture and innovative experiences to China.</p></div>
+    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>Beyond importing, we are committed to defining a new standard for premium Italian gastronomy in China.<br>Rooted in authentic flavor and guided by quality and safety, LuxurEat China（露意膳） brings Italian food culture and innovative experiences to China.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/news', '')); ?>">Brand News</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">Rednote</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">Weibo</a></div>
     <div><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">china@luxureat.com</a><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">roberto@truffleat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
-  <div class="lux-footer-bottom">2026 LUXUREAT CHINA.</div>
+  <div class="lux-footer-bottom">2026 LUXUREAT CHINA（露意膳）.</div>
 </footer>
 <!-- lux:footer:end -->
 <!-- lux:scripts:start -->

@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>联系我们 | LUXUREAT</title>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-gallery-fix'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-brand-suffix'); ?>">
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
@@ -192,7 +192,7 @@ roberto@truffleat.com
 <a href="https://www.truffleat.com" target="_blank" rel="noopener">www.truffleat.com</a>
 </article>
 <article class="lux-footprint-card glass-panel p-6 text-left">
-<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">location_city</span><strong>United States</strong><small>Seattle · Luxureat LLC</small></div>
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">location_city</span><strong>United States</strong><small>Seattle · Luxureat（露意膳） LLC</small></div>
 <p class="lux-footprint-role">面向北美市场的业务联络、合作伙伴支持与市场发展。</p>
 <p>605 Center Rd Apt A203<br>Everett, WA 98204, USA</p>
 <a href="mailto:info@luxureat.com">info@luxureat.com</a>
@@ -208,7 +208,7 @@ roberto@truffleat.com
 <a href="https://wa.me/66811331337" target="_blank" rel="noopener">WhatsApp: +66 811 331 337</a>
 </article>
 <article class="lux-footprint-card glass-panel p-6 text-left">
-<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">account_balance</span><strong>China</strong><small>Shanghai · LuxurEat China Ltd</small></div>
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">account_balance</span><strong>China</strong><small>Shanghai · LuxurEat China（露意膳） Ltd</small></div>
 <p class="lux-footprint-role">以上海为运营中心，负责中国本地进口、分销拓展、客户服务与市场沟通。</p>
 <p>Sala 505, Building A, 389, Lianming Road, Minhang District, Shanghai</p>
 <p>Yuan Pengfei</p>
@@ -235,12 +235,12 @@ roberto@truffleat.com
 <!-- lux:footer:start -->
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat China以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
+    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat China（露意膳）以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/news', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
     <div><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">china@luxureat.com</a><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">roberto@truffleat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
-  <div class="lux-footer-bottom">2026 LUXUREAT CHINA.</div>
+  <div class="lux-footer-bottom">2026 LUXUREAT CHINA（露意膳）.</div>
 </footer>
 <!-- lux:footer:end -->
 <!-- lux:scripts:start -->

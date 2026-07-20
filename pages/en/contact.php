@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Contact the Concierge - LuxurEat Maison</title>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-gallery-fix'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-brand-suffix'); ?>">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
@@ -224,7 +224,7 @@ roberto@truffleat.com
 <a href="https://www.truffleat.com" target="_blank" rel="noopener">www.truffleat.com</a>
 </article>
 <article class="lux-footprint-card glass-panel p-6 text-left">
-<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">location_city</span><strong>United States</strong><small>Seattle · Luxureat LLC</small></div>
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">location_city</span><strong>United States</strong><small>Seattle · Luxureat（露意膳） LLC</small></div>
 <p class="lux-footprint-role">Business liaison, partner support, and market development for North America.</p>
 <p>605 Center Rd Apt A203<br>Everett, WA 98204, USA</p>
 <a href="mailto:info@luxureat.com">info@luxureat.com</a>
@@ -240,7 +240,7 @@ roberto@truffleat.com
 <a href="https://wa.me/66811331337" target="_blank" rel="noopener">WhatsApp: +66 811 331 337</a>
 </article>
 <article class="lux-footprint-card glass-panel p-6 text-left">
-<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">account_balance</span><strong>China</strong><small>Shanghai · LuxurEat China Ltd</small></div>
+<div class="lux-footprint-heading"><span class="material-symbols-outlined text-primary lux-footprint-icon">account_balance</span><strong>China</strong><small>Shanghai · LuxurEat China（露意膳） Ltd</small></div>
 <p class="lux-footprint-role">Shanghai-based local operations for imports, distribution development, customer service, and market communication in China.</p>
 <p>Sala 505, Building A, 389, Lianming Road, Minhang District, Shanghai</p>
 <p>Yuan Pengfei</p>
@@ -279,12 +279,12 @@ roberto@truffleat.com
 <!-- lux:footer:start -->
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>Beyond importing, we are committed to defining a new standard for premium Italian gastronomy in China.<br>Rooted in authentic flavor and guided by quality and safety, LuxurEat China brings Italian food culture and innovative experiences to China.</p></div>
+    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>Beyond importing, we are committed to defining a new standard for premium Italian gastronomy in China.<br>Rooted in authentic flavor and guided by quality and safety, LuxurEat China（露意膳） brings Italian food culture and innovative experiences to China.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/news', '')); ?>">Brand News</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">Rednote</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">Weibo</a></div>
     <div><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">china@luxureat.com</a><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">roberto@truffleat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
-  <div class="lux-footer-bottom">2026 LUXUREAT CHINA.</div>
+  <div class="lux-footer-bottom">2026 LUXUREAT CHINA（露意膳）.</div>
 </footer>
 <!-- lux:footer:end -->
 <!-- lux:scripts:start -->

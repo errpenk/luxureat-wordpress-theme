@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-gallery-fix'); ?>">
+<!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260720-brand-suffix'); ?>">
 
 <?php wp_head(); ?>
 </head><body class="font-body-md">
@@ -28,7 +28,7 @@
 <span class="lux-hero-kicker">我们的故事</span>
 <h1 class="zh-display-title text-on-surface mb-8">品牌叙事</h1>
 <p class="lux-page-hero-subtitle lux-hero-support max-w-2xl mx-auto mb-12">
-                从意大利家族餐桌上的一份食谱，到世界各地餐桌上的真实风味，LuxurEat以松露、鱼子酱和精选高端食材，将代代相传的烹饪传统融入现代生活。每一款产品，都是经典食谱与创新表达之间的连接，让优质食材更自然地进入日常料理，也让意大利美食文化跨越地域，在每一次烹饪与分享中延续。
+                从意大利家族餐桌上的一份食谱，到世界各地餐桌上的真实风味，LuxurEat（露意膳）以松露、鱼子酱和精选高端食材，将代代相传的烹饪传统融入现代生活。每一款产品，都是经典食谱与创新表达之间的连接，让优质食材更自然地进入日常料理，也让意大利美食文化跨越地域，在每一次烹饪与分享中延续。
             </p>
 <div class="flex justify-center">
 <a class="w-12 h-12 flex items-center justify-center border border-primary rounded-full hover:bg-primary/10 transition-colors duration-500" href="#featured">
@@ -44,10 +44,10 @@
 <video class="lux-about-program-media" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-china-operations.m4v'); ?>" type="video/mp4"></video>
 <div class="lux-about-program-overlay" aria-hidden="true"></div>
 <div class="lux-about-program-inner">
-<p class="lux-about-program-kicker">LUXUREAT CHINA · SHANGHAI</p>
+<p class="lux-about-program-kicker">LUXUREAT（露意膳） CHINA（露意膳） · SHANGHAI</p>
 <div class="lux-about-program-lead">
 <h2>扎根中国的本地运营主体</h2>
-<p>LuxurEat China 是一家在中国设立并以上海为运营中心的中国公司，隶属于 LuxurEat 国际集团。它不是海外品牌的代表处，而是面向中国市场直接开展进口、分销、客户服务与商业发展的本地运营主体。</p>
+<p>LuxurEat China（露意膳） 是一家在中国设立并以上海为运营中心的中国公司，隶属于 LuxurEat（露意膳） 国际集团。它不是海外品牌的代表处，而是面向中国市场直接开展进口、分销、客户服务与商业发展的本地运营主体。</p>
 </div>
 </div>
 </section>
@@ -82,7 +82,7 @@
 </div>
 <aside class="lux-product-characteristics-note">
 <strong>产品特性说明</strong>
-<p>LuxurEat 提供多种无麸质、纯素、素食、低热量以及针对特定过敏原进行配方优化的产品。每款产品的具体特点应以相应产品说明为准。</p>
+<p>LuxurEat（露意膳） 提供多种无麸质、纯素、素食、低热量以及针对特定过敏原进行配方优化的产品。每款产品的具体特点应以相应产品说明为准。</p>
 </aside>
 </div>
 </section>
@@ -101,7 +101,7 @@
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 leading-tight">本味之道</h2>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8">
                         传承意大利工艺，甄选当季优质食材，以天然方式守护风味与品质，并通过负责任的采购与包装，表达对土地、自然与未来的尊重。<br><br>
-                        LuxurEat以传统为根、甄选为准、责任创新为向、永续为责。从优质原料到制作与包装，每一步都忠于意大利美食文化，也尊重自然与食材的未来。
+                        LuxurEat（露意膳）以传统为根、甄选为准、责任创新为向、永续为责。从优质原料到制作与包装，每一步都忠于意大利美食文化，也尊重自然与食材的未来。
                     </p>
 <a class="inline-flex items-center gap-4 group font-label-lg text-label-lg uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#" data-reader-open="zh-harvest">
                         阅读详细叙事
@@ -208,12 +208,12 @@
 <!-- lux:footer:start -->
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat China以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
+    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat China（露意膳）以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/news', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
     <div><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">china@luxureat.com</a><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">roberto@truffleat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
-  <div class="lux-footer-bottom">2026 LUXUREAT CHINA.</div>
+  <div class="lux-footer-bottom">2026 LUXUREAT CHINA（露意膳）.</div>
 </footer>
 <!-- lux:footer:end -->
 <!-- lux:scripts:start -->
