@@ -484,8 +484,6 @@ function initLuxFooterActions() {
     logIn: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg>',
     logOut: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></svg>',
     userPlus: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>',
-    circle: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle></svg>',
-    message: '<svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>',
   };
 
   const isZh = () => document.documentElement.lang?.toLowerCase().startsWith("zh") || location.pathname.includes("/zh/");
@@ -495,11 +493,17 @@ function initLuxFooterActions() {
     create: "创建账号",
     subtitleSignIn: "欢迎回到您的 LuxurEat（露意膳） 账户。",
     subtitleCreate: "创建您的 LuxurEat（露意膳） 账户。",
+    resetTitle: "重置密码",
+    subtitleReset: "输入注册邮箱，我们会发送安全的密码重置链接。",
     email: "电子邮箱",
     password: "密码",
     remember: "记住我",
     forgot: "忘记密码？",
-    divider: "或使用以下方式登录",
+    newsletter: "我愿意接收 LuxurEat 的活动提醒和产品上新邮件（可选）",
+    sendReset: "发送重置链接",
+    resetSent: "如果该邮箱已注册，密码重置链接已发送，请检查收件箱和垃圾邮件。",
+    unavailable: "账号服务暂未连接，请稍后再试。",
+    working: "请稍候…",
     signOut: "退出登录",
   } : {
     close: "Close",
@@ -507,11 +511,17 @@ function initLuxFooterActions() {
     create: "Create Account",
     subtitleSignIn: "Welcome back to your LuxurEat（露意膳） account.",
     subtitleCreate: "Create your LuxurEat（露意膳） account.",
+    resetTitle: "Reset Password",
+    subtitleReset: "Enter your account email and we will send a secure reset link.",
     email: "Email Address",
     password: "Password",
     remember: "Remember Me",
     forgot: "Forgot Password?",
-    divider: "Or Sign In With",
+    newsletter: "Email me about LuxurEat events and new products (optional)",
+    sendReset: "Send Reset Link",
+    resetSent: "If the email is registered, a reset link has been sent. Please check your inbox and spam folder.",
+    unavailable: "Account service is not connected yet. Please try again later.",
+    working: "Please wait…",
     signOut: "Sign Out",
   };
 
@@ -527,28 +537,25 @@ function initLuxFooterActions() {
             <h2 id="lux-account-title" data-account-title>${text.signIn}</h2>
             <p data-account-subtitle>${text.subtitleSignIn}</p>
           </header>
-          <form>
+          <form data-account-form>
             <label class="lux-account-field">
               <span>${text.email}</span>
-              <div class="lux-account-input">${icons.mail}<input type="email" placeholder="china@luxureat.com" autocomplete="email"></div>
+              <div class="lux-account-input">${icons.mail}<input name="email" type="email" placeholder="china@luxureat.com" autocomplete="email" required></div>
             </label>
-            <label class="lux-account-field">
+            <label class="lux-account-field" data-account-password>
               <span>${text.password}</span>
-              <div class="lux-account-input">${icons.lock}<input type="password" placeholder="••••••••" autocomplete="current-password"></div>
+              <div class="lux-account-input">${icons.lock}<input name="password" type="password" placeholder="••••••••" autocomplete="current-password" minlength="8" required></div>
             </label>
-            <div class="lux-account-row">
-              <label><input type="checkbox"><span>${text.remember}</span></label>
-              <a href="contact.html">${text.forgot}</a>
+            <div class="lux-account-row" data-account-login-options>
+              <label><input name="remember" type="checkbox" value="1"><span>${text.remember}</span></label>
+              <a href="${luxEscapeCoreHtml(window.LuxureatAccount?.lostPasswordUrl || "#")}" data-account-forgot>${text.forgot}</a>
             </div>
+            <label class="lux-account-newsletter" data-account-newsletter hidden><input name="newsletter" type="checkbox" value="1"><span>${text.newsletter}</span></label>
+            <p class="lux-account-feedback" data-account-feedback role="status" aria-live="polite"></p>
             <button class="lux-account-submit" type="submit" data-account-submit>${icons.logIn}<span>${text.signIn}</span></button>
           </form>
-          <div class="lux-account-divider">${text.divider}</div>
-          <div class="lux-account-social">
-            <button type="button">${icons.circle}Google</button>
-            <button type="button">${icons.message}WeChat</button>
-          </div>
           <button class="lux-account-toggle" type="button" data-account-toggle>${icons.userPlus}<span>${text.create}</span></button>
-          <button class="lux-account-logout" type="button">${icons.logOut}<span>${text.signOut}</span></button>
+          <button class="lux-account-logout" type="button" data-account-logout>${icons.logOut}<span>${text.signOut}</span></button>
         </section>
       </div>
     </div>`;
@@ -560,7 +567,71 @@ function initLuxFooterActions() {
 
   const ensureModal = () => {
     if (!modal()) document.body.insertAdjacentHTML("beforeend", modalHtml());
-    return modal();
+    const node = modal();
+    const loggedIn = Boolean(window.LuxureatAccount?.loggedIn);
+    node.querySelector("[data-account-form]").hidden = loggedIn;
+    node.querySelector("[data-account-toggle]").hidden = loggedIn;
+    node.querySelector("[data-account-logout]").hidden = !loggedIn;
+    return node;
+  };
+
+  const setMode = (node, mode) => {
+    const text = copy();
+    const creating = mode === "register";
+    const resetting = mode === "forgot";
+    const password = node.querySelector("input[name='password']");
+    node.dataset.accountMode = mode;
+    node.querySelector("[data-account-title]").textContent = resetting ? text.resetTitle : creating ? text.create : text.signIn;
+    node.querySelector("[data-account-subtitle]").textContent = resetting ? text.subtitleReset : creating ? text.subtitleCreate : text.subtitleSignIn;
+    node.querySelector("[data-account-icon]").innerHTML = resetting ? icons.mail : creating ? icons.userPlus : icons.logIn;
+    node.querySelector("[data-account-toggle]").innerHTML = mode === "login" ? `${icons.userPlus}<span>${text.create}</span>` : `${icons.logIn}<span>${text.signIn}</span>`;
+    node.querySelector("[data-account-submit]").innerHTML = resetting ? `${icons.mail}<span>${text.sendReset}</span>` : creating ? `${icons.userPlus}<span>${text.create}</span>` : `${icons.logIn}<span>${text.signIn}</span>`;
+    node.querySelector("[data-account-password]").hidden = resetting;
+    node.querySelector("[data-account-login-options]").hidden = mode !== "login";
+    node.querySelector("[data-account-newsletter]").hidden = !creating;
+    password.disabled = resetting;
+    password.required = !resetting;
+    password.autocomplete = creating ? "new-password" : "current-password";
+    node.querySelector("[data-account-feedback]").textContent = "";
+  };
+
+  const submit = async (form) => {
+    const node = ensureModal();
+    const text = copy();
+    const feedback = node.querySelector("[data-account-feedback]");
+    const button = node.querySelector("[data-account-submit]");
+    const account = window.LuxureatAccount;
+    if (!account?.ajaxUrl || !account?.nonce) {
+      feedback.textContent = text.unavailable;
+      return;
+    }
+
+    const data = new URLSearchParams(new FormData(form));
+    data.set("action", "luxureat_account");
+    data.set("nonce", account.nonce);
+    data.set("mode", node.dataset.accountMode || "login");
+    data.set("lang", isZh() ? "zh" : "en");
+    button.disabled = true;
+    feedback.textContent = text.working;
+    try {
+      const response = await fetch(account.ajaxUrl, {
+        method: "POST",
+        credentials: "same-origin",
+        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+        body: data,
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error(result.data?.message || text.unavailable);
+      if (node.dataset.accountMode === "forgot") {
+        feedback.textContent = result.data?.message || text.resetSent;
+        button.disabled = false;
+        return;
+      }
+      location.reload();
+    } catch (error) {
+      feedback.textContent = error.message || text.unavailable;
+      button.disabled = false;
+    }
   };
 
   const setOpen = (open) => {
@@ -569,6 +640,7 @@ function initLuxFooterActions() {
     node.setAttribute("aria-hidden", String(!open));
     document.body.style.overflow = open ? "hidden" : "";
     if (open) {
+      if (!window.LuxureatAccount?.loggedIn) setMode(node, "login");
       lastFocus = document.activeElement;
       requestAnimationFrame(() => node.querySelector("input")?.focus());
     } else {
@@ -587,19 +659,23 @@ function initLuxFooterActions() {
     }
     if (event.target.closest("[data-account-toggle]")) {
       const node = ensureModal();
-      const title = node.querySelector("[data-account-title]");
-      const subtitle = node.querySelector("[data-account-subtitle]");
-      const toggle = node.querySelector("[data-account-toggle]");
-      const submit = node.querySelector("[data-account-submit]");
-      const headerIcon = node.querySelector("[data-account-icon]");
-      const text = copy();
-      const creating = title.textContent === text.signIn;
-      title.textContent = creating ? text.create : text.signIn;
-      subtitle.textContent = creating ? text.subtitleCreate : text.subtitleSignIn;
-      headerIcon.innerHTML = creating ? icons.userPlus : icons.logIn;
-      toggle.innerHTML = creating ? `${icons.logIn}<span>${text.signIn}</span>` : `${icons.userPlus}<span>${text.create}</span>`;
-      submit.innerHTML = creating ? `${icons.userPlus}<span>${text.create}</span>` : `${icons.logIn}<span>${text.signIn}</span>`;
+      setMode(node, node.dataset.accountMode === "login" ? "register" : "login");
+      return;
     }
+    if (event.target.closest("[data-account-forgot]")) {
+      event.preventDefault();
+      setMode(ensureModal(), "forgot");
+      return;
+    }
+    if (event.target.closest("[data-account-logout]")) {
+      location.href = window.LuxureatAccount?.logoutUrl || "/";
+    }
+  });
+
+  document.addEventListener("submit", (event) => {
+    if (!event.target.matches("[data-account-form]")) return;
+    event.preventDefault();
+    submit(event.target);
   });
 
   document.addEventListener("keydown", (event) => {
