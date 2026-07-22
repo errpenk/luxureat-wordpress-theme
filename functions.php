@@ -339,10 +339,47 @@ function luxureat_static_checkout_ajax() {
     }
     WC()->cart->calculate_totals();
     WC()->cart->set_session();
-    wp_send_json_success(array('checkoutUrl' => wc_get_checkout_url()));
+    $checkout_url = $is_zh ? wc_get_checkout_url() : add_query_arg('lang', 'en', wc_get_checkout_url());
+    wp_send_json_success(array('checkoutUrl' => $checkout_url));
 }
 add_action('wp_ajax_nopriv_luxureat_checkout', 'luxureat_static_checkout_ajax');
 add_action('wp_ajax_luxureat_checkout', 'luxureat_static_checkout_ajax');
+
+function luxureat_static_cart_item_images($images, $cart_item) {
+    $product = isset($cart_item['data']) ? $cart_item['data'] : false;
+    if (!$product instanceof WC_Product) {
+        return $images;
+    }
+    $files = array(
+        'imperial-beluga-30g' => 'lux-005.jpg',
+        'royal-oscetra-30g' => 'lux-030.jpg',
+        'mother-of-pearl-spoons' => 'lux-022.jpg',
+        'champagne' => 'lux-042.jpg',
+        'ice-server' => 'lux-039.jpg',
+    );
+    $sku = $product->get_sku();
+    if (!isset($files[$sku])) {
+        return $images;
+    }
+    $url = get_template_directory_uri() . '/assets/media/products/' . $files[$sku];
+    return array((object) array(
+        'id' => $product->get_id(),
+        'src' => $url,
+        'thumbnail' => $url,
+        'srcset' => '',
+        'sizes' => '',
+        'name' => $product->get_name(),
+        'alt' => $product->get_name(),
+    ));
+}
+add_filter('woocommerce_store_api_cart_item_images', 'luxureat_static_cart_item_images', 10, 2);
+
+function luxureat_static_remove_checkout_marketing_optin() {
+    if (function_exists('is_checkout') && is_checkout()) {
+        wp_dequeue_script('mailpoet-marketing-optin-block-frontend');
+    }
+}
+add_action('wp_enqueue_scripts', 'luxureat_static_remove_checkout_marketing_optin', 100);
 
 function luxureat_static_account_language() {
     $language = isset($_GET['lang']) ? sanitize_key(wp_unslash($_GET['lang'])) : 'zh';
@@ -399,7 +436,7 @@ function luxureat_static_defer_scripts($tag, $handle) {
 add_filter('script_loader_tag', 'luxureat_static_defer_scripts', 10, 2);
 
 function luxureat_static_cache_headers($headers) {
-    if (!is_admin() && !is_user_logged_in()) {
+    if (!is_admin() && !is_user_logged_in() && !is_account_page() && !is_cart() && !is_checkout()) {
         $headers['Cache-Control'] = 'public, max-age=300, stale-while-revalidate=86400';
     }
 
