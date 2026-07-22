@@ -12,6 +12,9 @@ $is_zh_page = $page_language === 'zh';
 if ($is_customer_page && function_exists('switch_to_locale')) {
     switch_to_locale($is_zh_page ? 'zh_CN' : 'en_US');
 }
+if ($is_customer_page && function_exists('WC') && WC()->session) {
+    WC()->session->set('luxureat_checkout_lang', $page_language);
+}
 $account_endpoint = $is_account_page && function_exists('WC') && WC()->query ? WC()->query->get_current_endpoint() : '';
 $is_account_dashboard = $is_account_page && is_user_logged_in() && !$account_endpoint;
 $language_url = $is_checkout_page && function_exists('wc_get_checkout_url') ? wc_get_checkout_url() : (function_exists('wc_get_page_permalink') ? wc_get_page_permalink('myaccount') : get_permalink());
@@ -30,7 +33,7 @@ if ($is_checkout_page) $body_classes[] = 'lux-checkout-page';
 <header class="lux-wp-page-header">
     <a class="lux-wp-page-brand" href="<?php echo esc_url(home_url('/')); ?>">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat">
-        <span>LuxurEat <small>露意膳</small></span>
+        <span>LuxurEat <i aria-hidden="true">｜</i> <small>露意膳</small></span>
     </a>
     <nav class="lux-wp-page-actions" aria-label="<?php echo esc_attr($is_zh_page ? '页面导航' : 'Page navigation'); ?>">
         <?php if ($is_customer_page) : ?>

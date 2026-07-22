@@ -291,6 +291,9 @@ function luxureat_static_checkout_ajax() {
     if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'luxureat_checkout')) {
         wp_send_json_error(array('message' => $message('请刷新页面后重试。', 'Please refresh the page and try again.')), 403);
     }
+    if (!is_user_logged_in()) {
+        wp_send_json_error(array('message' => $message('请先登录账号，然后继续结算。', 'Please sign in before continuing to checkout.')), 401);
+    }
     if (!function_exists('WC') || !function_exists('wc_get_product_id_by_sku')) {
         wp_send_json_error(array('message' => $message('结算服务暂时不可用。', 'Checkout is temporarily unavailable.')), 503);
     }
@@ -344,6 +347,28 @@ function luxureat_static_checkout_ajax() {
 }
 add_action('wp_ajax_nopriv_luxureat_checkout', 'luxureat_static_checkout_ajax');
 add_action('wp_ajax_luxureat_checkout', 'luxureat_static_checkout_ajax');
+
+function luxureat_static_require_account_for_checkout() {
+    if (function_exists('is_checkout') && is_checkout() && !is_user_logged_in() && !wp_doing_ajax()) {
+        wp_safe_redirect(add_query_arg('account', 'required', home_url('/')));
+        exit;
+    }
+}
+add_action('template_redirect', 'luxureat_static_require_account_for_checkout', 0);
+
+function luxureat_static_translate_shipping_rates($rates) {
+    $language = function_exists('WC') && WC()->session ? WC()->session->get('luxureat_checkout_lang', 'zh') : 'zh';
+    if ($language !== 'zh') {
+        return $rates;
+    }
+    foreach ($rates as $rate) {
+        if (is_object($rate) && method_exists($rate, 'get_method_id') && $rate->get_method_id() === 'free_shipping') {
+            $rate->set_label('免费配送');
+        }
+    }
+    return $rates;
+}
+add_filter('woocommerce_package_rates', 'luxureat_static_translate_shipping_rates', 100);
 
 function luxureat_static_cart_item_images($images, $cart_item) {
     $product = isset($cart_item['data']) ? $cart_item['data'] : false;
