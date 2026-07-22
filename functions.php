@@ -279,6 +279,51 @@ function luxureat_static_account_ajax() {
 add_action('wp_ajax_nopriv_luxureat_account', 'luxureat_static_account_ajax');
 add_action('wp_ajax_luxureat_account', 'luxureat_static_account_ajax');
 
+function luxureat_static_account_language() {
+    $language = isset($_GET['lang']) ? sanitize_key(wp_unslash($_GET['lang'])) : 'zh';
+    return $language === 'en' ? 'en' : 'zh';
+}
+
+function luxureat_static_account_menu($items) {
+    if (!is_user_logged_in() || current_user_can('manage_options')) {
+        return $items;
+    }
+
+    $is_zh = luxureat_static_account_language() === 'zh';
+    $labels = array(
+        'orders' => $is_zh ? '订单' : 'Orders',
+        'edit-address' => $is_zh ? '地址' : 'Addresses',
+        'edit-account' => $is_zh ? '账户资料' : 'Account details',
+        'customer-logout' => $is_zh ? '退出登录' : 'Log out',
+    );
+
+    return array_intersect_key($labels, $items);
+}
+add_filter('woocommerce_account_menu_items', 'luxureat_static_account_menu', 999);
+
+function luxureat_static_account_endpoint_url($url) {
+    return add_query_arg('lang', luxureat_static_account_language(), $url);
+}
+add_filter('woocommerce_get_endpoint_url', 'luxureat_static_account_endpoint_url');
+
+function luxureat_static_account_dashboard() {
+    $user = wp_get_current_user();
+    $is_zh = luxureat_static_account_language() === 'zh';
+    ?>
+    <section class="lux-account-dashboard">
+        <p class="lux-account-eyebrow"><?php echo esc_html($is_zh ? '欢迎回来' : 'Welcome back'); ?></p>
+        <h2><?php echo esc_html($user->display_name ?: $user->user_login); ?></h2>
+        <p><?php echo esc_html($is_zh ? '在这里查看订单、管理收货与账单地址，或更新账户资料。' : 'View your orders, manage shipping and billing addresses, or update your account details.'); ?></p>
+    </section>
+    <?php
+}
+
+function luxureat_static_replace_account_dashboard() {
+    remove_action('woocommerce_account_dashboard', 'woocommerce_account_dashboard');
+    add_action('woocommerce_account_dashboard', 'luxureat_static_account_dashboard');
+}
+add_action('wp_loaded', 'luxureat_static_replace_account_dashboard');
+
 function luxureat_static_defer_scripts($tag, $handle) {
     if (strpos($handle, 'luxureat-') !== 0 || strpos($tag, ' defer') !== false) {
         return $tag;
