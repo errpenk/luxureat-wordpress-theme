@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Brand News | LUXUREAT</title>
-  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260724-cart-count-card-carousel-4'); ?>">
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260727-final-layout-5'); ?>">
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300;6..96,400;6..96,500;6..96,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
   
@@ -35,6 +35,8 @@
     </div>
   </section>
   <section class="lux-recent-events" id="recent-events" data-recent-events></section>
+  <section class="lux-exhibition-map" id="exhibition-map" data-exhibition-map aria-label="China exhibition map"></section>
+  <section class="lux-news-center" id="news-center" data-news-center></section>
 </main>
 <!-- lux:footer:start -->
 <footer class="lux-footer">

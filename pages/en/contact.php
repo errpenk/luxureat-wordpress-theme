@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Contact the Concierge - LuxurEat Maison</title>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260724-cart-count-card-carousel-4'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260727-final-layout-5'); ?>">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
@@ -92,7 +92,7 @@
 </div>
 </section>
 <!-- Main Content Grid -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap" id="brand-consultation">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
 <!-- Left: Contact Form & HQ -->
 <div class="lg:col-span-7 space-y-16">
@@ -251,6 +251,16 @@ roberto@truffleat.com
 </div>
 </div>
 </div>
+<section class="lux-contact-results" id="partner-results" aria-label="Partnership results">
+<div class="lux-contact-results-grid">
+<figure class="lux-contact-results-main"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/gifting-partnership-04.webp'); ?>" alt="LuxurEat exhibition and channel partners"></figure>
+<blockquote><p>“The value of a professional partnership lies not only in a successful delivery, but in clear communication, consistent quality, and a shared investment in the market for the long term.”</p><footer><strong>LuxurEat China Team</strong><span>Shanghai · Italy</span></footer></blockquote>
+<figure><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/gifting-partnership-01.webp'); ?>" alt="Premium food channel and market analysis"></figure>
+<figure><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/gifting-partnership-02.webp'); ?>" alt="LuxurEat international exhibition partnership"></figure>
+<figure><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/gifting-partnership-03.webp'); ?>" alt="Channel partner discussion and product documentation"></figure>
+<figure><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/gifting-partnership-05.webp'); ?>" alt="LuxurEat exhibition team"></figure>
+</div>
+</section>
 <div class="lux-footprint-video-strip" aria-label="LuxurEat global partnership film">
 <video class="lux-about-program-media" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/contact-global-footprint.m4v'); ?>" type="video/mp4"></video>
 <div class="lux-footprint-video-fade" aria-hidden="true"></div>
