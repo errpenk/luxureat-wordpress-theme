@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260727-final-layout-5'); ?>">
+<!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260728-performance-27'); ?>">
 
 <?php wp_head(); ?>
 </head><body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container flex flex-col min-h-screen">
@@ -56,10 +58,11 @@
 </div>
 </div>
 </div>
+<button class="lux-product-filter-toggle" type="button" data-caviar-filter-toggle aria-controls="product-filters" aria-expanded="true"><span>筛选条件</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></button>
 </section>
 <!-- Product Grid -->
 <div class="lux-product-browser" id="product-catalogue">
-<aside class="lux-product-filter-panel" aria-label="产品筛选">
+<aside class="lux-product-filter-panel" id="product-filters" aria-label="产品筛选">
 <header><strong>筛选条件</strong><button type="button" data-caviar-clear>全部清除</button></header>
 <section><h3>鱼种</h3><div class="lux-product-filter-list">
 <button type="button" data-caviar-filter="all" aria-pressed="true"><span aria-hidden="true"></span>全部品种</button>

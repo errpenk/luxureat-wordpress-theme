@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>Brand News | LUXUREAT</title>
-  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260727-final-layout-5'); ?>">
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260728-performance-27'); ?>">
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300;6..96,400;6..96,500;6..96,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
   
@@ -31,7 +33,7 @@
     <div class="relative z-10 max-w-4xl px-6 text-center">
       <span class="lux-hero-kicker">Follow our latest updates</span>
       <h1 class="mb-8 font-['Bodoni_Moda'] text-6xl md:text-8xl font-light text-[#e5e2e1]">Brand News</h1>
-      <p class="lux-page-hero-subtitle lux-hero-support mx-auto max-w-2xl">Follow LuxurEat（露意膳） exhibitions, collaboration opportunities, and new market trends.</p>
+      <p class="lux-page-hero-subtitle lux-hero-support mx-auto max-w-2xl">Follow LuxurEat (露意膳) exhibitions, collaboration opportunities, and new market trends.</p>
     </div>
   </section>
   <section class="lux-recent-events" id="recent-events" data-recent-events></section>
