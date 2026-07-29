@@ -1,11 +1,12 @@
 <!DOCTYPE html><html class="dark" lang="en"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/AlimamaShuHeiTi-Bold.woff2'); ?>" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <title>Quality &amp; Certification | LuxurEat Maison</title>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260728-live-links-28'); ?>">
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,900&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260729-mobile-media-29'); ?>">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,900&amp;family=Montserrat:wght@300;400;500;600&amp;display=optional" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
         .material-symbols-outlined {
@@ -79,7 +80,7 @@
 </section>
 <!-- Cold Chain Logistics -->
 <section class="mb-section-gap lux-muted-block lux-cert-system-block p-12 md:p-24 border-t border-b border-outline-variant/10 transition-all duration-1000 opacity-100" id="quality-system">
-<video class="lux-about-program-media" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/cert-quality-system.m4v'); ?>" type="video/mp4"></video>
+<video class="lux-about-program-media" autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/cert-quality-system.m4v'); ?>" type="video/mp4"></video>
 <div class="lux-cert-system-overlay" aria-hidden="true"></div>
 <div class="max-w-3xl mx-auto text-center mb-16">
 <h2 class="font-headline-lg text-headline-lg mb-6">A Global Quality System: From Origin to Market</h2>
@@ -137,7 +138,7 @@
 </section>
 <!-- Quality capability and global network -->
 <section class="lux-cert-capability" aria-labelledby="cert-capability-title">
-<video class="lux-cert-capability-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/cert-capability-background.m4v'); ?>" type="video/mp4"></video>
+<video class="lux-cert-capability-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/cert-capability-background.m4v'); ?>" type="video/mp4"></video>
 <span class="lux-cert-capability-overlay" aria-hidden="true"></span>
 <figure class="lux-cert-media-carousel" data-cert-media-carousel data-partnership-image role="button" tabindex="0" aria-label="View ingredient selection and quality-control images">
 <img data-cert-media-slide class="is-active" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/cert-quality-production.webp'); ?>" alt="Roberto Ugolini selecting truffle ingredients">

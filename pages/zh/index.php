@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/AlimamaShuHeiTi-Bold.woff2'); ?>" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300;6..96,400;6..96,500;6..96,600&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/><link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260728-live-links-28'); ?>">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300;6..96,400;6..96,500;6..96,600&amp;family=Montserrat:wght@300;400;500;600&amp;display=optional" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/><link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260729-mobile-media-29'); ?>">
 <style>
     .fade-in-up {
         animation: fadeInUp 1s ease-out forwards;
@@ -125,7 +126,7 @@
 </section>
 <!-- LuxurEat Group Overview -->
 <section class="lux-home-maison" id="maison-overview" aria-labelledby="section-5">
-<video class="lux-home-maison-media lux-about-program-media" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-maison-overview.m4v'); ?>" type="video/mp4"></video>
+<video class="lux-home-maison-media lux-about-program-media" autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-maison-overview.m4v'); ?>" type="video/mp4"></video>
 <div class="lux-home-maison-overlay" aria-hidden="true"></div>
 <div class="lux-home-maison-inner">
 <header class="lux-home-maison-head">
