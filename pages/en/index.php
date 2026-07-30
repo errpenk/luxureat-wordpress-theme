@@ -1,11 +1,11 @@
 <!DOCTYPE html><html class="dark" lang="en"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/AlimamaShuHeiTi-Bold.woff2'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <title>LuxurEat (露意膳) Maison - The Art of Exceptional Taste</title>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260730-performance-76'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260730-performance-77'); ?>">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&amp;display=optional" rel="stylesheet" media="print" onload="this.media='all'">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
@@ -67,7 +67,7 @@
 <!-- 1. Hero Section -->
 <header class="lux-home-hero relative h-[90vh] w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<video class="lux-hero-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle.mp4'); ?>" type="video/mp4"></video>
+<video class="lux-hero-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle.mp4'); ?>" type="video/mp4"></video>
 <div class="absolute inset-0 lux-hero-video-shade"></div>
 </div>
 <div class="lux-home-hero-content relative z-10 text-center max-w-5xl px-margin-mobile fade-in-up">

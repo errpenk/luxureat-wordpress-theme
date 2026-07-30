@@ -5,10 +5,9 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/AlimamaShuHeiTi-Bold.woff2'); ?>" as="font" type="font/woff2" crossorigin>
   <title>Blog | Caviar Academy | LUXUREAT</title>
   <meta name="description" content="LuxurEat (露意膳) Caviar Academy: discover caviar varieties, history, flavour and craft.">
-  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260730-performance-76'); ?>">
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260730-performance-77'); ?>">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&amp;display=optional" rel="stylesheet" media="print" onload="this.media='all'">
   
 <?php wp_head(); ?>
@@ -75,8 +74,8 @@
 <!-- lux:scripts:start -->
 
 
-<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/academy.js?v=20260730-performance-76'); ?>"></script>
-<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/js/academy.js?v=20260730-performance-76'); ?>"></script>
+<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/academy.js?v=20260730-performance-77'); ?>"></script>
+<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/js/academy.js?v=20260730-performance-77'); ?>"></script>
 
 <!-- lux:scripts:end -->
 <?php wp_footer(); ?>
