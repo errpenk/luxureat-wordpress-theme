@@ -21,6 +21,8 @@ function luxureat_static_aliases() {
         'journal.html' => 'zh/journal',
         'news' => 'zh/news',
         'news.html' => 'zh/news',
+        'blog' => 'zh/blog',
+        'blog.html' => 'zh/blog',
         'gifting' => 'zh/gifting',
         'gifting.html' => 'zh/gifting',
         'certification' => 'zh/certification',
@@ -55,6 +57,7 @@ function luxureat_static_pretty_paths() {
         'zh/rituals' => '/rituals/',
         'zh/journal' => '/journal/',
         'zh/news' => '/news/',
+        'zh/blog' => '/blog/',
         'zh/gifting' => '/gifting/',
         'zh/certification' => '/certification/',
         'zh/contact' => '/contact/',
@@ -64,6 +67,7 @@ function luxureat_static_pretty_paths() {
         'en/rituals' => '/en/rituals/',
         'en/journal' => '/en/journal/',
         'en/news' => '/en/news/',
+        'en/blog' => '/en/blog/',
         'en/gifting' => '/en/gifting/',
         'en/certification' => '/en/certification/',
         'en/contact' => '/en/contact/',
@@ -110,6 +114,11 @@ function luxureat_static_woo_catalog() {
         return array();
     }
 
+    $cached = get_transient('luxureat_static_woo_catalog');
+    if (is_array($cached)) {
+        return $cached;
+    }
+
     $catalog = array();
     foreach (array('imperial-beluga-30g', 'royal-oscetra-30g', 'mother-of-pearl-spoons', 'champagne', 'ice-server') as $sku) {
         $product_id = wc_get_product_id_by_sku($sku);
@@ -142,6 +151,7 @@ function luxureat_static_woo_catalog() {
             'maxQuantity' => $max_quantity,
         );
     }
+    set_transient('luxureat_static_woo_catalog', $catalog, MINUTE_IN_SECONDS);
     return $catalog;
 }
 
@@ -164,11 +174,13 @@ function luxureat_static_assets() {
         'product-data' => array('src' => 'assets/data/products.js', 'dependencies' => array()),
         'event-data' => array('src' => 'assets/data/events.js', 'dependencies' => array()),
         'journal-data' => array('src' => 'assets/data/journal.js', 'dependencies' => array()),
+        'academy-data' => array('src' => 'assets/data/academy.js', 'dependencies' => array('journal-data')),
         'brand-data' => array('src' => 'assets/data/brand.js', 'dependencies' => array()),
         'core' => array('src' => 'assets/js/core.js', 'dependencies' => array()),
         'products' => array('src' => 'assets/js/products.js', 'dependencies' => array('product-data')),
         'events' => array('src' => 'assets/js/events.js', 'dependencies' => array('event-data')),
         'journal' => array('src' => 'assets/js/journal.js', 'dependencies' => array('journal-data')),
+        'academy' => array('src' => 'assets/js/academy.js', 'dependencies' => array('academy-data')),
         'brand' => array('src' => 'assets/js/brand.js', 'dependencies' => array('brand-data')),
     );
     $assets_by_path = array(
@@ -177,6 +189,7 @@ function luxureat_static_assets() {
         'zh/caviar' => array('core', 'product-data', 'products'),
         'zh/rituals' => array('core', 'journal-data', 'journal'),
         'zh/news' => array('core', 'event-data', 'journal-data', 'journal'),
+        'zh/blog' => array('core', 'journal-data', 'academy-data', 'academy', 'journal'),
         'zh/certification' => array('core'),
         'zh/gifting' => array('core', 'brand-data', 'brand'),
         'zh/contact' => array('core', 'brand-data', 'brand'),
@@ -186,6 +199,7 @@ function luxureat_static_assets() {
         'en/products' => array('core', 'product-data', 'products'),
         'en/rituals' => array('core', 'journal-data', 'journal'),
         'en/news' => array('core', 'event-data', 'journal-data', 'journal'),
+        'en/blog' => array('core', 'journal-data', 'academy-data', 'academy', 'journal'),
         'en/certification' => array('core'),
         'en/gifting' => array('core', 'brand-data', 'brand'),
         'en/contact' => array('core', 'brand-data', 'brand'),
@@ -793,24 +807,22 @@ add_action('send_headers', 'luxureat_static_hide_server_version', 999);
 remove_action('wp_head', 'wp_generator');
 add_filter('the_generator', '__return_empty_string');
 
-add_filter('xmlrpc_enabled', '__return_false');
-function luxureat_static_disable_xmlrpc_request() {
-    if (defined('XMLRPC_REQUEST') && XMLRPC_REQUEST) {
-        header_remove('X-Powered-By');
-        status_header(403);
-        nocache_headers();
-        exit('XML-RPC disabled.');
-    }
-}
-add_action('init', 'luxureat_static_disable_xmlrpc_request', 0);
-
-function luxureat_static_remove_xmlrpc_auth_methods($methods) {
-    foreach (array('system.multicall', 'wp.getUsersBlogs', 'blogger.getUsersBlogs', 'metaWeblog.getUsersBlogs') as $method) {
+function luxureat_static_remove_xmlrpc_pingbacks($methods) {
+    foreach (array('pingback.ping', 'pingback.extensions.getPingbacks') as $method) {
         unset($methods[$method]);
     }
     return $methods;
 }
-add_filter('xmlrpc_methods', 'luxureat_static_remove_xmlrpc_auth_methods', 999);
+add_filter('xmlrpc_methods', 'luxureat_static_remove_xmlrpc_pingbacks', 999);
+
+function luxureat_static_restrict_xmlrpc_request() {
+    if (defined('XMLRPC_REQUEST') && XMLRPC_REQUEST && (!isset($_GET['for']) || $_GET['for'] !== 'jetpack')) {
+        status_header(403);
+        nocache_headers();
+        exit('XML-RPC is available only for Jetpack.');
+    }
+}
+add_action('init', 'luxureat_static_restrict_xmlrpc_request', 0);
 
 function luxureat_static_cookie_samesite_headers() {
     $cookies = array_values(array_filter(headers_list(), function ($header) {
