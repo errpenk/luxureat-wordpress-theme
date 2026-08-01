@@ -3,10 +3,11 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>LuxurEat（露意膳） | 您的购物袋</title>
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-subset.woff2'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSongWeb-subset.woff2'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-bag-critical.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Old Song Page";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Page";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-bag-critical.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-mobile-video-footer-123'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-mobile-optimal-128'); ?>">
 
 <style>
         .material-symbols-outlined {

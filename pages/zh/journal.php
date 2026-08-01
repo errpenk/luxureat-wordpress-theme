@@ -1,9 +1,10 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-subset.woff2'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSongWeb-subset.woff2'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-journal-critical.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-journal-critical.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Old Song Page";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-journal-critical.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Page";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-journal-critical.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-mobile-video-footer-123'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-mobile-optimal-128'); ?>">
 
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
@@ -27,7 +28,7 @@
 <!-- Hero Section -->
 <section class="lux-page-top-hero lux-standard-hero relative h-screen w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0 transition-all duration-1000 opacity-100">
-<video class="lux-hero-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo-poster.webp'); ?>" aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo.mp4'); ?>" type="video/mp4"></video>
+<video class="lux-hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture disableremoteplayback poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo-poster.webp'); ?>" aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo.mp4'); ?>" type="video/mp4"></video>
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
 <div class="lux-page-hero-content relative z-10 text-center px-margin-mobile max-w-4xl transition-all duration-1000 opacity-100">
@@ -47,7 +48,7 @@
 <!-- Main Content Grid -->
 <section class="lux-about-story" id="about-us" data-about-story></section>
 <section class="lux-about-program lux-about-program--identity" id="luxureat-china">
-<video class="lux-about-program-media" data-lux-autoplay muted loop playsinline preload="none" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-china-operations.m4v'); ?>" type="video/mp4"></video>
+<video class="lux-about-program-media" data-lux-autoplay muted loop playsinline webkit-playsinline preload="none" poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-china-operations-poster.webp'); ?>" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-china-operations-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-china-operations.m4v'); ?>" type="video/mp4"></video>
 <div class="lux-about-program-overlay" aria-hidden="true"></div>
 <div class="lux-about-program-inner">
 <p class="lux-about-program-kicker">LUXUREAT CHINA · SHANGHAI</p>
@@ -74,7 +75,7 @@
 </div>
 </section>
 <section class="lux-about-program lux-about-program--audience" id="consumer-needs">
-<video class="lux-about-program-media" data-lux-autoplay muted loop playsinline preload="none" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-consumer-needs.m4v'); ?>" type="video/mp4"></video>
+<video class="lux-about-program-media" data-lux-autoplay muted loop playsinline webkit-playsinline preload="none" poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-consumer-needs-poster.webp'); ?>" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-consumer-needs-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-consumer-needs.m4v'); ?>" type="video/mp4"></video>
 <div class="lux-about-program-overlay" aria-hidden="true"></div>
 <div class="lux-about-program-inner">
 <p class="lux-about-program-kicker">CONSUMER NEEDS</p>
@@ -98,7 +99,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center transition-all duration-1000 opacity-100">
 <div class="lg:col-span-7 article-card lux-reader-card group cursor-pointer">
 <div class="aspect-[16/10] overflow-hidden mb-8 border border-white/5 lux-reader-media">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/lux-032.jpg'); ?>">
+<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar.webp'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-harvest">阅读详情</button>
 </div>
 </div>
@@ -131,7 +132,7 @@
 <!-- Article 1 -->
 <article class="lux-journal-season-card article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media" data-reader-open="zh-truffle">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/products/lux-026.jpg'); ?>">
+<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-truffle-products.webp'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-truffle">阅读详情</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">寻味溯源</span>
@@ -144,7 +145,7 @@
 <!-- Article 2 -->
 <article class="lux-journal-season-card article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media" data-reader-open="zh-service">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/lux-003.jpg'); ?>">
+<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service.webp'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-service">阅读详情</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">精致生活</span>
@@ -157,7 +158,7 @@
 <!-- Article 3 -->
 <article class="lux-journal-season-card article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media" data-reader-open="zh-malossol">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/lux-048.jpg'); ?>">
+<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/caviar-processing-04.webp'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-malossol">阅读详情</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">匠心工艺</span>

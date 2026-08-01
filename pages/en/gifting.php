@@ -3,10 +3,11 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>LuxurEat (露意膳) | B2B &amp; Gifting</title>
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-mobile-video-footer-123'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-mobile-optimal-128'); ?>">
 <style>
         body { background-color: #131313; color: #e5e2e1; }
         
@@ -355,7 +356,7 @@
 </div>
 </div>
 <a class="lux-partner-card lg:w-1/2" href="mailto:roberto@ugolinigroup.com?subject=LuxurEat (露意膳)%20Business%20Partnership%20Inquiry">
-<span class="lux-partner-card-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-050.jpg'); ?>');"></span>
+<span class="lux-partner-card-bg" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/gifting-global-partnership.webp'); ?>');"></span>
 <span class="lux-partner-card-content">
 <strong class="font-headline-lg">Reference Plan</strong>
 <em>Inquire Now</em>

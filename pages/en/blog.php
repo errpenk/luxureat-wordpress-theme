@@ -6,10 +6,11 @@
 <title>Blog | Caviar Academy | LUXUREAT</title>
   <meta name="description" content="LuxurEat (露意膳) Caviar Academy: discover caviar varieties, history, flavour and craft.">
   <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-mobile-video-footer-123'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-mobile-optimal-128'); ?>">
     
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
@@ -76,8 +77,8 @@
 <!-- lux:scripts:start -->
 
 
-<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/academy.js?v=20260801-mobile-video-footer-123'); ?>"></script>
-<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/js/academy.js?v=20260801-mobile-video-footer-123'); ?>"></script>
+<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/academy.js?v=20260801-mobile-optimal-128'); ?>"></script>
+<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/js/academy.js?v=20260801-mobile-optimal-128'); ?>"></script>
 
 <!-- lux:scripts:end -->
 <?php wp_footer(); ?>

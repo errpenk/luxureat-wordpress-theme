@@ -1,13 +1,14 @@
-<!DOCTYPE html><html class="dark" lang="en"><head>
+<!DOCTYPE html><html class="dark lux-home-root" lang="en"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
 <title>LuxurEat (露意膳) Maison - The Art of Exceptional Taste</title>
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif Home";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral Home";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260801-mobile-video-footer-123'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260801-mobile-optimal-128'); ?>">
 <style>
         body {
             background-color: #131313;
@@ -48,7 +49,7 @@
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
-<body class="antialiased selection:bg-primary selection:text-on-primary">
+<body class="lux-home-page antialiased selection:bg-primary selection:text-on-primary">
 <!-- lux:header:start -->
 <header class="lux-header">
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
@@ -67,7 +68,7 @@
 <!-- 1. Hero Section -->
 <header class="lux-home-hero relative h-[90vh] w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<video class="lux-hero-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle.mp4'); ?>" type="video/mp4"></video>
+<video class="lux-hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture disableremoteplayback poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle.mp4'); ?>" type="video/mp4"></video>
 <div class="absolute inset-0 lux-hero-video-shade"></div>
 </div>
 <div class="lux-home-hero-content relative z-10 text-center max-w-5xl px-margin-mobile fade-in-up">
@@ -145,7 +146,7 @@
 </section>
 <!-- LuxurEat (露意膳) Group Overview -->
 <section class="lux-home-maison" id="maison-overview" aria-labelledby="section-5">
-<video class="lux-home-maison-media lux-about-program-media" data-lux-autoplay muted loop playsinline preload="none" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-maison-overview.m4v'); ?>" type="video/mp4"></video>
+<video class="lux-home-maison-media lux-about-program-media" data-lux-autoplay muted loop playsinline webkit-playsinline preload="none" poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-maison-overview-poster.webp'); ?>" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-maison-overview-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-maison-overview.m4v'); ?>" type="video/mp4"></video>
 <div class="lux-home-maison-overlay" aria-hidden="true"></div>
 <div class="lux-home-maison-inner">
 <header class="lux-home-maison-head">

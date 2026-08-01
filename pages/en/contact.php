@@ -3,10 +3,11 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Contact the Concierge - LuxurEat (露意膳) Maison</title>
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260801-mobile-optimal-128'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260801-mobile-optimal-128'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-mobile-video-footer-123'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-mobile-optimal-128'); ?>">
 <style>
         body { background-color: #000000; color: #e5e2e1; }
         .glass-panel {
@@ -216,10 +217,10 @@ roberto@ugolinigroup.com
 </ul>
 <div class="flex gap-4">
 <div class="lux-contact-service-thumb h-24 w-1/3 overflow-hidden rounded" tabindex="0">
-<div class="w-full h-full bg-cover bg-center" data-alt="Close up of a luxury hotel lobby with minimalist dark marble floors and warm ambient lighting, representing a premium B2B partnership setting." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-031.jpg'); ?>')"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Close up of a luxury hotel lobby with minimalist dark marble floors and warm ambient lighting, representing a premium B2B partnership setting." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/partnership-cases/hotel-restaurant.webp'); ?>')"></div>
 </div>
 <div class="lux-contact-service-thumb h-24 w-1/3 overflow-hidden rounded" tabindex="0">
-<div class="w-full h-full bg-cover bg-center" data-alt="A sophisticated corporate gift box featuring a gold logo on a matte black texture, surrounded by high-end packaging materials." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/lux-015.jpg'); ?>')"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A sophisticated corporate gift box featuring a gold logo on a matte black texture, surrounded by high-end packaging materials." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/gifting-service-private-label.webp'); ?>')"></div>
 </div>
 <div class="lux-contact-service-thumb lux-contact-network-thumb h-24 w-1/3 overflow-hidden rounded border border-on-surface/10" role="img" aria-label="International business network" tabindex="0"></div>
 </div>
@@ -285,7 +286,7 @@ roberto@ugolinigroup.com
 </div>
 </section>
 <div class="lux-footprint-video-strip" aria-label="LuxurEat (露意膳) global partnership film">
-<video class="lux-about-program-media" data-lux-autoplay muted loop playsinline preload="none" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/contact-global-footprint.m4v'); ?>" type="video/mp4"></video>
+<video class="lux-about-program-media" data-lux-autoplay muted loop playsinline webkit-playsinline preload="none" poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/contact-global-footprint-poster.webp'); ?>" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/contact-global-footprint-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/contact-global-footprint.m4v'); ?>" type="video/mp4"></video>
 <div class="lux-footprint-video-fade" aria-hidden="true"></div>
 <div class="lux-footprint-video-copy">
 <img class="lux-footprint-video-logo" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/contact-market-logo.png'); ?>" alt="LuxurEat (露意膳)">
