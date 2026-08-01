@@ -3,17 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <title>Brand News | LUXUREAT</title>
-  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260730-performance-77'); ?>">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&amp;display=optional" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
-  
+<title>Brand News | LUXUREAT</title>
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-performance-final-119'); ?>">
+    
   <style>.lux-news-page .lux-recent-events{margin-top:0}</style>
+<link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
-<body class="lux-news-page bg-[#131313] text-[#e5e2e1] font-[Montserrat]">
+<body class="lux-news-page bg-[#131313] text-[#e5e2e1]">
 <!-- lux:header:start -->
 <header class="lux-header">
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
@@ -27,12 +24,12 @@
 </header>
 <!-- lux:header:end -->
 <main>
-  <section class="lux-standard-hero relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+  <section class="lux-page-top-hero lux-hero-tail lux-standard-hero relative min-h-[85vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image:url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/brand-news-global.webp'); ?>')"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-[#131313]"></div>
-    <div class="relative z-10 max-w-4xl px-6 text-center">
+    <div class="lux-page-hero-content relative z-10 max-w-4xl px-6 text-center">
       <span class="lux-hero-kicker">Follow our latest updates</span>
-      <h1 class="mb-8 font-['Bodoni_Moda'] text-6xl md:text-8xl font-light text-[#e5e2e1]">Brand News</h1>
+      <h1 class="mb-8 text-6xl md:text-8xl font-light text-[#e5e2e1]">Brand News</h1>
       <p class="lux-page-hero-subtitle lux-hero-support mx-auto max-w-2xl">Follow LuxurEat (露意膳) at global food-industry exhibitions, with deeper coverage of brand partnerships, channel expansion, and emerging international market trends as we connect with quality partners and explore new directions for growth in premium food.</p>
     </div>
   </section>
@@ -46,7 +43,7 @@
     <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>Beyond importing, we are committed to defining a new standard for premium Italian gastronomy in China.<br>Rooted in authentic flavor and guided by quality and safety, LuxurEat (露意膳) brings Italian food culture and innovative experiences to China.</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/news', '')); ?>">Brand News</a><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Blog</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Gifting</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">Rednote</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">WeChat</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">Weibo</a></div>
-    <div><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">china@luxureat.com</a><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">roberto@truffleat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="mailto:roberto@ugolinigroup.com">roberto@ugolinigroup.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2026 LuxurEat (露意膳)｜Luxureat (Shanghai) Trading Co., Ltd. All Rights Reserved ｜ Unified Social Credit Code: 91310000MAERED2X1W</div>
 </footer>

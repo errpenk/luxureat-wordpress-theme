@@ -35,10 +35,10 @@ if (!isset($routes[$path])) {
     <title><?php esc_html_e('Page not found', 'luxureat-static'); ?></title>
     <?php wp_head(); ?>
 </head>
-<body style="margin:0;background:#101010;color:#e5e2e1;font-family:Montserrat,Arial,sans-serif;display:grid;min-height:100vh;place-items:center;text-align:center;padding:24px;">
+<body style="margin:0;background:#101010;color:#e5e2e1;font-family:Spectral;display:grid;min-height:100vh;place-items:center;text-align:center;padding:24px;">
     <main>
         <p style="color:#9df5ec;letter-spacing:.2em;text-transform:uppercase;font-size:12px;">LuxurEat</p>
-        <h1 style="font-family:Georgia,serif;font-weight:400;"><?php esc_html_e('Page not found', 'luxureat-static'); ?></h1>
+        <h1 style="font-family:'Nyght Serif';font-weight:400;"><?php esc_html_e('Page not found', 'luxureat-static'); ?></h1>
         <p><a style="color:#e9c349;" href="<?php echo esc_url(luxureat_static_url('zh')); ?>"><?php esc_html_e('Return to home', 'luxureat-static'); ?></a></p>
     </main>
     <?php wp_footer(); ?>

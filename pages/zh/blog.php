@@ -3,17 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/AlimamaShuHeiTi-Bold-subset.woff2'); ?>" as="font" type="font/woff2" crossorigin>
-  <title>知识博客 | Caviar Academy | LUXUREAT</title>
+<title>知识博客 | Caviar Academy | LUXUREAT</title>
   <meta name="description" content="LuxurEat（露意膳） Caviar Academy：了解鱼子酱品种、历史、风味与制作工艺。">
-  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260730-performance-77'); ?>">
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-performance-final-119'); ?>">
   
   
+<link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
-<body class="lux-academy-page font-[Montserrat]">
+<body class="lux-academy-page">
 <!-- lux:header:start -->
 <header class="lux-header">
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
@@ -27,10 +25,10 @@
 </header>
 <!-- lux:header:end -->
 <main>
-  <section class="lux-standard-hero lux-academy-news-hero relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+  <section class="lux-page-top-hero lux-hero-tail lux-standard-hero lux-academy-news-hero relative min-h-[85vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image:url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/caviar-academy-hero.webp'); ?>')"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-[#131313]"></div>
-    <div class="lux-academy-hero-content relative z-10 max-w-4xl px-6 text-center">
+    <div class="lux-page-hero-content relative z-10 max-w-4xl px-6 text-center">
       <span class="lux-hero-kicker lux-academy-hero-kicker">全面了解鱼子酱的历史、养殖与加工方式、种类、品鉴方法及可持续生产</span>
       <h1 class="zh-display-title mb-8 text-[#e5e2e1]">知识博客</h1>
       <div class="lux-page-hero-subtitle lux-hero-support lux-academy-hero-description">
@@ -67,7 +65,7 @@
     <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat（露意膳）以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/news', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
     <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
-    <div><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">china@luxureat.com</a><a href="mailto:china@luxureat.com?cc=roberto@truffleat.com">roberto@truffleat.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="mailto:roberto@ugolinigroup.com">roberto@ugolinigroup.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2026 LuxurEat（露意膳）｜露意膳（上海）贸易有限公司 版权所有 ｜ 统一社会信用代码：91310000MAERED2X1W</div>
 </footer>
@@ -75,8 +73,8 @@
 <!-- lux:scripts:start -->
 
 
-<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/academy.js?v=20260730-performance-77'); ?>"></script>
-<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/js/academy.js?v=20260730-performance-77'); ?>"></script>
+<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/academy.js?v=20260801-performance-final-119'); ?>"></script>
+<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/js/academy.js?v=20260801-performance-final-119'); ?>"></script>
 
 <!-- lux:scripts:end -->
 <?php wp_footer(); ?>

@@ -246,6 +246,12 @@ function luxureat_static_assets() {
                 'products' => luxureat_static_woo_catalog(),
             ));
         }
+        if ($handle === 'brand' && in_array($path, array('zh/contact', 'en/contact'), true)) {
+            wp_localize_script('luxureat-brand', 'LuxureatContact', array(
+                'ajaxUrl' => admin_url('admin-ajax.php'),
+                'nonce' => wp_create_nonce('luxureat_contact'),
+            ));
+        }
     }
 }
 add_action('wp_enqueue_scripts', 'luxureat_static_assets');
@@ -456,7 +462,8 @@ function luxureat_static_account_ajax() {
     }
 
     $mode = isset($_POST['mode']) ? sanitize_key(wp_unslash($_POST['mode'])) : 'login';
-    $email = isset($_POST['email']) ? sanitize_email(wp_unslash($_POST['email'])) : '';
+    $raw_email = isset($_POST['email']) ? trim((string) wp_unslash($_POST['email'])) : '';
+    $email = sanitize_email($raw_email);
     $password = isset($_POST['password']) ? (string) wp_unslash($_POST['password']) : '';
     if (!is_email($email)) {
         wp_send_json_error(array('message' => $message('电子邮箱不存在或格式错误。', 'The email address does not exist or is invalid.'), 'field' => 'email'), 400);
@@ -538,6 +545,62 @@ function luxureat_static_account_ajax() {
 }
 add_action('wp_ajax_nopriv_luxureat_account', 'luxureat_static_account_ajax');
 add_action('wp_ajax_luxureat_account', 'luxureat_static_account_ajax');
+
+function luxureat_static_contact_ajax() {
+    $is_zh = isset($_POST['lang']) && sanitize_key(wp_unslash($_POST['lang'])) === 'zh';
+    $message = function ($zh, $en) use ($is_zh) { return $is_zh ? $zh : $en; };
+    if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'luxureat_contact')) {
+        wp_send_json_error(array('message' => $message('请刷新页面后重试。', 'Please refresh the page and try again.')), 403);
+    }
+    if (!empty($_POST['company'])) {
+        wp_send_json_error(array('message' => $message('安全验证失败，请刷新页面后重试。', 'Security verification failed. Please refresh the page and try again.')), 403);
+    }
+
+    $name = isset($_POST['name']) ? trim(sanitize_text_field(wp_unslash($_POST['name']))) : '';
+    $phone = isset($_POST['phone']) ? trim(sanitize_text_field(wp_unslash($_POST['phone']))) : '';
+    $email = isset($_POST['email']) ? sanitize_email(wp_unslash($_POST['email'])) : '';
+    $inquiry_type = isset($_POST['inquiry_type']) ? trim(sanitize_text_field(wp_unslash($_POST['inquiry_type']))) : '';
+    $content = isset($_POST['message']) ? trim(sanitize_textarea_field(wp_unslash($_POST['message']))) : '';
+    $allowed_types = array(
+        '产品与采购咨询', '经销及渠道合作', '酒店餐饮与专业供应', '自有品牌与私人定制',
+        '企业礼赠与项目合作', '品牌、媒体合作', '其他',
+        'Product & Purchasing Enquiries', 'Distribution & Channel Partnerships',
+        'Hospitality, Catering & Professional Supply', 'Private Label & Bespoke Customisation',
+        'Corporate Gifting & Project Partnerships', 'Brand & Media Partnerships', 'Other',
+    );
+    if ($name === '' || $phone === '' || $content === '' || !in_array($inquiry_type, $allowed_types, true)) {
+        wp_send_json_error(array('message' => $message('请填写所有必填信息。', 'Please complete all required fields.')), 400);
+    }
+    if (strlen($name) > 240 || strlen($phone) > 120 || strlen($content) > 12000 || ($raw_email !== '' && !is_email($email))) {
+        wp_send_json_error(array('message' => $message('请检查所填信息后重试。', 'Please check the information and try again.')), 400);
+    }
+
+    $remote_address = isset($_SERVER['REMOTE_ADDR']) ? sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR'])) : '';
+    $rate_key = 'lux_contact_' . hash_hmac('sha256', $remote_address, wp_salt('nonce'));
+    if (get_transient($rate_key)) {
+        wp_send_json_error(array('message' => $message('信息已提交，请稍后再试。', 'Your message was submitted. Please wait before trying again.')), 429);
+    }
+
+    $subject = $name . ' + ' . $inquiry_type . ' + ' . $phone;
+    $not_provided = $message('未提供', 'Not provided');
+    $body = $message('姓名', 'Name') . '：' . $name . "
+"
+        . $message('电话', 'Phone') . '：' . $phone . "
+"
+        . $message('电子邮箱', 'Email') . '：' . ($email ?: $not_provided) . "
+
+"
+        . $message('咨询内容', 'Message') . "：
+" . $content;
+    $headers = $email ? array('Reply-To: ' . $name . ' <' . $email . '>') : array();
+    if (!wp_mail('roberto@ugolinigroup.com', $subject, $body, $headers)) {
+        wp_send_json_error(array('message' => $message('暂时无法发送，请稍后再试。', 'Your message could not be sent. Please try again later.')), 500);
+    }
+    set_transient($rate_key, 1, 30);
+    wp_send_json_success(array('message' => $message('信息已发送，我们会尽快与您联系。', 'Your message has been sent. We will be in touch soon.')));
+}
+add_action('wp_ajax_nopriv_luxureat_contact', 'luxureat_static_contact_ajax');
+add_action('wp_ajax_luxureat_contact', 'luxureat_static_contact_ajax');
 
 function luxureat_static_password_hint() {
     return determine_locale() === 'zh_CN'
