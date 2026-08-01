@@ -2,7 +2,11 @@
 
 <html class="dark" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260801-performance-final-119'); ?>">
+<!-- lux:fonts:start -->
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-subset.woff2'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSongWeb-subset.woff2'); ?>" as="font" type="font/woff2" crossorigin>
+<!-- lux:fonts:end -->
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260801-mobile-video-footer-123'); ?>">
 <style>
     .fade-in-up {
         animation: fadeInUp 1s ease-out forwards;
@@ -42,7 +46,7 @@
 <!-- 1. Hero Section -->
 <header class="lux-home-hero relative h-[90vh] w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<video class="lux-hero-video" data-lux-hero-deferred muted loop playsinline preload="none" disablepictureinpicture disableremoteplayback poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle.mp4'); ?>" type="video/mp4"></video>
+<video class="lux-hero-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle.mp4'); ?>" type="video/mp4"></video>
 <div class="absolute inset-0 lux-hero-video-shade"></div>
 </div>
 <div class="lux-home-hero-content relative z-10 text-center max-w-5xl px-margin-mobile fade-in-up">
@@ -252,7 +256,7 @@
   <div class="lux-footer-grid">
     <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat（露意膳）以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/journal', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/caviar', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/rituals', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/news', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/gifting', '')); ?>">礼赠合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
-    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/oEPE48mPS48/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
+    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/9H5RI6LEdaU" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
     <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="mailto:roberto@ugolinigroup.com">roberto@ugolinigroup.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2026 LuxurEat（露意膳）｜露意膳（上海）贸易有限公司 版权所有 ｜ 统一社会信用代码：91310000MAERED2X1W</div>
@@ -260,6 +264,6 @@
 <!-- lux:footer:end -->
 <!-- lux:scripts:start -->
 
-<script type="application/json" data-lux-deferred-scripts>["<?php echo esc_url(get_template_directory_uri() . '/assets/data/products.js?v=20260801-performance-final-119'); ?>","<?php echo esc_url(get_template_directory_uri() . '/assets/data/events.js?v=20260801-performance-final-119'); ?>","<?php echo esc_url(get_template_directory_uri() . '/assets/js/events.js?v=20260801-performance-final-119'); ?>","<?php echo esc_url(get_template_directory_uri() . '/assets/data/journal.js?v=20260801-performance-final-119'); ?>","<?php echo esc_url(get_template_directory_uri() . '/assets/js/journal.js?v=20260801-performance-final-119'); ?>","<?php echo esc_url(get_template_directory_uri() . '/assets/js/products.js?v=20260801-performance-final-119'); ?>"]</script>
+<script type="application/json" data-lux-deferred-scripts></script>
 <!-- lux:scripts:end --><?php wp_footer(); ?>
 </body></html>
