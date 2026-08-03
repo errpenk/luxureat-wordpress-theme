@@ -3,11 +3,11 @@
 <html class="dark lux-home-root" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-critical.woff2?v=20260801-font-image-final-130'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-home-subset.woff2?v=20260801-font-image-final-130'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Old Song Home";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-critical.woff2?v=20260801-font-image-final-130'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Home";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-home-subset.woff2?v=20260801-font-image-final-130'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-critical.woff2?v=20260803-font-video-final-131'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-home-subset.woff2?v=20260803-font-video-final-131'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Old Song Home";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-critical.woff2?v=20260803-font-video-final-131'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Home";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-home-subset.woff2?v=20260803-font-video-final-131'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260801-font-image-final-130'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260803-font-video-final-131'); ?>">
 <style>
     .fade-in-up {
         animation: fadeInUp 1s ease-out forwards;
