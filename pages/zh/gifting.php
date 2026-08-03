@@ -4,11 +4,11 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-gifting-critical.woff2?v=20260801-font-image-final-130'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-gifting-critical.woff2?v=20260801-font-image-final-130'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Old Song Page";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-gifting-critical.woff2?v=20260801-font-image-final-130'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Page";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-gifting-critical.woff2?v=20260801-font-image-final-130'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-complete.ttf?v=20260803-font-video-2'); ?>" as="font" type="font/ttf" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Old Song Complete";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-complete.ttf?v=20260803-font-video-2'); ?>") format("truetype");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-page-heading:"KingHwa Old Song Complete";--lux-zh-headline:"KingHwa Old Song Complete";--lux-zh-body:"KingHwa Old Song Complete";font-synthesis:none}html[lang^="zh"].lux-kinghwa-loading body :not(.material-symbols-outlined):not(svg):not(svg *){color:transparent!important;text-shadow:none!important}</style>
+<script>!function(d){var r=d.documentElement;if(d.fonts&&d.fonts.load){d.fonts.load('400 16px "KingHwa Old Song Complete"').then(function(){r.classList.remove("lux-kinghwa-loading")})}}(document);</script>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260801-font-image-final-130'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260803-font-video-2'); ?>">
 
 
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
@@ -217,7 +217,7 @@
 <!-- Set 4 -->
 <div class="group">
 <div class="relative aspect-[4/5] overflow-hidden bg-surface-container-low mb-6">
-<img loading="lazy" decoding="async" alt="LuxurEat 厨师团队的专业餐饮稳定供应方案" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/cooperation-foodservice-chefs.jpg'); ?>"/>
+<img loading="lazy" decoding="async" alt="LuxurEat 厨师团队的专业餐饮稳定供应方案" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/cooperation-foodservice-chefs.jpg?v=20260803-cooperation-2'); ?>"/>
 </div>
 <h4 class="text-label-lg font-bold text-on-surface uppercase tracking-widest mb-2">餐饮 · 稳定供应</h4>
 <p class="text-label-sm text-on-surface-variant mb-4">灵活规格 / 批量交付 / 品质支持</p>
