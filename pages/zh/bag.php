@@ -3,11 +3,11 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>LuxurEat（露意膳） | 您的购物袋</title>
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260803-recipe-layouts-144'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-bag-critical.woff2?v=20260803-recipe-layouts-144'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Old Song Page";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260803-recipe-layouts-144'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Page";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-bag-critical.woff2?v=20260803-recipe-layouts-144'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260803-recipe-layouts-145'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-bag-critical.woff2?v=20260803-recipe-layouts-145'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Old Song Page";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260803-recipe-layouts-145'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Page";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-bag-critical.woff2?v=20260803-recipe-layouts-145'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260803-recipe-layouts-144'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260803-recipe-layouts-145'); ?>">
 
 <style>
         .material-symbols-outlined {
