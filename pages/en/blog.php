@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Blog | Caviar Academy | LUXUREAT</title>
-  <meta name="description" content="LuxurEat (露意膳) Caviar Academy: discover caviar varieties, history, flavour and craft.">
+<title>Blog | Italian Food Academy | LUXUREAT</title>
+  <meta name="description" content="LuxurEat (露意膳) Knowledge Blog: explore caviar, Italian olive oil and Gelato through history, territory, flavour and craft.">
   <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260803-font-video-final-131'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260803-font-video-final-131'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260803-font-video-final-131'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260803-font-video-final-131'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260803-font-video-final-131'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260803-font-video-final-131'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260803-font-video-final-131'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260803-font-video-final-131'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260803-font-video-final-131'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:block}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260803-recipe-layouts-143'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260803-recipe-layouts-143'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260803-recipe-layouts-143'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260803-recipe-layouts-143'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260803-recipe-layouts-143'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260803-recipe-layouts-143'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260803-recipe-layouts-143'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260803-recipe-layouts-143'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260803-recipe-layouts-143'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260803-font-video-final-131'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260803-recipe-layouts-143'); ?>">
     
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
@@ -21,6 +21,7 @@
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/journal', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/products', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/rituals', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/news', '')); ?>">Brand News</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Blog</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/gifting', '')); ?>">Cooperation</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
   <div class="lux-actions">
+    <button class="lux-icon-action lux-search-action" type="button" data-global-search aria-label="Search Italian food, ingredients, olive oil and recipes"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></button>
     <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
     <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="Account sign in"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
     <span class="lux-lang"><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">ZH</a><span>/</span><a class="active" href="#">EN</a></span>
@@ -33,20 +34,21 @@
     <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image:url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/caviar-academy-hero.webp'); ?>')"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-[#131313]"></div>
     <div class="lux-page-hero-content relative z-10 max-w-4xl px-6 text-center">
-      <span class="lux-hero-kicker lux-academy-hero-kicker">A complete guide to caviar history, farming and processing methods, varieties, tasting techniques, and sustainable production.</span>
+      <span class="lux-hero-kicker lux-academy-hero-kicker">From caviar and Italian olive oil to Gelato: the origins, craft and table culture of Italian ingredients.</span>
       <h1 class="mb-8 text-6xl md:text-8xl font-light text-[#e5e2e1]">Blog</h1>
       <div class="lux-page-hero-subtitle lux-hero-support lux-academy-hero-description">
-        <p>Caviar Academy is a space designed for anyone who wishes to explore the world of caviar. Its content welcomes both enthusiasts and curious beginners. Here, you can discover the history of this precious delicacy, from its ancient origins to the development of modern production techniques.</p>
-        <p>This section covers traditional and innovative sturgeon farming methods and roe-processing techniques. It also offers a complete guide to caviar classification, explaining the unique qualities of different varieties and the proper ways to taste them so that their flavours can be fully appreciated.</p>
+        <p>The Knowledge Blog is an evolving space for Italian food culture, welcoming both enthusiasts and curious beginners who want a clear foundation.</p>
+        <p>Through clear, reliable and accessible content, we want to help readers understand Italian food culture, recognise the differences between ingredients and products, and form their own judgement when choosing, tasting and using them.</p>
       </div>
     </div>
   </section>
   <section class="lux-academy-shell" id="caviar-academy">
     <header class="lux-academy-intro">
       <span>Knowledge, origin &amp; craft</span>
-      <h2>Caviar Academy</h2>
-      <p>A considered guide to caviar species, origins, flavour, history and the craft behind every tin.</p>
+      <h2>Italian Food Academy</h2>
+      <p>A considered guide to regional Italy, ingredients, caviar, olive oil, Italian Gelato, recipes, nutrition and craft.</p>
     </header>
+    <div class="lux-academy-anchors" aria-hidden="true"><span id="culture-academy"></span><span id="food-academy"></span><span id="olive-academy"></span><span id="gelato-academy"></span><span id="nutrition-guide"></span></div>
     <div class="lux-academy-layout">
       <div>
         <div class="lux-academy-list" data-academy-list></div>
@@ -77,8 +79,8 @@
 <!-- lux:scripts:start -->
 
 
-<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/academy.js?v=20260803-font-video-final-131'); ?>"></script>
-<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/js/academy.js?v=20260803-font-video-final-131'); ?>"></script>
+<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/data/academy.js?v=20260803-recipe-layouts-143'); ?>"></script>
+<script defer src="<?php echo esc_url(get_template_directory_uri() . '/assets/js/academy.js?v=20260803-recipe-layouts-143'); ?>"></script>
 
 <!-- lux:scripts:end -->
 <?php wp_footer(); ?>
