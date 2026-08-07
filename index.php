@@ -3,6 +3,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+require_once get_template_directory() . '/static-seo.php';
+
 $routes = require get_template_directory() . '/routes.php';
 $path = luxureat_static_current_path();
 $aliases = luxureat_static_aliases();
