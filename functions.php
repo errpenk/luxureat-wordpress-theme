@@ -979,3 +979,56 @@ function luxureat_baidu_site_verification() {
     exit;
 }
 add_action('template_redirect', 'luxureat_baidu_site_verification', -100);
+
+function luxureat_google_site_verification() {
+    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
+    $request_path = parse_url($request_uri, PHP_URL_PATH);
+
+    if ($request_path !== '/google053137c136af2773.html') {
+        return;
+    }
+
+    $verification_file = get_template_directory() . '/google053137c136af2773.html';
+    if (!is_file($verification_file)) {
+        return;
+    }
+
+    status_header(200);
+    nocache_headers();
+    header('Content-Type: text/html; charset=UTF-8');
+    readfile($verification_file);
+    exit;
+}
+add_action('template_redirect', 'luxureat_google_site_verification', -100);
+
+function luxureat_static_robots_txt($output, $public) {
+    $robots_file = get_template_directory() . '/robots.txt';
+    if (!is_file($robots_file) || !is_readable($robots_file)) {
+        return $output;
+    }
+
+    $contents = file_get_contents($robots_file);
+    return is_string($contents) ? $contents : $output;
+}
+add_filter('robots_txt', 'luxureat_static_robots_txt', 999, 2);
+
+function luxureat_static_sitemap_endpoint() {
+    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
+    $request_path = parse_url($request_uri, PHP_URL_PATH);
+
+    if ($request_path !== '/sitemap.xml') {
+        return;
+    }
+
+    $sitemap_file = get_template_directory() . '/sitemap.xml';
+    if (!is_file($sitemap_file) || !is_readable($sitemap_file)) {
+        return;
+    }
+
+    status_header(200);
+    nocache_headers();
+    header('Content-Type: application/xml; charset=UTF-8');
+    readfile($sitemap_file);
+    exit;
+}
+add_action('template_redirect', 'luxureat_static_sitemap_endpoint', -100);
