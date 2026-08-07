@@ -1034,6 +1034,7 @@ function luxureat_static_sitemap_endpoint() {
 add_action('template_redirect', 'luxureat_static_sitemap_endpoint', -100);
 
 // LUXUREAT_SEARCH_URL_GUARD_BEGIN
+// Revision: 2026-08-07 Search Console spam cleanup
 
 function luxureat_static_public_canonical_path() {
     $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '/';
