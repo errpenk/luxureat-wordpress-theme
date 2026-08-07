@@ -979,3 +979,24 @@ function luxureat_baidu_site_verification() {
     exit;
 }
 add_action('template_redirect', 'luxureat_baidu_site_verification', -100);
+
+function luxureat_google_site_verification() {
+    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
+    $request_path = parse_url($request_uri, PHP_URL_PATH);
+
+    if ($request_path !== '/google053137c136af2773.html') {
+        return;
+    }
+
+    $verification_file = get_template_directory() . '/google053137c136af2773.html';
+    if (!is_file($verification_file)) {
+        return;
+    }
+
+    status_header(200);
+    nocache_headers();
+    header('Content-Type: text/html; charset=UTF-8');
+    readfile($verification_file);
+    exit;
+}
+add_action('template_redirect', 'luxureat_google_site_verification', -100);
