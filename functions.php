@@ -963,3 +963,19 @@ function luxureat_static_refresh_changed_routes() {
     update_option('luxureat_static_route_version', $route_version, false);
 }
 add_action('init', 'luxureat_static_refresh_changed_routes', 20);
+
+function luxureat_baidu_site_verification() {
+    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
+    $request_path = parse_url($request_uri, PHP_URL_PATH);
+
+    if ($request_path !== '/baidu_verify_codeva-unoYAk5W8p.html') {
+        return;
+    }
+
+    status_header(200);
+    nocache_headers();
+    header('Content-Type: text/html; charset=UTF-8');
+    echo '6c9c028426f2f70621969ba37ffb0ae3';
+    exit;
+}
+add_action('template_redirect', 'luxureat_baidu_site_verification', -100);
