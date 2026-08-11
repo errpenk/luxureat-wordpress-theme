@@ -1266,7 +1266,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'e6a84ab0784d8ebc9eebf241f1b2102b1e6b36d4')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'b284355551e92a33b0e287189bc01440f6eadaf6')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
