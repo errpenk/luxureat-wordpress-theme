@@ -1,21 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://luxureat.cn/</loc></url>
-  <url><loc>https://luxureat.cn/journal/</loc></url>
-  <url><loc>https://luxureat.cn/caviar/</loc></url>
-  <url><loc>https://luxureat.cn/rituals/</loc></url>
-  <url><loc>https://luxureat.cn/news/</loc></url>
-  <url><loc>https://luxureat.cn/blog/</loc></url>
-  <url><loc>https://luxureat.cn/certification/</loc></url>
-  <url><loc>https://luxureat.cn/gifting/</loc></url>
-  <url><loc>https://luxureat.cn/contact/</loc></url>
-  <url><loc>https://luxureat.cn/en/</loc></url>
-  <url><loc>https://luxureat.cn/en/journal/</loc></url>
-  <url><loc>https://luxureat.cn/en/products/</loc></url>
-  <url><loc>https://luxureat.cn/en/rituals/</loc></url>
-  <url><loc>https://luxureat.cn/en/news/</loc></url>
-  <url><loc>https://luxureat.cn/en/blog/</loc></url>
-  <url><loc>https://luxureat.cn/en/certification/</loc></url>
-  <url><loc>https://luxureat.cn/en/gifting/</loc></url>
-  <url><loc>https://luxureat.cn/en/contact/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://luxureat.cn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/about-us/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/about-us/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/about-us/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/about-us/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/product/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/product/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/product/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/product/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/new/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/new/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/new/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/new/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/recipe/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/recipe/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/recipe/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/recipe/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/brand/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/brand/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/brand/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/brand/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/blog/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/certification/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/certification/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/certification/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/certification/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/cooperation/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/cooperation/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/cooperation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/cooperation/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/contact/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/about-us/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/about-us/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/about-us/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/about-us/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/product/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/product/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/product/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/product/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/new/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/new/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/new/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/new/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/recipe/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/recipe/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/recipe/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/recipe/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/brand/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/brand/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/brand/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/brand/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/blog/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/certification/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/certification/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/certification/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/certification/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/cooperation/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/cooperation/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/cooperation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/cooperation/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/contact/" />
+  </url>
 </urlset>

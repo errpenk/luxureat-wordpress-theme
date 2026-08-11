@@ -13,32 +13,55 @@ function luxureat_static_aliases() {
         'index.html' => 'zh',
         'zh/index.html' => 'zh',
         'en/index.html' => 'en',
-        'caviar' => 'zh/caviar',
-        'caviar.html' => 'zh/caviar',
-        'rituals' => 'zh/rituals',
-        'rituals.html' => 'zh/rituals',
-        'journal' => 'zh/journal',
-        'journal.html' => 'zh/journal',
-        'news' => 'zh/news',
-        'news.html' => 'zh/news',
+        'about-us' => 'zh/about-us',
+        'about-us.html' => 'zh/about-us',
+        'journal' => 'zh/about-us',
+        'journal.html' => 'zh/about-us',
+        'product' => 'zh/product',
+        'product.html' => 'zh/product',
+        'caviar' => 'zh/product',
+        'caviar.html' => 'zh/product',
+        'recipe' => 'zh/recipe',
+        'recipe.html' => 'zh/recipe',
+        'rituals' => 'zh/recipe',
+        'rituals.html' => 'zh/recipe',
+        'brand' => 'zh/brand',
+        'brand.html' => 'zh/brand',
+        'news' => 'zh/brand',
+        'news.html' => 'zh/brand',
         'blog' => 'zh/blog',
         'blog.html' => 'zh/blog',
-        'gifting' => 'zh/gifting',
-        'gifting.html' => 'zh/gifting',
+        'new' => 'zh/new',
+        'new.html' => 'zh/new',
+        'cooperation' => 'zh/cooperation',
+        'cooperation.html' => 'zh/cooperation',
+        'gifting' => 'zh/cooperation',
+        'gifting.html' => 'zh/cooperation',
         'certification' => 'zh/certification',
         'certification.html' => 'zh/certification',
         'contact' => 'zh/contact',
         'contact.html' => 'zh/contact',
         'bag' => 'zh/bag',
         'bag.html' => 'zh/bag',
-        'en/caviar' => 'en/products',
-        'en/caviar.html' => 'en/products',
-        'en/private' => 'en/gifting',
-        'en/private.html' => 'en/gifting',
-        'private-selection' => 'en/gifting',
-        'private-selection.html' => 'en/gifting',
-        'product-imperial-beluga' => 'zh/caviar',
-        'product-imperial-beluga.html' => 'zh/caviar',
+        'en/journal' => 'en/about-us',
+        'en/journal.html' => 'en/about-us',
+        'en/products' => 'en/product',
+        'en/products.html' => 'en/product',
+        'en/caviar' => 'en/product',
+        'en/caviar.html' => 'en/product',
+        'en/rituals' => 'en/recipe',
+        'en/rituals.html' => 'en/recipe',
+        'en/news' => 'en/brand',
+        'en/news.html' => 'en/brand',
+        'en/new.html' => 'en/new',
+        'en/gifting' => 'en/cooperation',
+        'en/gifting.html' => 'en/cooperation',
+        'en/private' => 'en/cooperation',
+        'en/private.html' => 'en/cooperation',
+        'private-selection' => 'en/cooperation',
+        'private-selection.html' => 'en/cooperation',
+        'product-imperial-beluga' => 'zh/product',
+        'product-imperial-beluga.html' => 'zh/product',
     );
 }
 
@@ -53,22 +76,24 @@ function luxureat_static_normalize_path($path) {
 function luxureat_static_pretty_paths() {
     return array(
         'zh' => '/',
-        'zh/caviar' => '/caviar/',
-        'zh/rituals' => '/rituals/',
-        'zh/journal' => '/journal/',
-        'zh/news' => '/news/',
+        'zh/product' => '/product/',
+        'zh/recipe' => '/recipe/',
+        'zh/about-us' => '/about-us/',
+        'zh/brand' => '/brand/',
         'zh/blog' => '/blog/',
-        'zh/gifting' => '/gifting/',
+        'zh/new' => '/new/',
+        'zh/cooperation' => '/cooperation/',
         'zh/certification' => '/certification/',
         'zh/contact' => '/contact/',
         'zh/bag' => '/bag/',
         'en' => '/en/',
-        'en/products' => '/en/products/',
-        'en/rituals' => '/en/rituals/',
-        'en/journal' => '/en/journal/',
-        'en/news' => '/en/news/',
+        'en/product' => '/en/product/',
+        'en/recipe' => '/en/recipe/',
+        'en/about-us' => '/en/about-us/',
+        'en/brand' => '/en/brand/',
         'en/blog' => '/en/blog/',
-        'en/gifting' => '/en/gifting/',
+        'en/new' => '/en/new/',
+        'en/cooperation' => '/en/cooperation/',
         'en/certification' => '/en/certification/',
         'en/contact' => '/en/contact/',
         'en/bag' => '/en/bag/',
@@ -108,6 +133,244 @@ function luxureat_static_current_path() {
 
     return luxureat_static_normalize_path($request_path);
 }
+
+function luxureat_static_is_allowed_public_query($key, $route) {
+    if (strpos($key, 'utm_') === 0 || strpos($key, 'attribute_') === 0) {
+        return true;
+    }
+
+    if (in_array($key, array('gclid', 'dclid', 'fbclid', 'msclkid', '_gl', 'wc-ajax', 'add-to-cart', 'quantity', 'variation_id', '_wpnonce'), true)) {
+        return true;
+    }
+
+    if (in_array($route, array('zh', 'en'), true) && in_array($key, array('account', 'luxureat_verify', 'user', 'token'), true)) {
+        return true;
+    }
+
+    return in_array($route, array('zh/product', 'en/product'), true) && $key === 'category';
+}
+
+function luxureat_static_reject_noncanonical_requests() {
+    if (
+        is_admin()
+        || is_user_logged_in()
+        || (function_exists('wp_doing_ajax') && wp_doing_ajax())
+        || (function_exists('wp_doing_cron') && wp_doing_cron())
+    ) {
+        return;
+    }
+
+    $method = isset($_SERVER['REQUEST_METHOD']) ? strtoupper((string) $_SERVER['REQUEST_METHOD']) : 'GET';
+    if (!in_array($method, array('GET', 'HEAD'), true)) {
+        return;
+    }
+
+    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '/';
+    $request_path = parse_url($request_uri, PHP_URL_PATH);
+    $request_path = luxureat_static_normalize_path(is_string($request_path) ? $request_path : '');
+    $gone_paths = array('product-category/uncategorized');
+    $gone = in_array($request_path, $gone_paths, true);
+
+    $route = $request_path === '' ? 'zh' : $request_path;
+    $aliases = luxureat_static_aliases();
+    if (isset($aliases[$route])) {
+        $route = $aliases[$route];
+    }
+    $public_route = isset(luxureat_static_routes()[$route]);
+
+    $raw_query = parse_url($request_uri, PHP_URL_QUERY);
+    if (!$gone && $public_route && is_string($raw_query) && $raw_query !== '') {
+        $decoded_query = rawurldecode($raw_query);
+        $gone = preg_match('/^[A-Za-z]=[0-9]{7,}$/', $decoded_query) === 1
+            || preg_match('#^[^=&]+/[^=&]+\.html(?:&.*)?$#i', $decoded_query) === 1;
+
+        if (!$gone) {
+            $query = array();
+            wp_parse_str($raw_query, $query);
+            foreach (array_keys($query) as $key) {
+                if (!luxureat_static_is_allowed_public_query((string) $key, $route)) {
+                    $gone = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    if (!$gone) {
+        return;
+    }
+
+    status_header(410);
+    nocache_headers();
+    header('X-Robots-Tag: noindex, nofollow', true);
+    header('Content-Type: text/html; charset=UTF-8');
+    if ($method !== 'HEAD') {
+        echo '<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>Gone</title></head><body><h1>410 Gone</h1></body></html>';
+    }
+    exit;
+}
+add_action('template_redirect', 'luxureat_static_reject_noncanonical_requests', -200);
+
+function luxureat_static_is_utility_page() {
+    $path = luxureat_static_current_path();
+    $aliases = luxureat_static_aliases();
+    $route = isset($aliases[$path]) ? $aliases[$path] : $path;
+
+    return in_array($route, array('zh/bag', 'en/bag'), true)
+        || (function_exists('is_cart') && is_cart())
+        || (function_exists('is_checkout') && is_checkout())
+        || (function_exists('is_account_page') && is_account_page());
+}
+
+function luxureat_static_utility_noindex_header() {
+    if (luxureat_static_is_utility_page()) {
+        header('X-Robots-Tag: noindex, follow', true);
+    }
+}
+add_action('template_redirect', 'luxureat_static_utility_noindex_header', -50);
+
+function luxureat_static_utility_robots($robots) {
+    if (luxureat_static_is_utility_page()) {
+        $robots['noindex'] = true;
+        $robots['follow'] = true;
+    }
+    return $robots;
+}
+add_filter('wp_robots', 'luxureat_static_utility_robots', 999);
+
+function luxureat_static_search_metadata_endpoint() {
+    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
+    $request_path = parse_url($request_uri, PHP_URL_PATH);
+    $files = array(
+        '/google053137c136af2773.html' => array('google053137c136af2773.html', 'text/html; charset=UTF-8'),
+        '/sitemap.xml' => array('sitemap.xml', 'application/xml; charset=UTF-8'),
+    );
+
+    if (!isset($files[$request_path])) {
+        return;
+    }
+
+    $file = get_template_directory() . '/' . $files[$request_path][0];
+    if (!is_file($file) || !is_readable($file)) {
+        return;
+    }
+
+    status_header(200);
+    nocache_headers();
+    header('Content-Type: ' . $files[$request_path][1]);
+    readfile($file);
+    exit;
+}
+add_action('template_redirect', 'luxureat_static_search_metadata_endpoint', -100);
+
+function luxureat_static_robots_txt($output, $public) {
+    $file = get_template_directory() . '/robots.txt';
+    if (!is_file($file) || !is_readable($file)) {
+        return $output;
+    }
+
+    $contents = file_get_contents($file);
+    return is_string($contents) ? $contents : $output;
+}
+add_filter('robots_txt', 'luxureat_static_robots_txt', 999, 2);
+
+function luxureat_baidu_site_verification() {
+    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
+    if (parse_url($request_uri, PHP_URL_PATH) !== '/baidu_verify_codeva-unoYAk5W8p.html') {
+        return;
+    }
+
+    status_header(200);
+    nocache_headers();
+    header('Content-Type: text/html; charset=UTF-8');
+    echo '6c9c028426f2f70621969ba37ffb0ae3';
+    exit;
+}
+add_action('template_redirect', 'luxureat_baidu_site_verification', -100);
+
+function luxureat_static_seo_catalog() {
+    return array(
+        'zh' => array('title' => 'LuxurEat（露意膳） | 意大利高端美食与品牌合作', 'description' => 'LuxurEat（露意膳）专注意大利高端美食、地道风味与中国市场合作，提供产品、食谱、品牌内容与专业服务。', 'lang' => 'zh', 'alternate' => 'en', 'indexable' => true),
+        'zh/about-us' => array('title' => '关于我们 | LuxurEat（露意膳）', 'description' => '了解 LuxurEat（露意膳）的品牌传承、产地故事、品质承诺与时令观察。', 'lang' => 'zh', 'alternate' => 'en/about-us', 'indexable' => true),
+        'zh/product' => array('title' => '系列产品 | LuxurEat（露意膳）', 'description' => '浏览 LuxurEat（露意膳）精选意大利高端美食与松露、鱼子酱等系列产品。', 'lang' => 'zh', 'alternate' => 'en/product', 'indexable' => true),
+        'zh/new' => array('title' => '热门新品 | LuxurEat（露意膳）', 'description' => '发现 LuxurEat（露意膳）的意大利橄榄油、披萨与意式手工冰淇淋等热门新品。', 'lang' => 'zh', 'alternate' => 'en/new', 'indexable' => true),
+        'zh/recipe' => array('title' => '食谱艺术 | LuxurEat（露意膳）', 'description' => '从意大利地域风味到家庭餐桌，探索 LuxurEat（露意膳）的中英文食谱与烹饪灵感。', 'lang' => 'zh', 'alternate' => 'en/recipe', 'indexable' => true),
+        'zh/brand' => array('title' => '品牌新闻 | LuxurEat（露意膳）', 'description' => '查看 LuxurEat（露意膳）最新品牌活动、行业展会、合作动态与现场故事。', 'lang' => 'zh', 'alternate' => 'en/brand', 'indexable' => true),
+        'zh/blog' => array('title' => '知识博客 | LuxurEat（露意膳）', 'description' => '系统探索松露学院、意大利美食词典、生产者与产地故事，以及鱼子酱、橄榄油等意大利食材知识。', 'lang' => 'zh', 'alternate' => 'en/blog', 'indexable' => true),
+        'zh/certification' => array('title' => '品质认证 | LuxurEat（露意膳）', 'description' => '了解 LuxurEat（露意膳）的产地证明、质量体系、认证文件、责任贸易与合作项目。', 'lang' => 'zh', 'alternate' => 'en/certification', 'indexable' => true),
+        'zh/cooperation' => array('title' => '商务合作 | LuxurEat（露意膳）', 'description' => '探索 LuxurEat（露意膳）的国际市场定制、品牌合作、渠道方案与中国市场服务。', 'lang' => 'zh', 'alternate' => 'en/cooperation', 'indexable' => true),
+        'zh/contact' => array('title' => '联系我们 | LuxurEat（露意膳）', 'description' => '联系 LuxurEat（露意膳），咨询品牌、产品、渠道与商务合作。', 'lang' => 'zh', 'alternate' => 'en/contact', 'indexable' => true),
+        'zh/bag' => array('title' => '购物袋 | LuxurEat（露意膳）', 'description' => '查看并管理您在 LuxurEat（露意膳）购物袋中的已选产品。', 'lang' => 'zh', 'alternate' => 'en/bag', 'indexable' => false),
+        'en' => array('title' => 'LuxurEat | Premium Italian Food & Brand Partnerships', 'description' => 'Discover premium Italian food, authentic regional flavours, recipes, brand stories and professional market partnerships from LuxurEat.', 'lang' => 'en', 'alternate' => 'zh', 'indexable' => true),
+        'en/about-us' => array('title' => 'About Us | LuxurEat', 'description' => 'Discover LuxurEat\'s brand heritage, stories of place, quality promise and seasonal observations.', 'lang' => 'en', 'alternate' => 'zh/about-us', 'indexable' => true),
+        'en/product' => array('title' => 'Products | LuxurEat', 'description' => 'Browse LuxurEat\'s selected premium Italian foods, truffle products, caviar and culinary collections.', 'lang' => 'en', 'alternate' => 'zh/product', 'indexable' => true),
+        'en/new' => array('title' => 'New Arrivals | LuxurEat', 'description' => 'Discover new Italian olive oil, pizza and artisan Gelato selections from LuxurEat.', 'lang' => 'en', 'alternate' => 'zh/new', 'indexable' => true),
+        'en/recipe' => array('title' => 'Recipe Art | LuxurEat', 'description' => 'Explore bilingual Italian recipes, regional flavours and practical inspiration for the family table from LuxurEat.', 'lang' => 'en', 'alternate' => 'zh/recipe', 'indexable' => true),
+        'en/brand' => array('title' => 'Brand News | LuxurEat', 'description' => 'Read the latest LuxurEat events, trade exhibitions, partnerships and stories from the field.', 'lang' => 'en', 'alternate' => 'zh/brand', 'indexable' => true),
+        'en/blog' => array('title' => 'Knowledge Blog | LuxurEat', 'description' => 'Explore the Truffle Academy, Italian Food Dictionary, producers and stories of place, caviar, olive oil and Italian craft.', 'lang' => 'en', 'alternate' => 'zh/blog', 'indexable' => true),
+        'en/certification' => array('title' => 'Quality & Certification | LuxurEat', 'description' => 'Explore LuxurEat\'s origin records, quality systems, certification documents, responsible trade and partnership projects.', 'lang' => 'en', 'alternate' => 'zh/certification', 'indexable' => true),
+        'en/cooperation' => array('title' => 'Cooperation | LuxurEat', 'description' => 'Explore LuxurEat private label, brand partnerships, channel solutions and services for the China market.', 'lang' => 'en', 'alternate' => 'zh/cooperation', 'indexable' => true),
+        'en/contact' => array('title' => 'Contact | LuxurEat', 'description' => 'Contact LuxurEat for brand, product, distribution and business partnership enquiries.', 'lang' => 'en', 'alternate' => 'zh/contact', 'indexable' => true),
+        'en/bag' => array('title' => 'Shopping Bag | LuxurEat', 'description' => 'Review and manage the products selected in your LuxurEat shopping bag.', 'lang' => 'en', 'alternate' => 'zh/bag', 'indexable' => false),
+    );
+}
+
+function luxureat_static_seo_head() {
+    $path = luxureat_static_current_path();
+    $path = $path === '' || $path === '__home' ? 'zh' : $path;
+    $aliases = luxureat_static_aliases();
+    $route = isset($aliases[$path]) ? $aliases[$path] : $path;
+    $catalog = luxureat_static_seo_catalog();
+    if (!isset($catalog[$route])) {
+        return;
+    }
+
+    $meta = $catalog[$route];
+    $alternate = isset($catalog[$meta['alternate']]) ? $catalog[$meta['alternate']] : null;
+    $zh_route = $meta['lang'] === 'zh' ? $route : $meta['alternate'];
+    $canonical = luxureat_static_url($route);
+    if (empty($meta['indexable'])) {
+        echo '<meta name="robots" content="noindex,follow">' . "
+";
+    }
+    echo '<link rel="canonical" href="' . esc_url($canonical) . '">' . "
+";
+    echo '<link rel="alternate" hreflang="zh-CN" href="' . esc_url(luxureat_static_url($zh_route)) . '">' . "
+";
+    if ($alternate) {
+        $en_route = $meta['lang'] === 'en' ? $route : $meta['alternate'];
+        echo '<link rel="alternate" hreflang="en" href="' . esc_url(luxureat_static_url($en_route)) . '">' . "
+";
+    }
+    echo '<link rel="alternate" hreflang="x-default" href="' . esc_url(luxureat_static_url($zh_route)) . '">' . "
+";
+    echo '<meta property="og:type" content="website">' . "
+";
+    echo '<meta property="og:site_name" content="LuxurEat">' . "
+";
+    echo '<meta property="og:locale" content="' . esc_attr($meta['lang'] === 'zh' ? 'zh_CN' : 'en_US') . '">' . "
+";
+    echo '<meta property="og:title" content="' . esc_attr($meta['title']) . '">' . "
+";
+    echo '<meta property="og:description" content="' . esc_attr($meta['description']) . '">' . "
+";
+    echo '<meta property="og:url" content="' . esc_url($canonical) . '">' . "
+";
+    echo '<meta name="twitter:card" content="summary">' . "
+";
+    echo '<script type="application/ld+json">' . wp_json_encode(array(
+        '@context' => 'https://schema.org',
+        '@type' => 'WebPage',
+        'name' => $meta['title'],
+        'description' => $meta['description'],
+        'url' => $canonical,
+        'inLanguage' => $meta['lang'] === 'zh' ? 'zh-CN' : 'en',
+        'isPartOf' => array('@type' => 'WebSite', 'name' => 'LuxurEat', 'url' => luxureat_static_url('zh')),
+    ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>' . "
+";
+}
+remove_action('wp_head', 'rel_canonical');
+add_action('wp_head', 'luxureat_static_seo_head', 1);
 
 function luxureat_static_woo_catalog() {
     if (!function_exists('wc_get_product_id_by_sku')) {
@@ -171,37 +434,42 @@ function luxureat_static_assets() {
     );
 
     $catalog = array(
+        'certification-ui' => array('src' => 'assets/js/certification-ui.js', 'dependencies' => array()),
         'product-data' => array('src' => 'assets/data/products.js', 'dependencies' => array()),
         'event-data' => array('src' => 'assets/data/events.js', 'dependencies' => array()),
         'journal-data' => array('src' => 'assets/data/journal.js', 'dependencies' => array()),
         'academy-data' => array('src' => 'assets/data/academy.js', 'dependencies' => array('journal-data')),
+        'academy-columns' => array('src' => 'assets/data/academy-columns.js', 'dependencies' => array('academy-data')),
         'brand-data' => array('src' => 'assets/data/brand.js', 'dependencies' => array()),
         'core' => array('src' => 'assets/js/core.js', 'dependencies' => array()),
+        'new-arrivals' => array('src' => 'assets/js/new-arrivals.js', 'dependencies' => array()),
         'products' => array('src' => 'assets/js/products.js', 'dependencies' => array('product-data')),
         'events' => array('src' => 'assets/js/events.js', 'dependencies' => array('event-data')),
         'journal' => array('src' => 'assets/js/journal.js', 'dependencies' => array('journal-data')),
-        'academy' => array('src' => 'assets/js/academy.js', 'dependencies' => array('academy-data')),
+        'academy' => array('src' => 'assets/js/academy.js', 'dependencies' => array('academy-columns')),
         'brand' => array('src' => 'assets/js/brand.js', 'dependencies' => array('brand-data')),
     );
     $assets_by_path = array(
         'zh' => array('core', 'product-data', 'event-data', 'events', 'journal-data', 'journal', 'products'),
-        'zh/journal' => array('core', 'journal-data', 'journal'),
-        'zh/caviar' => array('core', 'product-data', 'products'),
-        'zh/rituals' => array('core', 'journal-data', 'journal'),
-        'zh/news' => array('core', 'event-data', 'journal-data', 'journal'),
-        'zh/blog' => array('core', 'journal-data', 'academy-data', 'academy', 'journal'),
-        'zh/certification' => array('core'),
-        'zh/gifting' => array('core', 'brand-data', 'brand'),
+        'zh/about-us' => array('core', 'journal-data', 'journal'),
+        'zh/product' => array('core', 'product-data', 'products'),
+        'zh/new' => array('core', 'journal-data', 'journal', 'new-arrivals'),
+        'zh/recipe' => array('core', 'journal-data', 'journal'),
+        'zh/brand' => array('core', 'event-data', 'journal-data', 'journal'),
+        'zh/blog' => array('core', 'journal-data', 'academy-data', 'academy-columns', 'academy', 'journal'),
+        'zh/certification' => array('core', 'certification-ui'),
+        'zh/cooperation' => array('core', 'brand-data', 'brand'),
         'zh/contact' => array('core', 'brand-data', 'brand'),
         'zh/bag' => array('core', 'product-data', 'products'),
         'en' => array('core', 'product-data', 'event-data', 'events', 'journal-data', 'journal', 'products'),
-        'en/journal' => array('core', 'journal-data', 'journal'),
-        'en/products' => array('core', 'product-data', 'products'),
-        'en/rituals' => array('core', 'journal-data', 'journal'),
-        'en/news' => array('core', 'event-data', 'journal-data', 'journal'),
-        'en/blog' => array('core', 'journal-data', 'academy-data', 'academy', 'journal'),
-        'en/certification' => array('core'),
-        'en/gifting' => array('core', 'brand-data', 'brand'),
+        'en/about-us' => array('core', 'journal-data', 'journal'),
+        'en/product' => array('core', 'product-data', 'products'),
+        'en/new' => array('core', 'journal-data', 'journal', 'new-arrivals'),
+        'en/recipe' => array('core', 'journal-data', 'journal'),
+        'en/brand' => array('core', 'event-data', 'journal-data', 'journal'),
+        'en/blog' => array('core', 'journal-data', 'academy-data', 'academy-columns', 'academy', 'journal'),
+        'en/certification' => array('core', 'certification-ui'),
+        'en/cooperation' => array('core', 'brand-data', 'brand'),
         'en/contact' => array('core', 'brand-data', 'brand'),
         'en/bag' => array('core', 'product-data', 'products'),
     );
@@ -229,6 +497,7 @@ function luxureat_static_assets() {
             wp_localize_script('luxureat-core', 'LuxureatAccount', array(
                 'ajaxUrl' => admin_url('admin-ajax.php'),
                 'nonce' => wp_create_nonce('luxureat_account'),
+                'newsletterNonce' => wp_create_nonce('luxureat_newsletter'),
                 'botChallenge' => luxureat_static_bot_challenge(),
                 'loggedIn' => is_user_logged_in(),
                 'bag' => is_user_logged_in() ? luxureat_static_get_bag(get_current_user_id()) : array(),
@@ -375,6 +644,34 @@ function luxureat_static_mailpoet_subscribe($email) {
         return new WP_Error('mailpoet_failed');
     }
 }
+
+function luxureat_static_newsletter_ajax() {
+    $is_zh = isset($_POST['lang']) && sanitize_key(wp_unslash($_POST['lang'])) === 'zh';
+    $message = function ($zh, $en) use ($is_zh) { return $is_zh ? $zh : $en; };
+    if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'luxureat_newsletter')) {
+        wp_send_json_error(array('message' => $message('请刷新页面后重试。', 'Please refresh the page and try again.')), 403);
+    }
+    if (!empty($_POST['company']) || !luxureat_static_verify_bot_challenge()) {
+        wp_send_json_error(array('message' => $message('安全验证失败，请刷新页面后重试。', 'Security verification failed. Please refresh the page and try again.')), 403);
+    }
+    $email = isset($_POST['email']) ? sanitize_email(wp_unslash($_POST['email'])) : '';
+    if (!is_email($email)) {
+        wp_send_json_error(array('message' => $message('请输入有效的电子邮箱。', 'Please enter a valid email address.')), 400);
+    }
+    $remote_address = isset($_SERVER['REMOTE_ADDR']) ? sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR'])) : '';
+    $rate_key = 'lux_newsletter_' . hash_hmac('sha256', strtolower($email) . '|' . $remote_address, wp_salt('nonce'));
+    if (get_transient($rate_key)) {
+        wp_send_json_error(array('message' => $message('确认邮件已发送，请检查收件箱。', 'A confirmation email was already sent. Please check your inbox.')), 429);
+    }
+    $subscribed = luxureat_static_mailpoet_subscribe($email);
+    if (is_wp_error($subscribed)) {
+        wp_send_json_error(array('message' => $message('订阅服务暂时不可用，请稍后再试。', 'Subscriptions are temporarily unavailable. Please try again later.')), 503);
+    }
+    set_transient($rate_key, '1', 10 * MINUTE_IN_SECONDS);
+    wp_send_json_success(array('message' => $message('确认邮件已发送，请打开邮件完成订阅。', 'Confirmation email sent. Open it to complete your subscription.')));
+}
+add_action('wp_ajax_nopriv_luxureat_newsletter', 'luxureat_static_newsletter_ajax');
+add_action('wp_ajax_luxureat_newsletter', 'luxureat_static_newsletter_ajax');
 
 function luxureat_static_send_verification($user_id, $lang) {
     $user = get_userdata($user_id);
@@ -963,157 +1260,3 @@ function luxureat_static_refresh_changed_routes() {
     update_option('luxureat_static_route_version', $route_version, false);
 }
 add_action('init', 'luxureat_static_refresh_changed_routes', 20);
-
-function luxureat_baidu_site_verification() {
-    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
-    $request_path = parse_url($request_uri, PHP_URL_PATH);
-
-    if ($request_path !== '/baidu_verify_codeva-unoYAk5W8p.html') {
-        return;
-    }
-
-    status_header(200);
-    nocache_headers();
-    header('Content-Type: text/html; charset=UTF-8');
-    echo '6c9c028426f2f70621969ba37ffb0ae3';
-    exit;
-}
-add_action('template_redirect', 'luxureat_baidu_site_verification', -100);
-
-// LUXUREAT_SEARCH_URL_GUARD_BEGIN
-// Revision: 2026-08-07 Search Console spam cleanup
-
-function luxureat_static_public_canonical_path() {
-    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '/';
-    $request_path = parse_url($request_uri, PHP_URL_PATH);
-    $request_path = is_string($request_path) ? $request_path : '/';
-
-    $normalized = '/' . trim($request_path, '/');
-    if ($normalized !== '/') {
-        $normalized .= '/';
-    }
-
-    $public_paths = array(
-        '/',
-        '/caviar/',
-        '/rituals/',
-        '/journal/',
-        '/news/',
-        '/blog/',
-        '/gifting/',
-        '/certification/',
-        '/contact/',
-        '/en/',
-        '/en/products/',
-        '/en/rituals/',
-        '/en/journal/',
-        '/en/news/',
-        '/en/blog/',
-        '/en/gifting/',
-        '/en/certification/',
-        '/en/contact/',
-    );
-
-    return in_array($normalized, $public_paths, true) ? $normalized : '';
-}
-
-function luxureat_static_is_spam_query($raw_query) {
-    if (!is_string($raw_query) || $raw_query === '') {
-        return false;
-    }
-
-    $decoded = rawurldecode($raw_query);
-
-    // Historical spam URLs seen by Search Console, e.g. ?t=3509394515 or ?p=9098915020.
-    if (preg_match('/^[A-Za-z]=[0-9]{7,}$/', $decoded)) {
-        return true;
-    }
-
-    // Historical malformed pseudo-paths placed after ?, e.g. ?category/7204-2598100054.html.
-    if (preg_match('#^[^=&]+/[^=&]+\.html(?:&.*)?$#i', $decoded)) {
-        return true;
-    }
-
-    return false;
-}
-
-function luxureat_static_reject_spam_query_urls() {
-    if (is_admin() || (function_exists('wp_doing_ajax') && wp_doing_ajax())) {
-        return;
-    }
-
-    $canonical_path = luxureat_static_public_canonical_path();
-    if ($canonical_path === '') {
-        return;
-    }
-
-    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
-    $raw_query = parse_url($request_uri, PHP_URL_QUERY);
-
-    if (!luxureat_static_is_spam_query($raw_query)) {
-        return;
-    }
-
-    status_header(404);
-    nocache_headers();
-    header('X-Robots-Tag: noindex, nofollow', true);
-    header('Content-Type: text/html; charset=UTF-8');
-    echo '<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>Not Found</title></head><body><h1>404 Not Found</h1></body></html>';
-    exit;
-}
-add_action('template_redirect', 'luxureat_static_reject_spam_query_urls', -200);
-
-// LUXUREAT_SEARCH_URL_GUARD_END
-
-function luxureat_google_site_verification() {
-    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
-    $request_path = parse_url($request_uri, PHP_URL_PATH);
-
-    if ($request_path !== '/google053137c136af2773.html') {
-        return;
-    }
-
-    $verification_file = get_template_directory() . '/google053137c136af2773.html';
-    if (!is_file($verification_file)) {
-        return;
-    }
-
-    status_header(200);
-    nocache_headers();
-    header('Content-Type: text/html; charset=UTF-8');
-    readfile($verification_file);
-    exit;
-}
-add_action('template_redirect', 'luxureat_google_site_verification', -100);
-
-function luxureat_static_robots_txt($output, $public) {
-    $robots_file = get_template_directory() . '/robots.txt';
-    if (!is_file($robots_file) || !is_readable($robots_file)) {
-        return $output;
-    }
-
-    $contents = file_get_contents($robots_file);
-    return is_string($contents) ? $contents : $output;
-}
-add_filter('robots_txt', 'luxureat_static_robots_txt', 999, 2);
-
-function luxureat_static_sitemap_endpoint() {
-    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
-    $request_path = parse_url($request_uri, PHP_URL_PATH);
-
-    if ($request_path !== '/sitemap.xml') {
-        return;
-    }
-
-    $sitemap_file = get_template_directory() . '/sitemap.xml';
-    if (!is_file($sitemap_file) || !is_readable($sitemap_file)) {
-        return;
-    }
-
-    status_header(200);
-    nocache_headers();
-    header('Content-Type: application/xml; charset=UTF-8');
-    readfile($sitemap_file);
-    exit;
-}
-add_action('template_redirect', 'luxureat_static_sitemap_endpoint', -100);

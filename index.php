@@ -3,10 +3,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-require_once get_template_directory() . '/static-seo.php';
-
 $routes = require get_template_directory() . '/routes.php';
 $path = luxureat_static_current_path();
+$request_path = $path;
 $aliases = luxureat_static_aliases();
 
 if ($path === '' || $path === '__home') {
@@ -22,6 +21,15 @@ if (isset($aliases[$path])) {
         $path = $target_path;
     } else {
         wp_safe_redirect(luxureat_static_url($target_path), 301);
+        exit;
+    }
+}
+
+if ($request_path === $path && isset($routes[$path])) {
+    $pretty_paths = luxureat_static_pretty_paths();
+    $canonical_request_path = isset($pretty_paths[$path]) ? trim($pretty_paths[$path], '/') : $path;
+    if ($canonical_request_path !== $request_path) {
+        wp_safe_redirect(luxureat_static_url($path), 301);
         exit;
     }
 }
