@@ -2,16 +2,17 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>LuxurEat | Premium Italian Food &amp; Brand Partnerships</title>
-<meta name="description" content="Discover premium Italian food, authentic regional flavours, recipes, brand stories and professional market partnerships from LuxurEat.">
+<title>LuxurEat Group | Premium Italian Food &amp; Brand Partnerships</title>
+<meta name="description" content="Discover premium Italian food, authentic regional flavours, recipes, brand stories and professional market partnerships from LuxurEat Group.">
 <!-- lux:seo:end -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260812-cookie-font-alignment-62'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260812-cookie-font-alignment-62'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260812-cookie-font-alignment-62'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260812-cookie-font-alignment-62'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20260812-cookie-font-alignment-62'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260812-scroll-footer-group-63'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260812-scroll-footer-group-63'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20260812-scroll-footer-group-63'); ?>" as="font" type="font/ttf" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260812-scroll-footer-group-63'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260812-scroll-footer-group-63'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20260812-scroll-footer-group-63'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260812-cookie-font-alignment-62'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260812-scroll-footer-group-63'); ?>">
 <style>
         body {
             background-color: #131313;
@@ -49,8 +50,8 @@
     </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260812-cookie-font-alignment-62'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-cookie-font-alignment-62'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260812-scroll-footer-group-63'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-scroll-footer-group-63'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -169,7 +170,7 @@
 <div class="lux-home-maison-inner">
 <header class="lux-home-maison-head">
 <div>
-<span>Who We Are / Maison Overview</span>
+<span>Who We Are / Group Overview</span>
 <h2 id="section-5">From Italian expertise,<br/>to a global gourmet group</h2>
 <blockquote>The luxury of taste—<strong>Made in Italy, admired worldwide.</strong></blockquote>
 </div>
@@ -226,7 +227,7 @@
 </aside>
 <!-- Brand partnership timeline -->
 <section class="lux-home-timeline" id="brand-timeline" data-home-timeline aria-labelledby="home-timeline-title">
-<header><span>MAISON MILESTONES / OUR JOURNEY</span><h2 id="home-timeline-title">Tradition, Experience &amp; Innovation</h2><p>Beginning with Italian culinary tradition and shaped by professional hospitality, product development and global collaboration, we build trusted brands, products and services for the long term.</p></header>
+<header><span>GROUP MILESTONES / OUR JOURNEY</span><h2 id="home-timeline-title">Tradition, Experience &amp; Innovation</h2><p>Beginning with Italian culinary tradition and shaped by professional hospitality, product development and global collaboration, we build trusted brands, products and services for the long term.</p></header>
 <div class="lux-home-timeline-layout">
 <div class="lux-home-timeline-steps">
 <article data-timeline-step data-timeline-index="0" class="is-active"><span>BRAND ORIGINS</span><h3>Born from a Passion for Italian Gastronomy</h3><p>LuxurEat (露意膳) began with a lasting appreciation for Italian cuisine, exceptional ingredients and traditional craftsmanship. Starting from authentic flavour and origin knowledge, we developed specialist judgement across truffles, caviar and premium foods while making respect for ingredients and makers a permanent part of the brand.</p><img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-roberto-mobile.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-roberto.jpg'); ?> 960w" sizes="100vw" width="720" height="901" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-roberto-mobile.webp'); ?>" class="lux-timeline-step-orbit" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-roberto.jpg'); ?>" alt="Roberto Ugolini with the TrufflEat brand"></article>
@@ -296,7 +297,7 @@
 <!-- lux:footer:start -->
 <section class="lux-newsletter" aria-labelledby="lux-newsletter-title-en">
   <div class="lux-newsletter-inner">
-    <div class="lux-newsletter-intro"><img width="1024" height="1024" class="lux-newsletter-icon" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/newsletter-envelope.svg'); ?>" alt="" aria-hidden="true"><div class="lux-newsletter-copy"><h2 id="lux-newsletter-title-en">LUXUREAT (露意膳) JOURNAL | SUBSCRIBE TO OUR UPDATES</h2><p>Receive new product releases, brand events and notes on authentic Italian flavour. Confirm your subscription through the email we send you.</p></div></div>
+    <div class="lux-newsletter-intro"><img width="1024" height="1024" class="lux-newsletter-icon" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/newsletter-envelope.svg'); ?>" alt="" aria-hidden="true"><div class="lux-newsletter-copy"><h2 id="lux-newsletter-title-en">LUXUREAT (露意膳) JOURNAL | SUBSCRIBE TO OUR UPDATES</h2><p>Receive new product releases, brand events and notes on authentic Italian flavour. Confirm your subscription through the email we send you.</p></div></div>
     <form class="lux-newsletter-form" data-newsletter-form novalidate>
       <label class="lux-visually-hidden" for="lux-newsletter-email-en">Enter your email address</label>
       <div><input id="lux-newsletter-email-en" name="email" type="email" autocomplete="email" maxlength="120" placeholder="Enter your email address"><button type="submit">Subscribe</button></div>
@@ -308,9 +309,9 @@ Please enter a valid email address."></p>
 </section>
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div class="lux-footer-brand"><div class="lux-footer-brand-main"><img width="256" height="256" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>Beyond importing, we are committed to defining a new standard for premium Italian gastronomy in China.<br>Rooted in authentic flavor and guided by quality and safety, LuxurEat (露意膳) brings Italian food culture and innovative experiences to China.</p></div><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="cookie">Cookie Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
+    <div class="lux-footer-brand"><div class="lux-footer-brand-main"><img width="256" height="256" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>Beyond importing, we are committed to defining a new standard for premium Italian gastronomy in China.<br>Rooted in authentic flavor and guided by quality and safety, LuxurEat (露意膳) brings Italian food culture and innovative experiences to China.</p></div><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="cookie">Cookie Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/about-us', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/new', '')); ?>">New Arrivals</a><a href="<?php echo esc_url(luxureat_static_url('en/product', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/recipe', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/brand', '')); ?>">Brand News</a><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Blog</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/cooperation', '')); ?>">Cooperation</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
-    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">Rednote</a><button type="button" data-footer-modal="wechat"><img width="229" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">WeChat</button><a href="https://v.douyin.com/9H5RI6LEdaU" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">Weibo</a></div>
+    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img width="200" height="200" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">Rednote</a><button type="button" data-footer-modal="wechat"><img width="229" height="200" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">WeChat</button><a href="https://v.douyin.com/9H5RI6LEdaU" target="_blank" rel="noopener"><img width="200" height="200" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img width="200" height="200" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">Weibo</a></div>
     <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="mailto:roberto@ugolinigroup.com">roberto@ugolinigroup.com</a><a href="tel:+8615721452475">+86 15721452475</a></div>
   </div>
   <div class="lux-footer-bottom">© 2026 LuxurEat (露意膳)｜Luxureat (Shanghai) Trading Co., Ltd. All Rights Reserved ｜ Unified Social Credit Code: 91310000MAERED2X1W</div>
