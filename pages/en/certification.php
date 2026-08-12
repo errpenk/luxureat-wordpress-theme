@@ -6,11 +6,11 @@
 <meta name="description" content="Explore LuxurEat's origin records, quality systems, certification documents, responsible trade and partnership projects.">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-black-light-header-56'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-black-light-header-56'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-black-light-header-56'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-black-light-header-56'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260812-black-light-header-56'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260812-black-light-header-56'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260812-black-light-header-56'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260812-black-light-header-56'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260812-black-light-header-56'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:block}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-newsletter-double-optin-57'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-newsletter-double-optin-57'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-newsletter-double-optin-57'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-newsletter-double-optin-57'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260812-newsletter-double-optin-57'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260812-newsletter-double-optin-57'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260812-newsletter-double-optin-57'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260812-newsletter-double-optin-57'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260812-newsletter-double-optin-57'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-black-light-header-56'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-newsletter-double-optin-57'); ?>">
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
@@ -24,8 +24,8 @@
     </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-black-light-header-56'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/certification.css?v=20260812-black-light-header-56'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-newsletter-double-optin-57'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/certification.css?v=20260812-newsletter-double-optin-57'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -304,7 +304,8 @@
       <label class="lux-visually-hidden" for="lux-newsletter-email-en">Enter your email address</label>
       <div><input id="lux-newsletter-email-en" name="email" type="email" autocomplete="email" maxlength="120" placeholder="Enter your email address"><button type="submit">Subscribe</button></div>
       <input name="company" type="text" tabindex="-1" autocomplete="off" hidden aria-hidden="true">
-      <p data-newsletter-feedback role="status" aria-live="polite" data-invalid="Please enter a valid email address."></p>
+      <p data-newsletter-feedback role="status" aria-live="polite" data-invalid="请输入正确的邮箱格式。
+Please enter a valid email address."></p>
     </form>
   </div>
 </section>

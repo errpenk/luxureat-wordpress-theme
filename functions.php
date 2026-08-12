@@ -1231,43 +1231,55 @@ function luxureat_static_mailpoet_subscribe($email) {
         $options = array('send_confirmation_email' => true, 'schedule_welcome_email' => true);
         try {
             $subscriber = $api->getSubscriber($email);
+            $already_subscribed = isset($subscriber['status']) && $subscriber['status'] === 'subscribed';
             $api->subscribeToLists($subscriber['id'], array($list_id), $options);
+            if ($already_subscribed) {
+                return 'already_subscribed';
+            }
         } catch (\MailPoet\API\MP\v1\APIException $error) {
             if ((int) $error->getCode() !== 4) {
                 throw $error;
             }
             $api->addSubscriber(array('email' => $email), array($list_id), $options);
         }
-        return true;
+        return 'confirmation_sent';
     } catch (\Throwable $error) {
         return new WP_Error('mailpoet_failed');
     }
 }
 
 function luxureat_static_newsletter_ajax() {
-    $is_zh = isset($_POST['lang']) && sanitize_key(wp_unslash($_POST['lang'])) === 'zh';
-    $message = function ($zh, $en) use ($is_zh) { return $is_zh ? $zh : $en; };
     if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'luxureat_newsletter')) {
-        wp_send_json_error(array('message' => $message('请刷新页面后重试。', 'Please refresh the page and try again.')), 403);
+        wp_send_json_error(array('message' => "请刷新页面后重试。
+Please refresh the page and try again."), 403);
     }
     if (!empty($_POST['company']) || !luxureat_static_verify_bot_challenge()) {
-        wp_send_json_error(array('message' => $message('安全验证失败，请刷新页面后重试。', 'Security verification failed. Please refresh the page and try again.')), 403);
+        wp_send_json_error(array('message' => "安全验证失败，请刷新页面后重试。
+Security verification failed. Please refresh the page and try again."), 403);
     }
     $email = isset($_POST['email']) ? sanitize_email(wp_unslash($_POST['email'])) : '';
     if (!is_email($email)) {
-        wp_send_json_error(array('message' => $message('请输入有效的电子邮箱。', 'Please enter a valid email address.')), 400);
+        wp_send_json_error(array('message' => "请输入正确的邮箱格式。
+Please enter a valid email address."), 400);
     }
     $remote_address = isset($_SERVER['REMOTE_ADDR']) ? sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR'])) : '';
     $rate_key = 'lux_newsletter_' . hash_hmac('sha256', strtolower($email) . '|' . $remote_address, wp_salt('nonce'));
     if (get_transient($rate_key)) {
-        wp_send_json_error(array('message' => $message('确认邮件已发送，请检查收件箱。', 'A confirmation email was already sent. Please check your inbox.')), 429);
+        wp_send_json_error(array('message' => "确认邮件已经发送，请检查收件箱或垃圾邮件。
+A confirmation email has already been sent. Please check your inbox or spam folder."), 429);
     }
     $subscribed = luxureat_static_mailpoet_subscribe($email);
     if (is_wp_error($subscribed)) {
-        wp_send_json_error(array('message' => $message('订阅服务暂时不可用，请稍后再试。', 'Subscriptions are temporarily unavailable. Please try again later.')), 503);
+        wp_send_json_error(array('message' => "订阅失败，请稍后再试。
+Subscription failed. Please try again later."), 503);
+    }
+    if ($subscribed === 'already_subscribed') {
+        wp_send_json_success(array('state' => 'already_subscribed', 'message' => "该邮箱已订阅。
+This email is already subscribed."));
     }
     set_transient($rate_key, '1', 10 * MINUTE_IN_SECONDS);
-    wp_send_json_success(array('message' => $message('确认邮件已发送，请打开邮件完成订阅。', 'Confirmation email sent. Open it to complete your subscription.')));
+    wp_send_json_success(array('state' => 'confirmation_sent', 'message' => "确认邮件已发送，请打开邮件完成订阅。
+Confirmation email sent. Open it to complete your subscription."));
 }
 add_action('wp_ajax_nopriv_luxureat_newsletter', 'luxureat_static_newsletter_ajax');
 add_action('wp_ajax_luxureat_newsletter', 'luxureat_static_newsletter_ajax');
@@ -1851,7 +1863,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '19c52c5957ad059a23589f71bd8543496f61837e')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '1f2add35e3cc78a1898fbf1fb9f6761115211294')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
