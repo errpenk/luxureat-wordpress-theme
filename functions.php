@@ -1273,13 +1273,9 @@ A confirmation email has already been sent. Please check your inbox or spam fold
         wp_send_json_error(array('message' => "订阅失败，请稍后再试。
 Subscription failed. Please try again later."), 503);
     }
-    if ($subscribed === 'already_subscribed') {
-        wp_send_json_success(array('state' => 'already_subscribed', 'message' => "该邮箱已订阅。
-This email is already subscribed."));
-    }
     set_transient($rate_key, '1', 10 * MINUTE_IN_SECONDS);
-    wp_send_json_success(array('state' => 'confirmation_sent', 'message' => "确认邮件已发送，请打开邮件完成订阅。
-Confirmation email sent. Open it to complete your subscription."));
+    wp_send_json_success(array('state' => 'confirmation_sent', 'message' => "如果该邮箱尚未订阅，确认邮件将会发送。请检查收件箱或垃圾邮件。
+If this email is not already subscribed, a confirmation message will be sent. Please check your inbox or spam folder."));
 }
 add_action('wp_ajax_nopriv_luxureat_newsletter', 'luxureat_static_newsletter_ajax');
 add_action('wp_ajax_luxureat_newsletter', 'luxureat_static_newsletter_ajax');
@@ -1355,6 +1351,39 @@ function luxureat_static_require_verified_email($user) {
     return $user;
 }
 add_filter('authenticate', 'luxureat_static_require_verified_email', 30);
+add_filter('login_errors', function () {
+    return determine_locale() === 'zh_CN' ? '登录信息不正确。' : 'The sign-in details are incorrect.';
+});
+
+function luxureat_static_rate_keys($scope, $identifier) {
+    $remote_address = isset($_SERVER['REMOTE_ADDR']) ? sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR'])) : 'unknown';
+    $identifier = strtolower(trim((string) $identifier));
+    $salt = wp_salt('nonce');
+    return array(
+        'ip' => 'lux_rate_' . hash_hmac('sha256', $scope . '|ip|' . $remote_address, $salt),
+        'identifier' => 'lux_rate_' . hash_hmac('sha256', $scope . '|identifier|' . $identifier, $salt),
+    );
+}
+
+function luxureat_static_rate_consume($scope, $identifier, $ip_limit, $identifier_limit, $window) {
+    $keys = luxureat_static_rate_keys($scope, $identifier);
+    $limits = array('ip' => $ip_limit, 'identifier' => $identifier_limit);
+    foreach ($keys as $type => $key) {
+        if ((int) get_transient($key) >= $limits[$type]) {
+            return false;
+        }
+    }
+    foreach ($keys as $key) {
+        set_transient($key, (int) get_transient($key) + 1, $window);
+    }
+    return true;
+}
+
+function luxureat_static_rate_reset($scope, $identifier) {
+    foreach (luxureat_static_rate_keys($scope, $identifier) as $key) {
+        delete_transient($key);
+    }
+}
 
 function luxureat_static_account_ajax() {
     $is_zh = isset($_POST['lang']) && sanitize_key(wp_unslash($_POST['lang'])) === 'zh';
@@ -1378,13 +1407,13 @@ function luxureat_static_account_ajax() {
     }
 
     if ($mode === 'forgot') {
+        if (!luxureat_static_rate_consume('forgot', $email, 5, 3, HOUR_IN_SECONDS)) {
+            wp_send_json_error(array('message' => $message('请求过于频繁，请稍后再试。', 'Too many requests. Please try again later.')), 429);
+        }
         $user = get_user_by('email', $email);
         if ($user) {
             update_user_meta($user->ID, 'locale', $is_zh ? 'zh_CN' : 'en_US');
-            $sent = retrieve_password($user->user_login);
-            if (is_wp_error($sent)) {
-                wp_send_json_error(array('message' => $message('暂时无法发送重置邮件，请稍后再试。', 'The reset email could not be sent. Please try again later.')), 500);
-            }
+            retrieve_password($user->user_login);
         }
         wp_send_json_success(array('message' => $message('如果该邮箱已注册，密码重置链接已发送，请检查收件箱和垃圾邮件。', 'If the email is registered, a reset link has been sent. Please check your inbox and spam folder.')));
     }
@@ -1399,17 +1428,23 @@ function luxureat_static_account_ajax() {
         if (!luxureat_static_strong_password($password, $email)) {
             wp_send_json_error(array('message' => $message('密码至少 12 位，并须包含字母和数字。', 'Use at least 12 characters with letters and numbers.')), 400);
         }
-        $existing = get_user_by('email', $email);
-        if ($existing && get_user_meta($existing->ID, '_luxureat_email_verified', true) !== '0') {
-            wp_send_json_error(array('message' => $message('账号已存在，请登录或使用其他电子邮箱。', 'An account already exists. Please sign in or use a different email address.'), 'field' => 'feedback'), 400);
+        if (!luxureat_static_rate_consume('register', $email, 8, 4, HOUR_IN_SECONDS)) {
+            wp_send_json_error(array('message' => $message('请求过于频繁，请稍后再试。', 'Too many requests. Please try again later.')), 429);
         }
-        $is_new = !$existing;
-        $user_id = $is_new ? wc_create_new_customer($email, '', $password) : $existing->ID;
+        $existing = get_user_by('email', $email);
+        if ($existing) {
+            $verification_expires = (int) get_user_meta($existing->ID, '_luxureat_email_expires', true);
+            if (get_user_meta($existing->ID, '_luxureat_email_verified', true) === '0' && $verification_expires < time()) {
+                luxureat_static_send_verification($existing->ID, $is_zh ? 'zh' : 'en');
+            }
+            wp_send_json_success(array(
+                'message' => $message('如果该邮箱可以注册，验证邮件将会发送，请检查收件箱和垃圾邮件。', 'If this email can be registered, a verification message will be sent. Please check your inbox and spam folder.'),
+                'requiresVerification' => true,
+            ));
+        }
+        $user_id = wc_create_new_customer($email, '', $password);
         if (is_wp_error($user_id)) {
             wp_send_json_error(array('message' => $message('暂时无法创建账号，请稍后再试。', 'The account could not be created. Please try again later.'), 'field' => 'feedback'), 400);
-        }
-        if (!$is_new) {
-            wp_set_password($password, $user_id);
         }
         update_user_meta($user_id, 'locale', $is_zh ? 'zh_CN' : 'en_US');
         if (!empty($_POST['newsletter'])) {
@@ -1418,10 +1453,8 @@ function luxureat_static_account_ajax() {
             delete_user_meta($user_id, '_luxureat_newsletter_pending');
         }
         if (!luxureat_static_send_verification($user_id, $is_zh ? 'zh' : 'en')) {
-            if ($is_new) {
-                require_once ABSPATH . 'wp-admin/includes/user.php';
-                wp_delete_user($user_id);
-            }
+            require_once ABSPATH . 'wp-admin/includes/user.php';
+            wp_delete_user($user_id);
             wp_send_json_error(array('message' => $message('验证邮件暂时无法发送，请稍后再试。', 'The verification email could not be sent. Please try again later.'), 'field' => 'feedback'), 500);
         }
         wp_send_json_success(array(
@@ -1430,15 +1463,13 @@ function luxureat_static_account_ajax() {
         ));
     }
 
+    if (!luxureat_static_rate_consume('login', $email, 10, 20, 15 * MINUTE_IN_SECONDS)) {
+        wp_send_json_error(array('message' => $message('登录尝试过于频繁，请稍后再试。', 'Too many sign-in attempts. Please try again later.'), 'field' => 'feedback'), 429);
+    }
+    $invalid_login = array('message' => $message('邮箱或密码不正确。', 'Incorrect email or password.'), 'field' => 'feedback');
     $user = get_user_by('email', $email);
-    if (!$user) {
-        wp_send_json_error(array('message' => $message('电子邮箱不存在或格式错误。', 'The email address does not exist or is invalid.'), 'field' => 'email'), 401);
-    }
-    if (get_user_meta($user->ID, '_luxureat_email_verified', true) === '0') {
-        wp_send_json_error(array('message' => $message('请先打开验证邮件完成邮箱验证。', 'Please verify your email using the link we sent before signing in.'), 'field' => 'feedback'), 403);
-    }
-    if ($password === '') {
-        wp_send_json_error(array('message' => $message('邮箱或密码不正确。', 'Incorrect email or password.'), 'field' => 'feedback'), 401);
+    if (!$user || get_user_meta($user->ID, '_luxureat_email_verified', true) === '0' || $password === '') {
+        wp_send_json_error($invalid_login, 401);
     }
     $credentials = array(
         'user_login' => $user->user_login,
@@ -1447,8 +1478,9 @@ function luxureat_static_account_ajax() {
     );
     $signed_in = wp_signon($credentials, is_ssl());
     if (is_wp_error($signed_in)) {
-        wp_send_json_error(array('message' => $message('邮箱或密码不正确。', 'Incorrect email or password.'), 'field' => 'feedback'), 401);
+        wp_send_json_error($invalid_login, 401);
     }
+    luxureat_static_rate_reset('login', $email);
     wp_send_json_success();
 }
 add_action('wp_ajax_nopriv_luxureat_account', 'luxureat_static_account_ajax');
@@ -1466,7 +1498,8 @@ function luxureat_static_contact_ajax() {
 
     $name = isset($_POST['name']) ? trim(sanitize_text_field(wp_unslash($_POST['name']))) : '';
     $phone = isset($_POST['phone']) ? trim(sanitize_text_field(wp_unslash($_POST['phone']))) : '';
-    $email = isset($_POST['email']) ? sanitize_email(wp_unslash($_POST['email'])) : '';
+    $raw_email = isset($_POST['email']) ? trim((string) wp_unslash($_POST['email'])) : '';
+    $email = sanitize_email($raw_email);
     $inquiry_type = isset($_POST['inquiry_type']) ? trim(sanitize_text_field(wp_unslash($_POST['inquiry_type']))) : '';
     $content = isset($_POST['message']) ? trim(sanitize_textarea_field(wp_unslash($_POST['message']))) : '';
     $allowed_types = array(
@@ -1758,6 +1791,7 @@ add_filter('script_loader_tag', 'luxureat_static_defer_scripts', 10, 2);
 
 function luxureat_static_cache_headers($headers) {
     $headers['Content-Security-Policy'] = "frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests";
+    $headers['Content-Security-Policy-Report-Only'] = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.openstreetmap.org https://*.wp.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.wp.com; frame-src 'self' https://trufflebar.com https://*.google.com; media-src 'self'; upgrade-insecure-requests";
     $headers['X-Frame-Options'] = 'SAMEORIGIN';
     $headers['X-Content-Type-Options'] = 'nosniff';
     $headers['Referrer-Policy'] = 'strict-origin-when-cross-origin';
@@ -1863,7 +1897,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'b3b326173255fe002c4a3f58e615d686289c3f6d')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'b77618f49f57d832cd3a10112e8a99b30b4040ac')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
