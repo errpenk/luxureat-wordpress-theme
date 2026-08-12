@@ -1096,6 +1096,11 @@ function luxureat_static_trim_plugin_assets() {
     }
 }
 add_action('wp_enqueue_scripts', 'luxureat_static_trim_plugin_assets', 999);
+add_action('wp_print_styles', 'luxureat_static_trim_plugin_assets', PHP_INT_MAX);
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('wp_enqueue_scripts', 'wp_enqueue_emoji_styles');
+add_filter('emoji_svg_url', '__return_false');
 
 function luxureat_static_bot_challenge() {
     $payload = time() . '.' . wp_generate_password(16, false, false);
@@ -1824,7 +1829,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '150a6bef0d8cb2c3105f8a343dba0eeb4daff4b3')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '8da5d50174225fc4c37cd8f669ef30ddc49eb877')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
