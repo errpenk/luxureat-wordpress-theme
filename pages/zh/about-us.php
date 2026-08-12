@@ -4,20 +4,20 @@
 <meta name="description" content="了解 LuxurEat（露意膳）的品牌传承、产地故事、品质承诺与时令观察。">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-mobile-hero-tails-38'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-mobile-hero-tails-38'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-mobile-hero-tails-38'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-mobile-hero-tails-38'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-journal-critical.woff2?v=20260812-recipe-seo-44'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-journal-critical.woff2?v=20260812-recipe-seo-44'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-journal-critical.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-journal-critical.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-mobile-hero-tails-38'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-recipe-seo-44'); ?>">
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-mobile-hero-tails-38'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/journal.css?v=20260811-related-gallery-fix-23'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-recipe-seo-44'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/journal.css?v=20260812-recipe-seo-44'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head><body class="font-body-md">
 <!-- lux:header:start -->
 <header class="lux-header">
-  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
+  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img width="256" height="256" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
   <nav class="lux-nav" aria-label="navigation"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a class="active" href="<?php echo esc_url(luxureat_static_url('zh/about-us', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/new', '')); ?>">热门新品</a><a href="<?php echo esc_url(luxureat_static_url('zh/product', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/recipe', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/brand', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/cooperation', '')); ?>">商务合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
   <div class="lux-actions">
     <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>" aria-label="购物袋"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
@@ -34,7 +34,7 @@
 <!-- Hero Section -->
 <section class="lux-page-top-hero lux-standard-hero relative h-screen w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0 transition-all duration-1000 opacity-100">
-<video class="lux-hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture disableremoteplayback poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo-poster.webp'); ?>" aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo.mp4'); ?>" type="video/mp4"></video>
+<video data-lux-autoplay class="lux-hero-video" muted loop playsinline webkit-playsinline preload="none" disablepictureinpicture disableremoteplayback poster="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo-poster.webp'); ?>" aria-hidden="true" tabindex="-1"><source media="(max-width: 640px)" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo-mobile.m4v'); ?>" type="video/mp4"><source src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/about-hero-chi-siamo.mp4'); ?>" type="video/mp4"></video>
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
 <div class="lux-page-hero-content relative z-10 text-center px-margin-mobile max-w-4xl transition-all duration-1000 opacity-100">
@@ -105,7 +105,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center transition-all duration-1000 opacity-100">
 <div class="lg:col-span-7 article-card lux-reader-card group cursor-pointer">
 <div class="aspect-[16/10] overflow-hidden mb-8 border border-white/5 lux-reader-media">
-<img data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar-mobile.webp'); ?>" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar.webp'); ?>">
+<img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar-mobile.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar.webp'); ?> 1366w" sizes="100vw" width="720" height="790" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar-mobile.webp'); ?>" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar.webp'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-harvest">阅读详情</button>
 </div>
 </div>
@@ -127,14 +127,14 @@
 <section class="lux-ingredient-standard-note" id="brand-promise" aria-label="品牌承诺：我们不使用的成分">
 <div class="lux-brand-promise-showcase">
 <div class="lux-brand-promise-feature">
-<img data-partnership-image role="button" tabindex="0" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/brand-promise/brand-promise-hero.webp'); ?>" alt="LuxurEat（露意膳）与合作伙伴参加食品品鉴活动">
+<img width="1600" height="1066" data-partnership-image role="button" tabindex="0" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/brand-promise/brand-promise-hero.webp'); ?>" alt="LuxurEat（露意膳）与合作伙伴参加食品品鉴活动">
 <div class="lux-brand-promise-copy"><small>品牌承诺</small><h2>以透明与责任，守护每一次选择</h2><p>LuxurEat（露意膳）坚持从真实产地、清晰配方、批次追溯与专业应用出发，让每一项承诺都能由文件、产品和实际服务验证。</p></div>
 </div>
 <div class="lux-brand-promise-grid">
-<article class="lux-brand-promise-card"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/brand-promise/brand-promise-traceability.webp'); ?>" alt="CaviarEat鱼子酱产品与门店"><div><svg class="lux-brand-promise-icon" viewBox="0 0 24 24" aria-hidden="true" translate="no"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><h3>真实产地</h3><p>与可信生产者长期合作，核查来源、批次与供应链文件。</p></div></article>
-<article class="lux-brand-promise-card"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/brand-promise/brand-promise-craft.webp'); ?>" alt="TrufflEat松露与专业松露切片工具"><div><svg class="lux-brand-promise-icon" viewBox="0 0 24 24" aria-hidden="true" translate="no"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5Z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg><h3>透明可追溯</h3><p>从配料、过敏原到储运记录，保留清晰且可核验的信息。</p></div></article>
-<article class="lux-brand-promise-card"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/brand-promise/brand-promise-seasonal.webp'); ?>" alt="白松露与节庆陈列"><div><svg class="lux-brand-promise-icon" viewBox="0 0 24 24" aria-hidden="true" translate="no"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><h3>尊重食材与工艺</h3><p>以克制加工和专业工具，保护松露、鱼子酱等食材的本真风味。</p></div></article>
-<article class="lux-brand-promise-card"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/brand-promise/brand-promise-service.webp'); ?>" alt="CaviarEat鱼子酱与品鉴器具"><div><svg class="lux-brand-promise-icon" viewBox="0 0 24 24" aria-hidden="true" translate="no"><path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V5l8-3 8 3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>可靠服务</h3><p>连接精选产品、专业应用与长期合作，让品质稳定抵达餐桌。</p></div></article>
+<article class="lux-brand-promise-card"><img width="1000" height="1032" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/brand-promise/brand-promise-traceability.webp'); ?>" alt="CaviarEat鱼子酱产品与门店"><div><svg class="lux-brand-promise-icon" viewBox="0 0 24 24" aria-hidden="true" translate="no"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><h3>真实产地</h3><p>与可信生产者长期合作，核查来源、批次与供应链文件。</p></div></article>
+<article class="lux-brand-promise-card"><img width="828" height="551" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/brand-promise/brand-promise-craft.webp'); ?>" alt="TrufflEat松露与专业松露切片工具"><div><svg class="lux-brand-promise-icon" viewBox="0 0 24 24" aria-hidden="true" translate="no"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5Z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg><h3>透明可追溯</h3><p>从配料、过敏原到储运记录，保留清晰且可核验的信息。</p></div></article>
+<article class="lux-brand-promise-card"><img width="976" height="810" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/brand-promise/brand-promise-seasonal.webp'); ?>" alt="白松露与节庆陈列"><div><svg class="lux-brand-promise-icon" viewBox="0 0 24 24" aria-hidden="true" translate="no"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><h3>尊重食材与工艺</h3><p>以克制加工和专业工具，保护松露、鱼子酱等食材的本真风味。</p></div></article>
+<article class="lux-brand-promise-card"><img width="1000" height="1333" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/brand-promise/brand-promise-service.webp'); ?>" alt="CaviarEat鱼子酱与品鉴器具"><div><svg class="lux-brand-promise-icon" viewBox="0 0 24 24" aria-hidden="true" translate="no"><path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V5l8-3 8 3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>可靠服务</h3><p>连接精选产品、专业应用与长期合作，让品质稳定抵达餐桌。</p></div></article>
 </div>
 </div>
 <p>我们不使用的成分，不只是一张排除清单，而是LuxurEat（露意膳）对健康、品质与透明度的基本承诺。我们审慎回避来源不清、功能不必要或可能掩盖原料本味的添加物，并优先选择配方清晰、批次可查、供应链记录完整的原料。</p>
@@ -155,7 +155,7 @@
 <!-- Article 1 -->
 <article class="lux-journal-season-card article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media" data-reader-open="zh-truffle">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-truffle-products.webp'); ?>">
+<img width="1080" height="650" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-truffle-products.webp'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-truffle">阅读详情</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">寻味溯源</span>
@@ -168,7 +168,7 @@
 <!-- Article 2 -->
 <article class="lux-journal-season-card article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media" data-reader-open="zh-service">
-<img data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service-mobile.webp'); ?>" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service.webp'); ?>">
+<img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service-mobile.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service.webp'); ?> 1280w" sizes="100vw" width="720" height="720" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service-mobile.webp'); ?>" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service.webp'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-service">阅读详情</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">精致生活</span>
@@ -181,7 +181,7 @@
 <!-- Article 3 -->
 <article class="lux-journal-season-card article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media" data-reader-open="zh-malossol">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/caviar-processing-04.webp'); ?>">
+<img width="854" height="590" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/caviar-processing-04.webp'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-malossol">阅读详情</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">匠心工艺</span>
@@ -198,37 +198,6 @@
 <!-- Footer -->
 
 
-<script class="">
-        // Simple parallax on scroll for hero
-        window.addEventListener('scroll', () => {
-            const scroll = window.pageYOffset;
-            const heroBg = document.querySelector('[style*="background-image"]');
-            if(heroBg) {
-                heroBg.style.transform = `translateY(${scroll * 0.4}px) scale(${1.05 + (scroll * 0.0001)})`;
-            }
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('article, section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-1000');
-            observer.observe(el);
-        });
-</script>
-
-
 
 
 
@@ -238,7 +207,7 @@
 <!-- lux:footer:start -->
 <section class="lux-newsletter" aria-labelledby="lux-newsletter-title-zh">
   <div class="lux-newsletter-inner">
-    <div class="lux-newsletter-intro"><img class="lux-newsletter-icon" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/newsletter-envelope.svg'); ?>" alt="" aria-hidden="true"><div class="lux-newsletter-copy"><h2 id="lux-newsletter-title-zh">LUXUREAT（露意膳）通讯｜订阅我们的更新</h2><p>接收产品上新、品牌活动与意式风味资讯。提交后，请通过邮件完成确认。</p></div></div>
+    <div class="lux-newsletter-intro"><img width="1024" height="1024" class="lux-newsletter-icon" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/newsletter-envelope.svg'); ?>" alt="" aria-hidden="true"><div class="lux-newsletter-copy"><h2 id="lux-newsletter-title-zh">LUXUREAT（露意膳）通讯｜订阅我们的更新</h2><p>接收产品上新、品牌活动与意式风味资讯。提交后，请通过邮件完成确认。</p></div></div>
     <form class="lux-newsletter-form" data-newsletter-form novalidate>
       <label class="lux-visually-hidden" for="lux-newsletter-email-zh">请输入电子邮箱</label>
       <div><input id="lux-newsletter-email-zh" name="email" type="email" autocomplete="email" maxlength="120" placeholder="请输入电子邮箱"><button type="submit">确认订阅</button></div>
@@ -249,9 +218,9 @@
 </section>
 <footer class="lux-footer">
   <div class="lux-footer-grid">
-    <div class="lux-footer-brand"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat（露意膳）以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
+    <div class="lux-footer-brand"><img width="256" height="256" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat（露意膳）以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
     <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/about-us', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/new', '')); ?>">热门新品</a><a href="<?php echo esc_url(luxureat_static_url('zh/product', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/recipe', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/brand', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/cooperation', '')); ?>">商务合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
-    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/9H5RI6LEdaU" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
+    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img width="229" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/9H5RI6LEdaU" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
     <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="mailto:roberto@ugolinigroup.com">roberto@ugolinigroup.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
   </div>
   <div class="lux-footer-bottom">© 2026 LuxurEat（露意膳）｜露意膳（上海）贸易有限公司 版权所有 ｜ 统一社会信用代码：91310000MAERED2X1W</div>

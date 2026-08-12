@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!-- lux:seo:start -->
+<title>How to Make Italian-Style Pizza and Pinsa at Home | LuxurEat</title>
+<meta name="description" content="A domestic oven cannot reproduce every condition of a professional pizzeria, but home cooks can get much closer to Italian-style results by matching the dough, heat and toppings to the style they want to make.">
+<!-- lux:seo:end -->
+<!-- lux:fonts:start -->
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-recipe-seo-44'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-recipe-seo-44'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:block}</style>
+<!-- lux:fonts:end -->
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-recipe-seo-44'); ?>">
+    
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-recipe-seo-44'); ?>">
+<link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
+<?php wp_head(); ?>
+</head>
+<body class="lux-academy-page">
+<!-- lux:header:start -->
+<header class="lux-header">
+  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img width="256" height="256" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
+  <nav class="lux-nav" aria-label="navigation"><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/about-us', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/new', '')); ?>">New Arrivals</a><a href="<?php echo esc_url(luxureat_static_url('en/product', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/recipe', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/brand', '')); ?>">Brand News</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Blog</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/cooperation', '')); ?>">Cooperation</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
+  <div class="lux-actions">
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="Account sign in"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
+    <span class="lux-lang"><a href="<?php echo esc_url(luxureat_static_url('blog/pizza-pinsa-at-home')); ?>">ZH</a><span>/</span><a class="active" href="#">EN</a></span>
+    <button class="lux-menu" type="button" data-open="Close" data-closed="Menu" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<!-- lux:header:end -->
+<main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="Breadcrumb"><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Knowledge Blog</a><span aria-hidden="true">/</span><span aria-current="page">How to Make Italian-Style Pizza and Pinsa at Home</span></nav><article class="lux-reader-layout lux-academy-reader">
+    <div class="lux-reader-rule"></div>
+    <section class="lux-reader-hero"><div class="lux-reader-hero-copy"><div class="lux-reader-meta-grid"><span>Pizza Academy</span><span>Pizza Academy · 2026</span></div><h1 id="lux-reader-title">How to Make Italian-Style Pizza and Pinsa at Home</h1><p class="lux-reader-summary">A domestic oven cannot reproduce every condition of a professional pizzeria, but home cooks can get much closer to Italian-style results by matching the dough, heat and toppings to the style they want to make.</p></div><figure class="lux-reader-cover"><img width="2000" height="1136" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/pizza-pinsa-at-home.webp'); ?>" alt="How to Make Italian-Style Pizza and Pinsa at Home"></figure></section>
+    <section class="lux-reader-content"><aside class="lux-reader-aside"><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Back to Knowledge Blog</a></aside><div class="lux-reader-copy"><section class="lux-reader-section" id="article-section-0"><h2>Choose the Style Before the Dough</h2><p>A Neapolitan-style pizza aims for softness and an airy rim, while a crisp Roman-style pizza or a Pinsa-style base aims for a different texture. A purpose-designed flour or blend can give the home cook a more suitable starting point than one universal dough formula.</p></section><section class="lux-reader-section" id="article-section-1"><h2>Get the Most from a Home Oven</h2><p>Preheat thoroughly. A pizza stone or steel needs time to store heat, and a short use of the grill/broiler near the end can help with top browning. Because domestic ovens run cooler than professional Neapolitan ovens, adapt the dough and baking time to the equipment you actually have.</p></section><section class="lux-reader-section" id="article-section-2"><h2>For Pinsa: Texture Before Claims</h2><p>Pinsa-style doughs often use high hydration, longer fermentation and flour blends that can include wheat, rice and soy, aiming for a crisp exterior and light, open interior. Describe that texture directly rather than promising that the product will necessarily be “more digestible.”</p></section><section class="lux-reader-section" id="article-section-3"><h2>Toppings: Less Is More</h2><p>A classic Margherita demonstrates the logic clearly: tomato, mozzarella, basil and Extra Virgin Olive Oil. Two or three well-chosen toppings will often give a clearer Italian-style result than a heavily loaded pizza.</p></section><section class="lux-reader-section" id="article-section-4"><h2>LuxurEat (露意膳) Application</h2><p>LuxurEat (露意膳) can support this experience with Italian-inspired flour blends and complementary ingredients for specific Pizza or Pinsa applications. Each product page should clearly state the intended style, allergens and final approved preparation method.</p><p>Brand-facing market articles separated from evergreen Academy content.</p></section></div></section>
+  </article></main>
+<!-- lux:footer:start -->
+<section class="lux-newsletter" aria-labelledby="lux-newsletter-title-en">
+  <div class="lux-newsletter-inner">
+    <div class="lux-newsletter-intro"><img width="1024" height="1024" class="lux-newsletter-icon" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/newsletter-envelope.svg'); ?>" alt="" aria-hidden="true"><div class="lux-newsletter-copy"><h2 id="lux-newsletter-title-en">LUXUREAT (露意膳) JOURNAL | SUBSCRIBE TO OUR UPDATES</h2><p>Receive new product releases, brand events and notes on authentic Italian flavour. Confirm your subscription through the email we send you.</p></div></div>
+    <form class="lux-newsletter-form" data-newsletter-form novalidate>
+      <label class="lux-visually-hidden" for="lux-newsletter-email-en">Enter your email address</label>
+      <div><input id="lux-newsletter-email-en" name="email" type="email" autocomplete="email" maxlength="120" placeholder="Enter your email address"><button type="submit">Subscribe</button></div>
+      <input name="company" type="text" tabindex="-1" autocomplete="off" hidden aria-hidden="true">
+      <p data-newsletter-feedback role="status" aria-live="polite" data-invalid="Please enter a valid email address."></p>
+    </form>
+  </div>
+</section>
+<footer class="lux-footer">
+  <div class="lux-footer-grid">
+    <div class="lux-footer-brand"><img width="256" height="256" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>Beyond importing, we are committed to defining a new standard for premium Italian gastronomy in China.<br>Rooted in authentic flavor and guided by quality and safety, LuxurEat (露意膳) brings Italian food culture and innovative experiences to China.</p></div>
+    <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/about-us', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/new', '')); ?>">New Arrivals</a><a href="<?php echo esc_url(luxureat_static_url('en/product', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/recipe', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/brand', '')); ?>">Brand News</a><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Blog</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/cooperation', '')); ?>">Cooperation</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
+    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">Rednote</a><button type="button" data-footer-modal="wechat"><img width="229" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">WeChat</button><a href="https://v.douyin.com/9H5RI6LEdaU" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">Weibo</a></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="mailto:roberto@ugolinigroup.com">roberto@ugolinigroup.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
+  </div>
+  <div class="lux-footer-bottom">© 2026 LuxurEat (露意膳)｜Luxureat (Shanghai) Trading Co., Ltd. All Rights Reserved ｜ Unified Social Credit Code: 91310000MAERED2X1W</div>
+</footer>
+<!-- lux:footer:end -->
+<!-- lux:scripts:start -->
+
+
+
+<!-- lux:scripts:end -->
+<?php wp_footer(); ?>
+</body>
+</html>

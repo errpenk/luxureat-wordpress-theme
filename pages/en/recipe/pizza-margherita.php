@@ -1,0 +1,67 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!-- lux:seo:start -->
+<title>Classic Margherita pizza | LuxurEat</title>
+<meta name="description" content="Patiently fermented dough, tomato, mozzarella and basil make a restrained classic with an airy rim and clear wheat flavour.">
+<!-- lux:seo:end -->
+<!-- lux:fonts:start -->
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-recipe-seo-44'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-recipe-seo-44'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:block}</style>
+<!-- lux:fonts:end -->
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-recipe-seo-44'); ?>">
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+        .ghost-border { border: 0.5px solid rgba(233, 195, 73, 0.3); } /* secondary with opacity */
+        .glass-panel { background: rgba(26, 26, 26, 0.4); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+
+
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-recipe-seo-44'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/rituals.css?v=20260812-recipe-seo-44'); ?>">
+<link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
+<?php wp_head(); ?>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- lux:header:start -->
+<header class="lux-header">
+  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img width="256" height="256" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
+  <nav class="lux-nav" aria-label="navigation"><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/about-us', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/new', '')); ?>">New Arrivals</a><a href="<?php echo esc_url(luxureat_static_url('en/product', '')); ?>">Products</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/recipe', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/brand', '')); ?>">Brand News</a><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Blog</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/cooperation', '')); ?>">Cooperation</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
+  <div class="lux-actions">
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('en/bag', '')); ?>" aria-label="Shopping bag"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="Account sign in"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
+    <span class="lux-lang"><a href="<?php echo esc_url(luxureat_static_url('recipe/pizza-margherita')); ?>">ZH</a><span>/</span><a class="active" href="#">EN</a></span>
+    <button class="lux-menu" type="button" data-open="Close" data-closed="Menu" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<!-- lux:header:end -->
+<main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="Breadcrumb"><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('en/recipe', '')); ?>">Recipes</a><span aria-hidden="true">/</span><span aria-current="page">Classic Margherita pizza</span></nav><article class="lux-recipe-reader lux-recipe-seo-page"><section class="lux-recipe-hero"><figure><img width="1800" height="1134" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/recipe-pizza-margherita.webp'); ?>" alt="Classic Margherita pizza"></figure><div class="lux-recipe-intro"><span>Pizza Academy</span><h1 id="lux-reader-title">Classic Margherita pizza</h1><p>Patiently fermented dough, tomato, mozzarella and basil make a restrained classic with an airy rim and clear wheat flavour.</p><dl class="lux-recipe-facts"><div><dt>Time</dt><dd>30 min + 8–24 hr fermentation</dd></div><div><dt>Difficulty</dt><dd>Medium</dd></div><div><dt>Serves</dt><dd>2 small pizzas</dd></div></dl></div></section><section class="lux-recipe-body"><aside class="lux-recipe-ingredients"><h2>Ingredients</h2><ul><li>500 g pizza flour</li><li>325 g water</li><li>10 g salt</li><li>1 g dry yeast</li><li>250 g crushed tomato</li><li>200 g mozzarella</li><li>Basil and extra-virgin olive oil</li></ul></aside><div class="lux-recipe-method"><h2>Method</h2><ol><li>Mix flour, water and yeast; rest for 20 minutes, add salt and knead until smooth.</li><li>Bulk-ferment, divide into two balls and cold-proof for 8–24 hours.</li><li>Bring to room temperature, open gently while preserving the rim, then add tomato and mozzarella.</li><li>Bake at the oven&#39;s highest temperature until risen and charred; finish with basil and olive oil.</li></ol></div></section><section class="lux-recipe-nutrition"><header><h2>Estimated nutrition per serving</h2></header><dl><div><dt>Energy</dt><dd>About 2,850 kJ (680 kcal) per pizza</dd></div><div><dt>Fat</dt><dd>About 19 g</dd></div><div><dt>Carbohydrate</dt><dd>About 98 g</dd></div><div><dt>Protein</dt><dd>About 28 g</dd></div></dl></section><section class="lux-recipe-details"><div><dt>Reference region</dt><dd>Campania / Naples</dd></div><div><dt>Allergen note</dt><dd>Contains gluten and milk</dd></div><div><dt>Substitutions</dt><dd>Adjust water to the flour&#39;s absorption; low-moisture mozzarella can replace fresh mozzarella</dd></div><div><dt>Related products</dt><dd><a class="lux-recipe-product-link" href="<?php echo esc_url(luxureat_static_url('en/product', '?category=pizza#product-catalogue')); ?>">Pizza catalogue (subject to live stock and label)</a></dd></div></section></article></main>
+<!-- lux:footer:start -->
+<section class="lux-newsletter" aria-labelledby="lux-newsletter-title-en">
+  <div class="lux-newsletter-inner">
+    <div class="lux-newsletter-intro"><img width="1024" height="1024" class="lux-newsletter-icon" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/newsletter-envelope.svg'); ?>" alt="" aria-hidden="true"><div class="lux-newsletter-copy"><h2 id="lux-newsletter-title-en">LUXUREAT (露意膳) JOURNAL | SUBSCRIBE TO OUR UPDATES</h2><p>Receive new product releases, brand events and notes on authentic Italian flavour. Confirm your subscription through the email we send you.</p></div></div>
+    <form class="lux-newsletter-form" data-newsletter-form novalidate>
+      <label class="lux-visually-hidden" for="lux-newsletter-email-en">Enter your email address</label>
+      <div><input id="lux-newsletter-email-en" name="email" type="email" autocomplete="email" maxlength="120" placeholder="Enter your email address"><button type="submit">Subscribe</button></div>
+      <input name="company" type="text" tabindex="-1" autocomplete="off" hidden aria-hidden="true">
+      <p data-newsletter-feedback role="status" aria-live="polite" data-invalid="Please enter a valid email address."></p>
+    </form>
+  </div>
+</section>
+<footer class="lux-footer">
+  <div class="lux-footer-grid">
+    <div class="lux-footer-brand"><img width="256" height="256" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>Beyond importing, we are committed to defining a new standard for premium Italian gastronomy in China.<br>Rooted in authentic flavor and guided by quality and safety, LuxurEat (露意膳) brings Italian food culture and innovative experiences to China.</p></div>
+    <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/about-us', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/new', '')); ?>">New Arrivals</a><a href="<?php echo esc_url(luxureat_static_url('en/product', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/recipe', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/brand', '')); ?>">Brand News</a><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Blog</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/cooperation', '')); ?>">Cooperation</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
+    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">Rednote</a><button type="button" data-footer-modal="wechat"><img width="229" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">WeChat</button><a href="https://v.douyin.com/9H5RI6LEdaU" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">Weibo</a></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="mailto:roberto@ugolinigroup.com">roberto@ugolinigroup.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
+  </div>
+  <div class="lux-footer-bottom">© 2026 LuxurEat (露意膳)｜Luxureat (Shanghai) Trading Co., Ltd. All Rights Reserved ｜ Unified Social Credit Code: 91310000MAERED2X1W</div>
+</footer>
+<!-- lux:footer:end -->
+<!-- lux:scripts:start -->
+
+
+
+<!-- lux:scripts:end --><?php wp_footer(); ?>
+</body></html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="dark" lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!-- lux:seo:start -->
+<title>看懂意大利菜单：从前菜到甜点，常见菜单词是什么意思？ | LuxurEat</title>
+<meta name="description" content="第一次打开意大利餐厅菜单时，即使认识“披萨”和“意面”，很多人仍然会被菜单结构弄得有些困惑。为什么“第一道菜”里没有前菜？为什么意面属于“第一道”，肉和鱼却属于“第二道”？">
+<!-- lux:seo:end -->
+<!-- lux:fonts:start -->
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20260812-recipe-seo-44'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-blog-critical.woff2?v=20260812-recipe-seo-44'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-blog-critical.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-recipe-seo-44'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
+<!-- lux:fonts:end -->
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-recipe-seo-44'); ?>">
+  
+  
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-recipe-seo-44'); ?>">
+<link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
+<?php wp_head(); ?>
+</head>
+<body class="lux-academy-page">
+<!-- lux:header:start -->
+<header class="lux-header">
+  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img width="256" height="256" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
+  <nav class="lux-nav" aria-label="navigation"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/about-us', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/new', '')); ?>">热门新品</a><a href="<?php echo esc_url(luxureat_static_url('zh/product', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/recipe', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/brand', '')); ?>">品牌新闻</a><a class="active" href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/cooperation', '')); ?>">商务合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
+  <div class="lux-actions">
+    <a class="lux-icon-action lux-bag-link" href="<?php echo esc_url(luxureat_static_url('zh/bag', '')); ?>" aria-label="购物袋"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="lux-bag-count" data-bag-count hidden></span></a>
+    <button class="lux-icon-action lux-account-link" type="button" data-account-open aria-label="个人登录"><svg class="lux-lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
+    <span class="lux-lang"><a class="active" href="#">ZH</a><span>/</span><a href="<?php echo esc_url(luxureat_static_url('en/blog/dictionary-italian-menu')); ?>">EN</a></span>
+    <button class="lux-menu" type="button" data-open="关闭" data-closed="菜单" aria-expanded="false">菜单</button>
+  </div>
+</header>
+<!-- lux:header:end -->
+<main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="面包屑导航"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><span aria-hidden="true">/</span><span aria-current="page">看懂意大利菜单：从前菜到甜点，常见菜单词是什么意思？</span></nav><article class="lux-reader-layout lux-academy-reader">
+    <div class="lux-reader-rule"></div>
+    <section class="lux-reader-hero"><div class="lux-reader-hero-copy"><div class="lux-reader-meta-grid"><span>意大利美食词典</span><span>意大利美食词典 · 2026</span></div><h1 id="lux-reader-title">看懂意大利菜单：从前菜到甜点，常见菜单词是什么意思？</h1><p class="lux-reader-summary">第一次打开意大利餐厅菜单时，即使认识“披萨”和“意面”，很多人仍然会被菜单结构弄得有些困惑。为什么“第一道菜”里没有前菜？为什么意面属于“第一道”，肉和鱼却属于“第二道”？</p></div><figure class="lux-reader-cover"><img width="2000" height="1500" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/dictionary-italian-menu.webp'); ?>" alt="看懂意大利菜单：从前菜到甜点，常见菜单词是什么意思？"></figure></section>
+    <section class="lux-reader-content"><aside class="lux-reader-aside"><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">返回知识博客</a></aside><div class="lux-reader-copy"><section class="lux-reader-section lux-reader-section-opening"><p>甜点之前为什么还有奶酪，有时甚至还有水果？</p><p>理解这些词，比简单记住几个菜名更有用，因为它们直接反映了意大利人的用餐结构。</p></section><section class="lux-reader-section" id="article-section-0"><h2>前菜：餐桌的开始</h2><p>Antipasto</p><p>通常译为“前菜”。</p><p>它并不一定是一道很小的装饰性菜肴，而是正式正餐开始前的一组食物。</p><p>常见内容包括：</p><ul class="lux-reader-prose-list"><li>腌制肉类；</li></ul><ul class="lux-reader-prose-list"><li>奶酪；</li></ul><ul class="lux-reader-prose-list"><li>烤蔬菜；</li></ul><ul class="lux-reader-prose-list"><li>海鲜；</li></ul><ul class="lux-reader-prose-list"><li>橄榄；</li></ul><ul class="lux-reader-prose-list"><li>烤面包；</li></ul><ul class="lux-reader-prose-list"><li>各类小份冷盘或热前菜。</li></ul><p>“Antipasto”字面上可以理解为“正餐之前”。</p><p>复数形式为：</p><p>Antipasti</p><p>如果菜单上写着“Antipasti misti”，通常就是“混合前菜”或“前菜拼盘”。</p></section><section class="lux-reader-section" id="article-section-1"><h2>第一道菜：通常是意面、烩饭或汤</h2><p>Primo</p><p>完整说法是：</p><p>Primo piatto</p><p>意大利菜单里的“第一道菜”并不是整顿饭真正意义上的第一口食物，而是前菜之后进入主体用餐阶段的第一道。</p><p>最常见的包括：</p><ul class="lux-reader-prose-list"><li>意面；</li></ul><ul class="lux-reader-prose-list"><li>烩饭；</li></ul><ul class="lux-reader-prose-list"><li>汤；</li></ul><ul class="lux-reader-prose-list"><li>意式团子；</li></ul><ul class="lux-reader-prose-list"><li>部分地方谷物料理。</li></ul><p>因此，如果在菜单上看到“Primi”，通常意味着这一栏主要是意面和米饭类主食料理。</p></section><section class="lux-reader-section" id="article-section-2"><h2>第二道菜：肉、鱼和主要蛋白质料理</h2><p>Secondo</p><p>完整说法是：</p><p>Secondo piatto</p><p>这一栏通常包括：</p><ul class="lux-reader-prose-list"><li>牛肉；</li></ul><ul class="lux-reader-prose-list"><li>猪肉；</li></ul><ul class="lux-reader-prose-list"><li>羊肉；</li></ul><ul class="lux-reader-prose-list"><li>鸡肉；</li></ul><ul class="lux-reader-prose-list"><li>鱼；</li></ul><ul class="lux-reader-prose-list"><li>海鲜；</li></ul><ul class="lux-reader-prose-list"><li>其他主要蛋白质料理。</li></ul><p>所以“第一道”和“第二道”的区别，并不是菜品质量或重要程度。</p><p>它们只是传统意大利用餐顺序中的不同位置。</p></section><section class="lux-reader-section" id="article-section-3"><h2>配菜通常单独出现</h2><p>Contorno</p><p>意思是配菜。</p><p>常见的有：</p><ul class="lux-reader-prose-list"><li>烤蔬菜；</li></ul><ul class="lux-reader-prose-list"><li>土豆；</li></ul><ul class="lux-reader-prose-list"><li>沙拉；</li></ul><ul class="lux-reader-prose-list"><li>菠菜；</li></ul><ul class="lux-reader-prose-list"><li>豆类。</li></ul><p>意大利餐厅的肉类或鱼类主菜有时不会自动配大量蔬菜，因此菜单上经常会把配菜单独列出来。</p><p>复数形式为：</p><p>Contorni</p></section><section class="lux-reader-section" id="article-section-4"><h2>甜点</h2><p>Dolce</p><p>意思是甜点。</p><p>复数为：</p><p>Dolci</p><p>常见的意大利甜点包括提拉米苏、奶冻、卡诺里、蛋糕和各类地方甜点。</p></section><section class="lux-reader-section" id="article-section-5"><h2>当你看到“今日推荐”</h2><p>Del giorno</p><p>意思是“当天的”或“今日”。</p><p>例如：</p><p>Piatto del giorno</p><p>就是“今日菜品”。</p><p>Dolce del giorno</p><p>就是“今日甜点”。</p><p>这类菜品往往会根据季节、市场采购或当天厨房准备情况变化。</p></section><section class="lux-reader-section" id="article-section-6"><h2>“自制”是什么意思？</h2><p>Fatto in casa</p><p>字面意思是“在家制作”，在餐厅语境中通常表示“店内制作”或“自制”。</p><p>例如：</p><p>Pasta fatta in casa</p><p>通常指餐厅自己制作的意面。</p><p>不过，看到这个词时仍然应该结合具体语境理解，它并不自动代表某种官方品质认证。</p></section><section class="lux-reader-section" id="article-section-7"><h2>LuxurEat（露意膳）视角</h2><p>LuxurEat（露意膳）希望“意大利美食词典”不仅帮助消费者翻译菜单，更帮助他们理解词语背后的饮食结构。</p><p>当消费者知道“前菜、第一道、第二道和配菜”分别承担什么角色之后，再阅读意大利食谱、餐厅菜单和产品搭配建议就会容易很多。</p><p>LuxurEat（露意膳）的食谱内容也可以使用这些传统分类，让中国消费者不仅知道“怎么做一道意大利菜”，还能够理解这道菜在意大利餐桌上通常属于什么位置。</p></section></div></section>
+  </article></main>
+<!-- lux:footer:start -->
+<section class="lux-newsletter" aria-labelledby="lux-newsletter-title-zh">
+  <div class="lux-newsletter-inner">
+    <div class="lux-newsletter-intro"><img width="1024" height="1024" class="lux-newsletter-icon" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/newsletter-envelope.svg'); ?>" alt="" aria-hidden="true"><div class="lux-newsletter-copy"><h2 id="lux-newsletter-title-zh">LUXUREAT（露意膳）通讯｜订阅我们的更新</h2><p>接收产品上新、品牌活动与意式风味资讯。提交后，请通过邮件完成确认。</p></div></div>
+    <form class="lux-newsletter-form" data-newsletter-form novalidate>
+      <label class="lux-visually-hidden" for="lux-newsletter-email-zh">请输入电子邮箱</label>
+      <div><input id="lux-newsletter-email-zh" name="email" type="email" autocomplete="email" maxlength="120" placeholder="请输入电子邮箱"><button type="submit">确认订阅</button></div>
+      <input name="company" type="text" tabindex="-1" autocomplete="off" hidden aria-hidden="true">
+      <p data-newsletter-feedback role="status" aria-live="polite" data-invalid="请输入有效的电子邮箱。"></p>
+    </form>
+  </div>
+</section>
+<footer class="lux-footer">
+  <div class="lux-footer-grid">
+    <div class="lux-footer-brand"><img width="256" height="256" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>不止于进口，更致力于定义意大利高端美食在中国的新标准。<br>LuxurEat（露意膳）以正宗风味为根，以品质与安全为准则，将意大利饮食文化与创新体验带到中国。</p></div>
+    <nav><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><a href="<?php echo esc_url(luxureat_static_url('zh/about-us', '')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/new', '')); ?>">热门新品</a><a href="<?php echo esc_url(luxureat_static_url('zh/product', '')); ?>">系列产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/recipe', '')); ?>">食谱艺术</a><a href="<?php echo esc_url(luxureat_static_url('zh/brand', '')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><a href="<?php echo esc_url(luxureat_static_url('zh/certification', '')); ?>">品质认证</a><a href="<?php echo esc_url(luxureat_static_url('zh/cooperation', '')); ?>">商务合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/contact', '')); ?>">联系我们</a></nav>
+    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">小红书</a><button type="button" data-footer-modal="wechat"><img width="229" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">微信</button><a href="https://v.douyin.com/9H5RI6LEdaU" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">抖音</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img width="200" height="200" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">微博</a></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="mailto:roberto@ugolinigroup.com">roberto@ugolinigroup.com</a><a href="tel:+8615721452475">+86 15721452475</a><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">隐私政策</button><button type="button" data-footer-modal="terms">销售条款</button><button type="button" data-footer-modal="shipping">配送说明</button></div></div>
+  </div>
+  <div class="lux-footer-bottom">© 2026 LuxurEat（露意膳）｜露意膳（上海）贸易有限公司 版权所有 ｜ 统一社会信用代码：91310000MAERED2X1W</div>
+</footer>
+<!-- lux:footer:end -->
+<!-- lux:scripts:start -->
+
+
+
+<!-- lux:scripts:end -->
+<?php wp_footer(); ?>
+</body>
+</html>
