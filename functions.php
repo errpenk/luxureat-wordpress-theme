@@ -753,7 +753,7 @@ function luxureat_static_assets() {
         'brand' => array('src' => 'assets/js/brand.js', 'dependencies' => array('brand-data')),
     );
     $assets_by_path = array(
-        'zh' => array('core', 'product-data', 'event-data', 'events', 'journal-data', 'journal', 'products'),
+        'zh' => array('core'),
         'zh/about-us' => array('core', 'journal-data', 'journal'),
         'zh/product' => array('core', 'product-data', 'products'),
         'zh/new' => array('core', 'journal-data', 'journal', 'new-arrivals'),
@@ -764,7 +764,7 @@ function luxureat_static_assets() {
         'zh/cooperation' => array('core', 'brand-data', 'brand'),
         'zh/contact' => array('core', 'brand-data', 'brand'),
         'zh/bag' => array('core', 'product-data', 'products'),
-        'en' => array('core', 'product-data', 'event-data', 'events', 'journal-data', 'journal', 'products'),
+        'en' => array('core'),
         'en/about-us' => array('core', 'journal-data', 'journal'),
         'en/product' => array('core', 'product-data', 'products'),
         'en/new' => array('core', 'journal-data', 'journal', 'new-arrivals'),
@@ -1046,6 +1046,15 @@ function luxureat_static_assets() {
                 'lostPasswordUrl' => wp_lostpassword_url(home_url('/')),
                 'logoutUrl' => wp_logout_url(home_url('/')),
             ));
+            if (in_array($path, array('zh', 'en'), true)) {
+                wp_localize_script('luxureat-core', 'LuxureatCheckout', array(
+                    'ajaxUrl' => admin_url('admin-ajax.php'),
+                    'nonce' => wp_create_nonce('luxureat_checkout'),
+                ));
+                wp_localize_script('luxureat-core', 'LuxureatWooCatalog', array(
+                    'products' => luxureat_static_woo_catalog(),
+                ));
+            }
         }
         if ($handle === 'products') {
             wp_localize_script('luxureat-products', 'LuxureatCheckout', array(
@@ -1065,6 +1074,28 @@ function luxureat_static_assets() {
     }
 }
 add_action('wp_enqueue_scripts', 'luxureat_static_assets');
+
+function luxureat_static_trim_plugin_assets() {
+    $path = luxureat_static_current_path();
+    $aliases = luxureat_static_aliases();
+    $path = isset($aliases[$path]) ? $aliases[$path] : ($path === '' ? 'zh' : $path);
+    if (!isset(luxureat_static_routes()[$path])) {
+        return;
+    }
+
+    foreach (array('woocommerce-layout', 'woocommerce-smallscreen', 'woocommerce-general', 'wc-blocks-style') as $handle) {
+        wp_dequeue_style($handle);
+    }
+    foreach (array(
+        'wc-jquery-blockui', 'wc-add-to-cart', 'wc-js-cookie', 'woocommerce',
+        'woocommerce-analytics', 'woocommerce-analytics-client', 'sourcebuster-js',
+        'wc-order-attribution', 'googlesitekit-events-provider-woocommerce',
+        'jetpack-stats', 'jquery', 'jquery-core', 'jquery-migrate'
+    ) as $handle) {
+        wp_dequeue_script($handle);
+    }
+}
+add_action('wp_enqueue_scripts', 'luxureat_static_trim_plugin_assets', 999);
 
 function luxureat_static_bot_challenge() {
     $payload = time() . '.' . wp_generate_password(16, false, false);
@@ -1793,7 +1824,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '9c95c7a45dedfd94bc451475f3dbe7d7bfcda713')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '150a6bef0d8cb2c3105f8a343dba0eeb4daff4b3')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
