@@ -7,11 +7,11 @@
 <meta name="robots" content="noindex,follow">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260812-links-contrast-51'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-bag-critical.woff2?v=20260812-links-contrast-51'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-bag-critical.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260812-adaptive-header-53'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-bag-critical.woff2?v=20260812-adaptive-header-53'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260812-adaptive-header-53'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-adaptive-header-53'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-bag-critical.woff2?v=20260812-adaptive-header-53'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-adaptive-header-53'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-links-contrast-51'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-adaptive-header-53'); ?>">
 
 <style>
         .material-symbols-outlined {
@@ -38,11 +38,11 @@
     </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-links-contrast-51'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-adaptive-header-53'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
-<body class="lux-light-top bg-background text-on-surface font-body-md overflow-x-hidden">
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 <!-- lux:header:start -->
 <header class="lux-header">
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img width="256" height="256" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"></a>
