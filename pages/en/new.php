@@ -8,14 +8,14 @@
 <meta name="description" content="Discover new Italian olive oil, pizza and artisan Gelato selections from LuxurEat.">
 <!-- lux:seo:end -->
   <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-blog-nav-sitemap-49'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-blog-nav-sitemap-49'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:block}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-links-contrast-51'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-links-contrast-51'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:block}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:block}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-blog-nav-sitemap-49'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-links-contrast-51'); ?>">
   
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-blog-nav-sitemap-49'); ?>">
-  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/new-arrivals.css?v=20260812-blog-nav-sitemap-49'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-links-contrast-51'); ?>">
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/new-arrivals.css?v=20260812-links-contrast-51'); ?>">
   <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -69,7 +69,7 @@
         <span>Fruit, green notes and a gentle peppery finish unfold in every drop. From bread and salads to pasta, it brings simple ingredients into sharper focus.</span>
         <div class="lux-new-actions">
           <a href="<?php echo esc_url(luxureat_static_url('en/product', '?category=olive-oil#product-catalogue')); ?>">Buy Now</a>
-          <a href="<?php echo esc_url(luxureat_static_url('en/blog', '?topic=olive')); ?>">Learn more</a>
+          <a href="<?php echo esc_url(luxureat_static_url('en/blog', '#olive-academy')); ?>">Learn more</a>
         </div>
       </div>
     </article>
@@ -82,7 +82,7 @@
         <span>An airy rim, high-heat char and rich cheese create balance in every slice. Begin with the dough and rediscover the craft of Italian pizza.</span>
         <div class="lux-new-actions">
           <a href="<?php echo esc_url(luxureat_static_url('en/product', '?category=pizza#product-catalogue')); ?>">Buy Now</a>
-          <a href="<?php echo esc_url(luxureat_static_url('en/blog', '?topic=pizza')); ?>">Learn more</a>
+          <a href="<?php echo esc_url(luxureat_static_url('en/blog', '#pizza-academy')); ?>">Learn more</a>
         </div>
       </div>
     </article>
@@ -95,7 +95,7 @@
         <span>Less air and a finer texture let authentic ingredients and seasonal flavours speak with remarkable clarity.</span>
         <div class="lux-new-actions">
           <a href="<?php echo esc_url(luxureat_static_url('en/product', '?category=gelato#product-catalogue')); ?>">Buy Now</a>
-          <a href="<?php echo esc_url(luxureat_static_url('en/blog', '?topic=gelato')); ?>">Learn more</a>
+          <a href="<?php echo esc_url(luxureat_static_url('en/blog', '#gelato-academy')); ?>">Learn more</a>
         </div>
       </div>
     </article>

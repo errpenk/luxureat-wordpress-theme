@@ -4,14 +4,14 @@
 <meta name="description" content="了解 LuxurEat（露意膳）的品牌传承、产地故事、品质承诺与时令观察。">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-journal-critical.woff2?v=20260812-blog-nav-sitemap-49'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-journal-critical.woff2?v=20260812-blog-nav-sitemap-49'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-journal-critical.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-journal-critical.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-journal-critical.woff2?v=20260812-links-contrast-51'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-journal-critical.woff2?v=20260812-links-contrast-51'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-journal-critical.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-journal-critical.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-blog-nav-sitemap-49'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-links-contrast-51'); ?>">
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-blog-nav-sitemap-49'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/journal.css?v=20260812-blog-nav-sitemap-49'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-links-contrast-51'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/journal.css?v=20260812-links-contrast-51'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head><body class="font-body-md">
@@ -105,7 +105,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center transition-all duration-1000 opacity-100">
 <div class="lg:col-span-7 article-card lux-reader-card group cursor-pointer">
 <div class="aspect-[16/10] overflow-hidden mb-8 border border-white/5 lux-reader-media">
-<img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar-mobile.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar.webp'); ?> 1366w" sizes="100vw" width="720" height="790" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar-mobile.webp'); ?>" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/about-caviar.webp'); ?>">
+<img width="1460" height="912" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/about-heritage-gift.webp'); ?>" alt="TrufflEat 松露美食礼盒">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-harvest">阅读详情</button>
 </div>
 </div>

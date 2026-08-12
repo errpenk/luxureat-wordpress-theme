@@ -8,14 +8,14 @@
 <meta name="description" content="发现 LuxurEat（露意膳）的意大利橄榄油、披萨与意式手工冰淇淋等热门新品。">
 <!-- lux:seo:end -->
   <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20260812-blog-nav-sitemap-49'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-news-critical.woff2?v=20260812-blog-nav-sitemap-49'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-news-critical.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-blog-nav-sitemap-49'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20260812-links-contrast-51'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-news-critical.woff2?v=20260812-links-contrast-51'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-news-critical.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-links-contrast-51'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-blog-nav-sitemap-49'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260812-links-contrast-51'); ?>">
   
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-blog-nav-sitemap-49'); ?>">
-  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/new-arrivals.css?v=20260812-blog-nav-sitemap-49'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-links-contrast-51'); ?>">
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/new-arrivals.css?v=20260812-links-contrast-51'); ?>">
   <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -69,7 +69,7 @@
         <span>果香、青绿气息与轻柔辛香在一滴油中展开。从面包、沙拉到意面，让简单食材更加鲜明。</span>
         <div class="lux-new-actions">
           <a href="<?php echo esc_url(luxureat_static_url('zh/product', '?category=olive-oil#product-catalogue')); ?>">立即购买</a>
-          <a href="<?php echo esc_url(luxureat_static_url('zh/blog', '?topic=olive')); ?>">了解更多</a>
+          <a href="<?php echo esc_url(luxureat_static_url('zh/blog', '#olive-academy')); ?>">了解更多</a>
         </div>
       </div>
     </article>
@@ -82,7 +82,7 @@
         <span>轻盈饼边、高温焦香与浓郁奶酪，共同构成一口平衡。从面团开始，重新认识披萨。</span>
         <div class="lux-new-actions">
           <a href="<?php echo esc_url(luxureat_static_url('zh/product', '?category=pizza#product-catalogue')); ?>">立即购买</a>
-          <a href="<?php echo esc_url(luxureat_static_url('zh/blog', '?topic=pizza')); ?>">了解更多</a>
+          <a href="<?php echo esc_url(luxureat_static_url('zh/blog', '#pizza-academy')); ?>">了解更多</a>
         </div>
       </div>
     </article>
@@ -95,7 +95,7 @@
         <span>更少空气、更细腻的质地，让真实原料与季节风味被清晰表达。</span>
         <div class="lux-new-actions">
           <a href="<?php echo esc_url(luxureat_static_url('zh/product', '?category=gelato#product-catalogue')); ?>">立即购买</a>
-          <a href="<?php echo esc_url(luxureat_static_url('zh/blog', '?topic=gelato')); ?>">了解更多</a>
+          <a href="<?php echo esc_url(luxureat_static_url('zh/blog', '#gelato-academy')); ?>">了解更多</a>
         </div>
       </div>
     </article>
