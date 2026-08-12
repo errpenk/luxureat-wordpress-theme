@@ -7,11 +7,11 @@
 <!-- lux:seo:end -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-critical.woff2?v=20260812-mobile-fast-47'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-home-subset.woff2?v=20260812-mobile-fast-47'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-critical.woff2?v=20260812-mobile-fast-47'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-mobile-fast-47'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-home-subset.woff2?v=20260812-mobile-fast-47'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-mobile-fast-47'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","Songti SC",serif!important;--lux-zh-headline:"KingHwa Page Critical","Songti SC",serif!important;--lux-zh-body:"ZhiSong Page Critical","Songti SC",serif!important}html.lux-full-fonts[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Old Song Site","Songti SC",serif!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site","Songti SC",serif!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site","Songti SC",serif!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-critical.woff2?v=20260812-blog-reader-48'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-home-subset.woff2?v=20260812-blog-reader-48'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-critical.woff2?v=20260812-blog-reader-48'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260812-blog-reader-48'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-home-subset.woff2?v=20260812-blog-reader-48'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260812-blog-reader-48'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260812-mobile-fast-47'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260812-blog-reader-48'); ?>">
 <style>
     .fade-in-up {
         animation: fadeInUp 1s ease-out forwards;
@@ -29,8 +29,8 @@
 </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260812-mobile-fast-47'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-mobile-fast-47'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260812-blog-reader-48'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260812-blog-reader-48'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
