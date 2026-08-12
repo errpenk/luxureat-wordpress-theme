@@ -243,6 +243,7 @@ function luxureat_static_search_metadata_endpoint() {
     $request_path = parse_url($request_uri, PHP_URL_PATH);
     $files = array(
         '/google053137c136af2773.html' => array('google053137c136af2773.html', 'text/html; charset=UTF-8'),
+        '/silian_luxureat.txt' => array('silian_luxureat.txt', 'text/plain; charset=UTF-8'),
         '/sitemap.xml' => array('sitemap.xml', 'application/xml; charset=UTF-8'),
     );
 
@@ -1897,7 +1898,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'a8dc5db745660bd4ab5c3639d935f3409e1fce22')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'dd1a9c7c8b0920f5847a45553cbeffb5fc23b4ee')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
