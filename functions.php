@@ -1539,7 +1539,7 @@ function luxureat_static_contact_ajax() {
         . "Messaggio:
 " . $content;
     $headers = array('Reply-To: ' . $name . ' <' . $email . '>');
-    if (!wp_mail('errpenk@gmail.com', $subject, $body, $headers)) {
+    if (!wp_mail('roberto@ugolinigroup.com', $subject, $body, $headers)) {
         wp_send_json_error(array('message' => $message('暂时无法发送，请稍后再试。', 'Your message could not be sent. Please try again later.')), 500);
     }
     set_transient($rate_key, 1, 30);
@@ -1902,7 +1902,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '19e0f92746b3b2fb07e70bf1b2844b285f4eaf44')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '5a691aa23d621a8c0da93d6e4f215d2a9bc8358c')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
