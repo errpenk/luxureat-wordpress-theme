@@ -751,7 +751,7 @@ function luxureat_static_assets() {
         'brand' => array('src' => 'assets/js/brand.js', 'dependencies' => array('brand-data')),
     );
     $assets_by_path = array(
-        'zh' => array('core'),
+        'zh' => array('image-variants', 'core'),
         'zh/about-us' => array('image-variants', 'core', 'journal-data', 'journal'),
         'zh/product' => array('image-variants', 'core', 'product-data', 'products'),
         'zh/new' => array('image-variants', 'core', 'journal-data', 'journal', 'new-arrivals'),
@@ -762,7 +762,7 @@ function luxureat_static_assets() {
         'zh/cooperation' => array('image-variants', 'core', 'brand-data', 'brand'),
         'zh/contact' => array('image-variants', 'core', 'brand-data', 'brand'),
         'zh/bag' => array('image-variants', 'core', 'product-data', 'products'),
-        'en' => array('core'),
+        'en' => array('image-variants', 'core'),
         'en/about-us' => array('image-variants', 'core', 'journal-data', 'journal'),
         'en/product' => array('image-variants', 'core', 'product-data', 'products'),
         'en/new' => array('image-variants', 'core', 'journal-data', 'journal', 'new-arrivals'),
@@ -1917,7 +1917,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'ee30d89fa26da0225df0680f348360626aa52232')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '48c4b9c33dffc00d9b932716696bfb71aee0e223')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
