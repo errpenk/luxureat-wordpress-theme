@@ -1506,10 +1506,10 @@ function luxureat_static_contact_ajax() {
         'Hospitality, Catering & Professional Supply', 'Private Label & Bespoke Customisation',
         'Corporate Gifting & Project Partnerships', 'Brand & Media Partnerships', 'Other',
     );
-    if ($name === '' || $phone === '' || $content === '' || !in_array($inquiry_type, $allowed_types, true)) {
+    if ($name === '' || $raw_email === '' || $content === '' || !in_array($inquiry_type, $allowed_types, true)) {
         wp_send_json_error(array('message' => $message('请填写所有必填信息。', 'Please complete all required fields.')), 400);
     }
-    if (strlen($name) > 240 || strlen($phone) > 120 || strlen($content) > 12000 || ($raw_email !== '' && !is_email($email))) {
+    if (strlen($name) > 240 || strlen($phone) > 120 || strlen($content) > 12000 || !is_email($email)) {
         wp_send_json_error(array('message' => $message('请检查所填信息后重试。', 'Please check the information and try again.')), 400);
     }
 
@@ -1523,15 +1523,15 @@ function luxureat_static_contact_ajax() {
     $not_provided = $message('未提供', 'Not provided');
     $body = $message('姓名', 'Name') . '：' . $name . "
 "
-        . $message('电话', 'Phone') . '：' . $phone . "
+        . $message('电话', 'Phone') . '：' . ($phone ?: $not_provided) . "
 "
-        . $message('电子邮箱', 'Email') . '：' . ($email ?: $not_provided) . "
+        . $message('电子邮箱', 'Email') . '：' . $email . "
 
 "
         . $message('咨询内容', 'Message') . "：
 " . $content;
-    $headers = $email ? array('Reply-To: ' . $name . ' <' . $email . '>') : array();
-    if (!wp_mail('roberto@ugolinigroup.com', $subject, $body, $headers)) {
+    $headers = array('Reply-To: ' . $name . ' <' . $email . '>');
+    if (!wp_mail('errpenk@gmail.com', $subject, $body, $headers)) {
         wp_send_json_error(array('message' => $message('暂时无法发送，请稍后再试。', 'Your message could not be sent. Please try again later.')), 500);
     }
     set_transient($rate_key, 1, 30);
@@ -1894,7 +1894,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '3f511c2fa075959b566b92eb8c6803cd1ff24d3c')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'a4b9e368c1008ee7052c72ff110b13ed703aca6a')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }

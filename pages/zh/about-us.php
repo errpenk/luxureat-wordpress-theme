@@ -169,7 +169,7 @@
 <!-- Article 2 -->
 <article class="lux-journal-season-card article-card lux-reader-card group cursor-pointer transition-all duration-1000 opacity-100">
 <div class="aspect-[4/5] overflow-hidden mb-6 border border-white/5 lux-reader-media" data-reader-open="zh-service">
-<img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service-mobile.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service.webp'); ?> 1280w" sizes="100vw" width="720" height="720" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service-mobile.webp'); ?>" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/caviar-etiquette-service.webp'); ?>">
+<img width="987" height="1481" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/journal/italian-caviar-market.webp'); ?>">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-service">阅读详情</button>
 </div>
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-3 block">精致生活</span>
