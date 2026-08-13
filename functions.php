@@ -735,13 +735,14 @@ function luxureat_static_assets() {
     );
 
     $catalog = array(
+        'image-variants' => array('src' => 'assets/data/image-variants.js', 'dependencies' => array()),
         'certification-ui' => array('src' => 'assets/js/certification-ui.js', 'dependencies' => array()),
         'product-data' => array('src' => 'assets/data/products.js', 'dependencies' => array()),
         'event-data' => array('src' => 'assets/data/events.js', 'dependencies' => array()),
         'journal-data' => array('src' => 'assets/data/journal.js', 'dependencies' => array()),
         'academy-index' => array('src' => 'assets/data/academy-index.js', 'dependencies' => array()),
         'brand-data' => array('src' => 'assets/data/brand.js', 'dependencies' => array()),
-        'core' => array('src' => 'assets/js/core.js', 'dependencies' => array()),
+        'core' => array('src' => 'assets/js/core.js', 'dependencies' => array('image-variants')),
         'new-arrivals' => array('src' => 'assets/js/new-arrivals.js', 'dependencies' => array()),
         'products' => array('src' => 'assets/js/products.js', 'dependencies' => array('product-data')),
         'events' => array('src' => 'assets/js/events.js', 'dependencies' => array('event-data')),
@@ -751,27 +752,27 @@ function luxureat_static_assets() {
     );
     $assets_by_path = array(
         'zh' => array('core'),
-        'zh/about-us' => array('core', 'journal-data', 'journal'),
-        'zh/product' => array('core', 'product-data', 'products'),
-        'zh/new' => array('core', 'journal-data', 'journal', 'new-arrivals'),
-        'zh/recipe' => array('core', 'journal-data', 'journal'),
-        'zh/brand' => array('core', 'event-data', 'journal-data', 'journal'),
-        'zh/blog' => array('core', 'academy-index', 'academy'),
-        'zh/certification' => array('core', 'certification-ui'),
-        'zh/cooperation' => array('core', 'brand-data', 'brand'),
-        'zh/contact' => array('core', 'brand-data', 'brand'),
-        'zh/bag' => array('core', 'product-data', 'products'),
+        'zh/about-us' => array('image-variants', 'core', 'journal-data', 'journal'),
+        'zh/product' => array('image-variants', 'core', 'product-data', 'products'),
+        'zh/new' => array('image-variants', 'core', 'journal-data', 'journal', 'new-arrivals'),
+        'zh/recipe' => array('image-variants', 'core', 'journal-data', 'journal'),
+        'zh/brand' => array('image-variants', 'core', 'event-data', 'journal-data', 'journal'),
+        'zh/blog' => array('image-variants', 'core', 'academy-index', 'academy'),
+        'zh/certification' => array('image-variants', 'core', 'certification-ui'),
+        'zh/cooperation' => array('image-variants', 'core', 'brand-data', 'brand'),
+        'zh/contact' => array('image-variants', 'core', 'brand-data', 'brand'),
+        'zh/bag' => array('image-variants', 'core', 'product-data', 'products'),
         'en' => array('core'),
-        'en/about-us' => array('core', 'journal-data', 'journal'),
-        'en/product' => array('core', 'product-data', 'products'),
-        'en/new' => array('core', 'journal-data', 'journal', 'new-arrivals'),
-        'en/recipe' => array('core', 'journal-data', 'journal'),
-        'en/brand' => array('core', 'event-data', 'journal-data', 'journal'),
-        'en/blog' => array('core', 'academy-index', 'academy'),
-        'en/certification' => array('core', 'certification-ui'),
-        'en/cooperation' => array('core', 'brand-data', 'brand'),
-        'en/contact' => array('core', 'brand-data', 'brand'),
-        'en/bag' => array('core', 'product-data', 'products'),
+        'en/about-us' => array('image-variants', 'core', 'journal-data', 'journal'),
+        'en/product' => array('image-variants', 'core', 'product-data', 'products'),
+        'en/new' => array('image-variants', 'core', 'journal-data', 'journal', 'new-arrivals'),
+        'en/recipe' => array('image-variants', 'core', 'journal-data', 'journal'),
+        'en/brand' => array('image-variants', 'core', 'event-data', 'journal-data', 'journal'),
+        'en/blog' => array('image-variants', 'core', 'academy-index', 'academy'),
+        'en/certification' => array('image-variants', 'core', 'certification-ui'),
+        'en/cooperation' => array('image-variants', 'core', 'brand-data', 'brand'),
+        'en/contact' => array('image-variants', 'core', 'brand-data', 'brand'),
+        'en/bag' => array('image-variants', 'core', 'product-data', 'products'),
         'blog/baerii-caviar' => array('core'),
         'en/blog/baerii-caviar' => array('core'),
         'blog/beluga-caviar' => array('core'),
@@ -1916,7 +1917,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'fbda3ea74d2ad50290a4da88690dea997535f8aa')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'ee30d89fa26da0225df0680f348360626aa52232')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
