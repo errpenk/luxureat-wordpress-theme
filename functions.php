@@ -243,6 +243,8 @@ function luxureat_static_search_metadata_endpoint() {
     $request_path = parse_url($request_uri, PHP_URL_PATH);
     $files = array(
         '/google053137c136af2773.html' => array('google053137c136af2773.html', 'text/html; charset=UTF-8'),
+        '/robots.txt' => array('robots.txt', 'text/plain; charset=UTF-8'),
+        '/llms.txt' => array('llms.txt', 'text/plain; charset=UTF-8'),
         '/sitemap.xml' => array('sitemap.xml', 'application/xml; charset=UTF-8'),
     );
 
@@ -257,22 +259,17 @@ function luxureat_static_search_metadata_endpoint() {
 
     status_header(200);
     nocache_headers();
-    header('Content-Type: ' . $files[$request_path][1]);
-    readfile($file);
+    header_remove('X-Robots-Tag');
+    header_remove('X-Powered-By');
+    header('Content-Type: ' . $files[$request_path][1], true);
+    header('Cache-Control: public, max-age=3600, stale-while-revalidate=86400', true);
+    header('X-Content-Type-Options: nosniff', true);
+    if (!isset($_SERVER['REQUEST_METHOD']) || strtoupper((string) $_SERVER['REQUEST_METHOD']) !== 'HEAD') {
+        readfile($file);
+    }
     exit;
 }
-add_action('template_redirect', 'luxureat_static_search_metadata_endpoint', -100);
-
-function luxureat_static_robots_txt($output, $public) {
-    $file = get_template_directory() . '/robots.txt';
-    if (!is_file($file) || !is_readable($file)) {
-        return $output;
-    }
-
-    $contents = file_get_contents($file);
-    return is_string($contents) ? $contents : $output;
-}
-add_filter('robots_txt', 'luxureat_static_robots_txt', 999, 2);
+add_action('init', 'luxureat_static_search_metadata_endpoint', -100);
 
 function luxureat_baidu_site_verification() {
     $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
@@ -1897,7 +1894,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '75ecec3f06a9d13ed453f4c251457f2aa41254b8')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'ca9a9fc73cd1b296171fffc9f9cffd73b0702a6f')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
