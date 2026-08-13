@@ -1099,6 +1099,17 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('wp_enqueue_scripts', 'wp_enqueue_emoji_styles');
 add_filter('emoji_svg_url', '__return_false');
 
+function luxureat_static_resource_hints($urls, $relation_type) {
+    if ($relation_type !== 'preconnect') {
+        return $urls;
+    }
+    return array_values(array_filter($urls, function ($url) {
+        $href = is_array($url) && isset($url['href']) ? $url['href'] : $url;
+        return !preg_match('#^(?:https?:)?//[ic]0\.wp\.com/?$#i', (string) $href);
+    }));
+}
+add_filter('wp_resource_hints', 'luxureat_static_resource_hints', 10, 2);
+
 function luxureat_static_filter_plugin_style($html, $handle) {
     $path = luxureat_static_current_path();
     $aliases = luxureat_static_aliases();
@@ -1902,7 +1913,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '5a691aa23d621a8c0da93d6e4f215d2a9bc8358c')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '31c4831691d60971e7a346490c4d536a12511138')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
