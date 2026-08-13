@@ -1499,14 +1499,23 @@ function luxureat_static_contact_ajax() {
     $email = sanitize_email($raw_email);
     $inquiry_type = isset($_POST['inquiry_type']) ? trim(sanitize_text_field(wp_unslash($_POST['inquiry_type']))) : '';
     $content = isset($_POST['message']) ? trim(sanitize_textarea_field(wp_unslash($_POST['message']))) : '';
-    $allowed_types = array(
-        '产品与采购咨询', '经销及渠道合作', '酒店餐饮与专业供应', '自有品牌与私人定制',
-        '企业礼赠与项目合作', '品牌、媒体合作', '其他',
-        'Product & Purchasing Enquiries', 'Distribution & Channel Partnerships',
-        'Hospitality, Catering & Professional Supply', 'Private Label & Bespoke Customisation',
-        'Corporate Gifting & Project Partnerships', 'Brand & Media Partnerships', 'Other',
+    $inquiry_labels = array(
+        '产品与采购咨询' => 'Richieste su prodotti e acquisti',
+        '经销及渠道合作' => 'Distribuzione e partnership commerciali',
+        '酒店餐饮与专业供应' => 'Fornitura per hotel, ristorazione e professionisti',
+        '自有品牌与私人定制' => 'Private label e personalizzazione su misura',
+        '企业礼赠与项目合作' => 'Regali aziendali e collaborazioni di progetto',
+        '品牌、媒体合作' => 'Collaborazioni con brand e media',
+        '其他' => 'Altro',
+        'Product & Purchasing Enquiries' => 'Richieste su prodotti e acquisti',
+        'Distribution & Channel Partnerships' => 'Distribuzione e partnership commerciali',
+        'Hospitality, Catering & Professional Supply' => 'Fornitura per hotel, ristorazione e professionisti',
+        'Private Label & Bespoke Customisation' => 'Private label e personalizzazione su misura',
+        'Corporate Gifting & Project Partnerships' => 'Regali aziendali e collaborazioni di progetto',
+        'Brand & Media Partnerships' => 'Collaborazioni con brand e media',
+        'Other' => 'Altro',
     );
-    if ($name === '' || $raw_email === '' || $content === '' || !in_array($inquiry_type, $allowed_types, true)) {
+    if ($name === '' || $raw_email === '' || $content === '' || !isset($inquiry_labels[$inquiry_type])) {
         wp_send_json_error(array('message' => $message('请填写所有必填信息。', 'Please complete all required fields.')), 400);
     }
     if (strlen($name) > 240 || strlen($phone) > 120 || strlen($content) > 12000 || !is_email($email)) {
@@ -1519,16 +1528,15 @@ function luxureat_static_contact_ajax() {
         wp_send_json_error(array('message' => $message('信息已提交，请稍后再试。', 'Your message was submitted. Please wait before trying again.')), 429);
     }
 
-    $subject = $name . ' + ' . $inquiry_type . ' + ' . $phone;
-    $not_provided = $message('未提供', 'Not provided');
-    $body = $message('姓名', 'Name') . '：' . $name . "
+    $subject = $name . ' + ' . $inquiry_labels[$inquiry_type];
+    $body = "Nome: " . $name . "
 "
-        . $message('电话', 'Phone') . '：' . ($phone ?: $not_provided) . "
+        . "Telefono: " . ($phone ?: 'Non fornito') . "
 "
-        . $message('电子邮箱', 'Email') . '：' . $email . "
+        . "E-mail: " . $email . "
 
 "
-        . $message('咨询内容', 'Message') . "：
+        . "Messaggio:
 " . $content;
     $headers = array('Reply-To: ' . $name . ' <' . $email . '>');
     if (!wp_mail('errpenk@gmail.com', $subject, $body, $headers)) {
@@ -1894,7 +1902,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'a4b9e368c1008ee7052c72ff110b13ed703aca6a')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '19e0f92746b3b2fb07e70bf1b2844b285f4eaf44')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
