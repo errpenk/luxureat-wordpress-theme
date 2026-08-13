@@ -1823,8 +1823,11 @@ add_filter('wp_headers', 'luxureat_static_cache_headers');
 
 function luxureat_static_hide_server_version() {
     header_remove('X-Powered-By');
+    if (!is_admin() && !is_user_logged_in() && !is_account_page() && !is_cart() && !is_checkout()) {
+        header('Cache-Control: public, max-age=300, s-maxage=1800, stale-while-revalidate=86400', true);
+    }
 }
-add_action('send_headers', 'luxureat_static_hide_server_version', 999);
+add_action('send_headers', 'luxureat_static_hide_server_version', PHP_INT_MAX);
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'rsd_link');
 add_filter('the_generator', '__return_empty_string');
@@ -1913,7 +1916,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '14dda7d607802c7684a5fd84740cc67c94ad9c43')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '47545126fde7970399a2eda0d79831c256e1661d')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
