@@ -65,7 +65,7 @@
 <span class="lux-hero-kicker">此刻，携手共行</span>
 <h1 class="zh-display-title text-secondary">联系我们</h1>
 <p class="lux-page-hero-subtitle lux-hero-support max-w-2xl mx-auto px-margin-mobile">
-                    臻选全球珍馐，开启卓越品鉴体验；专业顾问为您提供一对一选品与合作咨询。
+                    臻选全球珍馐，开启卓越品鉴体验；专业顾问为您提供一对一<a class="lux-context-link border-b border-primary/40 text-primary transition-colors hover:border-secondary hover:text-secondary" href="<?php echo esc_url(luxureat_static_url('zh/product', '')); ?>">选品</a>与<a class="lux-context-link border-b border-primary/40 text-primary transition-colors hover:border-secondary hover:text-secondary" href="<?php echo esc_url(luxureat_static_url('zh/cooperation', '')); ?>">合作咨询</a>。
                 </p>
 </div>
 </section>
