@@ -7,11 +7,11 @@
 <!-- lux:seo:end -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster-lite-v2.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260820-mobile-menu-67'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260820-mobile-menu-67'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260820-mobile-menu-67'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260820-mobile-menu-67'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20260820-mobile-menu-67'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260824-code-audit-20'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260824-code-audit-20'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260824-code-audit-20'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260824-code-audit-20'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20260824-code-audit-20'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260820-mobile-menu-67'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260824-code-audit-20'); ?>">
 <style>
         body {
             background-color: #131313;
@@ -49,8 +49,8 @@
     </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260820-mobile-menu-67'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260820-mobile-menu-67'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260824-code-audit-20'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260824-code-audit-20'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -121,31 +121,32 @@
 </a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container" data-product-type="Seasoning Oil">
-<img width="480" height="720" loading="lazy" decoding="async" alt="Olio aromatizzato al tartufo bianco" class="w-full h-full object-cover img-reveal opacity-80" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/products/appennino/product-02-480.webp'); ?>"/>
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img width="980" height="992" loading="lazy" decoding="async" alt="Caviar Series" class="w-full h-full object-cover img-reveal opacity-80" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-selected-caviar.webp'); ?>"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
 <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-<h3 class="font-display text-3xl text-on-surface mb-4">Olio aromatizzato al tartufo bianco · 60 ml</h3>
-<p class="text-on-surface-variant text-sm font-light mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">White-truffle flavoured olive oil for pasta, risotto, eggs and cold dishes.</p>
-<a class="lux-core-shop inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-background border border-white/20 bg-white/10 backdrop-blur px-6 py-3 hover:bg-white hover:text-background transition-colors" href="<?php echo esc_url(luxureat_static_url('en/product', '#product-en-white-truffle-oil-60ml')); ?>" data-product-open="en-white-truffle-oil-60ml" aria-label="Shop white truffle flavoured oil, 60 millilitres"><svg class="lux-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" translate="no"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></a>
+<h3 class="font-display text-3xl text-on-surface mb-4">Caviar Series</h3>
+<p class="text-on-surface-variant text-sm font-light mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Selected premium caviar with lustrous pearls and a delicate, refined taste.</p>
+<a class="lux-core-shop inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-background border border-white/20 bg-white/10 backdrop-blur px-6 py-3 hover:bg-white hover:text-background transition-colors" href="<?php echo esc_url(luxureat_static_url('en/product', '?category=caviar#product-catalogue')); ?>" data-series-link aria-label="View the Caviar Series"><svg class="lux-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" translate="no"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></a>
 </div>
 </div>
-<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container" data-product-type="Canned Edible Fungi">
-<img width="480" height="720" loading="lazy" decoding="async" alt="Fette tartufo nero estate" class="w-full h-full object-cover img-reveal opacity-80" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/products/appennino/product-05-480.webp'); ?>"/>
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-selected-truffle-720.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-selected-truffle.webp'); ?> 1122w" sizes="100vw" width="1122" height="1580" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-selected-truffle-720.webp'); ?>" loading="lazy" decoding="async" alt="Truffle Series" class="w-full h-full object-cover img-reveal opacity-80" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-selected-truffle.webp'); ?>"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
 <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-<h3 class="font-display text-3xl text-on-surface mb-4">Fette tartufo nero estate · 180 g</h3>
-<p class="text-on-surface-variant text-sm font-light mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Preserved summer-truffle slices for pizza, pasta, meat dishes and refined plating.</p>
-<a class="lux-core-shop inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-background border border-white/20 bg-white/10 backdrop-blur px-6 py-3 hover:bg-white hover:text-background transition-colors" href="<?php echo esc_url(luxureat_static_url('en/product', '#product-en-summer-truffle-slices-180g')); ?>" data-product-open="en-summer-truffle-slices-180g" aria-label="Shop summer black truffle slices, 180 grams"><svg class="lux-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" translate="no"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></a>
+<h3 class="font-display text-3xl text-on-surface mb-4">Truffle Series</h3>
+<p class="text-on-surface-variant text-sm font-light mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Italian truffles and truffle specialties with deep aroma and layered flavour.</p>
+<a class="lux-core-shop inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-background border border-white/20 bg-white/10 backdrop-blur px-6 py-3 hover:bg-white hover:text-background transition-colors" href="<?php echo esc_url(luxureat_static_url('en/product', '?category=truffle#product-catalogue')); ?>" data-series-link aria-label="View the Truffle Series"><svg class="lux-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" translate="no"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></a>
 </div>
 </div>
-<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container" data-product-type="Compound Condiment">
-<img width="480" height="691" loading="lazy" decoding="async" alt="Salsa al tartufo nero invernale" class="w-full h-full object-cover img-reveal opacity-80" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/products/appennino/product-21-480.webp'); ?>"/>
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-selected-seasoning-oil-720.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-selected-seasoning-oil.webp'); ?> 1600w" sizes="100vw" width="1600" height="1087" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-selected-seasoning-oil-720.webp'); ?>" loading="lazy" decoding="async" alt="Seasoning Oil Series" class="w-full h-full object-cover img-reveal opacity-80" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-selected-seasoning-oil.webp'); ?>"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
 <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-<h3 class="font-display text-3xl text-on-surface mb-4">Salsa al tartufo nero invernale · 180 g</h3>
-<p class="text-on-surface-variant text-sm font-light mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">A mushroom and winter-truffle condiment for pasta, risotto, bread and meat dishes.</p>
-<a class="lux-core-shop inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-background border border-white/20 bg-white/10 backdrop-blur px-6 py-3 hover:bg-white hover:text-background transition-colors" href="<?php echo esc_url(luxureat_static_url('en/product', '#product-en-winter-black-truffle-sauce-180g')); ?>" data-product-open="en-winter-black-truffle-sauce-180g" aria-label="Shop winter black truffle sauce, 180 grams"><svg class="lux-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" translate="no"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></a>
+<h3 class="font-display text-3xl text-on-surface mb-4">Seasoning Oil Series</h3>
+<p class="text-on-surface-variant text-sm font-light mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Fine olive oils carrying truffle character to finish every dish with aroma.</p>
+<a class="lux-core-shop inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-background border border-white/20 bg-white/10 backdrop-blur px-6 py-3 hover:bg-white hover:text-background transition-colors" href="<?php echo esc_url(luxureat_static_url('en/product', '?category=olive-oil#product-catalogue')); ?>" data-series-link aria-label="View the Seasoning Oil Series"><svg class="lux-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" translate="no"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></a>
+</div>
 </div>
 </div>
 </section>

@@ -4,14 +4,14 @@
 <meta name="description" content="浏览 LuxurEat（露意膳）精选意大利高端美食与松露、鱼子酱等系列产品。">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20260820-mobile-menu-67'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-caviar-critical.woff2?v=20260820-mobile-menu-67'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20260820-mobile-menu-67'); ?>" as="font" type="font/ttf" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20260820-mobile-menu-67'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260820-mobile-menu-67'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-caviar-critical.woff2?v=20260820-mobile-menu-67'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260820-mobile-menu-67'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20260824-code-audit-20'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-caviar-critical.woff2?v=20260824-code-audit-20'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20260824-code-audit-20'); ?>" as="font" type="font/ttf" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20260824-code-audit-20'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Labels Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20260824-code-audit-20'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260824-code-audit-20'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-caviar-critical.woff2?v=20260824-code-audit-20'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260824-code-audit-20'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Labels Critical","KingHwa Old Song Site"!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Labels Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260820-mobile-menu-67'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260824-code-audit-20'); ?>">
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260820-mobile-menu-67'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260824-code-audit-20'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head><body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container flex flex-col min-h-screen">
@@ -69,7 +69,7 @@
 <!-- Product Grid -->
 <div class="lux-product-browser" id="product-catalogue">
 <aside class="lux-product-filter-panel" id="product-filters" aria-label="产品筛选">
-<div class="lux-product-count">共显示 <strong data-caviar-count>24</strong> 款注册产品</div>
+<div class="lux-product-count">共显示 <strong data-caviar-count>47</strong> 款产品</div>
 <header><strong>筛选条件</strong><button type="button" data-caviar-clear>全部清除</button></header>
 <section><h3>产品分类</h3><div class="lux-product-filter-list">
 <button type="button" data-caviar-filter-group="category" data-caviar-filter="all" aria-pressed="true"><span aria-hidden="true"></span>全部分类</button>
@@ -77,10 +77,12 @@
 <button type="button" data-caviar-filter-group="category" data-caviar-filter="truffle" aria-pressed="false"><span aria-hidden="true"></span>松露</button>
 <button type="button" data-caviar-filter-group="category" data-caviar-filter="pizza" aria-pressed="false"><span aria-hidden="true"></span>披萨</button>
 <button type="button" data-caviar-filter-group="category" data-caviar-filter="olive-oil" aria-pressed="false"><span aria-hidden="true"></span>橄榄油</button>
+<button type="button" data-caviar-filter-group="category" data-caviar-filter="pasta" aria-pressed="false"><span aria-hidden="true"></span>意大利面</button>
 <button type="button" data-caviar-filter-group="category" data-caviar-filter="gelato" aria-pressed="false"><span aria-hidden="true"></span>意式手工冰淇淋</button>
 </div></section>
 <section><h3>标签产品类型</h3><div class="lux-product-filter-list">
 <button type="button" data-caviar-filter-group="type" data-caviar-filter="all" aria-pressed="true"><span aria-hidden="true"></span>全部类型</button>
+<button type="button" data-caviar-filter-group="type" data-caviar-filter="pasta" aria-pressed="false"><span aria-hidden="true"></span>面食</button>
 <button type="button" data-caviar-filter-group="type" data-caviar-filter="seasoning-oil" aria-pressed="false"><span aria-hidden="true"></span>调味油</button>
 <button type="button" data-caviar-filter-group="type" data-caviar-filter="canned-fungi" aria-pressed="false"><span aria-hidden="true"></span>食用菌罐头</button>
 <button type="button" data-caviar-filter-group="type" data-caviar-filter="compound-condiment" aria-pressed="false"><span aria-hidden="true"></span>复合调味品</button>
