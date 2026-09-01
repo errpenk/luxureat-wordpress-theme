@@ -37,6 +37,10 @@ function luxureat_static_aliases() {
         'cooperation.html' => 'zh/cooperation',
         'gifting' => 'zh/cooperation',
         'gifting.html' => 'zh/cooperation',
+        'china-market-insights' => 'zh/china-market-insights',
+        'china-market-insights.html' => 'zh/china-market-insights',
+        'import-export-services' => 'zh/import-export-services',
+        'import-export-services.html' => 'zh/import-export-services',
         'certification' => 'zh/certification',
         'certification.html' => 'zh/certification',
         'contact' => 'zh/contact',
@@ -58,6 +62,8 @@ function luxureat_static_aliases() {
         'en/gifting.html' => 'en/cooperation',
         'en/private' => 'en/cooperation',
         'en/private.html' => 'en/cooperation',
+        'en/china-market-insights.html' => 'en/china-market-insights',
+        'en/import-export-services.html' => 'en/import-export-services',
         'private-selection' => 'en/cooperation',
         'private-selection.html' => 'en/cooperation',
         'product-imperial-beluga' => 'zh/product',
@@ -84,6 +90,8 @@ function luxureat_static_pretty_paths() {
         'zh/new' => '/new/',
         'zh/cooperation' => '/cooperation/',
         'zh/certification' => '/certification/',
+        'zh/china-market-insights' => '/china-market-insights/',
+        'zh/import-export-services' => '/import-export-services/',
         'zh/contact' => '/contact/',
         'zh/bag' => '/bag/',
         'en' => '/en/',
@@ -95,6 +103,8 @@ function luxureat_static_pretty_paths() {
         'en/new' => '/en/new/',
         'en/cooperation' => '/en/cooperation/',
         'en/certification' => '/en/certification/',
+        'en/china-market-insights' => '/en/china-market-insights/',
+        'en/import-export-services' => '/en/import-export-services/',
         'en/contact' => '/en/contact/',
         'en/bag' => '/en/bag/',
     );
@@ -296,6 +306,8 @@ function luxureat_static_seo_catalog() {
         'zh/blog' => array('title' => '知识博客 | LuxurEat（露意膳）', 'description' => '系统探索松露学院、意大利美食词典、生产者与产地故事，以及鱼子酱、橄榄油等意大利食材知识。', 'lang' => 'zh', 'alternate' => 'en/blog', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/certification' => array('title' => '品质认证 | LuxurEat（露意膳）', 'description' => '了解 LuxurEat（露意膳）的产地证明、质量体系、认证文件、责任贸易与合作项目。', 'lang' => 'zh', 'alternate' => 'en/certification', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/cooperation' => array('title' => '商务合作 | LuxurEat（露意膳）', 'description' => '探索 LuxurEat（露意膳）的国际市场定制、品牌合作、渠道方案与中国市场服务。', 'lang' => 'zh', 'alternate' => 'en/cooperation', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
+        'zh/china-market-insights' => array('title' => '中国市场洞察 | LuxurEat（露意膳）', 'description' => '了解中国市场规模、城市与经济中心、意中贸易，以及意大利食品、饮料和葡萄酒的市场数据。', 'lang' => 'zh', 'alternate' => 'en/china-market-insights', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
+        'zh/import-export-services' => array('title' => '中国进出口与市场服务 | LuxurEat（露意膳）', 'description' => '了解 LuxurEat China 的进口中国、中国采购与出口、市场落地、品牌数字化与商务拓展服务。', 'lang' => 'zh', 'alternate' => 'en/import-export-services', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/contact' => array('title' => '联系我们 | LuxurEat（露意膳）', 'description' => '联系 LuxurEat（露意膳），咨询品牌、产品、渠道与商务合作。', 'lang' => 'zh', 'alternate' => 'en/contact', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/bag' => array('title' => '购物袋 | LuxurEat（露意膳）', 'description' => '查看并管理您在 LuxurEat（露意膳）购物袋中的已选产品。', 'lang' => 'zh', 'alternate' => 'en/bag', 'indexable' => false, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en' => array('title' => 'LuxurEat Group | Premium Italian Food & Brand Partnerships', 'description' => 'Discover premium Italian food, authentic regional flavours, recipes, brand stories and professional market partnerships from LuxurEat Group.', 'lang' => 'en', 'alternate' => 'zh', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
@@ -307,6 +319,8 @@ function luxureat_static_seo_catalog() {
         'en/blog' => array('title' => 'Knowledge Blog | LuxurEat', 'description' => 'Explore the Truffle Academy, Italian Food Dictionary, producers and stories of place, caviar, olive oil and Italian craft.', 'lang' => 'en', 'alternate' => 'zh/blog', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/certification' => array('title' => 'Quality & Certification | LuxurEat', 'description' => 'Explore LuxurEat\'s origin records, quality systems, certification documents, responsible trade and partnership projects.', 'lang' => 'en', 'alternate' => 'zh/certification', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/cooperation' => array('title' => 'Cooperation | LuxurEat', 'description' => 'Explore LuxurEat private label, brand partnerships, channel solutions and services for the China market.', 'lang' => 'en', 'alternate' => 'zh/cooperation', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
+        'en/china-market-insights' => array('title' => 'China Market Insights | LuxurEat', 'description' => 'Explore China\'s market scale, cities and economic centres, Italy–China trade, and market data for Italian food, beverages and wine.', 'lang' => 'en', 'alternate' => 'zh/china-market-insights', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
+        'en/import-export-services' => array('title' => 'China Import, Export & Market Services | LuxurEat', 'description' => 'Explore LuxurEat China services for importing into China, sourcing and export, market entry, brand digitalisation and business development.', 'lang' => 'en', 'alternate' => 'zh/import-export-services', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/contact' => array('title' => 'Contact | LuxurEat', 'description' => 'Contact LuxurEat for brand, product, distribution and business partnership enquiries.', 'lang' => 'en', 'alternate' => 'zh/contact', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/bag' => array('title' => 'Shopping Bag | LuxurEat', 'description' => 'Review and manage the products selected in your LuxurEat shopping bag.', 'lang' => 'en', 'alternate' => 'zh/bag', 'indexable' => false, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'blog/baerii-caviar' => array('title' => '贝氏鲟鱼子酱 | LuxurEat', 'description' => '贝氏鲟鱼子酱取自西伯利亚鲟（Acipenser baerii），以灰棕色小颗粒和带有轻柔碘感的细腻风味著称。', 'lang' => 'zh', 'alternate' => 'en/blog/baerii-caviar', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/baerii-caviar-cover-page-bg.png'),
@@ -783,6 +797,8 @@ function luxureat_static_assets() {
     $catalog = array(
         'image-variants' => array('src' => 'assets/data/image-variants.js', 'dependencies' => array()),
         'certification-ui' => array('src' => 'assets/js/certification-ui.js', 'dependencies' => array()),
+        'market-insights-ui' => array('src' => 'assets/js/market-insights.js', 'dependencies' => array()),
+        'import-export-ui' => array('src' => 'assets/js/import-export.js', 'dependencies' => array()),
         'product-data' => array('src' => 'assets/data/products.js', 'dependencies' => array()),
         'event-data' => array('src' => 'assets/data/events.js', 'dependencies' => array()),
         'journal-data' => array('src' => 'assets/data/journal.js', 'dependencies' => array()),
@@ -806,6 +822,8 @@ function luxureat_static_assets() {
         'zh/blog' => array('image-variants', 'core', 'academy-index', 'academy'),
         'zh/certification' => array('image-variants', 'core', 'certification-ui'),
         'zh/cooperation' => array('image-variants', 'core', 'brand-data', 'brand'),
+        'zh/china-market-insights' => array('image-variants', 'core', 'market-insights-ui'),
+        'zh/import-export-services' => array('image-variants', 'core', 'import-export-ui'),
         'zh/contact' => array('image-variants', 'core', 'brand-data', 'brand'),
         'zh/bag' => array('image-variants', 'core', 'product-data', 'products'),
         'en' => array('image-variants', 'core'),
@@ -817,6 +835,8 @@ function luxureat_static_assets() {
         'en/blog' => array('image-variants', 'core', 'academy-index', 'academy'),
         'en/certification' => array('image-variants', 'core', 'certification-ui'),
         'en/cooperation' => array('image-variants', 'core', 'brand-data', 'brand'),
+        'en/china-market-insights' => array('image-variants', 'core', 'market-insights-ui'),
+        'en/import-export-services' => array('image-variants', 'core', 'import-export-ui'),
         'en/contact' => array('image-variants', 'core', 'brand-data', 'brand'),
         'en/bag' => array('image-variants', 'core', 'product-data', 'products'),
         'blog/baerii-caviar' => array('core'),
@@ -2009,7 +2029,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '0123a8480b80784bf81813c97e6ad129b64228bc')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '39af3d8fe7ab507a13dc12eb24ed5a7bf794e825')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
