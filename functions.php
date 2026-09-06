@@ -256,6 +256,8 @@ function luxureat_static_search_metadata_endpoint() {
         '/robots.txt' => array('robots.txt', 'text/plain; charset=UTF-8'),
         '/llms.txt' => array('llms.txt', 'text/plain; charset=UTF-8'),
         '/sitemap.xml' => array('sitemap.xml', 'application/xml; charset=UTF-8'),
+        '/catalogues/tin-caviar-academy.pdf' => array('assets/documents/tin-caviar-academy.pdf', 'application/pdf'),
+        '/catalogues/luxureat-brochure.pdf' => array('assets/documents/luxureat-brochure.pdf', 'application/pdf'),
     );
 
     if (!isset($files[$request_path])) {
@@ -2029,7 +2031,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '8bf4f41181d2aaf0cf7088503f5bc7e8a25d29e7')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'fee1e705e7598c64eef5907cc7982d2b2f99d52d')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }

@@ -1,0 +1,132 @@
+.lux-import-export-page .lux-ms-section.lux-catalogue-section > .lux-ms-shell {
+  width: 100%;
+  max-width: none;
+}
+
+.lux-import-export-page .lux-ms-section.lux-catalogue-section { padding-bottom: 0; }
+
+.lux-catalogue-title {
+  margin-bottom: clamp(26px, 4vw, 48px);
+  text-align: center;
+}
+
+.lux-catalogue-title .lux-ms-eyebrow { margin-bottom: 12px; }
+
+.lux-catalogue-title h2 {
+  margin: 0;
+  color: #292621;
+  font: 400 clamp(42px, 5.5vw, 70px)/1 var(--lux-page-heading);
+}
+
+.lux-catalogue-grid { display: grid; gap: 0; background: #d8d8d8; }
+
+.lux-catalogue-row {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 480px;
+}
+
+.lux-catalogue-reader {
+  position: relative;
+  min-width: 0;
+  min-height: 480px;
+  display: flex;
+  background: #d8d8d8;
+}
+
+.lux-catalogue-reader iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  display: block;
+  border: 0;
+  background: #d8d8d8;
+  pointer-events: none;
+}
+
+.lux-catalogue-reader.is-active iframe { pointer-events: auto; }
+
+.lux-catalogue-toggle {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.lux-catalogue-reader.is-active .lux-catalogue-toggle { display: none; }
+.lux-catalogue-toggle:focus-visible { outline: 2px solid #9c7415; outline-offset: -4px; }
+
+.lux-catalogue-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(30px, 4vw, 54px);
+  background: #fff;
+  text-align: center;
+}
+
+.lux-catalogue-logo-link { display: inline-flex; align-items: center; justify-content: center; }
+.lux-catalogue-logo { display: block; object-fit: contain; transition: transform .3s ease; }
+.lux-catalogue-logo-link:hover .lux-catalogue-logo,
+.lux-catalogue-logo-link:focus-visible .lux-catalogue-logo { transform: scale(1.035); }
+.lux-catalogue-logo-link:focus-visible { outline: 1px solid #9c7415; outline-offset: 8px; }
+.lux-catalogue-logo.is-tin { width: min(100%, 300px); height: auto; }
+.lux-catalogue-logo.is-luxureat { width: 92px; height: 92px; }
+.lux-catalogue-copy h3 { margin: 20px 0 0; color: #292621; font: 400 clamp(27px, 3vw, 38px)/1.12 var(--lux-page-heading); }
+.lux-catalogue-copy p { max-width: 440px; margin: 14px auto 0; color: #625c54; font-size: 16px; line-height: 1.65; }
+.lux-catalogue-pages { margin-top: 10px; color: #777168; font-size: 13px; }
+
+.lux-catalogue-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.lux-catalogue-actions a {
+  min-width: 132px;
+  display: inline-flex;
+  justify-content: center;
+  padding: 11px 16px;
+  border: 1px solid #0c847d;
+  color: #005a54;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lux-catalogue-actions a:first-child { color: #fff; background: #006f68; }
+.lux-catalogue-actions a:hover,
+.lux-catalogue-actions a:focus-visible { color: #292621; border-color: #9c7415; background: #e9c349; }
+
+@media (max-width: 900px) {
+  .lux-catalogue-row { grid-template-columns: 1fr; }
+  .lux-catalogue-row .lux-catalogue-copy { grid-row: 1; }
+  .lux-catalogue-row .lux-catalogue-reader { grid-row: 2; }
+  .lux-catalogue-copy { min-height: 350px; }
+  .lux-catalogue-reader,
+  .lux-catalogue-reader iframe { min-height: min(52vh, 440px); }
+}
+
+@media (max-width: 640px) {
+  .lux-catalogue-copy { min-height: 300px; padding: 24px 18px; }
+  .lux-catalogue-logo.is-tin { width: min(100%, 220px); }
+  .lux-catalogue-logo.is-luxureat { width: 72px; height: 72px; }
+  .lux-catalogue-copy h3 { margin-top: 14px; font-size: 25px; }
+  .lux-catalogue-copy p { margin-top: 10px; font-size: 15px; line-height: 1.55; }
+  .lux-catalogue-pages { margin-top: 8px; }
+  .lux-catalogue-reader,
+  .lux-catalogue-reader iframe { min-height: min(42vh, 350px); }
+  .lux-catalogue-actions { width: 100%; margin-top: 12px; }
+  .lux-catalogue-actions a { flex: 1 1 130px; padding-block: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lux-catalogue-logo { transition: none; }
+}

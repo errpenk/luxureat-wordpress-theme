@@ -60,6 +60,19 @@
     });
   });
 
+  const catalogueReaders = [...document.querySelectorAll(".lux-catalogue-reader")];
+  const activateCatalogueReader = (reader) => {
+    const toggle = reader.querySelector("[data-catalogue-toggle]");
+    const frame = reader.querySelector("iframe");
+    reader.classList.add("is-active");
+    if (frame) frame.tabIndex = 0;
+    toggle?.setAttribute("aria-pressed", "true");
+  };
+  catalogueReaders.forEach((reader) => {
+    const toggle = reader.querySelector("[data-catalogue-toggle]");
+    toggle?.addEventListener("click", () => activateCatalogueReader(reader), { once: true });
+  });
+
   const orbitGroup = document.querySelector(".lux-market-entry-orbits");
   if (orbitGroup && ("IntersectionObserver" in window) && !reducedMotion) {
     const orbits = [...orbitGroup.querySelectorAll(".lux-flip-orbit")];
