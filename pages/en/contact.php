@@ -6,12 +6,12 @@
 <meta name="description" content="Contact LuxurEat for brand, product, distribution and business partnership enquiries.">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260907-cookie-consent-54'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260907-cookie-consent-54'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20260907-cookie-consent-54'); ?>" as="font" type="font/ttf" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260907-cookie-consent-54'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260907-cookie-consent-54'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260907-cookie-consent-54'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260907-cookie-consent-54'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260907-cookie-consent-54'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260907-cookie-consent-54'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260907-cookie-consent-54'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:swap}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260907-contact-fields-55'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260907-contact-fields-55'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20260907-contact-fields-55'); ?>" as="font" type="font/ttf" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260907-contact-fields-55'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260907-contact-fields-55'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260907-contact-fields-55'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260907-contact-fields-55'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260907-contact-fields-55'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260907-contact-fields-55'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260907-contact-fields-55'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:swap}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260907-cookie-consent-54'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260907-contact-fields-55'); ?>">
 <style>
         body { background-color: #000000; color: #e5e2e1; }
         .glass-panel {
@@ -63,7 +63,7 @@
     </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260907-cookie-consent-54'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260907-contact-fields-55'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -112,8 +112,18 @@
 <small class="lux-contact-field-error" data-contact-error="name" role="alert" hidden>Please enter your name.</small>
 </div>
 <div class="relative border-b border-outline-variant py-2">
-<label class="block font-label-sm uppercase text-on-surface/40 mb-2" for="contact-phone-en">Phone</label>
-<input class="w-full bg-transparent border-none p-0 text-on-surface focus:ring-0 placeholder-on-surface/20" id="contact-phone-en" name="phone" placeholder="Enter your phone number" type="tel" autocomplete="tel" maxlength="40">
+<label class="block font-label-sm uppercase text-on-surface/40 mb-2" for="contact-company-en">Company</label>
+<input class="w-full bg-transparent border-none p-0 text-on-surface focus:ring-0 placeholder-on-surface/20" id="contact-company-en" name="company" placeholder="Enter your company (optional)" type="text" autocomplete="organization" maxlength="120">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative border-b border-outline-variant py-2">
+<label class="block font-label-sm uppercase text-on-surface/40 mb-2" for="contact-product-industry-en">Product / Industry</label>
+<input class="w-full bg-transparent border-none p-0 text-on-surface focus:ring-0 placeholder-on-surface/20" id="contact-product-industry-en" name="product_industry" placeholder="Enter your product or industry (optional)" type="text" maxlength="120">
+</div>
+<div class="relative border-b border-outline-variant py-2">
+<label class="block font-label-sm uppercase text-on-surface/40 mb-2" for="contact-phone-en">Phone / WeChat</label>
+<input class="w-full bg-transparent border-none p-0 text-on-surface focus:ring-0 placeholder-on-surface/20" id="contact-phone-en" name="phone" placeholder="Enter your phone or WeChat (optional)" type="text" autocomplete="tel" maxlength="40">
 </div>
 </div>
 <div class="relative border-b border-outline-variant py-2">
@@ -143,7 +153,7 @@
 <textarea class="w-full bg-transparent border-none p-0 text-on-surface focus:ring-0 placeholder-on-surface/20 resize-none" id="contact-message-en" name="message" placeholder="Please describe your requirements..." required rows="4" maxlength="4000"></textarea>
 <small class="lux-contact-field-error" data-contact-error="message" role="alert" hidden>Please enter your message.</small>
 </div>
-<input class="lux-contact-honeypot" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input class="lux-contact-honeypot" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
 <button class="w-full md:w-auto px-12 py-4 bg-primary text-on-primary font-label-lg uppercase tracking-widest transition-all duration-300 hover:bg-primary-fixed hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/20 active:translate-y-0 active:scale-95" type="submit">
                                 Send Message
                             </button>
