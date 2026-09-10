@@ -299,7 +299,7 @@ add_action('template_redirect', 'luxureat_baidu_site_verification', -100);
 
 function luxureat_static_seo_catalog() {
     return array(
-        'zh' => array('title' => 'LuxurEat（露意膳）Group | 意大利高端美食与品牌合作', 'description' => 'LuxurEat（露意膳）Group 专注意大利高端美食、地道风味与中国市场合作，提供产品、食谱、品牌内容与专业服务。', 'lang' => 'zh', 'alternate' => 'en', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
+        'zh' => array('title' => 'LuxurEat（露意膳） | 意大利高端美食与品牌合作', 'description' => 'LuxurEat（露意膳）Group 专注意大利高端美食、地道风味与中国市场合作，提供产品、食谱、品牌内容与专业服务。', 'lang' => 'zh', 'alternate' => 'en', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/about-us' => array('title' => '关于我们 | LuxurEat（露意膳）', 'description' => '了解 LuxurEat（露意膳）的品牌传承、产地故事、品质承诺与时令观察。', 'lang' => 'zh', 'alternate' => 'en/about-us', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/product' => array('title' => '系列产品 | LuxurEat（露意膳）', 'description' => '浏览 LuxurEat（露意膳）精选意大利高端美食与松露、鱼子酱等系列产品。', 'lang' => 'zh', 'alternate' => 'en/product', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/new' => array('title' => '热门新品 | LuxurEat（露意膳）', 'description' => '发现 LuxurEat（露意膳）的意大利橄榄油、披萨与意式手工冰淇淋等热门新品。', 'lang' => 'zh', 'alternate' => 'en/new', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
@@ -2037,7 +2037,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '00c2da2ceb2727128c765b5b29e7bb0b471c7d7e')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '529fa71712e2dfa7b095e3e0dac10f32ca604406')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
