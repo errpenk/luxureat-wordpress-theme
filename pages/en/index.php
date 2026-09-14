@@ -7,11 +7,11 @@
 <!-- lux:seo:end -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster-lite-v2.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260914-font-stability-59'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260914-font-stability-59'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260914-font-stability-59'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260914-font-stability-59'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20260914-font-stability-59'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260914-mobile-fonts-60'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260914-mobile-fonts-60'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260914-mobile-fonts-60'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260914-mobile-fonts-60'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20260914-mobile-fonts-60'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260914-font-stability-59'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260914-mobile-fonts-60'); ?>">
 <style>
         body {
             background-color: #131313;
@@ -32,13 +32,11 @@
 
         .fade-in-up {
             animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            opacity: 0;
             transform: translateY(30px);
         }
 
         @keyframes fadeInUp {
             to {
-                opacity: 1;
                 transform: translateY(0);
             }
         }
@@ -49,8 +47,8 @@
     </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260914-font-stability-59'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260914-font-stability-59'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260914-mobile-fonts-60'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260914-mobile-fonts-60'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>

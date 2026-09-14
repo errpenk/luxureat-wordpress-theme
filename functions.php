@@ -248,6 +248,33 @@ function luxureat_static_utility_robots($robots) {
 }
 add_filter('wp_robots', 'luxureat_static_utility_robots', 999);
 
+function luxureat_static_publish_root_robots() {
+    $source = get_template_directory() . '/robots.txt';
+    $target = trailingslashit(ABSPATH) . 'robots.txt';
+    if (!is_readable($source)) {
+        return;
+    }
+
+    $contents = file_get_contents($source);
+    $target_hash = is_readable($target) ? hash_file('sha256', $target) : false;
+    if ($contents === false || (is_string($target_hash) && hash_equals(hash('sha256', $contents), $target_hash))) {
+        return;
+    }
+    if (!is_writable(ABSPATH)) {
+        return;
+    }
+
+    $temporary = $target . '.luxureat.tmp';
+    if (file_put_contents($temporary, $contents, LOCK_EX) !== false) {
+        @chmod($temporary, 0644);
+        @rename($temporary, $target);
+    }
+    if (is_file($temporary)) {
+        @unlink($temporary);
+    }
+}
+add_action('after_setup_theme', 'luxureat_static_publish_root_robots', 1);
+
 function luxureat_static_search_metadata_endpoint() {
     $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
     $request_path = parse_url($request_uri, PHP_URL_PATH);
@@ -270,11 +297,16 @@ function luxureat_static_search_metadata_endpoint() {
     }
 
     status_header(200);
-    nocache_headers();
     header_remove('X-Robots-Tag');
     header_remove('X-Powered-By');
+    header_remove('Set-Cookie');
+    header_remove('Pragma');
+    header_remove('Expires');
+    header_remove('Vary');
     header('Content-Type: ' . $files[$request_path][1], true);
     header('Cache-Control: public, max-age=3600, stale-while-revalidate=86400', true);
+    header('Expires: ' . gmdate('D, d M Y H:i:s', time() + HOUR_IN_SECONDS) . ' GMT', true);
+    header('Vary: Accept-Encoding', true);
     header('X-Content-Type-Options: nosniff', true);
     if (!isset($_SERVER['REQUEST_METHOD']) || strtoupper((string) $_SERVER['REQUEST_METHOD']) !== 'HEAD') {
         readfile($file);
@@ -2041,7 +2073,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'be371036ae9e86c56dc4fce386354f6717bd8cb0')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'a3e050548b94e85cdb4b76f36686ccd4ecc3dc84')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
