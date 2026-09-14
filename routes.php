@@ -26,6 +26,8 @@ return array(
     'en/import-export-services' => 'pages/en/import-export-services.php',
     'en/contact' => 'pages/en/contact.php',
     'en/bag' => 'pages/en/bag.php',
+    'blog/caviar-after-opening' => 'pages/zh/blog/caviar-after-opening.php',
+    'en/blog/caviar-after-opening' => 'pages/en/blog/caviar-after-opening.php',
     'blog/baerii-caviar' => 'pages/zh/blog/baerii-caviar.php',
     'en/blog/baerii-caviar' => 'pages/en/blog/baerii-caviar.php',
     'blog/beluga-caviar' => 'pages/zh/blog/beluga-caviar.php',

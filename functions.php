@@ -325,6 +325,8 @@ function luxureat_static_seo_catalog() {
         'en/import-export-services' => array('title' => 'China Import, Export & Market Services | LuxurEat', 'description' => 'Explore LuxurEat China services for importing into China, sourcing and export, market entry, brand digitalisation and business development.', 'lang' => 'en', 'alternate' => 'zh/import-export-services', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/contact' => array('title' => 'Contact | LuxurEat', 'description' => 'Contact LuxurEat for brand, product, distribution and business partnership enquiries.', 'lang' => 'en', 'alternate' => 'zh/contact', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/bag' => array('title' => 'Shopping Bag | LuxurEat', 'description' => 'Review and manage the products selected in your LuxurEat shopping bag.', 'lang' => 'en', 'alternate' => 'zh/bag', 'indexable' => false, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
+        'blog/caviar-after-opening' => array('title' => '鱼子酱开封后的保存方法 | LuxurEat', 'description' => '鱼子酱已经开封，但一次吃不完？以下是保持其最佳品质的方法。', 'lang' => 'zh', 'alternate' => 'en/blog/caviar-after-opening', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/caviar-after-opening-cover.webp'),
+        'en/blog/caviar-after-opening' => array('title' => 'How to Keep Your Caviar at Its Best After Opening | LuxurEat', 'description' => 'Opened your caviar but can’t finish it? Here’s how to keep it at its best.', 'lang' => 'en', 'alternate' => 'blog/caviar-after-opening', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/caviar-after-opening-cover.webp'),
         'blog/baerii-caviar' => array('title' => '贝氏鲟鱼子酱 | LuxurEat', 'description' => '贝氏鲟鱼子酱取自西伯利亚鲟（Acipenser baerii），以灰棕色小颗粒和带有轻柔碘感的细腻风味著称。', 'lang' => 'zh', 'alternate' => 'en/blog/baerii-caviar', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/baerii-caviar-cover-page-bg.png'),
         'en/blog/baerii-caviar' => array('title' => 'Baerii Caviar | LuxurEat', 'description' => 'Baerii caviar, obtained from the Acipenser baerii sturgeon, is appreciated for its small grey-brown eggs and delicate flavor with light iodine notes.', 'lang' => 'en', 'alternate' => 'blog/baerii-caviar', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/baerii-caviar-cover-page-bg.png'),
         'blog/beluga-caviar' => array('title' => '贝鲁迦鱼子酱 | LuxurEat', 'description' => '贝鲁迦鱼子酱（Beluga caviar）被视为最奢华、最稀有的鱼子酱之一，取自欧鳇（Beluga sturgeon，Huso huso），以硕大的灰色颗粒和细腻、奶油般的口感闻名。', 'lang' => 'zh', 'alternate' => 'en/blog/beluga-caviar', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/beluga-caviar-cover-new-page-bg.png'),
@@ -841,6 +843,8 @@ function luxureat_static_assets() {
         'en/import-export-services' => array('image-variants', 'core', 'import-export-ui'),
         'en/contact' => array('image-variants', 'core', 'brand-data', 'brand'),
         'en/bag' => array('image-variants', 'core', 'product-data', 'products'),
+        'blog/caviar-after-opening' => array('core'),
+        'en/blog/caviar-after-opening' => array('core'),
         'blog/baerii-caviar' => array('core'),
         'en/blog/baerii-caviar' => array('core'),
         'blog/beluga-caviar' => array('core'),
@@ -2037,7 +2041,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '91131e5d8cb2444a5fe801588f2d1e3912d543fa')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '5da307955042b71a5e9b52183fd9f5db0dea8593')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
