@@ -254,6 +254,8 @@ return array(
     'en/product/spaghetti-quadrati-ad-archetto' => 'pages/en/product/spaghetti-quadrati-ad-archetto.php',
     'product/bucatini-ad-archetto' => 'pages/zh/product/bucatini-ad-archetto.php',
     'en/product/bucatini-ad-archetto' => 'pages/en/product/bucatini-ad-archetto.php',
+    'events/roma-bar-show-2026' => 'pages/zh/events/roma-bar-show-2026.php',
+    'en/events/roma-bar-show-2026' => 'pages/en/events/roma-bar-show-2026.php',
     'events/fhc-shanghai-2026' => 'pages/zh/events/fhc-shanghai-2026.php',
     'en/events/fhc-shanghai-2026' => 'pages/en/events/fhc-shanghai-2026.php',
     'events/cifie-changsha-2026' => 'pages/zh/events/cifie-changsha-2026.php',

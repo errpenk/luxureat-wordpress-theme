@@ -585,10 +585,12 @@ function luxureat_static_seo_catalog() {
         'en/product/spaghetti-quadrati-ad-archetto' => array('title' => 'Spaghetti Quadrati ad Archetto · 12 × 500 g | LuxurEat', 'description' => 'The square cross-section gives this pasta a distinctive texture and excellent sauce-holding capacity. Made with 100% Italian durum wheat semolina and pure local spring water, bronze-drawn and slowly dried for 24–48 hours at 40–45°C.', 'lang' => 'en', 'alternate' => 'product/spaghetti-quadrati-ad-archetto', 'indexable' => true, 'type' => 'Product', 'image' => 'media/products/pasta/spaghetti-quadrati-ad-archetto.webp', 'sku' => 'ST022', 'category' => 'Pasta'),
         'product/bucatini-ad-archetto' => array('title' => 'U型细管面 · 10 × 500 g | LuxurEat', 'description' => '经典中空细管结构让酱汁同时附着于表面并进入面体内部。采用 100% 意大利硬质小麦粗面粉与当地纯净泉水，经青铜模具拉制并在 40–45°C 下低温慢干 24–48 小时。', 'lang' => 'zh', 'alternate' => 'en/product/bucatini-ad-archetto', 'indexable' => true, 'type' => 'Product', 'image' => 'media/products/pasta/bucatini-ad-archetto.webp', 'sku' => 'ST019', 'category' => '面食'),
         'en/product/bucatini-ad-archetto' => array('title' => 'Bucatini ad Archetto · 10 × 500 g | LuxurEat', 'description' => 'The classic hollow shape allows sauces to coat the surface and enter the pasta. Made with 100% Italian durum wheat semolina and pure local spring water, bronze-drawn and slowly dried for 24–48 hours at 40–45°C.', 'lang' => 'en', 'alternate' => 'product/bucatini-ad-archetto', 'indexable' => true, 'type' => 'Product', 'image' => 'media/products/pasta/bucatini-ad-archetto.webp', 'sku' => 'ST019', 'category' => 'Pasta'),
+        'events/roma-bar-show-2026' => array('title' => 'LuxurEat亮相Roma Bar Show。 | LuxurEat', 'description' => 'Roma Bar Show汇聚饮品、调酒与餐饮行业的企业、专业人士和创新趋势。LuxurEat在ARSIAL与Regione Lazio支持的拉齐奥联合展团中展示TRUFFLEAT与CAVIAREAT。', 'lang' => 'zh', 'alternate' => 'en/events/roma-bar-show-2026', 'indexable' => true, 'type' => 'Event', 'image' => 'media/brand-news/roma-bar-show-2026-cover.webp', 'startDate' => '2026-09-14', 'endDate' => '2026-09-15', 'location' => 'La Nuvola，罗马，意大利'),
+        'en/events/roma-bar-show-2026' => array('title' => 'LuxurEat(露意膳) at Roma Bar Show | LuxurEat', 'description' => 'Roma Bar Show brings together companies, professionals and innovation from the beverage, mixology and hospitality industries. With the support of ARSIAL and Regione Lazio, LuxurEat joined the Lazio collective pavilion with TRUFFLEAT and CAVIAREAT.', 'lang' => 'en', 'alternate' => 'events/roma-bar-show-2026', 'indexable' => true, 'type' => 'Event', 'image' => 'media/brand-news/roma-bar-show-2026-cover.webp', 'startDate' => '2026-09-14', 'endDate' => '2026-09-15', 'location' => 'La Nuvola, Rome, Italy'),
         'events/fhc-shanghai-2026' => array('title' => 'LuxurEat（露意膳）亮相FHC上海环球食品展。 | LuxurEat', 'description' => '2026年11月10日至12日，第二十九届FHC上海环球食品展将在上海浦东新国际博览中心举行。LuxurEat（露意膳）将携TruffleEat、CaviarEat、Ugolini等品牌亮相N3馆N3A10展位。', 'lang' => 'zh', 'alternate' => 'en/events/fhc-shanghai-2026', 'indexable' => true, 'type' => 'Event', 'image' => 'media/events/fhc-shanghai-2026-banner.webp', 'startDate' => '2026-11-10', 'endDate' => '2026-11-12', 'location' => '上海浦东新国际博览中心 N3馆N3A10展位'),
         'en/events/fhc-shanghai-2026' => array('title' => 'LuxurEat (露意膳) at FHC Shanghai Global Food Trade Show | LuxurEat', 'description' => 'From November 10 to 12, 2026, the 29th FHC Shanghai Global Food Trade Show will take place at the Shanghai New International Expo Centre. LuxurEat (露意膳) will present TruffleEat, CaviarEat, Ugolini, and other brands at Booth N3A10 in Hall N3.', 'lang' => 'en', 'alternate' => 'events/fhc-shanghai-2026', 'indexable' => true, 'type' => 'Event', 'image' => 'media/events/fhc-shanghai-2026-banner.webp', 'startDate' => '2026-11-10', 'endDate' => '2026-11-12', 'location' => 'Booth N3A10, Hall N3, Shanghai New International Expo Centre'),
         'events/cifie-changsha-2026' => array('title' => '意大利风味，与长沙相遇。 | LuxurEat', 'description' => '作为国家内贸流通重点展会、中部地区唯一获得UFI认证的食品餐饮专业展，第十一届中国国际食品餐饮博览会将于2026年9月18日至20日在长沙国际会展中心举办。LuxurEat（露意膳）将携TrufflEat、CaviarEat与Ugolini亮相，与全国及国际市场的专业伙伴相见。', 'lang' => 'zh', 'alternate' => 'en/events/cifie-changsha-2026', 'indexable' => true, 'type' => 'Event', 'image' => 'media/events/cifie-changsha-2026-banner.webp', 'startDate' => '2026-09-18', 'endDate' => '2026-09-20', 'location' => '长沙国际会展中心'),
-        'en/events/cifie-changsha-2026' => array('title' => 'Italian flavor meets Changsha. | LuxurEat', 'description' => 'The 11th China International Food & Catering Expo will take place at the Changsha International Convention and Exhibition Centre from September 18 to 20, 2026. As a key national exhibition for domestic trade and Central China’s only UFI-certified professional food and catering fair, it will welcome LuxurEat (露意膳), TrufflEat, CaviarEat, and Ugolini alongside partners from China and international markets.', 'lang' => 'en', 'alternate' => 'events/cifie-changsha-2026', 'indexable' => true, 'type' => 'Event', 'image' => 'media/events/cifie-changsha-2026-banner.webp', 'startDate' => '2026-09-18', 'endDate' => '2026-09-20', 'location' => 'Changsha International Convention and Exhibition Centre'),
+        'en/events/cifie-changsha-2026' => array('title' => 'Italian flavor meets Changsha | LuxurEat', 'description' => 'The 11th China International Food & Catering Expo will take place at the Changsha International Convention and Exhibition Centre from September 18 to 20, 2026. As a key national exhibition for domestic trade and Central China’s only UFI-certified professional food and catering fair, it will welcome LuxurEat (露意膳), TrufflEat, CaviarEat, and Ugolini alongside partners from China and international markets.', 'lang' => 'en', 'alternate' => 'events/cifie-changsha-2026', 'indexable' => true, 'type' => 'Event', 'image' => 'media/events/cifie-changsha-2026-banner.webp', 'startDate' => '2026-09-18', 'endDate' => '2026-09-20', 'location' => 'Changsha International Convention and Exhibition Centre'),
         'events/marca-china-2026' => array('title' => 'LuxurEat（露意膳）亮相广州国际自有品牌展。 | LuxurEat', 'description' => '中国食品市场正向健康化、品质化、地域化与年轻化发展。LuxurEat（露意膳） 将在广州与专业买家及合作伙伴共同探索新的产品与商业机会。', 'lang' => 'zh', 'alternate' => 'en/events/marca-china-2026', 'indexable' => true, 'type' => 'Event', 'image' => 'media/events/marca-china-2026.png', 'startDate' => '2026-09-08', 'endDate' => '2026-09-09', 'location' => '广州保利世贸展览馆'),
         'en/events/marca-china-2026' => array('title' => 'LuxurEat (露意膳) at Marca China 2026 | LuxurEat', 'description' => 'China\'s food market is moving toward healthier, higher-quality, more regional, and younger expressions. In Guangzhou, LuxurEat (露意膳) will explore new products and partnerships with professional buyers and industry partners.', 'lang' => 'en', 'alternate' => 'events/marca-china-2026', 'indexable' => true, 'type' => 'Event', 'image' => 'media/events/marca-china-2026.png', 'startDate' => '2026-09-08', 'endDate' => '2026-09-09', 'location' => 'Poly World Trade Expo Centre, Guangzhou'),
         'events/sial-guangzhou-2026' => array('title' => 'LuxurEat（露意膳）广州：2026 SIAL西雅展。 | LuxurEat', 'description' => '2026年9月3日至5日，SIAL西雅展（广州）将在广州保利世贸博览馆举行。LuxurEat（露意膳）将携TruffleEat、CaviarEat、Ugolini等品牌亮相。', 'lang' => 'zh', 'alternate' => 'en/events/sial-guangzhou-2026', 'indexable' => true, 'type' => 'Event', 'image' => 'media/events/sial-guangzhou-2026-banner.webp', 'startDate' => '2026-09-03', 'endDate' => '2026-09-05', 'location' => '广州保利世贸博览馆'),
@@ -837,6 +839,7 @@ function luxureat_static_assets() {
         'import-export-ui' => array('src' => 'assets/js/import-export.js', 'dependencies' => array()),
         'product-data' => array('src' => 'assets/data/products.js', 'dependencies' => array()),
         'event-data' => array('src' => 'assets/data/events.js', 'dependencies' => array()),
+        'brand-news-data' => array('src' => 'assets/data/brand-news.js', 'dependencies' => array()),
         'journal-data' => array('src' => 'assets/data/journal.js', 'dependencies' => array()),
         'academy-index' => array('src' => 'assets/data/academy-index.js', 'dependencies' => array()),
         'brand-data' => array('src' => 'assets/data/brand.js', 'dependencies' => array()),
@@ -854,7 +857,7 @@ function luxureat_static_assets() {
         'zh/product' => array('image-variants', 'core', 'product-data', 'products'),
         'zh/new' => array('image-variants', 'core', 'journal-data', 'journal', 'new-arrivals'),
         'zh/recipe' => array('image-variants', 'core', 'journal-data', 'journal'),
-        'zh/brand' => array('image-variants', 'core', 'event-data', 'journal-data', 'journal'),
+        'zh/brand' => array('image-variants', 'core', 'event-data', 'brand-news-data', 'journal-data', 'journal'),
         'zh/blog' => array('image-variants', 'core', 'academy-index', 'academy'),
         'zh/certification' => array('image-variants', 'core', 'certification-ui'),
         'zh/cooperation' => array('image-variants', 'core', 'brand-data', 'brand'),
@@ -867,7 +870,7 @@ function luxureat_static_assets() {
         'en/product' => array('image-variants', 'core', 'product-data', 'products'),
         'en/new' => array('image-variants', 'core', 'journal-data', 'journal', 'new-arrivals'),
         'en/recipe' => array('image-variants', 'core', 'journal-data', 'journal'),
-        'en/brand' => array('image-variants', 'core', 'event-data', 'journal-data', 'journal'),
+        'en/brand' => array('image-variants', 'core', 'event-data', 'brand-news-data', 'journal-data', 'journal'),
         'en/blog' => array('image-variants', 'core', 'academy-index', 'academy'),
         'en/certification' => array('image-variants', 'core', 'certification-ui'),
         'en/cooperation' => array('image-variants', 'core', 'brand-data', 'brand'),
@@ -1103,6 +1106,8 @@ function luxureat_static_assets() {
         'en/product/spaghetti-quadrati-ad-archetto' => array('core'),
         'product/bucatini-ad-archetto' => array('core'),
         'en/product/bucatini-ad-archetto' => array('core'),
+        'events/roma-bar-show-2026' => array('core'),
+        'en/events/roma-bar-show-2026' => array('core'),
         'events/fhc-shanghai-2026' => array('core'),
         'en/events/fhc-shanghai-2026' => array('core'),
         'events/cifie-changsha-2026' => array('core'),
@@ -2073,7 +2078,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'afe972a97510316929fb0bdfe4d3c49c4a075672')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '8764cb97d0ba640f542aafc6b9507da139685b40')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
