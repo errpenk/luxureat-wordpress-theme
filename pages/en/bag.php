@@ -4,7 +4,6 @@
 <!-- lux:seo:start -->
 <title>Shopping Bag | LuxurEat</title>
 <meta name="description" content="Review and manage the products selected in your LuxurEat shopping bag.">
-<meta name="robots" content="noindex,follow">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260919-brand-news-63'); ?>" as="font" type="font/woff2" crossorigin>

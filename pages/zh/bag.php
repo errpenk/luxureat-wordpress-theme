@@ -4,7 +4,6 @@
 <!-- lux:seo:start -->
 <title>购物袋 | LuxurEat（露意膳）</title>
 <meta name="description" content="查看并管理您在 LuxurEat（露意膳）购物袋中的已选产品。">
-<meta name="robots" content="noindex,follow">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-bag-critical.woff2?v=20260919-brand-news-63'); ?>" as="font" type="font/woff2" crossorigin>
