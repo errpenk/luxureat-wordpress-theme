@@ -378,6 +378,25 @@ function luxureat_static_search_metadata_endpoint() {
 }
 add_action('init', 'luxureat_static_search_metadata_endpoint', -100);
 
+function luxureat_sogou_site_verification() {
+    $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
+    if (parse_url($request_uri, PHP_URL_PATH) !== '/sogousiteverification.txt') {
+        return;
+    }
+
+    $file = get_template_directory() . '/sogousiteverification.txt';
+    if (!is_file($file) || !is_readable($file)) {
+        return;
+    }
+
+    status_header(200);
+    nocache_headers();
+    header('Content-Type: text/plain; charset=UTF-8');
+    readfile($file);
+    exit;
+}
+add_action('template_redirect', 'luxureat_sogou_site_verification', -100);
+
 function luxureat_baidu_site_verification() {
     $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
     if (parse_url($request_uri, PHP_URL_PATH) !== '/baidu_verify_codeva-unoYAk5W8p.html') {
@@ -2150,7 +2169,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'fd5f332487e7632e3f4652b2b67db670b8c8b389')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '252c89a995dfaffcb90003b4042ecfcf4e3529c3')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
