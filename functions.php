@@ -1214,7 +1214,7 @@ function luxureat_static_assets() {
                 'botChallenge' => luxureat_static_bot_challenge(),
             ));
         }
-        if ($handle === 'brand' && in_array($path, array('zh/contact', 'en/contact'), true)) {
+        if ($handle === 'brand' && in_array($path, array('zh/contact', 'en/contact', 'zh/cooperation', 'en/cooperation'), true)) {
             wp_localize_script('luxureat-brand', 'LuxureatContact', array(
                 'ajaxUrl' => admin_url('admin-ajax.php'),
                 'nonce' => wp_create_nonce('luxureat_contact'),
@@ -1402,6 +1402,10 @@ function luxureat_static_contact_ajax() {
     $name = isset($_POST['name']) ? trim(sanitize_text_field(wp_unslash($_POST['name']))) : '';
     $company = isset($_POST['company']) ? trim(sanitize_text_field(wp_unslash($_POST['company']))) : '';
     $product_industry = isset($_POST['product_industry']) ? trim(sanitize_text_field(wp_unslash($_POST['product_industry']))) : '';
+    $estimated_quantity = isset($_POST['estimated_quantity']) ? trim(sanitize_text_field(wp_unslash($_POST['estimated_quantity']))) : '';
+    $delivery_market = isset($_POST['delivery_market']) ? trim(sanitize_text_field(wp_unslash($_POST['delivery_market']))) : '';
+    $target_date = isset($_POST['target_date']) ? trim(sanitize_text_field(wp_unslash($_POST['target_date']))) : '';
+    $is_b2b_quote = isset($_POST['form_context']) && sanitize_key(wp_unslash($_POST['form_context'])) === 'b2b_quote';
     $phone = isset($_POST['phone']) ? trim(sanitize_text_field(wp_unslash($_POST['phone']))) : '';
     $raw_email = isset($_POST['email']) ? trim((string) wp_unslash($_POST['email'])) : '';
     $email = sanitize_email($raw_email);
@@ -1426,7 +1430,10 @@ function luxureat_static_contact_ajax() {
     if ($name === '' || $raw_email === '' || $content === '' || !isset($inquiry_labels[$inquiry_type])) {
         wp_send_json_error(array('message' => $message('请填写所有必填信息。', 'Please complete all required fields.')), 400);
     }
-    if (strlen($name) > 240 || strlen($company) > 360 || strlen($product_industry) > 360 || strlen($phone) > 120 || strlen($content) > 12000 || !is_email($email)) {
+    if ($is_b2b_quote && ($company === '' || $product_industry === '' || $estimated_quantity === '' || $delivery_market === '')) {
+        wp_send_json_error(array('message' => $message('请填写所有必填报价信息。', 'Please complete all required quote details.')), 400);
+    }
+    if (strlen($name) > 240 || strlen($company) > 360 || strlen($product_industry) > 360 || strlen($estimated_quantity) > 240 || strlen($delivery_market) > 360 || strlen($target_date) > 120 || strlen($phone) > 120 || strlen($content) > 12000 || !is_email($email)) {
         wp_send_json_error(array('message' => $message('请检查所填信息后重试。', 'Please check the information and try again.')), 400);
     }
 
@@ -1443,6 +1450,12 @@ function luxureat_static_contact_ajax() {
 "
         . "Prodotto / Settore: " . ($product_industry ?: 'Non fornito') . "
 "
+        . ($is_b2b_quote ? "Quantità stimata: " . $estimated_quantity . "
+"
+            . "Mercato di consegna: " . $delivery_market . "
+"
+            . "Data di consegna desiderata: " . ($target_date ?: 'Non fornito') . "
+" : '')
         . "Telefono / WeChat: " . ($phone ?: 'Non fornito') . "
 "
         . "E-mail: " . $email . "
@@ -1582,7 +1595,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '5d80c2bb312448599ac31dafe87d2a0c596ecf28')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '8ed3f53fdaaa51b810fa99e3e8d3258a11ff75b8')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }

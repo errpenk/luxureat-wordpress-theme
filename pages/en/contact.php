@@ -6,12 +6,12 @@
 <meta name="description" content="Contact LuxurEat for brand, product, distribution and business partnership enquiries.">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260919-brand-news-63'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260919-brand-news-63'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20260919-brand-news-63'); ?>" as="font" type="font/ttf" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260919-brand-news-63'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260919-brand-news-63'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260919-brand-news-63'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260919-brand-news-63'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260919-brand-news-63'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260919-brand-news-63'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260919-brand-news-63'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:swap}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260927-b2b-fields-68'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260927-b2b-fields-68'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20260927-b2b-fields-68'); ?>" as="font" type="font/ttf" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260927-b2b-fields-68'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260927-b2b-fields-68'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260927-b2b-fields-68'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260927-b2b-fields-68'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260927-b2b-fields-68'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260927-b2b-fields-68'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260927-b2b-fields-68'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:swap}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260919-brand-news-63'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260927-b2b-fields-68'); ?>">
 <style>
         body { background-color: #000000; color: #e5e2e1; }
         .glass-panel {
@@ -63,7 +63,7 @@
     </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260919-brand-news-63'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260927-b2b-fields-68'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -235,6 +235,9 @@ roberto@ugolinigroup.com
 <div class="w-full h-full bg-cover bg-center" data-alt="A sophisticated corporate gift box featuring a gold logo on a matte black texture, surrounded by high-end packaging materials." style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/gifting-service-private-label.webp'); ?>')"></div>
 </div>
 <div class="lux-contact-service-thumb lux-contact-network-thumb h-24 w-1/3 overflow-hidden rounded border border-on-surface/10" role="img" aria-label="International business network" tabindex="0"></div>
+</div>
+<div class="lux-contact-b2b-action">
+<a class="lux-contact-b2b-cta" href="<?php echo esc_url(luxureat_static_url('en/cooperation', '#inquiry')); ?>">Request a B2B Quote <span aria-hidden="true">→</span></a>
 </div>
 </div>
 </div>
