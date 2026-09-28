@@ -7,16 +7,18 @@
 <meta name="description" content="了解中国市场规模、城市与经济中心、意中贸易，以及意大利食品、饮料和葡萄酒的市场数据。">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
+<link rel="preconnect" href="https://embed.tawk.to" crossorigin>
+<link rel="dns-prefetch" href="//embed.tawk.to">
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/market-services/china-market-hero-mobile.webp'); ?>" as="image" type="image/webp" media="(max-width: 640px)" fetchpriority="high">
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/market-services/china-market-hero.webp'); ?>" as="image" type="image/webp" media="(min-width: 641px)" fetchpriority="high">
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-hero-critical.woff2?v=20260928-tawk-71'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-market-critical.woff2?v=20260928-tawk-71'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Market Hero Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-hero-critical.woff2?v=20260928-tawk-71'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Market Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-critical.woff2?v=20260928-tawk-71'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-market-critical.woff2?v=20260928-tawk-71'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-page-heading:"KingHwa Market Hero Critical","KingHwa Market Critical"!important;--lux-zh-headline:"KingHwa Market Hero Critical","KingHwa Market Critical"!important;--lux-zh-body:"LuxurEat ZhiSong Site"!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-hero-critical.woff2?v=20260928-tawk-72'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-market-critical.woff2?v=20260928-tawk-72'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Market Hero Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-hero-critical.woff2?v=20260928-tawk-72'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Market Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-critical.woff2?v=20260928-tawk-72'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-market-critical.woff2?v=20260928-tawk-72'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-page-heading:"KingHwa Market Hero Critical","KingHwa Market Critical"!important;--lux-zh-headline:"KingHwa Market Hero Critical","KingHwa Market Critical"!important;--lux-zh-body:"LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260928-tawk-71'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260928-tawk-72'); ?>">
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260928-tawk-71'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/market-services.css?v=20260928-tawk-71'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260928-tawk-72'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/market-services.css?v=20260928-tawk-72'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
