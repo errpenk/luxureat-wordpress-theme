@@ -8,12 +8,12 @@
 <!-- lux:fonts:start -->
 <link rel="preconnect" href="https://embed.tawk.to" crossorigin>
 <link rel="dns-prefetch" href="//embed.tawk.to">
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260928-tawk-72'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260928-tawk-72'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20260928-tawk-72'); ?>" as="font" type="font/ttf" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260928-tawk-72'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260928-tawk-72'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260928-tawk-72'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260928-tawk-72'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260928-tawk-72'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260928-tawk-72'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260928-tawk-72'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:swap}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260929-tawk-73'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260929-tawk-73'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20260929-tawk-73'); ?>" as="font" type="font/ttf" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20260929-tawk-73'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20260929-tawk-73'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20260929-tawk-73'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20260929-tawk-73'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20260929-tawk-73'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20260929-tawk-73'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20260929-tawk-73'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:swap}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260928-tawk-72'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20260929-tawk-73'); ?>">
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
@@ -27,8 +27,8 @@
     </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260928-tawk-72'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/certification.css?v=20260928-tawk-72'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260929-tawk-73'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/certification.css?v=20260929-tawk-73'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
