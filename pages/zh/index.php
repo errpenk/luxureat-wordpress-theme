@@ -7,13 +7,11 @@
 <!-- lux:seo:end -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster-lite-v2.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
 <!-- lux:fonts:start -->
-<link rel="preconnect" href="https://embed.tawk.to" crossorigin>
-<link rel="dns-prefetch" href="//embed.tawk.to">
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-hero-critical.woff2?v=20260929-tawk-73-home-font5'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-hero-critical.woff2?v=20260929-tawk-73-home-font5'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Hero Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-hero-critical.woff2?v=20260929-tawk-73-home-font5'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-critical.woff2?v=20260929-tawk-73-home-font5'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260929-tawk-73'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Hero Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-hero-critical.woff2?v=20260929-tawk-73-home-font5'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-home-subset.woff2?v=20260929-tawk-73'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260929-tawk-73'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}html[lang^="zh"] .lux-home-hero{--lux-zh-headline:"KingHwa Hero Critical","KingHwa Page Critical","KingHwa Old Song Site"}html[lang^="zh"] body :is(.lux-header,.lux-home-hero,.lux-cookie-banner) :is(p,a,span,button){font-family:"ZhiSong Hero Critical","ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-hero-critical.woff2?v=20260929-seo-perf-74-home-font5'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-hero-critical.woff2?v=20260929-seo-perf-74-home-font5'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Hero Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-hero-critical.woff2?v=20260929-seo-perf-74-home-font5'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-home-critical.woff2?v=20260929-seo-perf-74-home-font5'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20260929-seo-perf-74'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Hero Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-hero-critical.woff2?v=20260929-seo-perf-74-home-font5'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-home-subset.woff2?v=20260929-seo-perf-74'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20260929-seo-perf-74'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:block}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}html[lang^="zh"] .lux-home-hero{--lux-zh-headline:"KingHwa Hero Critical","KingHwa Page Critical","KingHwa Old Song Site"}html[lang^="zh"] body :is(.lux-header,.lux-home-hero,.lux-cookie-banner) :is(p,a,span,button){font-family:"ZhiSong Hero Critical","ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260929-tawk-73'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260929-seo-perf-74'); ?>">
 <style>
     .fade-in-up {
         animation: fadeInUp 1s ease-out forwards;
@@ -31,8 +29,8 @@
 </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260929-tawk-73'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260929-tawk-73'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260929-seo-perf-74'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260929-seo-perf-74'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -68,10 +66,10 @@
         </p>
 <div class="lux-home-hero-actions flex flex-col sm:flex-row items-center justify-center gap-6">
 <a class="lux-home-hero-action lux-action-copy w-full sm:w-auto px-12 py-5 border border-white/20 text-on-surface uppercase text-[11px] tracking-[0.3em] transition-all backdrop-blur-sm" href="<?php echo esc_url(luxureat_static_url('zh/product', '')); ?>">
-                浏览产品
+                个人品鉴
             </a>
-<a class="lux-home-hero-action lux-action-copy w-full sm:w-auto px-12 py-5 border border-white/20 text-on-surface uppercase text-[11px] tracking-[0.3em] transition-all backdrop-blur-sm" href="<?php echo esc_url(luxureat_static_url('zh/about-us', '#about-us')); ?>">
-                认识我们
+<a class="lux-home-hero-action lux-action-copy w-full sm:w-auto px-12 py-5 border border-white/20 text-on-surface uppercase text-[11px] tracking-[0.3em] transition-all backdrop-blur-sm" href="<?php echo esc_url(luxureat_static_url('zh/cooperation', '')); ?>">
+                商务合作
             </a>
 </div>
 </div>
