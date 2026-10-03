@@ -7,12 +7,12 @@
 <!-- lux:seo:end -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster-lite-v2.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260929-image-font-perf-77'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260929-image-font-perf-77'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold-market.woff2?v=20260929-image-font-perf-77'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20260929-image-font-perf-77'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20260929-image-font-perf-77'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold-market.woff2?v=20260929-image-font-perf-77'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20260929-image-font-perf-77'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20261003-home-partnership-perf-78'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20261003-home-partnership-perf-78'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold-market.woff2?v=20261003-home-partnership-perf-78'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-home-critical.woff2?v=20261003-home-partnership-perf-78'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-home-critical.woff2?v=20261003-home-partnership-perf-78'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold-market.woff2?v=20261003-home-partnership-perf-78'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20261003-home-partnership-perf-78'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20260929-image-font-perf-77'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20261003-home-partnership-perf-78'); ?>">
 <style>
         body {
             background-color: #131313;
@@ -48,8 +48,8 @@
     </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20260929-image-font-perf-77'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20260929-image-font-perf-77'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20261003-home-partnership-perf-78'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261003-home-partnership-perf-78'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -253,8 +253,8 @@
 <div class="lux-home-partnership-continuum">
 <section class="lux-home-why" id="china-partnership" aria-labelledby="lux-home-why-title">
 <div class="lux-home-why-media">
-<figure class="lux-home-why-main"><img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-caviar-mobile.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-caviar.webp'); ?> 1192w" sizes="100vw" width="720" height="830" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-caviar-mobile.webp'); ?>" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-caviar.webp'); ?>" alt="CaviarEat Oscietra caviar presented on ice"></figure>
-<figure class="lux-home-why-inset"><img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-truffles-mobile.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-truffles.jpg'); ?> 1440w" sizes="100vw" width="720" height="480" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-truffles-mobile.webp'); ?>" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-truffles.jpg'); ?>" alt="Selected Italian black truffles"></figure>
+<figure class="lux-home-why-main"><img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-caviar-mobile.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-caviar.webp'); ?> 1192w" sizes="(max-width: 600px) 76vw, (max-width: 900px) 590px, 34vw" width="720" height="830" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-caviar-mobile.webp'); ?>" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-caviar.webp'); ?>" alt="CaviarEat Oscietra caviar presented on ice"></figure>
+<figure class="lux-home-why-inset"><img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-truffles-mobile.webp'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-truffles.jpg'); ?> 1440w" sizes="(max-width: 600px) 50vw, (max-width: 900px) 346px, 20vw" width="720" height="480" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-truffles-mobile.webp'); ?>" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-china-partnership-truffles.jpg'); ?>" alt="Selected Italian black truffles"></figure>
 </div>
 <div class="lux-home-why-copy">
 <span>CHINA PARTNERSHIP / CHANNEL COOPERATION</span>
@@ -271,7 +271,6 @@
 <div><strong data-count-up="4">0</strong><span>Global Offices</span></div>
 <div><strong data-count-up="7" data-count-suffix="K+">0</strong><span>Satisfied Clients</span></div>
 </div>
-<a href="<?php echo esc_url(luxureat_static_url('en/cooperation', '#private-label')); ?>">Explore Partnership</a>
 </div>
 </section>
 <section class="lux-home-partnership-manufacturing" aria-labelledby="partnership-manufacturing-title-en">
