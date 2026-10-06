@@ -251,7 +251,7 @@ function luxureat_static_redirect_legacy_aliases() {
     $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '/';
     $request_path = parse_url($request_uri, PHP_URL_PATH);
     $request_path = luxureat_static_normalize_path(is_string($request_path) ? $request_path : '');
-    if (preg_match('#^(en/)?events/([a-z0-9-]+)$#', $request_path, $matches) && in_array($matches[2], array('roma-bar-show-2026', 'fhc-shanghai-2026', 'cifie-changsha-2026', 'marca-china-2026', 'sial-guangzhou-2026'), true)) {
+    if (preg_match('#^(en/)?events/([a-z0-9-]+)$#', $request_path, $matches) && in_array($matches[2], array('sial-paris-2026', 'roma-bar-show-2026', 'fhc-shanghai-2026', 'cifie-changsha-2026', 'marca-china-2026', 'sial-guangzhou-2026'), true)) {
         $brand_route = empty($matches[1]) ? 'zh/brand' : 'en/brand';
         wp_safe_redirect(luxureat_static_url($brand_route, '#event-' . rawurlencode($matches[2])), 301);
         exit;
@@ -1596,7 +1596,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'f974d5b314c349fa6528629d688b8d6ec303ccc5')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'b78534fadd85a65b1894655b9aaa002686caac54')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
