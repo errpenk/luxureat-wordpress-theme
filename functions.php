@@ -290,32 +290,35 @@ function luxureat_static_disable_consumer_commerce() {
 }
 add_action('template_redirect', 'luxureat_static_disable_consumer_commerce', -50);
 
-function luxureat_static_publish_root_robots() {
-    $source = get_template_directory() . '/robots.txt';
-    $target = trailingslashit(ABSPATH) . 'robots.txt';
-    if (!is_readable($source)) {
-        return;
-    }
-
-    $contents = file_get_contents($source);
-    $target_hash = is_readable($target) ? hash_file('sha256', $target) : false;
-    if ($contents === false || (is_string($target_hash) && hash_equals(hash('sha256', $contents), $target_hash))) {
-        return;
-    }
+function luxureat_static_publish_root_metadata() {
     if (!is_writable(ABSPATH)) {
         return;
     }
 
-    $temporary = $target . '.luxureat.tmp';
-    if (file_put_contents($temporary, $contents, LOCK_EX) !== false) {
-        @chmod($temporary, 0644);
-        @rename($temporary, $target);
-    }
-    if (is_file($temporary)) {
-        @unlink($temporary);
+    foreach (array('robots.txt', 'llms.txt') as $filename) {
+        $source = get_template_directory() . '/' . $filename;
+        $target = trailingslashit(ABSPATH) . $filename;
+        if (!is_readable($source)) {
+            continue;
+        }
+
+        $contents = file_get_contents($source);
+        $target_hash = is_readable($target) ? hash_file('sha256', $target) : false;
+        if ($contents === false || (is_string($target_hash) && hash_equals(hash('sha256', $contents), $target_hash))) {
+            continue;
+        }
+
+        $temporary = $target . '.luxureat.tmp';
+        if (file_put_contents($temporary, $contents, LOCK_EX) !== false) {
+            @chmod($temporary, 0644);
+            @rename($temporary, $target);
+        }
+        if (is_file($temporary)) {
+            @unlink($temporary);
+        }
     }
 }
-add_action('after_setup_theme', 'luxureat_static_publish_root_robots', 1);
+add_action('after_setup_theme', 'luxureat_static_publish_root_metadata', 1);
 
 function luxureat_static_search_metadata_endpoint() {
     $request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
@@ -1600,7 +1603,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'c6268d2c12b4b833b2f4f0b06048388bef79d1ff')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '2cd3e74d19326d0940cac2d8efd55000e355a14b')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
