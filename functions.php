@@ -21,6 +21,8 @@ function luxureat_static_aliases() {
         'zh/recipe.html' => 'zh/recipe',
         'zh/brand' => 'zh/brand',
         'zh/brand.html' => 'zh/brand',
+        'zh/gallery' => 'zh/gallery',
+        'zh/gallery.html' => 'zh/gallery',
         'zh/blog' => 'zh/blog',
         'zh/blog.html' => 'zh/blog',
         'zh/new' => 'zh/new',
@@ -39,6 +41,7 @@ function luxureat_static_aliases() {
         'en/product.html' => 'en/product',
         'en/recipe.html' => 'en/recipe',
         'en/brand.html' => 'en/brand',
+        'en/gallery.html' => 'en/gallery',
         'en/blog.html' => 'en/blog',
         'en/cooperation.html' => 'en/cooperation',
         'en/certification.html' => 'en/certification',
@@ -57,6 +60,8 @@ function luxureat_static_aliases() {
         'rituals.html' => 'zh/recipe',
         'brand' => 'zh/brand',
         'brand.html' => 'zh/brand',
+        'gallery' => 'zh/gallery',
+        'gallery.html' => 'zh/gallery',
         'news' => 'zh/brand',
         'news.html' => 'zh/brand',
         'blog' => 'zh/blog',
@@ -114,6 +119,7 @@ function luxureat_static_pretty_paths() {
         'zh/recipe' => '/recipe/',
         'zh/about-us' => '/about-us/',
         'zh/brand' => '/brand/',
+        'zh/gallery' => '/gallery/',
         'zh/blog' => '/blog/',
         'zh/new' => '/new/',
         'zh/cooperation' => '/cooperation/',
@@ -126,6 +132,7 @@ function luxureat_static_pretty_paths() {
         'en/recipe' => '/en/recipe/',
         'en/about-us' => '/en/about-us/',
         'en/brand' => '/en/brand/',
+        'en/gallery' => '/en/gallery/',
         'en/blog' => '/en/blog/',
         'en/new' => '/en/new/',
         'en/cooperation' => '/en/cooperation/',
@@ -406,6 +413,7 @@ function luxureat_static_seo_catalog() {
         'zh/new' => array('title' => '热门新品 | LuxurEat（露意膳）', 'description' => '发现 LuxurEat（露意膳）的意大利橄榄油、披萨与意式手工冰淇淋等热门新品。', 'lang' => 'zh', 'alternate' => 'en/new', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/recipe' => array('title' => '食谱艺术 | LuxurEat（露意膳）', 'description' => '从意大利地域风味到家庭餐桌，探索 LuxurEat（露意膳）的中英文食谱与烹饪灵感。', 'lang' => 'zh', 'alternate' => 'en/recipe', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/brand' => array('title' => '品牌新闻 | LuxurEat（露意膳）', 'description' => '查看 LuxurEat（露意膳）最新品牌活动、行业展会、合作动态与现场故事。', 'lang' => 'zh', 'alternate' => 'en/brand', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
+        'zh/gallery' => array('title' => '企业画廊 | LuxurEat（露意膳）', 'description' => '按时间、地点、展会与名称浏览 LuxurEat（露意膳）的现场图片和视频。', 'lang' => 'zh', 'alternate' => 'en/gallery', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/blog' => array('title' => '知识博客 | LuxurEat（露意膳）', 'description' => '系统探索松露学院、意大利美食词典、生产者与产地故事，以及鱼子酱、橄榄油等意大利食材知识。', 'lang' => 'zh', 'alternate' => 'en/blog', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/certification' => array('title' => '品质认证 | LuxurEat（露意膳）', 'description' => '了解 LuxurEat（露意膳）的产地证明、质量体系、认证文件、责任贸易与合作项目。', 'lang' => 'zh', 'alternate' => 'en/certification', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/cooperation' => array('title' => '商务合作 | LuxurEat（露意膳）', 'description' => '探索 LuxurEat（露意膳）的国际市场定制、品牌合作、渠道方案与中国市场服务。', 'lang' => 'zh', 'alternate' => 'en/cooperation', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
@@ -418,6 +426,7 @@ function luxureat_static_seo_catalog() {
         'en/new' => array('title' => 'New Arrivals | LuxurEat', 'description' => 'Discover new Italian olive oil, pizza and artisan Gelato selections from LuxurEat.', 'lang' => 'en', 'alternate' => 'zh/new', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/recipe' => array('title' => 'Recipe Art | LuxurEat', 'description' => 'Explore bilingual Italian recipes, regional flavours and practical inspiration for the family table from LuxurEat.', 'lang' => 'en', 'alternate' => 'zh/recipe', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/brand' => array('title' => 'Brand News | LuxurEat', 'description' => 'Read the latest LuxurEat events, trade exhibitions, partnerships and stories from the field.', 'lang' => 'en', 'alternate' => 'zh/brand', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
+        'en/gallery' => array('title' => 'Company Gallery | LuxurEat', 'description' => 'Explore LuxurEat exhibition photos and videos by date, location, event and name.', 'lang' => 'en', 'alternate' => 'zh/gallery', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/blog' => array('title' => 'Knowledge Blog | LuxurEat', 'description' => 'Explore the Truffle Academy, Italian Food Dictionary, producers and stories of place, caviar, olive oil and Italian craft.', 'lang' => 'en', 'alternate' => 'zh/blog', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/certification' => array('title' => 'Quality & Certification | LuxurEat', 'description' => 'Explore LuxurEat\'s origin records, quality systems, certification documents, responsible trade and partnership projects.', 'lang' => 'en', 'alternate' => 'zh/certification', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/cooperation' => array('title' => 'Cooperation | LuxurEat', 'description' => 'Explore LuxurEat private label, brand partnerships, channel solutions and services for the China market.', 'lang' => 'en', 'alternate' => 'zh/cooperation', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
@@ -871,6 +880,7 @@ function luxureat_static_assets() {
         'import-export-ui' => array('src' => 'assets/js/import-export.js', 'dependencies' => array()),
         'product-data' => array('src' => 'assets/data/products.js', 'dependencies' => array()),
         'event-data' => array('src' => 'assets/data/events.js', 'dependencies' => array()),
+        'gallery-data' => array('src' => 'assets/data/gallery.js', 'dependencies' => array()),
         'brand-news-data' => array('src' => 'assets/data/brand-news.js', 'dependencies' => array()),
         'journal-data' => array('src' => 'assets/data/journal.js', 'dependencies' => array()),
         'academy-index' => array('src' => 'assets/data/academy-index.js', 'dependencies' => array()),
@@ -880,6 +890,7 @@ function luxureat_static_assets() {
         'new-arrivals' => array('src' => 'assets/js/new-arrivals.js', 'dependencies' => array()),
         'products' => array('src' => 'assets/js/products.js', 'dependencies' => array('product-data')),
         'events' => array('src' => 'assets/js/events.js', 'dependencies' => array('event-data')),
+        'gallery' => array('src' => 'assets/js/gallery.js', 'dependencies' => array('event-data', 'gallery-data')),
         'journal' => array('src' => 'assets/js/journal.js', 'dependencies' => array('journal-data')),
         'academy' => array('src' => 'assets/js/academy.js', 'dependencies' => array('academy-index')),
         'brand' => array('src' => 'assets/js/brand.js', 'dependencies' => array('brand-data')),
@@ -890,7 +901,8 @@ function luxureat_static_assets() {
         'zh/product' => array('image-variants', 'core', 'chat', 'product-data', 'products'),
         'zh/new' => array('image-variants', 'core', 'chat', 'journal-data', 'journal', 'new-arrivals'),
         'zh/recipe' => array('image-variants', 'core', 'chat', 'journal-data', 'journal'),
-        'zh/brand' => array('image-variants', 'core', 'chat', 'event-data', 'brand-news-data', 'journal-data', 'journal'),
+        'zh/brand' => array('image-variants', 'core', 'chat', 'event-data', 'gallery-data', 'brand-news-data', 'journal-data', 'journal'),
+        'zh/gallery' => array('image-variants', 'core', 'chat', 'event-data', 'gallery-data', 'brand-news-data', 'journal-data', 'gallery', 'journal'),
         'zh/blog' => array('image-variants', 'core', 'chat', 'academy-index', 'academy'),
         'zh/certification' => array('image-variants', 'core', 'chat', 'certification-ui'),
         'zh/cooperation' => array('image-variants', 'core', 'chat', 'brand-data', 'brand'),
@@ -902,7 +914,8 @@ function luxureat_static_assets() {
         'en/product' => array('image-variants', 'core', 'chat', 'product-data', 'products'),
         'en/new' => array('image-variants', 'core', 'chat', 'journal-data', 'journal', 'new-arrivals'),
         'en/recipe' => array('image-variants', 'core', 'chat', 'journal-data', 'journal'),
-        'en/brand' => array('image-variants', 'core', 'chat', 'event-data', 'brand-news-data', 'journal-data', 'journal'),
+        'en/brand' => array('image-variants', 'core', 'chat', 'event-data', 'gallery-data', 'brand-news-data', 'journal-data', 'journal'),
+        'en/gallery' => array('image-variants', 'core', 'chat', 'event-data', 'gallery-data', 'brand-news-data', 'journal-data', 'gallery', 'journal'),
         'en/blog' => array('image-variants', 'core', 'chat', 'academy-index', 'academy'),
         'en/certification' => array('image-variants', 'core', 'chat', 'certification-ui'),
         'en/cooperation' => array('image-variants', 'core', 'chat', 'brand-data', 'brand'),
@@ -1620,7 +1633,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '8effc4bbd1074dcc02539945d9f26435b74dc006')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '1c608bafe4fdbee0506041dd709c30da148a323f')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }

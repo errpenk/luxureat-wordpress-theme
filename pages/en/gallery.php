@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- lux:seo:start -->
+<title>Company Gallery | LuxurEat</title>
+<meta name="description" content="Explore LuxurEat exhibition photos and videos by date, location, event and name.">
+<!-- lux:seo:end -->
+  <!-- lux:fonts:start -->
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261008-mobile-images-1'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20261008-mobile-images-1'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20261008-mobile-images-1'); ?>" as="font" type="font/ttf" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261008-mobile-images-1'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Regular.woff2?v=20261008-mobile-images-1'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-RegularItalic.woff2?v=20261008-mobile-images-1'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Nyght Serif";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Bold.woff2?v=20261008-mobile-images-1'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Italic.woff2?v=20261008-mobile-images-1'); ?>") format("woff2");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-Light.woff2?v=20261008-mobile-images-1'); ?>") format("woff2");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:"Spectral";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/Spectral-SemiBold.woff2?v=20261008-mobile-images-1'); ?>") format("woff2");font-weight:600;font-style:normal;font-display:swap}</style>
+<!-- lux:fonts:end -->
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261008-mobile-images-1'); ?>">
+
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261008-mobile-images-1'); ?>">
+<link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
+<?php wp_head(); ?>
+</head>
+<body class="lux-gallery-page">
+<!-- lux:header:start -->
+<header class="lux-header">
+  <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('en', '')); ?>"><img width="64" height="64" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo-64.webp'); ?>" srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo-64.webp'); ?> 64w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo-96.webp'); ?> 96w" sizes="(max-width: 1080px) 96px, 64px" alt="LuxurEat"></a>
+  <nav class="lux-nav" aria-label="navigation"><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/about-us', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/new', '')); ?>">New Arrivals</a><a href="<?php echo esc_url(luxureat_static_url('en/product', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/recipe', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/brand', '')); ?>">Brand News</a><a class="active" href="<?php echo esc_url(luxureat_static_url('en/gallery', '')); ?>">Gallery</a><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Blog</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/china-market-insights', '')); ?>">China Market</a><a href="<?php echo esc_url(luxureat_static_url('en/import-export-services', '')); ?>">China Services</a><a href="<?php echo esc_url(luxureat_static_url('en/cooperation', '')); ?>">Cooperation</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
+  <div class="lux-actions">
+    <span class="lux-lang"><a href="<?php echo esc_url(luxureat_static_url('zh/gallery', '')); ?>">ZH</a><span>/</span><a class="active" href="#">EN</a></span>
+    <button class="lux-menu" type="button" data-open="Close" data-closed="Menu" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<!-- lux:header:end -->
+<main class="lux-gallery-main">
+  <section class="lux-gallery-hero" aria-labelledby="gallery-title">
+    <div class="lux-gallery-hero-copy">
+      <span class="lux-gallery-kicker">CAPTURING EVERY BRAND MOMENT</span>
+      <h1 id="gallery-title">Company Gallery</h1>
+      <p>From live cooking and food presentations to conversations with industry partners, this gallery captures moments from LuxurEat’s culinary journey. Discover the stories behind them in our <a href="<?php echo esc_url(luxureat_static_url('en/brand', '')); ?>">Brand News</a>.</p>
+    </div>
+    <div class="lux-gallery-hero-images" aria-hidden="true">
+      <img loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/sial-paris-2026-gallery-02.webp'); ?>" alt="" width="768" height="576">
+    </div>
+  </section>
+  <section class="lux-gallery-archive" aria-label="Company gallery media">
+    <form id="gallery-filters" class="lux-gallery-filters" data-gallery-filters role="search">
+      <label class="lux-gallery-search">Search by name<input name="search" type="search" autocomplete="off" placeholder="Media or exhibition name"></label>
+      <label>Location<select name="place"><option value="">All locations</option></select></label>
+      <label>Exhibition<select name="event"><option value="">All exhibitions</option></select></label>
+      <details class="lux-gallery-filter-more"><summary>More filters</summary><div><label>From<input name="start" type="date"></label><label>To<input name="end" type="date"></label><label>Type<select name="kind"><option value="">All types</option><option value="photo">Photos</option><option value="video">Videos</option></select></label></div></details>
+      <button type="reset" class="lux-gallery-reset">Clear filters</button>
+    </form>
+    <div id="gallery-results" class="lux-gallery-results-head"><div class="lux-gallery-layout" role="group" aria-label="Media size"><button type="button" data-gallery-layout="large" aria-label="Large images" title="Large images" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></button><button type="button" data-gallery-layout="small" aria-label="Small images" title="Small images" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></button></div></div>
+    <div class="lux-gallery-groups" data-gallery-grid data-layout="large"></div>
+    <p class="lux-gallery-empty" data-gallery-empty hidden>No media matches your filters. Try another search.</p>
+    <nav class="lux-gallery-pagination" data-gallery-pagination></nav>
+    <noscript><p><a href="<?php echo esc_url(luxureat_static_url('en/brand', '#event-sial-paris-2026')); ?>">View SIAL Paris 2026 exhibition videos</a></p></noscript>
+  </section>
+</main>
+<dialog class="lux-gallery-dialog lux-about-lightbox" data-gallery-dialog aria-label="Media viewer"><div class="lux-image-lightbox-frame"><button type="button" data-gallery-close aria-label="Close"><svg class="lux-lucide" viewBox="0 0 24 24" aria-hidden="true"><path d="m18 6-12 12"/><path d="m6 6 12 12"/></svg></button><div data-gallery-viewer></div></div></dialog>
+<!-- lux:footer:start -->
+<section class="lux-newsletter" aria-labelledby="lux-newsletter-title-en">
+  <div class="lux-newsletter-inner">
+    <div class="lux-newsletter-intro"><img width="1024" height="1024" class="lux-newsletter-icon" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/newsletter-envelope.svg'); ?>" alt="" aria-hidden="true"><div class="lux-newsletter-copy"><h2 id="lux-newsletter-title-en">LUXUREAT (露意膳) JOURNAL | SUBSCRIBE TO OUR UPDATES</h2><p>Receive new product releases, brand events and notes on authentic Italian flavour. Confirm your subscription through the email we send you.</p></div></div>
+    <form class="lux-newsletter-form" data-newsletter-form novalidate>
+      <label class="lux-visually-hidden" for="lux-newsletter-email-en">Enter your email address</label>
+      <div><input id="lux-newsletter-email-en" name="email" type="email" autocomplete="email" maxlength="120" placeholder="Enter your email address"><button type="submit">Subscribe</button></div>
+      <input name="company" type="text" tabindex="-1" autocomplete="off" hidden aria-hidden="true">
+      <p data-newsletter-feedback role="status" aria-live="polite" data-invalid="请输入正确的邮箱格式。
+Please enter a valid email address."></p>
+    </form>
+  </div>
+</section>
+<footer class="lux-footer">
+  <div class="lux-footer-grid">
+    <div class="lux-footer-brand"><div class="lux-footer-brand-main"><img width="256" height="256" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>" alt="LuxurEat"><p>Beyond importing, we are committed to defining a new standard for premium Italian gastronomy in China.<br>Rooted in authentic flavor and guided by quality and safety, LuxurEat (露意膳) brings Italian food culture and innovative experiences to China.</p></div><div class="lux-footer-legal"><button type="button" data-footer-modal="privacy">Privacy Policy</button><button type="button" data-footer-modal="cookie">Cookie Policy</button><button type="button" data-footer-modal="terms">Terms of Sale</button><button type="button" data-footer-modal="shipping">Shipping</button></div></div>
+    <nav><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><a href="<?php echo esc_url(luxureat_static_url('en/about-us', '')); ?>">About Us</a><a href="<?php echo esc_url(luxureat_static_url('en/new', '')); ?>">New Arrivals</a><a href="<?php echo esc_url(luxureat_static_url('en/product', '')); ?>">Products</a><a href="<?php echo esc_url(luxureat_static_url('en/recipe', '')); ?>">Recipe Art</a><a href="<?php echo esc_url(luxureat_static_url('en/brand', '')); ?>">Brand News</a><a href="<?php echo esc_url(luxureat_static_url('en/gallery', '')); ?>">Gallery</a><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Blog</a><a href="<?php echo esc_url(luxureat_static_url('en/certification', '')); ?>">Certification</a><a href="<?php echo esc_url(luxureat_static_url('en/china-market-insights', '')); ?>">China Market</a><a href="<?php echo esc_url(luxureat_static_url('en/import-export-services', '')); ?>">China Services</a><a href="<?php echo esc_url(luxureat_static_url('en/cooperation', '')); ?>">Cooperation</a><a href="<?php echo esc_url(luxureat_static_url('en/contact', '')); ?>">Contact</a></nav>
+    <div class="lux-footer-social"><a href="https://xhslink.com/m/AfATtrqiQvu" target="_blank" rel="noopener"><img width="200" height="200" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/rednote.svg'); ?>" alt="">Rednote</a><button type="button" data-footer-modal="wechat"><img width="229" height="200" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/wechat.svg'); ?>" alt="">WeChat</button><a href="https://v.douyin.com/9H5RI6LEdaU" target="_blank" rel="noopener"><img width="200" height="200" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/douyin.svg'); ?>" alt="">Douyin</a><a href="https://weibo.com/u/6353448966" target="_blank" rel="noopener"><img width="200" height="200" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/social/weibo.svg'); ?>" alt="">Weibo</a></div>
+    <div><a href="mailto:china@luxureat.com">china@luxureat.com</a><a href="mailto:roberto@ugolinigroup.com">roberto@ugolinigroup.com</a><a href="tel:+8615721452475">+86 15721452475</a></div>
+  </div>
+  <div class="lux-footer-bottom">© 2026 LuxurEat (露意膳)｜Luxureat (Shanghai) Trading Co., Ltd. All Rights Reserved ｜ Unified Social Credit Code: 91310000MAERED2X1W</div>
+</footer>
+<!-- lux:footer:end -->
+<!-- lux:scripts:start -->
+
+
+
+
+
+
+
+
+
+<!-- lux:scripts:end -->
+<?php wp_footer(); ?>
+</body>
+</html>
