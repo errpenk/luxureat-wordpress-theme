@@ -8,6 +8,69 @@ function luxureat_static_routes() {
     return is_array($routes) ? $routes : array();
 }
 
+function luxureat_cms_posts($kind) {
+    $posts = get_posts(array(
+        'post_type' => 'post', 'post_status' => array('publish', 'draft'),
+        'numberposts' => -1, 'meta_key' => '_luxureat_kind', 'meta_value' => $kind,
+    ));
+    $result = array();
+    foreach ($posts as $post) {
+        $source_id = get_post_meta($post->ID, '_luxureat_source_id', true);
+        if (!$source_id) continue;
+        $result[$source_id . ':' . get_post_meta($post->ID, '_luxureat_lang', true)] = $post;
+    }
+    return $result;
+}
+
+function luxureat_cms_post($source_id, $lang, $kind) {
+    static $cache = array();
+    if (!isset($cache[$kind])) $cache[$kind] = luxureat_cms_posts($kind);
+    return isset($cache[$kind][$source_id . ':' . $lang]) ? $cache[$kind][$source_id . ':' . $lang] : null;
+}
+
+function luxureat_cms_payload($kind) {
+    $result = array();
+    foreach (luxureat_cms_posts($kind) as $post) {
+        $id = get_post_meta($post->ID, '_luxureat_source_id', true);
+        $lang = get_post_meta($post->ID, '_luxureat_lang', true);
+        $image = get_the_post_thumbnail_url($post->ID, 'full');
+        $record = array(
+            'title' => get_the_title($post),
+            'intro' => get_the_excerpt($post),
+            'image' => $image ? $image : '',
+            'cmsHtml' => apply_filters('the_content', $post->post_content),
+        );
+        if ($kind === 'gallery') {
+            $video_id = (int) get_post_meta($post->ID, '_luxureat_video_attachment_id', true);
+            $video_url = $video_id ? wp_get_attachment_url($video_id) : '';
+            if (preg_match('/<video\b[^>]*\bsrc=["\']([^"\']+)/i', $post->post_content, $video_match)) {
+                $video_url = esc_url_raw(html_entity_decode($video_match[1], ENT_QUOTES));
+            }
+            $record['src'] = $video_url ? $video_url : '';
+            $record['poster'] = $record['image'];
+            $record['eventId'] = get_post_meta($post->ID, '_luxureat_event_id', true);
+            $record['date'] = get_post_meta($post->ID, '_luxureat_date', true);
+            $record['lang'] = $lang;
+        }
+        $result[$id . ':' . $lang] = $record;
+    }
+    return $result;
+}
+
+function luxureat_cms_detail($source_id, $lang, $kind) {
+    $post = luxureat_cms_post($source_id, $lang, $kind);
+    if (!$post) return false;
+    $title = get_the_title($post);
+    $image = get_the_post_thumbnail_url($post->ID, 'full');
+    $parent = $kind === 'recipe' ? ($lang === 'zh' ? '食谱艺术' : 'Recipes') : ($lang === 'zh' ? '知识博客' : 'Knowledge Blog');
+    $parent_url = luxureat_static_url($lang . '/' . ($kind === 'recipe' ? 'recipe' : 'blog'));
+    echo '<main class="lux-article-page"><nav class="lux-breadcrumb"><a href="' . esc_url($parent_url) . '">' . esc_html($parent) . '</a><span> / </span><span>' . esc_html($title) . '</span></nav>';
+    echo '<article class="lux-reader-layout lux-academy-reader"><section class="lux-reader-hero"><div class="lux-reader-hero-copy"><h1 id="lux-reader-title">' . esc_html($title) . '</h1><p class="lux-reader-summary">' . esc_html(get_the_excerpt($post)) . '</p></div>';
+    if ($image) echo '<figure class="lux-reader-cover"><img src="' . esc_url($image) . '" alt="' . esc_attr($title) . '"></figure>';
+    echo '</section><section class="lux-reader-content"><aside class="lux-reader-aside"><a href="' . esc_url($parent_url) . '">' . esc_html($lang === 'zh' ? '返回' . $parent : 'Back to ' . $parent) . '</a></aside><div class="lux-reader-copy lux-cms-prose">' . apply_filters('the_content', $post->post_content) . '</div></section></article></main>';
+    return true;
+}
+
 function luxureat_static_aliases() {
     return array(
         'index.html' => 'zh',
@@ -1241,6 +1304,13 @@ function luxureat_static_assets() {
             filemtime($source),
             true
         );
+        $cms_kinds = array('journal-data' => 'recipe', 'academy-index' => 'blog', 'gallery-data' => 'gallery');
+        if (isset($cms_kinds[$handle])) {
+            $kind = $cms_kinds[$handle];
+            wp_add_inline_script('luxureat-' . $handle,
+                'window.LUXUREAT_CMS = window.LUXUREAT_CMS || {}; window.LUXUREAT_CMS[' . wp_json_encode($kind) . '] = ' . wp_json_encode(luxureat_cms_payload($kind), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ';',
+                'after');
+        }
         if ($handle === 'core') {
             wp_localize_script('luxureat-core', 'LuxureatNewsletter', array(
                 'ajaxUrl' => admin_url('admin-ajax.php'),
@@ -1633,7 +1703,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '1c608bafe4fdbee0506041dd709c30da148a323f')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'e661d7e28fad65c74d50d882112fbf7f7facfa42')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }

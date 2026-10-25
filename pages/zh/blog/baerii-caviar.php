@@ -31,11 +31,11 @@
   </div>
 </header>
 <!-- lux:header:end -->
-<main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="面包屑导航"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><span aria-hidden="true">/</span><span aria-current="page">贝氏鲟鱼子酱</span></nav><article class="lux-reader-layout lux-academy-reader is-wide-cover">
+<?php if (!luxureat_cms_detail('zh-academy-baerii-caviar', 'zh', 'blog')): ?><main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="面包屑导航"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><span aria-hidden="true">/</span><span aria-current="page">贝氏鲟鱼子酱</span></nav><article class="lux-reader-layout lux-academy-reader is-wide-cover">
     <div class="lux-reader-rule"></div>
     <section class="lux-reader-hero"><div class="lux-reader-hero-copy"><div class="lux-reader-meta-grid"><span>鱼子酱知识科普</span><span>鱼子酱知识科普 · 2026</span></div><h1 id="lux-reader-title">贝氏鲟鱼子酱</h1><p class="lux-reader-summary">贝氏鲟鱼子酱取自西伯利亚鲟（Acipenser baerii），以灰棕色小颗粒和带有轻柔碘感的细腻风味著称。</p></div><figure class="lux-reader-cover"><img width="795" height="182" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/baerii-caviar-cover-page-bg.png'); ?>" alt="贝氏鲟鱼子酱"></figure></section>
     <section class="lux-reader-content"><aside class="lux-reader-aside"><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">返回知识博客</a></aside><div class="lux-reader-copy"><section class="lux-reader-section lux-reader-section-opening"><p>贝氏鲟是成熟速度较快的鲟鱼品种之一，约 7–8 年即可成熟，产出的鱼卵也比其他品种更小。</p><p>这是我们产品目录中价格最亲民的鱼子酱，但凭借稳定品质和鲜明风味，依然深受厨师与美食爱好者喜爱。</p></section><section class="lux-reader-section" id="article-section-0"><h2>贝氏鲟鱼子酱的感官特征</h2><p>品种：西伯利亚鲟（Acipenser baerii）</p><p>色泽：从浅灰色到灰棕色</p><p>颗粒尺寸：约2.9–3.0毫米</p><p>鲟鱼年龄：8年</p><p>香气：无强烈气味</p><p>质地：颗粒紧实，弹性良好</p><p>风味：香气细腻，带有轻柔咸鲜气息</p></section></div></section>
-  </article></main>
+  </article></main><?php endif; ?>
 <!-- lux:footer:start -->
 <section class="lux-newsletter" aria-labelledby="lux-newsletter-title-zh">
   <div class="lux-newsletter-inner">

@@ -31,11 +31,11 @@
   </div>
 </header>
 <!-- lux:header:end -->
-<main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="面包屑导航"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><span aria-hidden="true">/</span><span aria-current="page">卡露伽与阿穆尔鱼子酱</span></nav><article class="lux-reader-layout lux-academy-reader is-wide-cover">
+<?php if (!luxureat_cms_detail('zh-academy-kaluga-amur-caviar', 'zh', 'blog')): ?><main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="面包屑导航"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><span aria-hidden="true">/</span><span aria-current="page">卡露伽与阿穆尔鱼子酱</span></nav><article class="lux-reader-layout lux-academy-reader is-wide-cover">
     <div class="lux-reader-rule"></div>
     <section class="lux-reader-hero"><div class="lux-reader-hero-copy"><div class="lux-reader-meta-grid"><span>鱼子酱知识科普</span><span>鱼子酱知识科普 · 2026</span></div><h1 id="lux-reader-title">卡露伽与阿穆尔鱼子酱</h1><p class="lux-reader-summary">卡露伽与阿穆尔鱼子酱被视为珍贵贝鲁迦鱼子酱（Beluga caviar）的优质替代选择，主要优势在于价格更亲民。卡露伽鲟仅栖息于中俄之间的黑龙江及其支流。</p></div><figure class="lux-reader-cover"><img width="624" height="152" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/kaluga-amur-caviar-cover-page-bg.png'); ?>" alt="卡露伽与阿穆尔鱼子酱"></figure></section>
     <section class="lux-reader-content"><aside class="lux-reader-aside"><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">返回知识博客</a></aside><div class="lux-reader-copy"><section class="lux-reader-section lux-reader-section-opening"><p>该鲟鱼的主要养殖场位于中国宜都。其鱼子酱与贝鲁迦鱼子酱十分相似，但风味略为浓郁；鱼卵色泽从棕色延伸至金色，是其鲜明特征。</p></section><section class="lux-reader-section" id="article-section-0"><h2>卡露伽与阿穆尔鱼子酱的感官特征</h2><p>品种：达氏鳇×施氏鲟（Acipenser dauricus x Schrenki）</p><p>色泽：从棕色到金色</p><p>颗粒尺寸：约3.0–3.1毫米</p><p>鲟鱼年龄：10–11年</p><p>香气：无强烈气味</p><p>质地：颗粒紧实、饱满</p><p>风味：平衡而协调</p></section><section class="lux-reader-section" id="article-section-1"><h2>皇家卡露伽与阿穆尔的区别</h2><p>CaviarEat产品目录提供两种卡露伽鱼子酱，主要区别在于颗粒尺寸、鲟鱼年龄与品质等级：</p><p>皇家卡露伽：鲟鱼年龄10–12年，颗粒直径3.0–3.3毫米。</p><p>阿穆尔：鲟鱼年龄约10年，颗粒直径约3.0毫米。</p></section></div></section>
-  </article></main>
+  </article></main><?php endif; ?>
 <!-- lux:footer:start -->
 <section class="lux-newsletter" aria-labelledby="lux-newsletter-title-zh">
   <div class="lux-newsletter-inner">

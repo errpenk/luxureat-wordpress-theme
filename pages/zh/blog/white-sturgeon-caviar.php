@@ -31,11 +31,11 @@
   </div>
 </header>
 <!-- lux:header:end -->
-<main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="面包屑导航"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><span aria-hidden="true">/</span><span aria-current="page">白鲟鱼子酱</span></nav><article class="lux-reader-layout lux-academy-reader is-wide-cover">
+<?php if (!luxureat_cms_detail('zh-academy-white-sturgeon-caviar', 'zh', 'blog')): ?><main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="面包屑导航"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><span aria-hidden="true">/</span><span aria-current="page">白鲟鱼子酱</span></nav><article class="lux-reader-layout lux-academy-reader is-wide-cover">
     <div class="lux-reader-rule"></div>
     <section class="lux-reader-hero"><div class="lux-reader-hero-copy"><div class="lux-reader-meta-grid"><span>鱼子酱知识科普</span><span>鱼子酱知识科普 · 2026</span></div><h1 id="lux-reader-title">白鲟鱼子酱</h1><p class="lux-reader-summary">白鲟原生于北美西海岸，其鱼子酱以较大颗粒、奶油般质地和细腻风味受到珍视。</p></div><figure class="lux-reader-cover"><img width="1024" height="279" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/white-sturgeon-caviar-cover-page-bg.png'); ?>" alt="白鲟鱼子酱"></figure></section>
     <section class="lux-reader-content"><aside class="lux-reader-aside"><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">返回知识博客</a></aside><div class="lux-reader-copy"><section class="lux-reader-section lux-reader-section-opening"><p>得益于较高产量和易于养殖的特点，白鲟鱼子酱如今已成为国际市场上供应广泛、需求旺盛的品种之一。</p></section><section class="lux-reader-section" id="article-section-0"><h2>白鲟鱼子酱的主要特征</h2><p>色泽：从深灰色到深黑色，具有体现新鲜度的明亮光泽。</p><p>颗粒尺寸：比许多品种更大，质地紧实而带有奶油感。</p><p>风味：细腻、略带黄油感，伴有海洋气息和顺滑尾韵，适合偏爱优雅、低强度风味的人。</p><p>产地：主要养殖于美国和加拿大，以稳定产量和高品质著称。</p></section><section class="lux-reader-section" id="article-section-1"><h2>推荐搭配</h2><p>白鲟鱼子酱适合搭配干型香槟、干白葡萄酒，以及黄油烤面包、鱼肉塔塔或新土豆等细腻菜肴。它用途广泛，既适合美食创作，也适合简洁而精致的直接品鉴。</p></section></div></section>
-  </article></main>
+  </article></main><?php endif; ?>
 <!-- lux:footer:start -->
 <section class="lux-newsletter" aria-labelledby="lux-newsletter-title-zh">
   <div class="lux-newsletter-inner">
