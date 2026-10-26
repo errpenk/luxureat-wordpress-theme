@@ -47,7 +47,11 @@ function luxureat_cms_payload($kind) {
                 $video_url = esc_url_raw(html_entity_decode($video_match[1], ENT_QUOTES));
             }
             $record['src'] = $video_url ? $video_url : '';
-            $record['poster'] = $record['image'];
+            $poster_url = $record['image'];
+            if (preg_match('/<video\b[^>]*\bposter=["\']([^"\']+)/i', $post->post_content, $poster_match)) {
+                $poster_url = esc_url_raw(html_entity_decode($poster_match[1], ENT_QUOTES));
+            }
+            $record['poster'] = $poster_url;
             $record['eventId'] = get_post_meta($post->ID, '_luxureat_event_id', true);
             $record['date'] = get_post_meta($post->ID, '_luxureat_date', true);
             $record['lang'] = $lang;
@@ -1707,7 +1711,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'b4db619b7ac733407d44afe2e2c20d05eba501db')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'f39c60ed41e20d26fe8cd867484b1362556da692')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
