@@ -946,7 +946,7 @@ function luxureat_static_assets() {
         array(),
         filemtime($theme_dir . '/integration.css')
     );
-    if (preg_match('~^(zh|en)/blog/~', $path)) {
+    if (preg_match('~^(?:blog|zh/blog|en/blog)/~', $path)) {
         wp_enqueue_style('luxureat-reader-share', $theme_uri . '/assets/css/reader-share.css', array('luxureat-integration'), filemtime($theme_dir . '/assets/css/reader-share.css'));
     }
 
@@ -1719,7 +1719,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '12f7c56ee5b027b22692e261af269396380a83cb')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '43a00029e713aad0a9c66355b39886b69664c58c')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
