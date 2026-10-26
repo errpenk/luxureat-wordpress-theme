@@ -15,7 +15,7 @@
 <!-- lux:fonts:end -->
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261008-mobile-images-1'); ?>">
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/gallery-viewer.css?v=20261008-mobile-images-1'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/gallery-viewer.css?v=20261008-mobile-images-1-gallery16'); ?>">
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261008-mobile-images-1'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
@@ -44,7 +44,7 @@
   </section>
   <section class="lux-gallery-archive" aria-label="Company gallery media">
     <form id="gallery-filters" class="lux-gallery-filters" data-gallery-filters role="search">
-      <label class="lux-gallery-search">Search by name<input name="search" type="search" autocomplete="off" placeholder="Media or exhibition name"></label>
+      <label class="lux-gallery-search">Search by name<input name="search" type="search" autocomplete="off" placeholder="Media or exhibition name" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="gallery-suggestions"><span id="gallery-suggestions" class="lux-gallery-suggestions" role="listbox" hidden></span></label>
       <details class="lux-gallery-filter-more"><summary>More filters</summary><div><label>Location<select name="place"><option value="">All locations</option></select></label><label>Exhibition<select name="event"><option value="">All exhibitions</option></select></label><label>From<input name="start" type="date"></label><label>To<input name="end" type="date"></label><label>Type<select name="kind"><option value="">All types</option><option value="photo">Photos</option><option value="video">Videos</option></select></label></div></details>
       <button type="reset" class="lux-gallery-reset">Clear filters</button>
     </form>
