@@ -3,6 +3,10 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+add_filter('the_content', function ($content) {
+    return preg_replace('~https?://i[0-9]+\.wp\.com/luxureat\.cn/wp-content/uploads/~', 'https://luxureat.cn/wp-content/uploads/', $content);
+}, 9999);
+
 function luxureat_static_routes() {
     $routes = require get_template_directory() . '/routes.php';
     return is_array($routes) ? $routes : array();
@@ -1711,7 +1715,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'f39c60ed41e20d26fe8cd867484b1362556da692')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'f684a608cd94d9ad77ed6531d826c21b1038a29b')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
