@@ -15,7 +15,7 @@
 <!-- lux:fonts:end -->
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261008-mobile-images-1'); ?>">
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/gallery-viewer.css?v=20261008-mobile-images-1-gallery16'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/gallery-viewer.css?v=20261008-mobile-images-1-gallery17'); ?>">
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261008-mobile-images-1'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
@@ -45,7 +45,8 @@
   <section class="lux-gallery-archive" aria-label="Company gallery media">
     <form id="gallery-filters" class="lux-gallery-filters" data-gallery-filters role="search">
       <label class="lux-gallery-search">Search by name<input name="search" type="search" autocomplete="off" placeholder="Media or exhibition name" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="gallery-suggestions"><span id="gallery-suggestions" class="lux-gallery-suggestions" role="listbox" hidden></span></label>
-      <details class="lux-gallery-filter-more"><summary>More filters</summary><div><label>Location<select name="place"><option value="">All locations</option></select></label><label>Exhibition<select name="event"><option value="">All exhibitions</option></select></label><label>From<input name="start" type="date"></label><label>To<input name="end" type="date"></label><label>Type<select name="kind"><option value="">All types</option><option value="photo">Photos</option><option value="video">Videos</option></select></label></div></details>
+      <label class="lux-gallery-place">Location<select name="place"><option value="">All locations</option></select></label>
+      <details class="lux-gallery-filter-more"><summary>More filters</summary><div><label>Exhibition<select name="event"><option value="">All exhibitions</option></select></label><label>From<input name="start" type="date"></label><label>Type<select name="kind"><option value="">All types</option><option value="photo">Photos</option><option value="video">Videos</option></select></label></div></details>
       <button type="reset" class="lux-gallery-reset">Clear filters</button>
     </form>
     <div id="gallery-results" class="lux-gallery-results-head"><div class="lux-gallery-layout" role="group" aria-label="Media size"><button type="button" data-gallery-layout="large" aria-label="Large images" title="Large images" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></button><button type="button" data-gallery-layout="small" aria-label="Small images" title="Small images" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></button></div></div>

@@ -15,7 +15,7 @@
 <!-- lux:fonts:end -->
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261008-mobile-images-1'); ?>">
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/gallery-viewer.css?v=20261008-mobile-images-1-gallery16'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/gallery-viewer.css?v=20261008-mobile-images-1-gallery17'); ?>">
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261008-mobile-images-1'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
@@ -45,7 +45,8 @@
   <section class="lux-gallery-archive" aria-label="企业画廊素材">
     <form id="gallery-filters" class="lux-gallery-filters" data-gallery-filters role="search">
       <label class="lux-gallery-search">名称搜索<input name="search" type="search" autocomplete="off" placeholder="素材或展会名称" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="gallery-suggestions"><span id="gallery-suggestions" class="lux-gallery-suggestions" role="listbox" hidden></span></label>
-      <details class="lux-gallery-filter-more"><summary>更多筛选</summary><div><label>地点<select name="place"><option value="">全部地点</option></select></label><label>展会<select name="event"><option value="">全部展会</option></select></label><label>开始日期<input name="start" type="date"></label><label>结束日期<input name="end" type="date"></label><label>类型<select name="kind"><option value="">全部类型</option><option value="photo">图片</option><option value="video">视频</option></select></label></div></details>
+      <label class="lux-gallery-place">地点<select name="place"><option value="">全部地点</option></select></label>
+      <details class="lux-gallery-filter-more"><summary>更多筛选</summary><div><label>展会<select name="event"><option value="">全部展会</option></select></label><label>开始日期<input name="start" type="date"></label><label>类型<select name="kind"><option value="">全部类型</option><option value="photo">图片</option><option value="video">视频</option></select></label></div></details>
       <button type="reset" class="lux-gallery-reset">清除筛选</button>
     </form>
     <div id="gallery-results" class="lux-gallery-results-head"><div class="lux-gallery-layout" role="group" aria-label="影像大小"><button type="button" data-gallery-layout="large" aria-label="大图" title="大图" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></button><button type="button" data-gallery-layout="small" aria-label="小图" title="小图" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></button></div></div>
