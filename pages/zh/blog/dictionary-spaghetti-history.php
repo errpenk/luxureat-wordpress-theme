@@ -34,10 +34,7 @@
 <?php if (!luxureat_cms_detail('zh-academy-dictionary-spaghetti-history', 'zh', 'blog')): ?><main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="面包屑导航"><a href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>">首页</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a><span aria-hidden="true">/</span><span aria-current="page">谁发明了意大利面？从西西里、那不勒斯到中国传说的意大利饮食史</span></nav><article class="lux-reader-layout lux-academy-reader">
     <div class="lux-reader-rule"></div>
     <section class="lux-reader-hero"><div class="lux-reader-hero-copy"><div class="lux-reader-meta-grid"><span>意大利美食词典</span><span>意大利美食词典 · 2026</span></div><h1 id="lux-reader-title">谁发明了意大利面？从西西里、那不勒斯到中国传说的意大利饮食史</h1><p class="lux-reader-summary">从中世纪地中海的干制面食，到那不勒斯的日常餐桌，再到风靡世界：意大利面的起源，比任何传奇故事都更加精彩。</p></div><figure class="lux-reader-cover"><img width="1200" height="900" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/spaghetti-history-cover.webp'); ?>" alt="谁发明了意大利面？从西西里、那不勒斯到中国传说的意大利饮食史"></figure></section>
-    <section class="lux-reader-content"><aside class="lux-reader-aside"><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">返回知识博客</a></aside><div class="lux-reader-copy lux-cms-prose"><h1>谁发明了意大利面？</h1>
-<h2>从西西里、那不勒斯到中国传说的意大利饮食史</h2>
-<p><em>从中世纪地中海的干制面食，到那不勒斯的日常餐桌，再到风靡世界：意大利面的起源，比任何传奇故事都更加精彩。</em></p>
-<p><em>图片："Spaghettata"，Roberto De Martino / Wikimedia
+    <section class="lux-reader-content"><aside class="lux-reader-aside"><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">返回知识博客</a></aside><div class="lux-reader-copy lux-cms-prose"><p><em>图片："Spaghettata"，Roberto De Martino / Wikimedia
 Commons，公共领域。</em></p>
 <p>一盘意大利面，或许是最能让人立刻联想到意大利的食物之一。想象一下，用叉子卷起细长的面条，配上番茄与罗勒—简单的食材，却足以让人辨认出一种已经走向世界的饮食文化。</p>
 <p>但当我们追问"究竟是谁发明了 spaghetti？"时，答案却没有想象中那么简单。</p>
@@ -47,7 +44,7 @@ Commons，公共领域。</em></p>
 spaghetti 传统是如何形成的。</strong></p>
 <h2>01. 中世纪西西里：一条重要的历史证据</h2>
 <blockquote>
-<p><strong>1154 · 西西里 Trabia</strong>\
+<p><strong>1154 · 西西里 Trabia</strong>
 地理学家 al-Idrisi 记录了当地规模化生产
 <em>itriyya</em>—一种可保存、可运输的细长干制面食。</p>
 </blockquote>
@@ -78,7 +75,7 @@ spaghetti 完全相同、已经标准化的产品。</p>
 等词汇，并不一定对应今天我们看到这些名称时所想到的具体形状。</p>
 <p>名称、形态与制作方法都会随着时间变化。用今天意大利面工厂的产品目录去理解中世纪词汇，很容易得到过于简单的结论。</p>
 <h2>03. 那不勒斯：当面食成为大众食物</h2>
-<p><img alt="zh spaghetti history" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-naples.webp" /></p>
+<p><img alt="约1880年的那不勒斯食面者" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-naples.webp" /></p>
 <p><em>图片：Giorgio Sommer，"Macaroni eaters, Naples"，约 1880 年 / Wikimedia
 Commons。</em></p>
 <blockquote>
@@ -92,13 +89,13 @@ Commons。</em></p>
 <p>此后几个世纪，坎帕尼亚地区的面食生产不断发展，Gragnano
 等生产中心进一步提高了面食的供应量。面食也进入了城市街头生活：人们可以买到已经煮好的面，快速食用，并搭配磨碎的奶酪和胡椒。</p>
 <p>历史图像中的 <em>mangiamaccheroni</em>、街头面食摊贩和
-Pulcinella，都说明这种食物已经深深进入那不勒斯的城市文化。到了 18—19
+Pulcinella，都说明这种食物已经深深进入那不勒斯的城市文化。到了 18---19
 世纪，这种形象开始超越城市本身，逐渐成为更广泛的意大利饮食符号。</p>
 <p>因此，那不勒斯的贡献远远不只是"谁最先做出了一根长面条"。</p>
 <p>它真正重要的地方，是让面食成为一种<strong>共同的日常习惯、一种城市生活方式，以及一种饮食身份。</strong></p>
 <h2>04. "Spaghetti"这个名字什么时候出现？</h2>
 <blockquote>
-<h1>1817</h1>
+<p><strong>1817</strong></p>
 <p><strong>"Spaghetti"一词至少在 1817 年已经有文献记录。</strong></p>
 </blockquote>
 <p><em>Spaghetti</em> 来自意大利语 <em>spago</em>，意为细绳；<em>spaghetti</em>
@@ -114,17 +111,34 @@ lingua italiana della gastronomia</em>）指出，在 1817 年 6 月 14 日的
 <p><strong>"Spaghetti"这一名称至少从 1817 年起已有文献记录。</strong></p>
 <p>当然，一个名称第一次出现在现存文献中的时间，并不等于这种食物真正诞生的时间。食物完全可能早于名称存在，也可能曾经使用其他名字。</p>
 <h2>05. 马可·波罗把 spaghetti 从中国带回了意大利吗？</h2>
-<p><img alt="zh spaghetti history" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-marco-polo.webp" /></p>
+<p><img alt="马可·波罗肖像" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-marco-polo.webp" /></p>
 <p><em>图片：马可·波罗推定肖像，16 世纪 / Wikimedia Commons。</em></p>
 <h3>没有—但真实的历史反而更加有趣。</h3>
 <p>这是一个流传极广的故事：马可·波罗在中国发现了面条，并在 1295
 年结束亚洲旅行后把它带回意大利。</p>
 <p>但更早的意大利文献已经足以否定这种简单的叙述。</p>
-<p>年份       历史记录
-  — —-
-  <strong>1154</strong>   西西里：al-Idrisi 记录 <em>itriyya</em> 的生产。
-  <strong>1279</strong>   热那亚：财产清单中出现装有 <em>maccheroni</em> 的容器。
-  <strong>1295</strong>   马可·波罗结束亚洲之旅返回。</p>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th>历史记录</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1154</strong></td>
+<td>西西里：al-Idrisi 记录 <em>itriyya</em> 的生产。</td>
+</tr>
+<tr>
+<td><strong>1279</strong></td>
+<td>热那亚：财产清单中出现装有 <em>maccheroni</em> 的容器。</td>
+</tr>
+<tr>
+<td><strong>1295</strong></td>
+<td>马可·波罗结束亚洲之旅返回。</td>
+</tr>
+</tbody>
+</table>
 <p>换句话说，<strong>在马可·波罗回到意大利之前，意大利已经存在面食生产和消费的历史记录。</strong></p>
 <p>不过，"马可·波罗带回意大利面"这个传说本身的形成过程更加复杂。</p>
 <p>人们经常把它完全归因于美国面食行业期刊 <em>Macaroni Journal</em> 在 1929
@@ -147,7 +161,7 @@ spaghetti 直接起源于它。</strong></p>
 <p>如果要证明两者之间存在历史传播关系，还需要能够连接不同地区、时期、接触与技术变化的证据链。仅仅"长得像"并不足够。</p>
 <p>同样，在现有证据下，直接断言世界各地所有面条传统都彼此完全独立，也会显得过于绝对。</p>
 <h2>06. 番茄，其实来得很晚</h2>
-<p><img alt="zh spaghetti history" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-tomato.webp" /></p>
+<p><img alt="番茄意大利面的基本食材" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-tomato.webp" /></p>
 <p><em>图片：番茄意大利面的基本食材 / Wikimedia Commons。</em></p>
 <p>今天，我们几乎会本能地把 spaghetti 和番茄联系在一起。</p>
 <p>但从历史来看，面食已经存在了几个世纪之后，番茄才进入这段故事。</p>
@@ -158,7 +172,7 @@ spaghetti 直接起源于它。</strong></p>
 Memoria di Bologna 的相关历史整理将 <em>vermicelli al pomodoro</em> 的记录放在
 1839 年版本中。</p>
 <blockquote>
-<p><strong>面食 → 番茄 → 番茄意大利面</strong>\
+<p><strong>面食 → 番茄 → 番茄意大利面</strong>
 今天看起来仿佛从来就应该在一起的组合，其实来自不同历史轨迹的相遇。</p>
 </blockquote>
 <p>当然，一道菜第一次被印刷在食谱中，也不意味着那就是它真正被"发明"的时间。家庭厨房、街头摊贩与餐饮店里的实际做法，完全可能早于书面记录。</p>

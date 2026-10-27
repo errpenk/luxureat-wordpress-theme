@@ -33,12 +33,7 @@
 <?php if (!luxureat_cms_detail('en-academy-dictionary-spaghetti-history', 'en', 'blog')): ?><main class="lux-article-page"><nav class="lux-breadcrumb" aria-label="Breadcrumb"><a href="<?php echo esc_url(luxureat_static_url('en', '')); ?>">Home</a><span aria-hidden="true">/</span><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Knowledge Blog</a><span aria-hidden="true">/</span><span aria-current="page">Who Invented Spaghetti? The Story of an Italian Symbol, from Sicily and Naples to the Legends of China</span></nav><article class="lux-reader-layout lux-academy-reader">
     <div class="lux-reader-rule"></div>
     <section class="lux-reader-hero"><div class="lux-reader-hero-copy"><div class="lux-reader-meta-grid"><span>Italian Food Dictionary</span><span>Italian Food Dictionary · 2026</span></div><h1 id="lux-reader-title">Who Invented Spaghetti? The Story of an Italian Symbol, from Sicily and Naples to the Legends of China</h1><p class="lux-reader-summary">From the dried pasta of the medieval Mediterranean to the tables of Naples and its international success, the origins of spaghetti tell a story more fascinating than any legend.</p></div><figure class="lux-reader-cover"><img width="1200" height="900" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/academy/spaghetti-history-cover.webp'); ?>" alt="Who Invented Spaghetti? The Story of an Italian Symbol, from Sicily and Naples to the Legends of China"></figure></section>
-    <section class="lux-reader-content"><aside class="lux-reader-aside"><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Back to Knowledge Blog</a></aside><div class="lux-reader-copy lux-cms-prose"><h1>Who Invented Spaghetti?</h1>
-<h2>The story of an Italian symbol, from Sicily and Naples to the legends of China</h2>
-<p><em>From the dried pasta of the medieval Mediterranean to the tables of
-Naples and its international success, the origins of spaghetti tell a
-story more fascinating than any legend.</em></p>
-<p><em>Image: "Spaghettata", Roberto De Martino / Wikimedia Commons, public
+    <section class="lux-reader-content"><aside class="lux-reader-aside"><a href="<?php echo esc_url(luxureat_static_url('en/blog', '')); ?>">Back to Knowledge Blog</a></aside><div class="lux-reader-copy lux-cms-prose"><p><em>Image: "Spaghettata", Roberto De Martino / Wikimedia Commons, public
 domain.</em></p>
 <p>A plate of spaghetti is one of the most immediate ways to evoke Italy.
 Picture the strands wrapped around a fork, dressed with tomato and
@@ -57,7 +52,7 @@ but different histories: the origins of pasta, the origins of long
 pasta, and the formation of the Italian spaghetti tradition.</p>
 <h2>01. Medieval Sicily: a fundamental piece of evidence</h2>
 <blockquote>
-<p><strong>1154 · Trabia, Sicily</strong>\
+<p><strong>1154 · Trabia, Sicily</strong>
 Al-Idrisi documents an organized production of <em>itriyya</em>, a
 thread-like dried pasta that was also made for trade.</p>
 </blockquote>
@@ -84,7 +79,7 @@ certificate.</strong></p>
 <h2>02. Drying: the step that allowed pasta to travel</h2>
 <p>Fresh dough and a dried food have very different possibilities for
 storage and distribution. Reducing moisture allows pasta to last longer
-and travel more easily — an essential advantage in a world where
+and travel more easily --- an essential advantage in a world where
 journeys took time.</p>
 <p>The history of dried pasta therefore became intertwined with ports and
 trade. Alongside Sicily, Genoa also played an important role. A Genoese
@@ -100,7 +95,7 @@ associate with them today. Names, forms and preparation methods changed
 over time; reading a medieval document as though it were a modern pasta
 catalogue can lead to misleading conclusions.</p>
 <h2>03. Naples and the transformation of pasta into popular food</h2>
-<p><img alt="en spaghetti history" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-naples.webp" /></p>
+<p><img alt="Macaroni eaters in Naples, c. 1880" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-naples.webp" /></p>
 <p><em>Image: Giorgio Sommer, "Macaroni eaters, Naples", c. 1880 / Wikimedia
 Commons.</em></p>
 <blockquote>
@@ -112,7 +107,7 @@ everyday food and a collective symbol.</p>
 <p>During the seventeenth century, the eating habits of the Neapolitan
 population changed profoundly. Historian Emilio Sereni examined this
 shift through the transformation of Neapolitans from <em>mangiafoglia</em> ---
-"leaf eaters" — to <em>mangiamaccheroni</em>, or "macaroni eaters". The
+"leaf eaters" --- to <em>mangiamaccheroni</em>, or "macaroni eaters". The
 expressions reflect the growing importance of pasta in the popular diet
 amid economic difficulties and changes in production.</p>
 <p>The development of pasta making in Campania, including centres such as
@@ -128,7 +123,7 @@ shaped a strand of pasta. It concerns the way pasta became a shared
 habit, an urban presence and part of a gastronomic identity.</p>
 <h2>04. When did the word "spaghetti" appear?</h2>
 <blockquote>
-<h1>1817</h1>
+<p><strong>1817</strong></p>
 <p><strong>The word "spaghetti" is documented at least as early as 1817.</strong></p>
 </blockquote>
 <p>The term comes from <em>spago</em>, meaning string or twine: <em>spaghetti</em> are
@@ -144,23 +139,35 @@ supplies for the Real Casa degli Invalidi.</p>
 A product may exist before its name appears in a surviving document, or
 it may previously have been known under different names.</p>
 <h2>05. Did Marco Polo bring spaghetti from China?</h2>
-<p><img alt="en spaghetti history" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-marco-polo.webp" /></p>
+<p><img alt="Portrait of Marco Polo" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-marco-polo.webp" /></p>
 <p><em>Image: alleged portrait of Marco Polo, 16th century / Wikimedia
 Commons.</em></p>
-<h3>No — but the real story is more interesting.</h3>
+<h3>No --- but the real story is more interesting.</h3>
 <p>The story is famous: Marco Polo supposedly discovered pasta in China and
 brought it back to Italy when he returned from his travels in 1295.</p>
 <p>Earlier Italian evidence is enough to contradict this version.</p>
-<p>—-
-  Date                                Evidence
-  — —-
-  <strong>1154</strong>                            In Sicily, al-Idrisi describes the
-                                      production of <em>itriyya</em>.</p>
-<p><strong>1279</strong>                            A Genoese inventory mentions a
-                                      container of macaroni.</p>
-<p><strong>1295</strong>                            Marco Polo returns from his journey
-                                      in Asia.
-  —-</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1154</strong></td>
+<td>In Sicily, al-Idrisi describes the production of <em>itriyya</em>.</td>
+</tr>
+<tr>
+<td><strong>1279</strong></td>
+<td>A Genoese inventory mentions a container of macaroni.</td>
+</tr>
+<tr>
+<td><strong>1295</strong></td>
+<td>Marco Polo returns from his journey in Asia.</td>
+</tr>
+</tbody>
+</table>
 <p>The history of the legend itself is more complicated. It is often
 attributed entirely to a story published in 1929 in the American trade
 publication <em>Macaroni Journal</em>. That publication certainly helped
@@ -192,7 +199,7 @@ not enough. At the same time, claiming complete independence among all
 such traditions would also be more categorical than the available
 evidence allows.</p>
 <h2>06. Tomato came much later</h2>
-<p><img alt="en spaghetti history" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-tomato.webp" /></p>
+<p><img alt="Ingredients for spaghetti with tomato sauce" src="https://luxureat.cn/wp-content/themes/luxureat-wordpress-theme/assets/media/academy/spaghetti-history-tomato.webp" /></p>
 <p><em>Image: ingredients for spaghetti with tomato sauce / Wikimedia
 Commons.</em></p>
 <p>Today, spaghetti and tomato seem almost inseparable. Historically,
@@ -206,7 +213,7 @@ The first edition of a book must be distinguished from the appearance of
 individual recipes: a reconstruction published by Storia e Memoria di
 Bologna places <em>vermicelli al pomodoro</em> in the 1839 edition.</p>
 <blockquote>
-<p><strong>Pasta → Tomato → Spaghetti with tomato sauce</strong>\
+<p><strong>Pasta → Tomato → Spaghetti with tomato sauce</strong>
 A dish that now seems timeless is actually the result of different
 histories coming together.</p>
 </blockquote>
