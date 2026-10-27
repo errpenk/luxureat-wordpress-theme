@@ -39,7 +39,7 @@
       <p>From live cooking and food presentations to conversations with industry partners, this gallery captures moments from LuxurEat’s culinary journey. Discover the stories behind them in our <a href="<?php echo esc_url(luxureat_static_url('en/brand', '')); ?>">Brand News</a>.</p>
     </div>
     <div class="lux-gallery-hero-images" aria-hidden="true">
-      <img loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/sial-paris-2026-gallery-02.webp'); ?>" alt="" width="768" height="576">
+      <img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/gallery-hero-caviar-720.webp?v=20261008-mobile-images-1'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/events/gallery-hero-caviar.webp'); ?> 1920w" sizes="100vw" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/gallery-hero-caviar-720.webp?v=20261008-mobile-images-1'); ?>" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/gallery-hero-caviar.webp'); ?>" alt="" width="1920" height="1080">
     </div>
   </section>
   <section class="lux-gallery-archive" aria-label="Company gallery media">

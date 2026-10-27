@@ -39,7 +39,7 @@
       <p>从展会现场的烹饪演示、菜品展示，到与行业伙伴的交流，这里记录 LuxurEat 的美食旅程。想了解影像背后的故事，请阅读<a href="<?php echo esc_url(luxureat_static_url('zh/brand', '')); ?>">品牌新闻</a>。</p>
     </div>
     <div class="lux-gallery-hero-images" aria-hidden="true">
-      <img loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/sial-paris-2026-gallery-02.webp'); ?>" alt="" width="768" height="576">
+      <img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/gallery-hero-caviar-720.webp?v=20261008-mobile-images-1'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/events/gallery-hero-caviar.webp'); ?> 1920w" sizes="100vw" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/gallery-hero-caviar-720.webp?v=20261008-mobile-images-1'); ?>" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/events/gallery-hero-caviar.webp'); ?>" alt="" width="1920" height="1080">
     </div>
   </section>
   <section class="lux-gallery-archive" aria-label="企业画廊素材">
