@@ -976,7 +976,7 @@ function luxureat_static_assets() {
         'brand' => array('src' => 'assets/js/brand.js', 'dependencies' => array('brand-data')),
     );
     $assets_by_path = array(
-        'zh' => array('image-variants', 'core', 'chat'),
+        'zh' => array('image-variants', 'core', 'chat', 'home-interactions'),
         'zh/about-us' => array('image-variants', 'core', 'chat', 'journal-data', 'journal'),
         'zh/product' => array('image-variants', 'core', 'chat', 'product-data', 'products'),
         'zh/new' => array('image-variants', 'core', 'chat', 'journal-data', 'journal', 'new-arrivals'),
@@ -989,7 +989,7 @@ function luxureat_static_assets() {
         'zh/china-market-insights' => array('image-variants', 'core', 'chat', 'market-insights-ui'),
         'zh/import-export-services' => array('image-variants', 'core', 'chat', 'import-export-ui'),
         'zh/contact' => array('image-variants', 'core', 'chat', 'brand-data', 'brand'),
-        'en' => array('image-variants', 'core', 'chat'),
+        'en' => array('image-variants', 'core', 'chat', 'home-interactions'),
         'en/about-us' => array('image-variants', 'core', 'chat', 'journal-data', 'journal'),
         'en/product' => array('image-variants', 'core', 'chat', 'product-data', 'products'),
         'en/new' => array('image-variants', 'core', 'chat', 'journal-data', 'journal', 'new-arrivals'),
@@ -1724,7 +1724,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'a19c5054ad3c9cdc3973575016e2649a7ba7008c')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '9b63f869e5d5249a8ae549591cd57d9414c62747')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
