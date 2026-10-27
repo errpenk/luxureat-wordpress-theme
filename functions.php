@@ -609,6 +609,8 @@ function luxureat_static_seo_catalog() {
         'blog/china-italian-gelato' => array('title' => '为什么中国正在重新认识意式手工冰淇淋 | LuxurEat', 'description' => '中国已经拥有成熟的冷冻甜品市场。因此，意式手工冰淇淋的机会并不是从零向消费者解释“什么是冰淇淋”，而是让人理解意式手工冰淇淋为什么能代表一种不同的工艺、风味、质地与意大利饮食文化组合。', 'lang' => 'zh', 'alternate' => 'en/blog/china-italian-gelato', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/china-italian-gelato.webp', 'author' => 'LuxurEat'),
         'blog/china-italian-evo' => array('title' => '为什么中国正在重新认识意大利特级初榨橄榄油 | LuxurEat', 'description' => '在中国，橄榄油正在逐步摆脱“进口健康油”这一单一形象。随着消费者越来越熟悉国际烹饪，特级初榨橄榄油有更多机会被理解为一种具有地域身份、烹饪用途和明确生产标准的风味食材。', 'lang' => 'zh', 'alternate' => 'en/blog/china-italian-evo', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/china-italian-evo.webp', 'author' => 'LuxurEat'),
         'blog/china-pizza-pinsa' => array('title' => '为什么中国正在进一步理解意大利披萨——以及品萨如何创造新的入口 | LuxurEat', 'description' => '披萨在中国已经拥有很高认知度，因此挑战完全不同。机会不在于再次介绍“什么是披萨”，而在于把讨论从泛化的快餐概念，带向地域风格、面团技术、食材品质，以及品萨这类更新的意大利形式。', 'lang' => 'zh', 'alternate' => 'en/blog/china-pizza-pinsa', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/china-pizza-pinsa.webp', 'author' => 'LuxurEat'),
+        'blog/dictionary-spaghetti-history' => array('title' => '谁发明了意大利面？从西西里、那不勒斯到中国传说的意大利饮食史 | LuxurEat', 'description' => '从中世纪地中海的干制面食，到那不勒斯的日常餐桌，再到风靡世界：意大利面的起源，比任何传奇故事都更加精彩。', 'lang' => 'zh', 'alternate' => 'en/blog/dictionary-spaghetti-history', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/spaghetti-history-cover.webp', 'author' => 'LuxurEat'),
+        'en/blog/dictionary-spaghetti-history' => array('title' => 'Who Invented Spaghetti? The Story of an Italian Symbol, from Sicily and Naples to the Legends of China | LuxurEat', 'description' => 'From the dried pasta of the medieval Mediterranean to the tables of Naples and its international success, the origins of spaghetti tell a story more fascinating than any legend.', 'lang' => 'en', 'alternate' => 'blog/dictionary-spaghetti-history', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/spaghetti-history-cover.webp', 'author' => 'LuxurEat'),
         'blog/truffle-what-is-truffle' => array('title' => '什么是松露？为什么它会生长在地下？ | LuxurEat', 'description' => '提到松露，很多人首先想到的是“昂贵”“稀有”或“高级餐厅”。但如果真正想理解这种食材，最好的起点并不是价格，而是先弄清楚一件事：松露究竟是什么？松露是一类在地下形成子实体的真菌。与我们平时在地面上看到的蘑菇不同，成熟松露隐藏在土壤之中，因此仅靠肉眼很难发现。', 'lang' => 'zh', 'alternate' => 'en/blog/truffle-what-is-truffle', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/truffle-what-is-truffle.webp', 'author' => 'LuxurEat'),
         'blog/truffle-truffle-types' => array('title' => '白松露、黑松露、夏季松露：它们到底有什么区别？ | LuxurEat', 'description' => '第一次接触松露时，最容易产生的误解之一就是：“松露不都是一样的吗，只是颜色不同？”实际上，白松露、珍贵黑松露、夏季黑松露等属于不同种类，它们的成熟时期、香气特点、市场定位和料理方法都存在差异。', 'lang' => 'zh', 'alternate' => 'en/blog/truffle-truffle-types', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/truffle-truffle-types.webp', 'author' => 'LuxurEat'),
         'blog/truffle-italian-truffle-map' => array('title' => '意大利松露地图：为什么著名产地不只有阿尔巴？ | LuxurEat', 'description' => '说到意大利松露，很多人首先想到的是阿尔巴。这并不奇怪。皮埃蒙特的白松露文化拥有极高的国际知名度，阿尔巴也长期成为意大利白松露最具象征性的名字之一。但如果把“意大利松露”等同于“阿尔巴松露”，就会错过意大利松露文化真正有趣的部分：它从来不是单一产区的故事。', 'lang' => 'zh', 'alternate' => 'en/blog/truffle-italian-truffle-map', 'indexable' => true, 'type' => 'Article', 'image' => 'media/academy/truffle-italian-truffle-map.webp', 'author' => 'LuxurEat'),
@@ -1103,6 +1105,8 @@ function luxureat_static_assets() {
         'blog/china-italian-gelato' => array('core'),
         'blog/china-italian-evo' => array('core'),
         'blog/china-pizza-pinsa' => array('core'),
+        'blog/dictionary-spaghetti-history' => array('core'),
+        'en/blog/dictionary-spaghetti-history' => array('core'),
         'blog/truffle-what-is-truffle' => array('core'),
         'blog/truffle-truffle-types' => array('core'),
         'blog/truffle-italian-truffle-map' => array('core'),
@@ -1719,7 +1723,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '8713b1d1d27b8d0828f3ff1cc20daeb48fda7bc8')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'b871904b37c9e02fe3f720f86acb6fc4a6df056c')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }

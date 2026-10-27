@@ -781,6 +781,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/blog/china-pizza-pinsa/" />
   </url>
   <url>
+    <loc>https://luxureat.cn/blog/dictionary-spaghetti-history/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/blog/dictionary-spaghetti-history/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/blog/dictionary-spaghetti-history/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/blog/dictionary-spaghetti-history/" />
+  </url>
+  <url>
+    <loc>https://luxureat.cn/en/blog/dictionary-spaghetti-history/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/blog/dictionary-spaghetti-history/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/blog/dictionary-spaghetti-history/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxureat.cn/blog/dictionary-spaghetti-history/" />
+  </url>
+  <url>
     <loc>https://luxureat.cn/blog/truffle-what-is-truffle/</loc>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://luxureat.cn/blog/truffle-what-is-truffle/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://luxureat.cn/en/blog/truffle-what-is-truffle/" />

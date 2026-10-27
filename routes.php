@@ -130,6 +130,8 @@ return array(
     'blog/china-italian-gelato' => 'pages/zh/blog/china-italian-gelato.php',
     'blog/china-italian-evo' => 'pages/zh/blog/china-italian-evo.php',
     'blog/china-pizza-pinsa' => 'pages/zh/blog/china-pizza-pinsa.php',
+    'blog/dictionary-spaghetti-history' => 'pages/zh/blog/dictionary-spaghetti-history.php',
+    'en/blog/dictionary-spaghetti-history' => 'pages/en/blog/dictionary-spaghetti-history.php',
     'blog/truffle-what-is-truffle' => 'pages/zh/blog/truffle-what-is-truffle.php',
     'blog/truffle-truffle-types' => 'pages/zh/blog/truffle-truffle-types.php',
     'blog/truffle-italian-truffle-map' => 'pages/zh/blog/truffle-italian-truffle-map.php',
