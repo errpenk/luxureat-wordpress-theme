@@ -69,64 +69,61 @@ function luxureat_cms_payload($kind) {
 
 function luxureat_cms_recipe_video($source_id, $image) {
     $videos = array(
-        'zh-recipe-truffle-eggs' => array('slug' => 'truffle-eggs', 'lang' => 'zh', 'description' => '煎制太阳蛋', 'source' => 'https://www.pexels.com/video/person-cooking-sunny-side-up-4828460/', 'creator' => 'Ketut Subiyanto'),
-        'zh-recipe-truffle-toast' => array('slug' => 'truffle-toast', 'lang' => 'zh', 'description' => '切开牛油果吐司上的水波蛋', 'source' => 'https://www.pexels.com/video/a-person-cutting-a-poached-egg-on-an-avocado-toast-7929033/', 'creator' => 'Nicola Barts'),
-        'zh-recipe-truffle-tagliolini' => array('slug' => 'truffle-tagliolini', 'lang' => 'zh', 'description' => '手工制作新鲜意大利面', 'source' => 'https://www.pexels.com/video/crop-people-making-pasta-6211544/', 'creator' => 'Antonius Ferret'),
-        'zh-recipe-truffle-ravioli' => array('slug' => 'truffle-ravioli', 'lang' => 'zh', 'description' => '厨师制作意式馄饨', 'source' => 'https://www.pexels.com/video/chef-preparing-delicious-ravioli-dish-37313798/', 'creator' => 'Olga Kobylko'),
-        'zh-recipe-black-truffle-risotto' => array('slug' => 'black-truffle-risotto', 'lang' => 'zh', 'description' => '摆盘后的意式烩饭', 'source' => 'https://www.pexels.com/video/elegant-risotto-meal-with-fresh-juice-setting-31194667/', 'creator' => 'Zenia Diamond'),
-        'zh-recipe-mushroom-soup' => array('slug' => 'mushroom-soup', 'lang' => 'zh', 'description' => '端上一碗奶油蘑菇汤', 'source' => 'https://www.pexels.com/video/a-person-putting-a-bowl-of-mushroom-soup-on-a-surface-5950766/', 'creator' => 'alleksana'),
-        'zh-recipe-beef-carpaccio-scallop-truffle' => array('slug' => 'beef-carpaccio-scallop-truffle', 'lang' => 'zh', 'description' => '厨师切制牛肉', 'source' => 'https://www.pexels.com/video/chef-slicing-meat-8477208/', 'creator' => 'Los Muertos Crew'),
-        'zh-recipe-shrimp-tartare-truffle' => array('slug' => 'shrimp-tartare-truffle', 'lang' => 'zh', 'description' => '柠檬搭配海鲜料理', 'source' => 'https://www.pexels.com/video/exquisite-seafood-dish-with-lemon-squeeze-outdoors-38916212/', 'creator' => 'Alberto Escalona'),
-        'zh-recipe-sweet-bread-butter-caviar' => array('slug' => 'sweet-bread-butter-caviar', 'lang' => 'zh', 'description' => '鱼子酱点缀寿司', 'source' => 'https://www.pexels.com/video/an-orange-and-black-caviar-on-top-8901903/', 'creator' => 'Ivan S'),
-        'zh-recipe-truffle-tiramisu' => array('slug' => 'truffle-tiramisu', 'lang' => 'zh', 'description' => '制作提拉米苏甜点', 'source' => 'https://www.pexels.com/video/elegant-tiramisu-dessert-preparation-at-home-36911779/', 'creator' => 'Melike'),
-        'zh-recipe-olive-bruschetta' => array('slug' => 'olive-bruschetta', 'lang' => 'zh', 'description' => '制作番茄香草烤面包', 'source' => 'https://www.pexels.com/video/fresh-bruschetta-preparation-with-tomatoes-37210931/', 'creator' => 'Anh Nguyen'),
-        'zh-recipe-olive-pasta' => array('slug' => 'olive-pasta', 'lang' => 'zh', 'description' => '为意大利面淋上橄榄油', 'source' => 'https://www.pexels.com/video/a-person-pouring-liquid-in-the-bowl-6327759/', 'creator' => 'Tima Miroshnichenko'),
-        'zh-recipe-pizza-margherita' => array('slug' => 'pizza-margherita', 'lang' => 'zh', 'description' => '为玛格丽特披萨加入罗勒', 'source' => 'https://www.pexels.com/video/chef-hands-putting-basil-topping-on-pizza-6092988/', 'creator' => 'ROMAN ODINTSOV'),
-        'zh-recipe-gelato-classic' => array('slug' => 'gelato-classic', 'lang' => 'zh', 'description' => '舀取巧克力意式冰淇淋', 'source' => 'https://www.pexels.com/video/woman-scooping-gelato-5659617/', 'creator' => 'ROMAN ODINTSOV'),
-        'en-recipe-truffle-eggs' => array('slug' => 'truffle-eggs', 'lang' => 'en', 'description' => 'Frying sunny-side-up eggs', 'source' => 'https://www.pexels.com/video/person-cooking-sunny-side-up-4828460/', 'creator' => 'Ketut Subiyanto'),
-        'en-recipe-truffle-toast' => array('slug' => 'truffle-toast', 'lang' => 'en', 'description' => 'Cutting a poached egg on avocado toast', 'source' => 'https://www.pexels.com/video/a-person-cutting-a-poached-egg-on-an-avocado-toast-7929033/', 'creator' => 'Nicola Barts'),
-        'en-recipe-truffle-tagliolini' => array('slug' => 'truffle-tagliolini', 'lang' => 'en', 'description' => 'Making fresh pasta by hand', 'source' => 'https://www.pexels.com/video/crop-people-making-pasta-6211544/', 'creator' => 'Antonius Ferret'),
-        'en-recipe-truffle-ravioli' => array('slug' => 'truffle-ravioli', 'lang' => 'en', 'description' => 'A chef preparing ravioli', 'source' => 'https://www.pexels.com/video/chef-preparing-delicious-ravioli-dish-37313798/', 'creator' => 'Olga Kobylko'),
-        'en-recipe-black-truffle-risotto' => array('slug' => 'black-truffle-risotto', 'lang' => 'en', 'description' => 'A plated risotto', 'source' => 'https://www.pexels.com/video/elegant-risotto-meal-with-fresh-juice-setting-31194667/', 'creator' => 'Zenia Diamond'),
-        'en-recipe-mushroom-soup' => array('slug' => 'mushroom-soup', 'lang' => 'en', 'description' => 'Serving a bowl of creamy mushroom soup', 'source' => 'https://www.pexels.com/video/a-person-putting-a-bowl-of-mushroom-soup-on-a-surface-5950766/', 'creator' => 'alleksana'),
-        'en-recipe-beef-carpaccio-scallop-truffle' => array('slug' => 'beef-carpaccio-scallop-truffle', 'lang' => 'en', 'description' => 'A chef slicing beef', 'source' => 'https://www.pexels.com/video/chef-slicing-meat-8477208/', 'creator' => 'Los Muertos Crew'),
-        'en-recipe-shrimp-tartare-truffle' => array('slug' => 'shrimp-tartare-truffle', 'lang' => 'en', 'description' => 'A seafood dish with lemon', 'source' => 'https://www.pexels.com/video/exquisite-seafood-dish-with-lemon-squeeze-outdoors-38916212/', 'creator' => 'Alberto Escalona'),
-        'en-recipe-sweet-bread-butter-caviar' => array('slug' => 'sweet-bread-butter-caviar', 'lang' => 'en', 'description' => 'Caviar topping sushi', 'source' => 'https://www.pexels.com/video/an-orange-and-black-caviar-on-top-8901903/', 'creator' => 'Ivan S'),
-        'en-recipe-truffle-tiramisu' => array('slug' => 'truffle-tiramisu', 'lang' => 'en', 'description' => 'Preparing tiramisu', 'source' => 'https://www.pexels.com/video/elegant-tiramisu-dessert-preparation-at-home-36911779/', 'creator' => 'Melike'),
-        'en-recipe-olive-bruschetta' => array('slug' => 'olive-bruschetta', 'lang' => 'en', 'description' => 'Preparing tomato and herb bruschetta', 'source' => 'https://www.pexels.com/video/fresh-bruschetta-preparation-with-tomatoes-37210931/', 'creator' => 'Anh Nguyen'),
-        'en-recipe-olive-pasta' => array('slug' => 'olive-pasta', 'lang' => 'en', 'description' => 'Drizzling olive oil over pasta', 'source' => 'https://www.pexels.com/video/a-person-pouring-liquid-in-the-bowl-6327759/', 'creator' => 'Tima Miroshnichenko'),
-        'en-recipe-pizza-margherita' => array('slug' => 'pizza-margherita', 'lang' => 'en', 'description' => 'Adding basil to a Margherita pizza', 'source' => 'https://www.pexels.com/video/chef-hands-putting-basil-topping-on-pizza-6092988/', 'creator' => 'ROMAN ODINTSOV'),
-        'en-recipe-gelato-classic' => array('slug' => 'gelato-classic', 'lang' => 'en', 'description' => 'Scooping chocolate gelato', 'source' => 'https://www.pexels.com/video/woman-scooping-gelato-5659617/', 'creator' => 'ROMAN ODINTSOV'),
-        'zh-recipe-olive-panzanella' => array('slug' => 'olive-panzanella', 'lang' => 'zh', 'description' => '为番茄烤面包加入配料', 'source' => 'https://www.pexels.com/video/preparing-bruschetta-with-fresh-ingredients-37210926/', 'creator' => 'Anh Nguyen'),
-        'en-recipe-olive-panzanella' => array('slug' => 'olive-panzanella', 'lang' => 'en', 'description' => 'Garnishing tomato bruschetta', 'source' => 'https://www.pexels.com/video/preparing-bruschetta-with-fresh-ingredients-37210926/', 'creator' => 'Anh Nguyen'),
-        'zh-recipe-olive-pinzimonio' => array('slug' => 'olive-pinzimonio', 'lang' => 'zh', 'description' => '摆放新鲜蔬菜', 'source' => 'https://www.pexels.com/video/raw-food-presentation-6328266/', 'creator' => 'Tima Miroshnichenko'),
-        'en-recipe-olive-pinzimonio' => array('slug' => 'olive-pinzimonio', 'lang' => 'en', 'description' => 'Arranging fresh vegetables', 'source' => 'https://www.pexels.com/video/raw-food-presentation-6328266/', 'creator' => 'Tima Miroshnichenko'),
-        'zh-recipe-light-fennel-orange-salad' => array('slug' => 'light-fennel-orange-salad', 'lang' => 'zh', 'description' => '切制橙片', 'source' => 'https://www.pexels.com/video/a-person-cutting-up-an-orange-on-a-plate-3699004/', 'creator' => 'Erkan Avanoğlu'),
-        'en-recipe-light-fennel-orange-salad' => array('slug' => 'light-fennel-orange-salad', 'lang' => 'en', 'description' => 'Slicing an orange', 'source' => 'https://www.pexels.com/video/a-person-cutting-up-an-orange-on-a-plate-3699004/', 'creator' => 'Erkan Avanoğlu'),
-        'zh-recipe-light-grilled-zucchini' => array('slug' => 'light-grilled-zucchini', 'lang' => 'zh', 'description' => '烤制多种蔬菜', 'source' => 'https://www.pexels.com/video/vegetables-being-cooked-on-a-grill-5616331/', 'creator' => 'Askar Abayev'),
-        'en-recipe-light-grilled-zucchini' => array('slug' => 'light-grilled-zucchini', 'lang' => 'en', 'description' => 'Grilling assorted vegetables', 'source' => 'https://www.pexels.com/video/vegetables-being-cooked-on-a-grill-5616331/', 'creator' => 'Askar Abayev'),
-        'zh-recipe-light-sea-bass-acqua-pazza' => array('slug' => 'light-sea-bass-acqua-pazza', 'lang' => 'zh', 'description' => '用香草烹制鱼料理', 'source' => 'https://www.pexels.com/video/delicious-fish-cooking-with-fresh-herbs-29643123/', 'creator' => 'Edson Colibri Cardoso'),
-        'en-recipe-light-sea-bass-acqua-pazza' => array('slug' => 'light-sea-bass-acqua-pazza', 'lang' => 'en', 'description' => 'Cooking fish with fresh herbs', 'source' => 'https://www.pexels.com/video/delicious-fish-cooking-with-fresh-herbs-29643123/', 'creator' => 'Edson Colibri Cardoso'),
-        'zh-recipe-family-spaghetti-pomodoro' => array('slug' => 'family-spaghetti-pomodoro', 'lang' => 'zh', 'description' => '番茄罗勒意大利面', 'source' => 'https://www.pexels.com/video/delicious-spaghetti-with-tomato-sauce-and-basil-36391232/', 'creator' => 'Hanna M'),
-        'en-recipe-family-spaghetti-pomodoro' => array('slug' => 'family-spaghetti-pomodoro', 'lang' => 'en', 'description' => 'Spaghetti with tomato and basil', 'source' => 'https://www.pexels.com/video/delicious-spaghetti-with-tomato-sauce-and-basil-36391232/', 'creator' => 'Hanna M'),
-        'zh-recipe-family-zucchini-frittata' => array('slug' => 'family-zucchini-frittata', 'lang' => 'zh', 'description' => '切开蔬菜烘蛋', 'source' => 'https://www.pexels.com/video/close-up-video-of-an-omelette-6289318/', 'creator' => 'Klaus Nielsen'),
-        'en-recipe-family-zucchini-frittata' => array('slug' => 'family-zucchini-frittata', 'lang' => 'en', 'description' => 'Slicing a vegetable omelette', 'source' => 'https://www.pexels.com/video/close-up-video-of-an-omelette-6289318/', 'creator' => 'Klaus Nielsen'),
-        'zh-recipe-family-chicken-cacciatora' => array('slug' => 'family-chicken-cacciatora', 'lang' => 'zh', 'description' => '锅中炖煮鸡肉', 'source' => 'https://www.pexels.com/video/a-close-up-shot-of-chickens-being-cooked-4362882/', 'creator' => 'Suraphat Nuea-on'),
-        'en-recipe-family-chicken-cacciatora' => array('slug' => 'family-chicken-cacciatora', 'lang' => 'en', 'description' => 'Chicken simmering in a pot', 'source' => 'https://www.pexels.com/video/a-close-up-shot-of-chickens-being-cooked-4362882/', 'creator' => 'Suraphat Nuea-on'),
-        'zh-recipe-truffle-summer-crostini' => array('slug' => 'truffle-summer-crostini', 'lang' => 'zh', 'description' => '将面包蘸入橄榄油', 'source' => 'https://www.pexels.com/video/a-person-dipping-bread-in-olive-oil-4109923/', 'creator' => 'Polina Tankilevitch'),
-        'en-recipe-truffle-summer-crostini' => array('slug' => 'truffle-summer-crostini', 'lang' => 'en', 'description' => 'Dipping bread in olive oil', 'source' => 'https://www.pexels.com/video/a-person-dipping-bread-in-olive-oil-4109923/', 'creator' => 'Polina Tankilevitch'),
-        'zh-recipe-truffle-trout' => array('slug' => 'truffle-trout', 'lang' => 'zh', 'description' => '柠檬香草烤鳟鱼', 'source' => 'https://www.pexels.com/video/grilled-trout-with-lemon-and-herbs-outdoors-39170687/', 'creator' => 'Zoltan Eberhart'),
-        'en-recipe-truffle-trout' => array('slug' => 'truffle-trout', 'lang' => 'en', 'description' => 'Grilled trout with lemon and herbs', 'source' => 'https://www.pexels.com/video/grilled-trout-with-lemon-and-herbs-outdoors-39170687/', 'creator' => 'Zoltan Eberhart'),
-        'zh-recipe-truffle-lamb' => array('slug' => 'truffle-lamb', 'lang' => 'zh', 'description' => '大锅烹制羊肉炖菜', 'source' => 'https://www.pexels.com/video/authentic-street-style-lamb-stew-cooking-39327749/', 'creator' => 'Syafril Anggara'),
-        'en-recipe-truffle-lamb' => array('slug' => 'truffle-lamb', 'lang' => 'en', 'description' => 'Cooking lamb stew in a large pan', 'source' => 'https://www.pexels.com/video/authentic-street-style-lamb-stew-cooking-39327749/', 'creator' => 'Syafril Anggara'),
+        'zh-recipe-truffle-eggs' => array('slug' => 'truffle-eggs', 'lang' => 'zh', 'description' => '金黄煎蛋与柔嫩蛋黄，为松露鸡蛋开启香气四溢的早晨。'),
+        'zh-recipe-truffle-toast' => array('slug' => 'truffle-toast', 'lang' => 'zh', 'description' => '轻轻切开水波蛋，流动的蛋黄为松露吐司带来丰盈灵感。'),
+        'zh-recipe-truffle-tagliolini' => array('slug' => 'truffle-tagliolini', 'lang' => 'zh', 'description' => '从面粉到鲜面，手作的细致为松露意面铺垫风味。'),
+        'zh-recipe-truffle-ravioli' => array('slug' => 'truffle-ravioli', 'lang' => 'zh', 'description' => '厨师细心制作意式馄饨，期待松露点亮最后一口。'),
+        'zh-recipe-black-truffle-risotto' => array('slug' => 'black-truffle-risotto', 'lang' => 'zh', 'description' => '一盘细腻烩饭，映衬黑松露料理的优雅餐桌。'),
+        'zh-recipe-mushroom-soup' => array('slug' => 'mushroom-soup', 'lang' => 'zh', 'description' => '一碗蘑菇浓汤端上桌，让温暖与鲜香慢慢展开。'),
+        'zh-recipe-beef-carpaccio-scallop-truffle' => array('slug' => 'beef-carpaccio-scallop-truffle', 'lang' => 'zh', 'description' => '鲜嫩牛肉被细心切制，为精致的牛肉薄片料理揭开序幕。'),
+        'zh-recipe-shrimp-tartare-truffle' => array('slug' => 'shrimp-tartare-truffle', 'lang' => 'zh', 'description' => '柠檬点亮海鲜的鲜美，也为松露虾塔塔带来清爽灵感。'),
+        'zh-recipe-sweet-bread-butter-caviar' => array('slug' => 'sweet-bread-butter-caviar', 'lang' => 'zh', 'description' => '鱼子酱点亮精致的一口，启发奶油鱼子酱吐司的摆盘美学。'),
+        'zh-recipe-truffle-tiramisu' => array('slug' => 'truffle-tiramisu', 'lang' => 'zh', 'description' => '层层制作的提拉米苏，承载意式甜点的柔软与惊喜。'),
+        'zh-recipe-olive-bruschetta' => array('slug' => 'olive-bruschetta', 'lang' => 'zh', 'description' => '番茄与香草落在酥脆面包上，意式开胃时刻从这里开始。'),
+        'zh-recipe-olive-pasta' => array('slug' => 'olive-pasta', 'lang' => 'zh', 'description' => '橄榄油缓缓裹住意大利面，让每一口都带着地中海风味。'),
+        'zh-recipe-pizza-margherita' => array('slug' => 'pizza-margherita', 'lang' => 'zh', 'description' => '一片罗勒落在玛格丽特披萨上，经典意式风味就此鲜活。'),
+        'zh-recipe-gelato-classic' => array('slug' => 'gelato-classic', 'lang' => 'zh', 'description' => '一勺细腻意式冰淇淋，为餐桌留下甜蜜余韵。'),
+        'en-recipe-truffle-eggs' => array('slug' => 'truffle-eggs', 'lang' => 'en', 'description' => 'Golden fried eggs and a tender yolk set the scene for a fragrant truffle breakfast.'),
+        'en-recipe-truffle-toast' => array('slug' => 'truffle-toast', 'lang' => 'en', 'description' => 'A poached egg breaks open over toast, inspiring a rich and inviting truffle toast.'),
+        'en-recipe-truffle-tagliolini' => array('slug' => 'truffle-tagliolini', 'lang' => 'en', 'description' => 'From flour to fresh pasta, careful hands set the stage for truffle tagliolini.'),
+        'en-recipe-truffle-ravioli' => array('slug' => 'truffle-ravioli', 'lang' => 'en', 'description' => 'A chef shapes ravioli with care, ready for the finishing touch of truffle.'),
+        'en-recipe-black-truffle-risotto' => array('slug' => 'black-truffle-risotto', 'lang' => 'en', 'description' => 'A beautifully plated risotto sets an elegant table for black truffle.'),
+        'en-recipe-mushroom-soup' => array('slug' => 'mushroom-soup', 'lang' => 'en', 'description' => 'A bowl of mushroom soup arrives at the table, bringing warmth and savory comfort.'),
+        'en-recipe-beef-carpaccio-scallop-truffle' => array('slug' => 'beef-carpaccio-scallop-truffle', 'lang' => 'en', 'description' => 'Carefully sliced beef sets the stage for an elegant carpaccio.'),
+        'en-recipe-shrimp-tartare-truffle' => array('slug' => 'shrimp-tartare-truffle', 'lang' => 'en', 'description' => 'A squeeze of lemon brightens seafood and inspires a fresh truffle shrimp tartare.'),
+        'en-recipe-sweet-bread-butter-caviar' => array('slug' => 'sweet-bread-butter-caviar', 'lang' => 'en', 'description' => 'A touch of caviar elevates a delicate bite and inspires the presentation of caviar toast.'),
+        'en-recipe-truffle-tiramisu' => array('slug' => 'truffle-tiramisu', 'lang' => 'en', 'description' => 'Layer by layer, tiramisu comes together with the soft charm of an Italian dessert.'),
+        'en-recipe-olive-bruschetta' => array('slug' => 'olive-bruschetta', 'lang' => 'en', 'description' => 'Tomato and herbs meet crisp bread, opening an inviting Italian aperitivo.'),
+        'en-recipe-olive-pasta' => array('slug' => 'olive-pasta', 'lang' => 'en', 'description' => 'Olive oil coats fresh pasta, bringing Mediterranean flavor to every bite.'),
+        'en-recipe-pizza-margherita' => array('slug' => 'pizza-margherita', 'lang' => 'en', 'description' => 'Fresh basil lands on a Margherita pizza, bringing an Italian classic to life.'),
+        'en-recipe-gelato-classic' => array('slug' => 'gelato-classic', 'lang' => 'en', 'description' => 'A scoop of creamy gelato leaves a sweet Italian finish at the table.'),
+        'zh-recipe-olive-panzanella' => array('slug' => 'olive-panzanella', 'lang' => 'zh', 'description' => '番茄与香草的鲜亮色彩，呼应意式面包沙拉的夏日灵感。'),
+        'en-recipe-olive-panzanella' => array('slug' => 'olive-panzanella', 'lang' => 'en', 'description' => 'Bright tomato and herbs echo the summer spirit of an Italian bread salad.'),
+        'zh-recipe-olive-pinzimonio' => array('slug' => 'olive-pinzimonio', 'lang' => 'zh', 'description' => '新鲜蔬菜展现自然色彩，等待一滴好橄榄油点亮。'),
+        'en-recipe-olive-pinzimonio' => array('slug' => 'olive-pinzimonio', 'lang' => 'en', 'description' => 'Fresh vegetables show their natural colors, ready for a drizzle of fine olive oil.'),
+        'zh-recipe-light-fennel-orange-salad' => array('slug' => 'light-fennel-orange-salad', 'lang' => 'zh', 'description' => '新鲜橙片的明亮香气，为茴香橙子沙拉注入清爽节奏。'),
+        'en-recipe-light-fennel-orange-salad' => array('slug' => 'light-fennel-orange-salad', 'lang' => 'en', 'description' => 'Fresh orange slices bring a bright, refreshing note to fennel and orange salad.'),
+        'zh-recipe-light-grilled-zucchini' => array('slug' => 'light-grilled-zucchini', 'lang' => 'zh', 'description' => '蔬菜在烤架上轻轻上色，唤醒节瓜料理的烟火香气。'),
+        'en-recipe-light-grilled-zucchini' => array('slug' => 'light-grilled-zucchini', 'lang' => 'en', 'description' => 'Vegetables take on color over the grill, inspiring the smoky warmth of grilled zucchini.'),
+        'zh-recipe-light-sea-bass-acqua-pazza' => array('slug' => 'light-sea-bass-acqua-pazza', 'lang' => 'zh', 'description' => '鲜鱼与香草在锅中相遇，勾勒出意式海鲜料理的鲜美。'),
+        'en-recipe-light-sea-bass-acqua-pazza' => array('slug' => 'light-sea-bass-acqua-pazza', 'lang' => 'en', 'description' => 'Fish and fresh herbs meet in the pan, capturing the appeal of Italian seafood.'),
+        'zh-recipe-family-spaghetti-pomodoro' => array('slug' => 'family-spaghetti-pomodoro', 'lang' => 'zh', 'description' => '番茄与罗勒拥抱意大利面，简单食材也能成为餐桌主角。'),
+        'en-recipe-family-spaghetti-pomodoro' => array('slug' => 'family-spaghetti-pomodoro', 'lang' => 'en', 'description' => 'Tomato and basil embrace spaghetti, letting simple ingredients shine.'),
+        'zh-recipe-family-zucchini-frittata' => array('slug' => 'family-zucchini-frittata', 'lang' => 'zh', 'description' => '切开松软烘蛋，让家常节瓜料理多一份温暖。'),
+        'en-recipe-family-zucchini-frittata' => array('slug' => 'family-zucchini-frittata', 'lang' => 'en', 'description' => 'A tender omelette is sliced open, bringing warmth to a family zucchini frittata.'),
+        'zh-recipe-family-chicken-cacciatora' => array('slug' => 'family-chicken-cacciatora', 'lang' => 'zh', 'description' => '鸡肉在锅中慢慢炖煮，家的味道随香气一点点展开。'),
+        'en-recipe-family-chicken-cacciatora' => array('slug' => 'family-chicken-cacciatora', 'lang' => 'en', 'description' => 'Chicken simmers gently in the pot as the comforting aroma of home unfolds.'),
+        'zh-recipe-truffle-summer-crostini' => array('slug' => 'truffle-summer-crostini', 'lang' => 'zh', 'description' => '面包蘸入橄榄油的瞬间，为夏日松露烤面包开启酥香序曲。'),
+        'en-recipe-truffle-summer-crostini' => array('slug' => 'truffle-summer-crostini', 'lang' => 'en', 'description' => 'Bread dipped in olive oil begins the crisp, fragrant story of summer truffle crostini.'),
+        'zh-recipe-truffle-trout' => array('slug' => 'truffle-trout', 'lang' => 'zh', 'description' => '柠檬与香草陪伴烤鳟鱼，呈现清爽又丰盛的一餐。'),
+        'en-recipe-truffle-trout' => array('slug' => 'truffle-trout', 'lang' => 'en', 'description' => 'Lemon and herbs bring freshness to grilled trout and an inviting meal.'),
+        'zh-recipe-truffle-lamb' => array('slug' => 'truffle-lamb', 'lang' => 'zh', 'description' => '一锅羊肉慢炖出浓郁香气，为松露羊肉料理增添灵感。'),
+        'en-recipe-truffle-lamb' => array('slug' => 'truffle-lamb', 'lang' => 'en', 'description' => 'A pan of slow-cooked lamb builds rich aroma and inspires a truffle lamb dish.'),
     );
     if (!isset($videos[$source_id])) return '';
     $video = $videos[$source_id];
     $src = get_template_directory_uri() . '/assets/media/recipes/' . $video['slug'] . '.mp4';
-    $zh = $video['lang'] === 'zh';
-    $prefix = $zh ? '画面：' : 'Video: ';
-    $suffix = $zh ? '。素材画面，非本食谱操作演示。来源：' : '. Stock footage, not a demonstration of this recipe. Source: ';
-    return '<figure class="lux-recipe-video"><video controls playsinline preload="none" poster="' . esc_url($image) . '" aria-label="' . esc_attr($video['description']) . '"><source src="' . esc_url($src) . '" type="video/mp4"></video><figcaption>' . esc_html($prefix . $video['description'] . $suffix) . '<a href="' . esc_url($video['source']) . '" target="_blank" rel="noopener noreferrer">' . esc_html($video['creator']) . ' / Pexels</a></figcaption></figure>';
+    return '<figure class="lux-recipe-video"><video controls playsinline preload="none" poster="' . esc_url($image) . '" aria-label="' . esc_attr($video['description']) . '"><source src="' . esc_url($src) . '" type="video/mp4"></video><figcaption>' . esc_html($video['description']) . '</figcaption></figure>';
 }
 
 function luxureat_cms_recipe_content($content, $source_id, $image) {
@@ -1801,7 +1798,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '81e5354a0d2ead3599d06aeb6060cf55ba7ac64a')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '05505e50445e3c1fb5bd0b28b17a471bcaf901be')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
