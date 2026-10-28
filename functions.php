@@ -482,7 +482,7 @@ function luxureat_static_seo_catalog() {
     return array(
         'zh' => array('title' => 'LuxurEat（露意膳） | 意大利高端美食与品牌合作', 'description' => 'LuxurEat（露意膳）Group 专注意大利高端美食、地道风味与中国市场合作，提供产品、食谱、品牌内容与专业服务。', 'lang' => 'zh', 'alternate' => 'en', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/about-us' => array('title' => '关于我们 | LuxurEat（露意膳）', 'description' => '了解 LuxurEat（露意膳）的品牌传承、产地故事、品质承诺与时令观察。', 'lang' => 'zh', 'alternate' => 'en/about-us', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
-        'zh/product' => array('title' => '系列产品 | LuxurEat（露意膳）', 'description' => '浏览 LuxurEat（露意膳）精选意大利高端美食与松露、鱼子酱等系列产品。', 'lang' => 'zh', 'alternate' => 'en/product', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
+        'zh/product' => array('title' => '我们的产品 | LuxurEat（露意膳）', 'description' => '浏览 LuxurEat（露意膳）精选意大利高端美食，包括松露、鱼子酱等产品。', 'lang' => 'zh', 'alternate' => 'en/product', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/new' => array('title' => '热门新品 | LuxurEat（露意膳）', 'description' => '发现 LuxurEat（露意膳）的意大利橄榄油、披萨与意式手工冰淇淋等热门新品。', 'lang' => 'zh', 'alternate' => 'en/new', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/recipe' => array('title' => '食谱艺术 | LuxurEat（露意膳）', 'description' => '从意大利地域风味到家庭餐桌，探索 LuxurEat（露意膳）的中英文食谱与烹饪灵感。', 'lang' => 'zh', 'alternate' => 'en/recipe', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'zh/brand' => array('title' => '品牌新闻 | LuxurEat（露意膳）', 'description' => '查看 LuxurEat（露意膳）最新品牌活动、行业展会、合作动态与现场故事。', 'lang' => 'zh', 'alternate' => 'en/brand', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
@@ -495,7 +495,7 @@ function luxureat_static_seo_catalog() {
         'zh/contact' => array('title' => '联系我们 | LuxurEat（露意膳）', 'description' => '联系 LuxurEat（露意膳），咨询品牌、产品、渠道与商务合作。', 'lang' => 'zh', 'alternate' => 'en/contact', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en' => array('title' => 'LuxurEat Group | Premium Italian Food & Brand Partnerships', 'description' => 'Discover premium Italian food, authentic regional flavours, recipes, brand stories and professional market partnerships from LuxurEat Group.', 'lang' => 'en', 'alternate' => 'zh', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/about-us' => array('title' => 'About Us | LuxurEat', 'description' => 'Discover LuxurEat\'s brand heritage, stories of place, quality promise and seasonal observations.', 'lang' => 'en', 'alternate' => 'zh/about-us', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
-        'en/product' => array('title' => 'Products | LuxurEat', 'description' => 'Browse LuxurEat\'s selected premium Italian foods, truffle products, caviar and culinary collections.', 'lang' => 'en', 'alternate' => 'zh/product', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
+        'en/product' => array('title' => 'Our Products | LuxurEat', 'description' => 'Browse LuxurEat\'s selected premium Italian foods, truffle products, caviar and culinary collections.', 'lang' => 'en', 'alternate' => 'zh/product', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/new' => array('title' => 'New Arrivals | LuxurEat', 'description' => 'Discover new Italian olive oil, pizza and artisan Gelato selections from LuxurEat.', 'lang' => 'en', 'alternate' => 'zh/new', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/recipe' => array('title' => 'Recipe Art | LuxurEat', 'description' => 'Explore bilingual Italian recipes, regional flavours and practical inspiration for the family table from LuxurEat.', 'lang' => 'en', 'alternate' => 'zh/recipe', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
         'en/brand' => array('title' => 'Brand News | LuxurEat', 'description' => 'Read the latest LuxurEat events, trade exhibitions, partnerships and stories from the field.', 'lang' => 'en', 'alternate' => 'zh/brand', 'indexable' => true, 'type' => 'WebPage', 'image' => 'media/brand/home-hero-truffle-poster.webp'),
@@ -915,7 +915,7 @@ function luxureat_static_seo_head() {
         $parent_names = array(
             'Article' => $is_zh ? '知识博客' : 'Knowledge Blog',
             'NewsArticle' => $is_zh ? '品牌新闻' : 'Brand News',
-            'Product' => $is_zh ? '系列产品' : 'Products',
+            'Product' => $is_zh ? '我们的产品' : 'Products',
             'Event' => $is_zh ? '品牌新闻' : 'Brand News',
             'Recipe' => $is_zh ? '食谱艺术' : 'Recipes',
         );
@@ -1725,7 +1725,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '2689fd90161aea7ebe0a36c97fec4fb9f8e3953f')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'e66c3f09e9c20d8309bda38f443a315034ba8912')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
