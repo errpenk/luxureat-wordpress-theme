@@ -71,7 +71,7 @@ html[lang^="en"] .lux-hero-support{font-family:"Spectral";font-weight:400;line-h
 <noscript></noscript>
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20261008-mobile-images-1'); ?>" media="print" onload="this.onload=null;this.media='all'"><noscript><link href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20261008-mobile-images-1'); ?>" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261008-mobile-images-1'); ?>" media="print" onload="this.onload=null;this.media='all'"><noscript><link href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261008-mobile-images-1'); ?>" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-editorial.css?v=20261008-mobile-images-1-ugolini17'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-editorial.css?v=20261008-mobile-images-1-ugolini18'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
