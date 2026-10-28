@@ -45,6 +45,7 @@ function luxureat_cms_payload($kind) {
             'image' => $image ? $image : '',
             'cmsHtml' => luxureat_origin_upload_images(apply_filters('the_content', $post->post_content)),
         );
+        if ($kind === 'blog') $record['date'] = get_the_date('Y-m-d', $post);
         if ($kind === 'gallery') {
             $video_id = (int) get_post_meta($post->ID, '_luxureat_video_attachment_id', true);
             $video_url = $video_id ? wp_get_attachment_url($video_id) : '';
@@ -1724,7 +1725,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'd880e12b0c61a99577eb520bb4e57eb2b3e218e3')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'c8a303c0c052e7f39d680b747672f51268ae2dcc')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
