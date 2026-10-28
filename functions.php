@@ -67,77 +67,80 @@ function luxureat_cms_payload($kind) {
     return $result;
 }
 
-function luxureat_cms_recipe_video($source_id, $image) {
+function luxureat_cms_recipe_media($source_id, $image) {
     $videos = array(
-        'zh-recipe-truffle-eggs' => array('slug' => 'truffle-eggs', 'lang' => 'zh', 'description' => '金黄煎蛋与柔嫩蛋黄，为松露鸡蛋开启香气四溢的早晨。'),
-        'zh-recipe-truffle-toast' => array('slug' => 'truffle-toast', 'lang' => 'zh', 'description' => '轻轻切开水波蛋，流动的蛋黄为松露吐司带来丰盈灵感。'),
-        'zh-recipe-truffle-tagliolini' => array('slug' => 'truffle-tagliolini', 'lang' => 'zh', 'description' => '从面粉到鲜面，手作的细致为松露意面铺垫风味。'),
-        'zh-recipe-truffle-ravioli' => array('slug' => 'truffle-ravioli', 'lang' => 'zh', 'description' => '厨师细心制作意式馄饨，期待松露点亮最后一口。'),
-        'zh-recipe-black-truffle-risotto' => array('slug' => 'black-truffle-risotto', 'lang' => 'zh', 'description' => '一盘细腻烩饭，映衬黑松露料理的优雅餐桌。'),
-        'zh-recipe-mushroom-soup' => array('slug' => 'mushroom-soup', 'lang' => 'zh', 'description' => '一碗蘑菇浓汤端上桌，让温暖与鲜香慢慢展开。'),
-        'zh-recipe-beef-carpaccio-scallop-truffle' => array('slug' => 'beef-carpaccio-scallop-truffle', 'lang' => 'zh', 'description' => '鲜嫩牛肉被细心切制，为精致的牛肉薄片料理揭开序幕。'),
-        'zh-recipe-shrimp-tartare-truffle' => array('slug' => 'shrimp-tartare-truffle', 'lang' => 'zh', 'description' => '柠檬点亮海鲜的鲜美，也为松露虾塔塔带来清爽灵感。'),
-        'zh-recipe-sweet-bread-butter-caviar' => array('slug' => 'sweet-bread-butter-caviar', 'lang' => 'zh', 'description' => '鱼子酱点亮精致的一口，启发奶油鱼子酱吐司的摆盘美学。'),
-        'zh-recipe-truffle-tiramisu' => array('slug' => 'truffle-tiramisu', 'lang' => 'zh', 'description' => '层层制作的提拉米苏，承载意式甜点的柔软与惊喜。'),
-        'zh-recipe-olive-bruschetta' => array('slug' => 'olive-bruschetta', 'lang' => 'zh', 'description' => '番茄与香草落在酥脆面包上，意式开胃时刻从这里开始。'),
-        'zh-recipe-olive-pasta' => array('slug' => 'olive-pasta', 'lang' => 'zh', 'description' => '橄榄油缓缓裹住意大利面，让每一口都带着地中海风味。'),
-        'zh-recipe-pizza-margherita' => array('slug' => 'pizza-margherita', 'lang' => 'zh', 'description' => '一片罗勒落在玛格丽特披萨上，经典意式风味就此鲜活。'),
-        'zh-recipe-gelato-classic' => array('slug' => 'gelato-classic', 'lang' => 'zh', 'description' => '一勺细腻意式冰淇淋，为餐桌留下甜蜜余韵。'),
-        'en-recipe-truffle-eggs' => array('slug' => 'truffle-eggs', 'lang' => 'en', 'description' => 'Golden fried eggs and a tender yolk set the scene for a fragrant truffle breakfast.'),
-        'en-recipe-truffle-toast' => array('slug' => 'truffle-toast', 'lang' => 'en', 'description' => 'A poached egg breaks open over toast, inspiring a rich and inviting truffle toast.'),
-        'en-recipe-truffle-tagliolini' => array('slug' => 'truffle-tagliolini', 'lang' => 'en', 'description' => 'From flour to fresh pasta, careful hands set the stage for truffle tagliolini.'),
-        'en-recipe-truffle-ravioli' => array('slug' => 'truffle-ravioli', 'lang' => 'en', 'description' => 'A chef shapes ravioli with care, ready for the finishing touch of truffle.'),
-        'en-recipe-black-truffle-risotto' => array('slug' => 'black-truffle-risotto', 'lang' => 'en', 'description' => 'A beautifully plated risotto sets an elegant table for black truffle.'),
-        'en-recipe-mushroom-soup' => array('slug' => 'mushroom-soup', 'lang' => 'en', 'description' => 'A bowl of mushroom soup arrives at the table, bringing warmth and savory comfort.'),
-        'en-recipe-beef-carpaccio-scallop-truffle' => array('slug' => 'beef-carpaccio-scallop-truffle', 'lang' => 'en', 'description' => 'Carefully sliced beef sets the stage for an elegant carpaccio.'),
-        'en-recipe-shrimp-tartare-truffle' => array('slug' => 'shrimp-tartare-truffle', 'lang' => 'en', 'description' => 'A squeeze of lemon brightens seafood and inspires a fresh truffle shrimp tartare.'),
-        'en-recipe-sweet-bread-butter-caviar' => array('slug' => 'sweet-bread-butter-caviar', 'lang' => 'en', 'description' => 'A touch of caviar elevates a delicate bite and inspires the presentation of caviar toast.'),
-        'en-recipe-truffle-tiramisu' => array('slug' => 'truffle-tiramisu', 'lang' => 'en', 'description' => 'Layer by layer, tiramisu comes together with the soft charm of an Italian dessert.'),
-        'en-recipe-olive-bruschetta' => array('slug' => 'olive-bruschetta', 'lang' => 'en', 'description' => 'Tomato and herbs meet crisp bread, opening an inviting Italian aperitivo.'),
-        'en-recipe-olive-pasta' => array('slug' => 'olive-pasta', 'lang' => 'en', 'description' => 'Olive oil coats fresh pasta, bringing Mediterranean flavor to every bite.'),
-        'en-recipe-pizza-margherita' => array('slug' => 'pizza-margherita', 'lang' => 'en', 'description' => 'Fresh basil lands on a Margherita pizza, bringing an Italian classic to life.'),
-        'en-recipe-gelato-classic' => array('slug' => 'gelato-classic', 'lang' => 'en', 'description' => 'A scoop of creamy gelato leaves a sweet Italian finish at the table.'),
-        'zh-recipe-olive-panzanella' => array('slug' => 'olive-panzanella', 'lang' => 'zh', 'description' => '番茄与香草的鲜亮色彩，呼应意式面包沙拉的夏日灵感。'),
-        'en-recipe-olive-panzanella' => array('slug' => 'olive-panzanella', 'lang' => 'en', 'description' => 'Bright tomato and herbs echo the summer spirit of an Italian bread salad.'),
-        'zh-recipe-olive-pinzimonio' => array('slug' => 'olive-pinzimonio', 'lang' => 'zh', 'description' => '新鲜蔬菜展现自然色彩，等待一滴好橄榄油点亮。'),
-        'en-recipe-olive-pinzimonio' => array('slug' => 'olive-pinzimonio', 'lang' => 'en', 'description' => 'Fresh vegetables show their natural colors, ready for a drizzle of fine olive oil.'),
-        'zh-recipe-light-fennel-orange-salad' => array('slug' => 'light-fennel-orange-salad', 'lang' => 'zh', 'description' => '新鲜橙片的明亮香气，为茴香橙子沙拉注入清爽节奏。'),
-        'en-recipe-light-fennel-orange-salad' => array('slug' => 'light-fennel-orange-salad', 'lang' => 'en', 'description' => 'Fresh orange slices bring a bright, refreshing note to fennel and orange salad.'),
-        'zh-recipe-light-grilled-zucchini' => array('slug' => 'light-grilled-zucchini', 'lang' => 'zh', 'description' => '蔬菜在烤架上轻轻上色，唤醒节瓜料理的烟火香气。'),
-        'en-recipe-light-grilled-zucchini' => array('slug' => 'light-grilled-zucchini', 'lang' => 'en', 'description' => 'Vegetables take on color over the grill, inspiring the smoky warmth of grilled zucchini.'),
-        'zh-recipe-light-sea-bass-acqua-pazza' => array('slug' => 'light-sea-bass-acqua-pazza', 'lang' => 'zh', 'description' => '鲜鱼与香草在锅中相遇，勾勒出意式海鲜料理的鲜美。'),
-        'en-recipe-light-sea-bass-acqua-pazza' => array('slug' => 'light-sea-bass-acqua-pazza', 'lang' => 'en', 'description' => 'Fish and fresh herbs meet in the pan, capturing the appeal of Italian seafood.'),
-        'zh-recipe-family-spaghetti-pomodoro' => array('slug' => 'family-spaghetti-pomodoro', 'lang' => 'zh', 'description' => '番茄与罗勒拥抱意大利面，简单食材也能成为餐桌主角。'),
-        'en-recipe-family-spaghetti-pomodoro' => array('slug' => 'family-spaghetti-pomodoro', 'lang' => 'en', 'description' => 'Tomato and basil embrace spaghetti, letting simple ingredients shine.'),
-        'zh-recipe-family-zucchini-frittata' => array('slug' => 'family-zucchini-frittata', 'lang' => 'zh', 'description' => '切开松软烘蛋，让家常节瓜料理多一份温暖。'),
-        'en-recipe-family-zucchini-frittata' => array('slug' => 'family-zucchini-frittata', 'lang' => 'en', 'description' => 'A tender omelette is sliced open, bringing warmth to a family zucchini frittata.'),
-        'zh-recipe-family-chicken-cacciatora' => array('slug' => 'family-chicken-cacciatora', 'lang' => 'zh', 'description' => '鸡肉在锅中慢慢炖煮，家的味道随香气一点点展开。'),
-        'en-recipe-family-chicken-cacciatora' => array('slug' => 'family-chicken-cacciatora', 'lang' => 'en', 'description' => 'Chicken simmers gently in the pot as the comforting aroma of home unfolds.'),
-        'zh-recipe-truffle-summer-crostini' => array('slug' => 'truffle-summer-crostini', 'lang' => 'zh', 'description' => '面包蘸入橄榄油的瞬间，为夏日松露烤面包开启酥香序曲。'),
-        'en-recipe-truffle-summer-crostini' => array('slug' => 'truffle-summer-crostini', 'lang' => 'en', 'description' => 'Bread dipped in olive oil begins the crisp, fragrant story of summer truffle crostini.'),
-        'zh-recipe-truffle-trout' => array('slug' => 'truffle-trout', 'lang' => 'zh', 'description' => '柠檬与香草陪伴烤鳟鱼，呈现清爽又丰盛的一餐。'),
-        'en-recipe-truffle-trout' => array('slug' => 'truffle-trout', 'lang' => 'en', 'description' => 'Lemon and herbs bring freshness to grilled trout and an inviting meal.'),
-        'zh-recipe-truffle-lamb' => array('slug' => 'truffle-lamb', 'lang' => 'zh', 'description' => '一锅羊肉慢炖出浓郁香气，为松露羊肉料理增添灵感。'),
-        'en-recipe-truffle-lamb' => array('slug' => 'truffle-lamb', 'lang' => 'en', 'description' => 'A pan of slow-cooked lamb builds rich aroma and inspires a truffle lamb dish.'),
+        'zh-recipe-truffle-eggs' => array('slug' => 'truffle-eggs', 'lang' => 'zh', 'description' => '金黄煎蛋与柔嫩蛋黄，为松露鸡蛋开启香气四溢的早晨。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-truffle-toast' => array('slug' => 'truffle-toast', 'lang' => 'zh', 'description' => '轻轻切开水波蛋，流动的蛋黄为松露吐司带来丰盈灵感。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-truffle-tagliolini' => array('slug' => 'truffle-tagliolini', 'lang' => 'zh', 'description' => '从面粉到鲜面，手作的细致为松露意面铺垫风味。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-truffle-ravioli' => array('slug' => 'truffle-ravioli', 'lang' => 'zh', 'description' => '厨师细心制作意式馄饨，期待松露点亮最后一口。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-black-truffle-risotto' => array('slug' => 'black-truffle-risotto', 'lang' => 'zh', 'description' => '一盘细腻烩饭，映衬黑松露料理的优雅餐桌。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-mushroom-soup' => array('slug' => 'mushroom-soup', 'lang' => 'zh', 'description' => '一碗蘑菇浓汤端上桌，让温暖与鲜香慢慢展开。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-beef-carpaccio-scallop-truffle' => array('slug' => 'beef-carpaccio-scallop-truffle', 'lang' => 'zh', 'description' => '鲜嫩牛肉被细心切制，为精致的牛肉薄片料理揭开序幕。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-shrimp-tartare-truffle' => array('slug' => 'shrimp-tartare-truffle', 'lang' => 'zh', 'description' => '柠檬点亮海鲜的鲜美，也为松露虾塔塔带来清爽灵感。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-sweet-bread-butter-caviar' => array('slug' => 'sweet-bread-butter-caviar', 'lang' => 'zh', 'description' => '鱼子酱点亮精致的一口，启发奶油鱼子酱吐司的摆盘美学。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-truffle-tiramisu' => array('slug' => 'truffle-tiramisu', 'lang' => 'zh', 'description' => '层层制作的提拉米苏，承载意式甜点的柔软与惊喜。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-olive-bruschetta' => array('slug' => 'olive-bruschetta', 'lang' => 'zh', 'description' => '番茄与香草落在酥脆面包上，意式开胃时刻从这里开始。', 'note' => '营养数据为按上述标准化配料计算的每份估算值，实际结果会因面包品牌、番茄品种及实际调味量而变化。'),
+        'zh-recipe-olive-pasta' => array('slug' => 'olive-pasta', 'lang' => 'zh', 'description' => '橄榄油缓缓裹住意大利面，让每一口都带着地中海风味。', 'note' => '营养数据为每份估算值。煮面水中的盐不会全部进入最终成品。'),
+        'zh-recipe-pizza-margherita' => array('slug' => 'pizza-margherita', 'lang' => 'zh', 'description' => '一片罗勒落在玛格丽特披萨上，经典意式风味就此鲜活。', 'note' => '营养数据为每份估算值。'),
+        'zh-recipe-gelato-classic' => array('slug' => 'gelato-classic', 'lang' => 'zh', 'description' => '一勺细腻意式冰淇淋，为餐桌留下甜蜜余韵。', 'note' => '营养数据为每份估算值。'),
+        'en-recipe-truffle-eggs' => array('slug' => 'truffle-eggs', 'lang' => 'en', 'description' => 'Golden fried eggs and a tender yolk set the scene for a fragrant truffle breakfast.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-truffle-toast' => array('slug' => 'truffle-toast', 'lang' => 'en', 'description' => 'A poached egg breaks open over toast, inspiring a rich and inviting truffle toast.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-truffle-tagliolini' => array('slug' => 'truffle-tagliolini', 'lang' => 'en', 'description' => 'From flour to fresh pasta, careful hands set the stage for truffle tagliolini.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-truffle-ravioli' => array('slug' => 'truffle-ravioli', 'lang' => 'en', 'description' => 'A chef shapes ravioli with care, ready for the finishing touch of truffle.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-black-truffle-risotto' => array('slug' => 'black-truffle-risotto', 'lang' => 'en', 'description' => 'A beautifully plated risotto sets an elegant table for black truffle.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-mushroom-soup' => array('slug' => 'mushroom-soup', 'lang' => 'en', 'description' => 'A bowl of mushroom soup arrives at the table, bringing warmth and savory comfort.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-beef-carpaccio-scallop-truffle' => array('slug' => 'beef-carpaccio-scallop-truffle', 'lang' => 'en', 'description' => 'Carefully sliced beef sets the stage for an elegant carpaccio.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-shrimp-tartare-truffle' => array('slug' => 'shrimp-tartare-truffle', 'lang' => 'en', 'description' => 'A squeeze of lemon brightens seafood and inspires a fresh truffle shrimp tartare.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-sweet-bread-butter-caviar' => array('slug' => 'sweet-bread-butter-caviar', 'lang' => 'en', 'description' => 'A touch of caviar elevates a delicate bite and inspires the presentation of caviar toast.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-truffle-tiramisu' => array('slug' => 'truffle-tiramisu', 'lang' => 'en', 'description' => 'Layer by layer, tiramisu comes together with the soft charm of an Italian dessert.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-olive-bruschetta' => array('slug' => 'olive-bruschetta', 'lang' => 'en', 'description' => 'Tomato and herbs meet crisp bread, opening an inviting Italian aperitivo.', 'note' => 'Estimated per serving from the standardised ingredients above; bread brand, tomato variety and actual seasoning will change the result.'),
+        'en-recipe-olive-pasta' => array('slug' => 'olive-pasta', 'lang' => 'en', 'description' => 'Olive oil coats fresh pasta, bringing Mediterranean flavor to every bite.', 'note' => 'Estimated per serving. Not all salt added to the cooking water enters the finished dish.'),
+        'en-recipe-pizza-margherita' => array('slug' => 'pizza-margherita', 'lang' => 'en', 'description' => 'Fresh basil lands on a Margherita pizza, bringing an Italian classic to life.', 'note' => 'Nutrition values are estimates per serving.'),
+        'en-recipe-gelato-classic' => array('slug' => 'gelato-classic', 'lang' => 'en', 'description' => 'A scoop of creamy gelato leaves a sweet Italian finish at the table.', 'note' => 'Nutrition values are estimates per serving.'),
+        'zh-recipe-olive-panzanella' => array('slug' => 'olive-panzanella', 'lang' => 'zh', 'description' => '番茄与香草的鲜亮色彩，呼应意式面包沙拉的夏日灵感。', 'note' => '营养数据为每份估算值，实际结果会随面包种类、面包含盐量及实际调味量变化。'),
+        'en-recipe-olive-panzanella' => array('slug' => 'olive-panzanella', 'lang' => 'en', 'description' => 'Bright tomato and herbs echo the summer spirit of an Italian bread salad.', 'note' => 'Estimated per serving; bread type, bread salt and actual seasoning will affect the result.'),
+        'zh-recipe-olive-pinzimonio' => array('slug' => 'olive-pinzimonio', 'lang' => 'zh', 'description' => '新鲜蔬菜展现自然色彩，等待一滴好橄榄油点亮。', 'note' => '营养数据为每份估算值，实际结果会随蔬菜种类、橄榄油实际食用量和调味量变化。'),
+        'en-recipe-olive-pinzimonio' => array('slug' => 'olive-pinzimonio', 'lang' => 'en', 'description' => 'Fresh vegetables show their natural colors, ready for a drizzle of fine olive oil.', 'note' => 'Estimated per serving; vegetable selection, the amount of oil actually eaten and seasoning will change the result.'),
+        'zh-recipe-light-fennel-orange-salad' => array('slug' => 'light-fennel-orange-salad', 'lang' => 'zh', 'description' => '新鲜橙片的明亮香气，为茴香橙子沙拉注入清爽节奏。', 'note' => '营养数据为每份估算值，实际结果会随橙子、橄榄及调味量变化。'),
+        'en-recipe-light-fennel-orange-salad' => array('slug' => 'light-fennel-orange-salad', 'lang' => 'en', 'description' => 'Fresh orange slices bring a bright, refreshing note to fennel and orange salad.', 'note' => 'Estimated per serving; oranges, olives and seasoning will affect the result.'),
+        'zh-recipe-light-grilled-zucchini' => array('slug' => 'light-grilled-zucchini', 'lang' => 'zh', 'description' => '蔬菜在烤架上轻轻上色，唤醒节瓜料理的烟火香气。', 'note' => '营养数据为每份估算值。'),
+        'en-recipe-light-grilled-zucchini' => array('slug' => 'light-grilled-zucchini', 'lang' => 'en', 'description' => 'Vegetables take on color over the grill, inspiring the smoky warmth of grilled zucchini.', 'note' => 'Estimated per serving.'),
+        'zh-recipe-light-sea-bass-acqua-pazza' => array('slug' => 'light-sea-bass-acqua-pazza', 'lang' => 'zh', 'description' => '鲜鱼与香草在锅中相遇，勾勒出意式海鲜料理的鲜美。', 'note' => '营养数据为每份估算值；葡萄酒是否使用会影响结果。'),
+        'en-recipe-light-sea-bass-acqua-pazza' => array('slug' => 'light-sea-bass-acqua-pazza', 'lang' => 'en', 'description' => 'Fish and fresh herbs meet in the pan, capturing the appeal of Italian seafood.', 'note' => 'Estimated per serving; using wine will affect the result.'),
+        'zh-recipe-family-spaghetti-pomodoro' => array('slug' => 'family-spaghetti-pomodoro', 'lang' => 'zh', 'description' => '番茄与罗勒拥抱意大利面，简单食材也能成为餐桌主角。', 'note' => '营养数据为每份估算值。'),
+        'en-recipe-family-spaghetti-pomodoro' => array('slug' => 'family-spaghetti-pomodoro', 'lang' => 'en', 'description' => 'Tomato and basil embrace spaghetti, letting simple ingredients shine.', 'note' => 'Estimated per serving.'),
+        'zh-recipe-family-zucchini-frittata' => array('slug' => 'family-zucchini-frittata', 'lang' => 'zh', 'description' => '切开松软烘蛋，让家常节瓜料理多一份温暖。', 'note' => '营养数据为每份估算值。'),
+        'en-recipe-family-zucchini-frittata' => array('slug' => 'family-zucchini-frittata', 'lang' => 'en', 'description' => 'A tender omelette is sliced open, bringing warmth to a family zucchini frittata.', 'note' => 'Estimated per serving.'),
+        'zh-recipe-family-chicken-cacciatora' => array('slug' => 'family-chicken-cacciatora', 'lang' => 'zh', 'description' => '鸡肉在锅中慢慢炖煮，家的味道随香气一点点展开。', 'note' => '营养数据为每份估算值。'),
+        'en-recipe-family-chicken-cacciatora' => array('slug' => 'family-chicken-cacciatora', 'lang' => 'en', 'description' => 'Chicken simmers gently in the pot as the comforting aroma of home unfolds.', 'note' => 'Estimated per serving.'),
+        'zh-recipe-truffle-summer-crostini' => array('slug' => 'truffle-summer-crostini', 'lang' => 'zh', 'description' => '面包蘸入橄榄油的瞬间，为夏日松露烤面包开启酥香序曲。', 'note' => '营养数据为每份估算值。'),
+        'en-recipe-truffle-summer-crostini' => array('slug' => 'truffle-summer-crostini', 'lang' => 'en', 'description' => 'Bread dipped in olive oil begins the crisp, fragrant story of summer truffle crostini.', 'note' => 'Estimated per serving.'),
+        'zh-recipe-truffle-trout' => array('slug' => 'truffle-trout', 'lang' => 'zh', 'description' => '柠檬与香草陪伴烤鳟鱼，呈现清爽又丰盛的一餐。', 'note' => '营养数据为每份估算值。'),
+        'en-recipe-truffle-trout' => array('slug' => 'truffle-trout', 'lang' => 'en', 'description' => 'Lemon and herbs bring freshness to grilled trout and an inviting meal.', 'note' => 'Estimated per serving.'),
+        'zh-recipe-truffle-lamb' => array('slug' => 'truffle-lamb', 'lang' => 'zh', 'description' => '一锅羊肉慢炖出浓郁香气，为松露羊肉料理增添灵感。', 'note' => '营养数据为每份估算值。'),
+        'en-recipe-truffle-lamb' => array('slug' => 'truffle-lamb', 'lang' => 'en', 'description' => 'A pan of slow-cooked lamb builds rich aroma and inspires a truffle lamb dish.', 'note' => 'Estimated per serving.'),
     );
     if (!isset($videos[$source_id])) return '';
     $video = $videos[$source_id];
     $src = get_template_directory_uri() . '/assets/media/recipes/' . $video['slug'] . '.mp4';
-    return '<figure class="lux-recipe-video"><video controls playsinline preload="none" poster="' . esc_url($image) . '" aria-label="' . esc_attr($video['description']) . '"><source src="' . esc_url($src) . '" type="video/mp4"></video><figcaption>' . esc_html($video['description']) . '</figcaption></figure>';
+    return array(
+        'video' => '<figure class="lux-recipe-video"><video controls playsinline preload="none" poster="' . esc_url($image) . '" aria-label="' . esc_attr($video['description']) . '"><source src="' . esc_url($src) . '" type="video/mp4"></video><figcaption>' . esc_html($video['description']) . '</figcaption></figure>',
+        'note' => $video['note'],
+    );
 }
 
 function luxureat_cms_recipe_content($content, $source_id, $image) {
-    $video = luxureat_cms_recipe_video($source_id, $image);
-    if (!$video) return $content;
-    $pattern = '~(<h[2-4]\b[^>]*>\s*(?:每份的估计营养成分|Estimated nutrition per serving)\s*</h[2-4]>\s*<dl\b[^>]*>.*?</dl>(?:\s*<p>\s*(?:<strong>)?\s*(?:营养说明|Nutrition note).*?</p>)?)~su';
+    $media = luxureat_cms_recipe_media($source_id, $image);
+    if (!$media) return $content;
+    $note = '<p class="lux-recipe-nutrition-note">' . esc_html($media['note']) . '</p>';
+    $pattern = '~(<h[2-4]\b[^>]*>\s*(?:每份的估计营养成分|Estimated nutrition per serving)\s*</h[2-4]>)(\s*<dl\b[^>]*>.*?</dl>)(?:\s*<p>\s*(?:<strong>)?\s*(?:营养说明|Nutrition note).*?</p>)?~su';
     if (preg_match($pattern, $content)) {
-        return preg_replace_callback($pattern, function ($match) use ($video) {
-            return '<section class="lux-cms-recipe-nutrition">' . $match[1] . $video . '</section>';
+        return preg_replace_callback($pattern, function ($match) use ($note, $media) {
+            return '<section class="lux-cms-recipe-nutrition">' . $match[1] . $note . $match[2] . $media['video'] . '</section>';
         }, $content, 1);
     }
-    return $content . '<section class="lux-cms-recipe-nutrition">' . $video . '</section>';
+    return $content . '<section class="lux-cms-recipe-nutrition">' . $note . $media['video'] . '</section>';
 }
-
 function luxureat_cms_detail($source_id, $lang, $kind) {
     $post = luxureat_cms_post($source_id, $lang, $kind);
     if (!$post) return false;
@@ -1798,7 +1801,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '05505e50445e3c1fb5bd0b28b17a471bcaf901be')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '5dea71528c3a3c7cd96166887278509eeee97de8')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
