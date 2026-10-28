@@ -71,7 +71,7 @@ html[lang^="en"] .lux-hero-support{font-family:"Spectral";font-weight:400;line-h
 <noscript></noscript>
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20261008-mobile-images-1'); ?>" media="print" onload="this.onload=null;this.media='all'"><noscript><link href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20261008-mobile-images-1'); ?>" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261008-mobile-images-1'); ?>" media="print" onload="this.onload=null;this.media='all'"><noscript><link href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261008-mobile-images-1'); ?>" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-editorial.css?v=20261008-mobile-images-1-ugolini19'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-editorial.css?v=20261008-mobile-images-1-ugolini20'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -190,7 +190,7 @@ html[lang^="en"] .lux-hero-support{font-family:"Spectral";font-weight:400;line-h
 <header class="lux-home-maison-head">
 <div>
 <h2 id="section-5">从意大利经验，<br/>到全球美食集团</h2>
-<p>从产地、产品研发到中国市场合作，我们让意大利食材与更多餐桌相遇。</p><a href="<?php echo esc_url(luxureat_static_url('zh/about-us', '')); ?>">了解我们的故事 ↗</a>
+<p>从产地、产品研发到中国市场合作，我们让意大利食材与更多餐桌相遇。</p><a href="<?php echo esc_url(luxureat_static_url('zh/about-us', '')); ?>">了解我们的故事 <svg class="lux-home-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
 </div>
 </header>
 </div>
@@ -214,7 +214,7 @@ html[lang^="en"] .lux-hero-support{font-family:"Spectral";font-weight:400;line-h
 <img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-flavour-truffle-two-720.webp?v=20261008-mobile-images-1'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-flavour-truffle-two.webp'); ?> 1600w" sizes="100vw" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-flavour-truffle-two-720.webp?v=20261008-mobile-images-1'); ?>" width="1600" height="1067" class="lux-market-slide" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-flavour-truffle-two.webp'); ?>" alt="" loading="lazy" decoding="async">
 </div>
 <div class="lux-home-market-system-layout">
-<div class="lux-feature-intro"><span>FLAVOUR JOURNEYS / 风味专题</span><h2>餐桌上的<br>意大利风味</h2><p>从松露与鱼子酱，到工艺、产地与可持续的选择，沿着食材认识意大利。</p><a href="<?php echo esc_url(luxureat_static_url('zh/product', '')); ?>">探索产品系列 ↗</a><a class="lux-feature-values-link" href="<?php echo esc_url(luxureat_static_url('zh/about-us', '#reader-zh-harvest')); ?>" data-reader-open="zh-harvest">了解我们的价值观 ↗</a></div>
+<div class="lux-feature-intro"><span>FLAVOUR JOURNEYS / 风味专题</span><h2>餐桌上的<br>意大利风味</h2><p>从松露与鱼子酱，到工艺、产地与可持续的选择，沿着食材认识意大利。</p><a href="<?php echo esc_url(luxureat_static_url('zh/product', '')); ?>">探索产品系列 <svg class="lux-home-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a class="lux-feature-values-link" href="<?php echo esc_url(luxureat_static_url('zh/about-us', '#reader-zh-harvest')); ?>" data-reader-open="zh-harvest">了解我们的价值观 <svg class="lux-home-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
 <div class="lux-home-market-features">
 <article class="lux-market-feature" role="button" tabindex="0" data-market-slide-to="0" aria-label="传统传承" aria-pressed="true"><div class="lux-market-card-front"><span class="material-symbols-outlined" data-icon="history_edu" aria-hidden="true" translate="no"></span><h3>传统传承</h3><p>把意大利家族餐桌的真实风味与传统工艺延续至今。</p></div><span class="lux-market-card-back" aria-hidden="true"></span></article>
 <article class="lux-market-feature" role="button" tabindex="0" data-market-slide-to="1" aria-label="创新表达" aria-pressed="false"><div class="lux-market-card-front"><span class="material-symbols-outlined" data-icon="lightbulb" aria-hidden="true" translate="no"></span><h3>创新表达</h3><p>让经典食谱与现代料理相连，使优质食材自然融入日常。</p></div><span class="lux-market-card-back" aria-hidden="true"></span></article>
