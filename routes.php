@@ -306,6 +306,8 @@ return array(
     'en/recipe/truffle-trout' => 'pages/en/recipe/truffle-trout.php',
     'recipe/truffle-lamb' => 'pages/zh/recipe/truffle-lamb.php',
     'en/recipe/truffle-lamb' => 'pages/en/recipe/truffle-lamb.php',
+    'news/fhc-shanghai-2026-new-products' => 'pages/zh/news/fhc-shanghai-2026-new-products.php',
+    'en/news/fhc-shanghai-2026-new-products' => 'pages/en/news/fhc-shanghai-2026-new-products.php',
     'news/sial-paris-2026-lazio-global' => 'pages/zh/news/sial-paris-2026-lazio-global.php',
     'en/news/sial-paris-2026-lazio-global' => 'pages/en/news/sial-paris-2026-lazio-global.php',
     'news/fhc-shanghai-2026-breakfast' => 'pages/zh/news/fhc-shanghai-2026-breakfast.php',
