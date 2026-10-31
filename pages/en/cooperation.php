@@ -342,6 +342,7 @@
 <p class="font-body-md text-on-surface-variant max-w-md">
                         Tell us the product, format, estimated quantity, delivery market and target date. Our business advisory team will respond with an OEM assessment, wholesale quote, customization guidance or sample arrangements.
                     </p>
+<aside class="lux-quote-wechat" aria-label="WeChat: LuxurEatChina"><img width="84" height="84" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/wechat-qr.webp'); ?>" alt="WeChat QR code"><span class="lux-wechat-copy"><span lang="en">More details or more information, you can also search for our WeChat ID:</span><b lang="en">LuxurEatChina</b></span></aside>
 <div class="lux-inquiry-divider" aria-hidden="true"></div>
 <div class="pt-8 space-y-4">
 <div class="flex items-center gap-4">
@@ -382,7 +383,6 @@
 <input class="lux-contact-honeypot" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="lux-quote-submit">
 <button type="submit">Submit Quote Request</button>
-<aside class="lux-quote-wechat" aria-label="WeChat: LuxurEatChina"><img width="84" height="84" loading="lazy" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/wechat-qr.webp'); ?>" alt="WeChat QR code"><b lang="en">LuxurEatChina</b></aside>
 <p class="lux-quote-privacy">By submitting, you agree that we may use these details to respond to this business enquiry.</p>
 <p class="lux-contact-feedback" data-contact-feedback role="status" aria-live="polite"></p>
 </div>
