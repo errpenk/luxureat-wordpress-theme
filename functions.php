@@ -489,7 +489,7 @@ function luxureat_static_search_metadata_endpoint() {
         '/robots.txt' => array('robots.txt', 'text/plain; charset=UTF-8'),
         '/llms.txt' => array('llms.txt', 'text/plain; charset=UTF-8'),
         '/sitemap.xml' => array('sitemap.xml', 'application/xml; charset=UTF-8'),
-        '/catalogues/tin-caviar-academy.pdf' => array('assets/documents/tin-caviar-academy.pdf', 'application/pdf'),
+        '/catalogues/tin-caviar-brochure.pdf' => array('assets/documents/tin-caviar-brochure.pdf', 'application/pdf'),
         '/catalogues/luxureat-brochure.pdf' => array('assets/documents/luxureat-brochure.pdf', 'application/pdf'),
     );
 
@@ -1805,7 +1805,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '9869dcb4b3f8f4ddae24cc769c0012f741e8bdf8')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '89c36bf83a3b27b3511fb6a554fef7958cb91b6f')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
