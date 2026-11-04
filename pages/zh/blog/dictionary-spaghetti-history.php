@@ -8,15 +8,15 @@
 <meta name="description" content="从中世纪地中海的干制面食，到那不勒斯的日常餐桌，再到风靡世界：意大利面的起源，比任何传奇故事都更加精彩。">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261104-product-switch4'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-blog-critical.woff2?v=20261104-product-switch4'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20261104-product-switch4'); ?>" as="font" type="font/ttf" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261104-product-switch4'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20261104-product-switch4-site-font7'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-blog-critical.woff2?v=20261104-product-switch4'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20261104-product-switch4-site-font7'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261104-truffelixir-release3'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-blog-critical.woff2?v=20261104-truffelixir-release3'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20261104-truffelixir-release3'); ?>" as="font" type="font/ttf" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261104-truffelixir-release3'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20261104-truffelixir-release3-site-font7'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-blog-critical.woff2?v=20261104-truffelixir-release3'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20261104-truffelixir-release3-site-font7'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261104-product-switch4'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261104-truffelixir-release3'); ?>">
   
   
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-product-switch4'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-truffelixir-release3'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head>
@@ -38,7 +38,7 @@
 Commons，公共领域。</em></p>
 <p>一盘意大利面，或许是最能让人立刻联想到意大利的食物之一。想象一下，用叉子卷起细长的面条，配上番茄与罗勒—简单的食材，却足以让人辨认出一种已经走向世界的饮食文化。</p>
 <p>但当我们追问"究竟是谁发明了 spaghetti？"时，答案却没有想象中那么简单。</p>
-<p>它诞生于西西里？那不勒斯？还是像著名传说所说的那样，由马可·波罗从中国带回意大利？</p>
+<p>它诞生于西西里？那不勒斯？还是像流传的故事所说的那样，由马可·波罗从中国带回意大利？</p>
 <p>我们并不知道某一位明确的"意大利面发明者"，也无法确定一个唯一的诞生地点和日期。不过，我们可以沿着几个关键节点重新理解它的历史：中世纪西西里的干制面食生产、地中海贸易网络、那不勒斯面食文化的发展，以及今天我们所熟悉的"spaghetti"这一名称的出现。</p>
 <p>理解这段历史，首先要区分三个彼此相关、却并不完全相同的问题：<strong>面食从哪里来、长条形面食从哪里来，以及意大利
 spaghetti 传统是如何形成的。</strong></p>
