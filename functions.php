@@ -932,8 +932,6 @@ function luxureat_static_seo_head() {
         echo '<link rel="alternate" hreflang="en" href="' . esc_url(luxureat_static_url($en_route)) . '">' . "
 ";
     }
-    echo '<link rel="alternate" hreflang="x-default" href="' . esc_url(luxureat_static_url($zh_route)) . '">' . "
-";
     $is_article = in_array($meta['type'], array('Article', 'NewsArticle'), true);
     $og_type = $is_article ? 'article' : ($meta['type'] === 'Product' ? 'product' : 'website');
     echo '<meta property="og:type" content="' . esc_attr($og_type) . '">' . "
@@ -1810,7 +1808,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '02f8b92634df3b5e1d00ba1d6d0487a9d4e9e87a')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'c50eefcd7ffedf1af66cf1d57c77beaf5f302336')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
