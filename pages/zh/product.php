@@ -4,14 +4,14 @@
 <meta name="description" content="浏览 LuxurEat（露意膳）精选意大利高端美食，包括松露、鱼子酱等产品。">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261103-services-product-recipe-videos3'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-caviar-critical.woff2?v=20261103-services-product-recipe-videos3'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20261103-services-product-recipe-videos3'); ?>" as="font" type="font/ttf" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261103-services-product-recipe-videos3'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Labels Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20261103-services-product-recipe-videos3'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20261103-services-product-recipe-videos3-site-font7'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-caviar-critical.woff2?v=20261103-services-product-recipe-videos3'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20261103-services-product-recipe-videos3-site-font7'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Labels Critical","KingHwa Old Song Site"!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Labels Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261104-product-switch4'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-caviar-critical.woff2?v=20261104-product-switch4'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20261104-product-switch4'); ?>" as="font" type="font/ttf" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261104-product-switch4'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Labels Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-labels-critical.woff2?v=20261104-product-switch4'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20261104-product-switch4-site-font7'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-caviar-critical.woff2?v=20261104-product-switch4'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20261104-product-switch4-site-font7'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Labels Critical","KingHwa Old Song Site"!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Labels Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261103-services-product-recipe-videos3'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261104-product-switch4'); ?>">
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261103-services-product-recipe-videos3'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-product-switch4'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <?php wp_head(); ?>
 </head><body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container flex flex-col min-h-screen">
@@ -38,6 +38,7 @@
 <p class="lux-page-hero-subtitle lux-hero-support max-w-2xl mt-4 text-center">
 <span class="block">我们的产品由专业生产商精心打造，并按照严格的工艺与品质标准进行生产和管理。从原料筛选到最终包装，每一个环节都致力于呈现稳定、纯正且符合高端餐饮需求的品质表现。</span>
 </p>
+<nav class="lux-catalogue-switch" aria-label="产品浏览切换"><a href="<?php echo esc_url(luxureat_static_url('zh/product', '')); ?>" aria-current="page">产品全览</a><a href="<?php echo esc_url(luxureat_static_url('zh/new', '')); ?>">热门新品</a></nav>
 </section>
 <!-- Filters & Sorting -->
 <section class="flex flex-col md:flex-row justify-between items-center gap-6 border-y border-white/10 py-4 sticky top-[78px] bg-background z-40" data-lux-caviar-controls>
@@ -100,7 +101,7 @@
 <div class="relative z-10 text-center flex flex-col items-center gap-6 max-w-3xl">
 <h3 class="font-display-lg text-display-lg-mobile md:text-display-lg text-secondary">食谱艺术</h3>
 <p class="lux-page-hero-subtitle lux-promo-support-copy">
-                     从早餐、第一道主食到甜点，以LuxurEat（露意膳）鱼子酱、松露与精选食材构筑意大利餐桌，让每一道食谱兼具本味、技法与优雅。
+                     从早餐、意式主食到甜点，以LuxurEat（露意膳）鱼子酱、松露与精选食材构筑意大利餐桌，让每一道食谱兼具本味、技法与优雅。
                  </p>
 <a class="inline-flex px-12 py-4 border border-primary text-primary font-label-lg uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all duration-500 active:scale-95" href="<?php echo esc_url(luxureat_static_url('zh/recipe', '')); ?>">探索食谱</a>
 </div>
