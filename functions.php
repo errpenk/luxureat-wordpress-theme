@@ -127,7 +127,7 @@ function luxureat_cms_recipe_media($source_id, $image) {
     $src = get_template_directory_uri() . '/assets/media/recipes/' . $video['slug'] . '.mp4';
     $extras = '<div class="lux-recipe-extra-videos">';
     foreach ($video['extras'] as $index => $extra) {
-        $extras .= '<video style="flex-grow: ' . (float) $video['ratios'][$index] . '; aspect-ratio: ' . (float) $video['ratios'][$index] . '" data-lux-autoplay autoplay muted loop playsinline preload="metadata" controls><source src="' . esc_url(get_template_directory_uri() . $extra) . '" type="video/mp4"></video>';
+        $extras .= '<video style="flex-grow: ' . (float) $video['ratios'][$index] . '; aspect-ratio: ' . (float) $video['ratios'][$index] . '" data-lux-autoplay muted loop playsinline preload="none" controls><source data-src="' . esc_url(get_template_directory_uri() . $extra) . '" type="video/mp4"></video>';
     }
     $extras .= '</div>';
     return array(
@@ -1834,7 +1834,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '28da09fa5e4f67352744f548a3a9e61cfc89555c')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'cf8b877eb278d1c7d28e3a0b0b38861f892204a5')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
