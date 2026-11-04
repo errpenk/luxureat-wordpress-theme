@@ -8,12 +8,12 @@
 <!-- Fonts -->
 
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-rituals-critical.woff2?v=20261104-mobile-media-footer'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-rituals-critical.woff2?v=20261104-mobile-media-footer'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20261104-mobile-media-footer'); ?>" as="font" type="font/ttf" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-rituals-critical.woff2?v=20261104-mobile-media-footer'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20261104-mobile-media-footer-site-font7'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-rituals-critical.woff2?v=20261104-mobile-media-footer'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20261104-mobile-media-footer-site-font7'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-rituals-critical.woff2?v=20261104-mobile-grids-flips'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-rituals-critical.woff2?v=20261104-mobile-grids-flips'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/MaterialSymbolsOutlined-subset.ttf?v=20261104-mobile-grids-flips'); ?>" as="font" type="font/ttf" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-rituals-critical.woff2?v=20261104-mobile-grids-flips'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Old Song Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-site.woff2?v=20261104-mobile-grids-flips-site-font7'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"ZhiSong Page Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-rituals-critical.woff2?v=20261104-mobile-grids-flips'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-site.woff2?v=20261104-mobile-grids-flips-site-font7'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-headline:"KingHwa Page Critical","KingHwa Old Song Site"!important;--lux-zh-body:"ZhiSong Page Critical","LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261104-mobile-media-footer'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261104-mobile-grids-flips'); ?>">
 <style>
         body {
             background-color: #000000;
@@ -49,12 +49,13 @@
     </style>
 
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-mobile-media-footer'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/rituals.css?v=20261104-mobile-media-footer-recipe2'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-mobile-grids-flips'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/rituals.css?v=20261104-mobile-grids-flips-recipe2'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/mobile-sections.css?v=20261104-mobile-grids-flips'); ?>">
 <?php wp_head(); ?>
 </head>
-<body class="bg-background text-on-background">
+<body class="lux-recipe-page bg-background text-on-background">
 <!-- lux:header:start -->
 <header class="lux-header">
   <a class="lux-brand" href="<?php echo esc_url(luxureat_static_url('zh', '')); ?>"><img width="64" height="64" loading="eager" fetchpriority="high" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo-64.webp'); ?>" srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo-64.webp'); ?> 64w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo-96.webp'); ?> 96w" sizes="(max-width: 1080px) 96px, 64px" alt="LuxurEat"></a>
