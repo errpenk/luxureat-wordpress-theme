@@ -463,7 +463,7 @@ function luxureat_static_publish_root_metadata() {
         return;
     }
 
-    foreach (array('robots.txt', 'llms.txt', 'sitemap.xml') as $filename) {
+    foreach (array('robots.txt', 'llms.txt', 'sitemap.xml', '.well-known/ard.json') as $filename) {
         $source = get_template_directory() . '/' . $filename;
         $target = trailingslashit(ABSPATH) . $filename;
         if (!is_readable($source)) {
@@ -476,6 +476,9 @@ function luxureat_static_publish_root_metadata() {
             continue;
         }
 
+        if (strpos($filename, '/') !== false && !is_dir(dirname($target))) {
+            wp_mkdir_p(dirname($target));
+        }
         $temporary = $target . '.luxureat.tmp';
         if (file_put_contents($temporary, $contents, LOCK_EX) !== false) {
             @chmod($temporary, 0644);
@@ -1835,7 +1838,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '1e79c5ae9c0dd14978cc30b59cc3a39a9d5c32f1')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'ac0d7ea48d5dd5709f817dc6dec843ac17e39b31')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
