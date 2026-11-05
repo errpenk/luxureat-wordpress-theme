@@ -1508,10 +1508,6 @@ function luxureat_static_filter_plugin_style($html, $handle) {
     if (isset(luxureat_static_routes()[$path]) && in_array($handle, array('wc-blocks-style', 'woocommerce-inline'), true)) {
         return '';
     }
-    if ($handle === 'luxureat-integration' && in_array($path, array('zh', 'en'), true)) {
-        return str_replace("media='all'", "media='print' onload=\"this.onload=null;this.media='all'\"", $html)
-            . '<noscript>' . $html . '</noscript>';
-    }
     return $html;
 }
 add_filter('style_loader_tag', 'luxureat_static_filter_plugin_style', PHP_INT_MAX, 2);
@@ -1838,7 +1834,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '9fc5145f032ba52266fdbc37ed67720067ba3b75')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '0374fd43142fd11d321786f453494f9572c1d8d8')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }

@@ -56,7 +56,7 @@ html[lang^="en"] .lux-hero-support{font-family:"Spectral";font-weight:400;line-h
 .lux-home-page > .lux-home-partnership-continuum{contain-intrinsic-size:auto 1800px}
 </style>
 <!-- lux:home-critical:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20261104-mobile-grids-flips'); ?>" media="print" onload="this.onload=null;this.media='all'"><noscript><link href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20261104-mobile-grids-flips'); ?>" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-home.css?v=20261104-mobile-grids-flips'); ?>">
 <style>
         body {
             background-color: #131313;
@@ -91,10 +91,10 @@ html[lang^="en"] .lux-hero-support{font-family:"Spectral";font-weight:400;line-h
         ::-webkit-scrollbar-thumb { background: #353535; }
     </style>
 
-<noscript></noscript>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20261104-mobile-grids-flips'); ?>" media="print" onload="this.onload=null;this.media='all'"><noscript><link href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20261104-mobile-grids-flips'); ?>" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-mobile-grids-flips'); ?>" media="print" onload="this.onload=null;this.media='all'"><noscript><link href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-mobile-grids-flips'); ?>" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-editorial.css?v=20261104-mobile-grids-flips-ugolini20-perf1'); ?>" media="print" onload="this.onload=null;this.media='all'"><noscript><link href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-editorial.css?v=20261104-mobile-grids-flips-ugolini20-perf1'); ?>" rel="stylesheet"></noscript>
+
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-watermarks-lock.css?v=20261104-mobile-grids-flips'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-mobile-grids-flips'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-editorial.css?v=20261104-mobile-grids-flips-ugolini20-stable2'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <link rel="ard" href="https://luxureat.cn/.well-known/ard.json">
 <?php wp_head(); ?>
