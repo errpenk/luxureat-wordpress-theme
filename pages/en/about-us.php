@@ -133,8 +133,8 @@
 <p>Making Italian specialty food relevant to different lifestyles through clear, modern, and responsible product experiences.</p>
 </div>
 <div class="lux-about-program-grid lux-about-program-grid--two">
-<article><span>YOUNGER CONSUMERS</span><h3>For Younger Consumers</h3><p>Modern formats, convenient serving occasions, clear packaging, and shareable experiences help truffles, caviar, and Italian specialty foods fit more naturally into everyday life. Serving methods and product characteristics must be verified in the <a class="lux-context-link border-b border-primary/40 text-primary transition-colors hover:border-secondary hover:text-secondary" href="<?php echo esc_url(luxureat_static_url('en/product', '')); ?>">relevant product information</a>.</p></article>
-<article><span>SENIOR CONSUMERS</span><h3>For Senior Consumers</h3><p>We focus on controlled portions, ease of use, clear ingredient and nutrition information, and, where applicable, lighter formulations and accessible textures. Formulation and suitability details must be verified in the relevant product information.</p></article>
+<article><span>CARE FOR THE YOUTH</span><h3>For Younger Consumers</h3><p>Modern formats, convenient serving occasions, clear packaging, and shareable experiences help truffles, caviar, and Italian specialty foods fit more naturally into everyday life. Serving methods and product characteristics must be verified in the <a class="lux-context-link border-b border-primary/40 text-primary transition-colors hover:border-secondary hover:text-secondary" href="<?php echo esc_url(luxureat_static_url('en/product', '')); ?>">relevant product information</a>.</p></article>
+<article><span>CARE FOR THE SENIOR</span><h3>For Senior Consumers</h3><p>We focus on controlled portions, ease of use, clear ingredient and nutrition information, and, where applicable, lighter formulations and accessible textures. Formulation and suitability details must be verified in the relevant product information.</p></article>
 </div>
 <aside class="lux-product-characteristics-note">
 <strong>Product Characteristics Notice</strong>
