@@ -105,7 +105,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center transition-all duration-1000 opacity-100">
 <div class="lg:col-span-7 article-card lux-reader-card group cursor-pointer">
 <div class="aspect-[16/10] overflow-hidden mb-8 border border-white/5 lux-reader-media">
-<img srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/about-heritage-gift-720.webp?v=20261104-mobile-grids-flips'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/about/about-heritage-gift.webp'); ?> 1460w" sizes="100vw" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/about-heritage-gift-720.webp?v=20261104-mobile-grids-flips'); ?>" width="1460" height="912" loading="lazy" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/about-heritage-gift.webp'); ?>" alt="TrufflEat 松露美食礼盒">
+<img fetchpriority="high" srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/about-heritage-gift-720.webp?v=20261104-mobile-grids-flips'); ?> 720w, <?php echo esc_url(get_template_directory_uri() . '/assets/media/about/about-heritage-gift.webp'); ?> 1460w" sizes="100vw" data-lux-mobile-src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/about-heritage-gift-720.webp?v=20261104-mobile-grids-flips'); ?>" width="1460" height="912" loading="eager" decoding="async" class="w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/about/about-heritage-gift.webp'); ?>" alt="TrufflEat 松露美食礼盒">
 <button type="button" class="lux-reader-cta" data-reader-open="zh-harvest">阅读详情</button>
 </div>
 </div>
