@@ -1745,22 +1745,7 @@ add_filter('wp_headers', 'luxureat_static_cache_headers');
 
 function luxureat_static_hide_server_version() {
     header_remove('X-Powered-By');
-    $path = luxureat_static_current_path();
-    $aliases = luxureat_static_aliases();
-    $path = isset($aliases[$path]) ? $aliases[$path] : ($path === '' ? 'zh' : $path);
-    if (!is_admin() && !is_user_logged_in() && !(function_exists('wp_doing_ajax') && wp_doing_ajax()) && isset(luxureat_static_routes()[$path])) {
-        $cookies = array();
-        foreach (headers_list() as $header) {
-            if (stripos($header, 'Set-Cookie:') === 0 && stripos($header, 'Set-Cookie: PHPSESSID=') !== 0) {
-                $cookies[] = $header;
-            }
-        }
-        header_remove('Set-Cookie');
-        foreach ($cookies as $cookie) {
-            header($cookie, false);
-        }
-        header_remove('Pragma');
-        header_remove('Expires');
+    if (!is_admin() && !is_user_logged_in()) {
         header('Cache-Control: public, max-age=300, s-maxage=1800, stale-while-revalidate=86400', true);
     }
 }
@@ -1853,7 +1838,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'c156b89edd14f34d37ef07ace1bd8620e11c0ef9')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '6c787e52157522585cdc65c133a756b8cbd687e7')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
