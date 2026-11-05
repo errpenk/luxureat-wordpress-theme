@@ -495,6 +495,7 @@ function luxureat_static_search_metadata_endpoint() {
         '/google053137c136af2773.html' => array('google053137c136af2773.html', 'text/html; charset=UTF-8'),
         '/robots.txt' => array('robots.txt', 'text/plain; charset=UTF-8'),
         '/llms.txt' => array('llms.txt', 'text/plain; charset=UTF-8'),
+        '/.well-known/ard.json' => array('.well-known/ard.json', 'application/ard+json; charset=UTF-8'),
         '/sitemap.xml' => array('sitemap.xml', 'application/xml; charset=UTF-8'),
         '/catalogues/tin-caviar-brochure.pdf' => array('assets/documents/tin-caviar-brochure.pdf', 'application/pdf'),
         '/catalogues/luxureat-brochure.pdf' => array('assets/documents/luxureat-brochure.pdf', 'application/pdf'),
@@ -1834,7 +1835,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'a5c9efd16339f334091c216712c1f451e0506762')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '1e79c5ae9c0dd14978cc30b59cc3a39a9d5c32f1')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }

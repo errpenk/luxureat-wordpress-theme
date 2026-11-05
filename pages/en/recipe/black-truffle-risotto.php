@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/rituals.css?v=20261104-mobile-grids-flips-recipe2'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/mobile-sections.css?v=20261104-mobile-grids-flips'); ?>">
+<link rel="ard" href="https://luxureat.cn/.well-known/ard.json">
 <?php wp_head(); ?>
 </head>
 <body class="lux-recipe-page antialiased min-h-screen flex flex-col">

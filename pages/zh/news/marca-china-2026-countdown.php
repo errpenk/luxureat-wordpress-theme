@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-mobile-grids-flips'); ?>">
   <style>.lux-news-page .lux-recent-events{margin-top:0}</style>
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
+<link rel="ard" href="https://luxureat.cn/.well-known/ard.json">
 <?php wp_head(); ?>
 </head>
 <body class="lux-news-page bg-[#131313] text-[#e5e2e1]">

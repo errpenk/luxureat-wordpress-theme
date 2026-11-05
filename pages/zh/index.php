@@ -73,6 +73,7 @@ html[lang^="en"] .lux-hero-support{font-family:"Spectral";font-weight:400;line-h
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-mobile-grids-flips'); ?>" media="print" onload="this.onload=null;this.media='all'"><noscript><link href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261104-mobile-grids-flips'); ?>" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/home-editorial.css?v=20261104-mobile-grids-flips-ugolini20'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
+<link rel="ard" href="https://luxureat.cn/.well-known/ard.json">
 <?php wp_head(); ?>
 </head>
 <body class="lux-home-page antialiased bg-background text-on-background selection:bg-primary selection:text-on-primary">
