@@ -56,7 +56,7 @@
 <!-- Corporate Hero Section -->
 <section class="lux-page-top-hero lux-hero-tail lux-gifting-hero lux-standard-hero relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center opacity-70" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/gifting-hero-cooperation.webp'); ?>')"></div>
+<div class="w-full h-full bg-cover bg-center opacity-70" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/cooperation-business-team.webp'); ?>')"></div>
 <div class="absolute inset-0 lux-hero-fade-both"></div>
 </div>
 <div class="lux-page-hero-content relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto">
