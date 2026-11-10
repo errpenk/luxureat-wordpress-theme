@@ -1,0 +1,106 @@
+{
+  "zh": {
+    "title": "中文 · LuxurEat（露意膳）",
+    "file": "pages/zh/index.php"
+  },
+  "zh/about-us": {
+    "title": "中文 · 关于我们",
+    "file": "pages/zh/about-us.php"
+  },
+  "zh/product": {
+    "title": "中文 · 我们的产品",
+    "file": "pages/zh/product.php"
+  },
+  "zh/new": {
+    "title": "中文 · 热门新品",
+    "file": "pages/zh/new.php"
+  },
+  "zh/recipe": {
+    "title": "中文 · 食谱艺术",
+    "file": "pages/zh/recipe.php"
+  },
+  "zh/brand": {
+    "title": "中文 · 品牌新闻",
+    "file": "pages/zh/brand.php"
+  },
+  "zh/gallery": {
+    "title": "中文 · 企业画廊",
+    "file": "pages/zh/gallery.php"
+  },
+  "zh/blog": {
+    "title": "中文 · 知识博客",
+    "file": "pages/zh/blog.php"
+  },
+  "zh/certification": {
+    "title": "中文 · 品质认证",
+    "file": "pages/zh/certification.php"
+  },
+  "zh/cooperation": {
+    "title": "中文 · 商务合作",
+    "file": "pages/zh/cooperation.php"
+  },
+  "zh/china-market-insights": {
+    "title": "中文 · 中国市场洞察",
+    "file": "pages/zh/china-market-insights.php"
+  },
+  "zh/import-export-services": {
+    "title": "中文 · 中国进出口与市场服务",
+    "file": "pages/zh/import-export-services.php"
+  },
+  "zh/contact": {
+    "title": "中文 · 联系我们",
+    "file": "pages/zh/contact.php"
+  },
+  "en": {
+    "title": "English · LuxurEat Group",
+    "file": "pages/en/index.php"
+  },
+  "en/about-us": {
+    "title": "English · About Us",
+    "file": "pages/en/about-us.php"
+  },
+  "en/product": {
+    "title": "English · Our Products",
+    "file": "pages/en/product.php"
+  },
+  "en/new": {
+    "title": "English · New Arrivals",
+    "file": "pages/en/new.php"
+  },
+  "en/recipe": {
+    "title": "English · Recipe Art",
+    "file": "pages/en/recipe.php"
+  },
+  "en/brand": {
+    "title": "English · Brand News",
+    "file": "pages/en/brand.php"
+  },
+  "en/gallery": {
+    "title": "English · Company Gallery",
+    "file": "pages/en/gallery.php"
+  },
+  "en/blog": {
+    "title": "English · Knowledge Blog",
+    "file": "pages/en/blog.php"
+  },
+  "en/certification": {
+    "title": "English · Quality & Certification",
+    "file": "pages/en/certification.php"
+  },
+  "en/cooperation": {
+    "title": "English · Cooperation",
+    "file": "pages/en/cooperation.php"
+  },
+  "en/china-market-insights": {
+    "title": "English · China Market Insights",
+    "file": "pages/en/china-market-insights.php"
+  },
+  "en/import-export-services": {
+    "title": "English · China Import, Export & Market Services",
+    "file": "pages/en/import-export-services.php"
+  },
+  "en/contact": {
+    "title": "English · Contact",
+    "file": "pages/en/contact.php"
+  }
+}
