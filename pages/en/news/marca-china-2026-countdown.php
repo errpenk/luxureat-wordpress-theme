@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>7-Day Countdown | Top Products Gather at Marca China — Discover the Next Bestseller! | LuxurEat</title>
+<title>Marca China 2026: Seven Days to Discover New Products | LuxurEat</title>
 <meta name="description" content="The Guangzhou International Private Label Fair brings together quality exhibitors from food, beauty, household and pet sectors, offering retailers, brand owners, e-commerce businesses and buyers fresh sourcing inspiration.">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Who Invented Spaghetti? The Story of an Italian Symbol, from Sicily and Naples to the Legends of China | LuxurEat</title>
+<title>Who Invented Spaghetti? Its Italian History | LuxurEat</title>
 <meta name="description" content="From the dried pasta of the medieval Mediterranean to the tables of Naples and its international success, the origins of spaghetti tell a story more fascinating than any legend.">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>LuxurEat, Truffleat, Caviareat and Ugolini Gourmet Together at SIAL Paris 2026 | LuxurEat</title>
+<title>LuxurEat Group Brands at SIAL Paris 2026 | LuxurEat</title>
 <meta name="description" content="From 17 to 21 October 2026, four brands will come together in Paris to present truffles, caviar and Italian gourmet specialties at one of the international food industry’s major global events.">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->

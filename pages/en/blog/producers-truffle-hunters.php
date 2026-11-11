@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Masters of the Forest: How Italian Truffle Hunters Read the Underground World | LuxurEat</title>
+<title>Italian Truffle Hunters: Masters of the Forest | LuxurEat</title>
 <meta name="description" content="Before a truffle reaches the table, there is no perfectly organised orchard and no production line capable of predicting the exact position of every truffle.">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
