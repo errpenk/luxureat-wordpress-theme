@@ -28,6 +28,10 @@ function luxureat_cms_responsive_images($content) {
         }
         if ($tags->get_attribute('alt') === null) $tags->set_attribute('alt', get_post_meta($id, '_wp_attachment_image_alt', true));
         if (!$tags->get_attribute('loading')) $tags->set_attribute('loading', 'lazy');
+        if ($tags->get_attribute('loading') === 'lazy' && $tags->get_attribute('srcset')) {
+            $sizes = $tags->get_attribute('sizes') ?: '100vw';
+            if (strpos($sizes, 'auto') !== 0) $tags->set_attribute('sizes', 'auto, ' . $sizes);
+        }
         $tags->set_attribute('decoding', 'async');
     }
     return $tags->get_updated_html();
@@ -1894,7 +1898,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '6735f0d269b4f923c2ec27e72ba02b8fc0585b32')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'bc048dfee6c614ffee09aa32e41825d443205c2f')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
