@@ -65,7 +65,7 @@ function luxureat_cms_payload($kind) {
     foreach (luxureat_cms_posts($kind) as $post) {
         $id = get_post_meta($post->ID, '_luxureat_source_id', true);
         $lang = get_post_meta($post->ID, '_luxureat_lang', true);
-        $image = get_the_post_thumbnail_url($post->ID, 'full');
+        $image = get_the_post_thumbnail_url($post->ID, 'medium_large');
         $record = array(
             'title' => get_the_title($post),
             'intro' => get_the_excerpt($post),
@@ -1894,7 +1894,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '9183c4f07746505f3bc44b2e583f819cba790dbd')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '63301438ffefc609c27ada9228a51204041b60f5')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
