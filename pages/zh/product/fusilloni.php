@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>螺旋粉 · 6 × 350 g | LuxurEat</title>
-<meta name="description" content="宽大的螺旋结构能够将酱汁充分卷入面体。采用 100% 意大利硬质小麦粗面粉与当地纯净泉水制作，经青铜模具拉制和 40–45°C 低温慢干 24–48 小时。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '螺旋粉 · 6 × 350 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '宽大的螺旋结构能够将酱汁充分卷入面体。采用 100% 意大利硬质小麦粗面粉与当地纯净泉水制作，经青铜模具拉制和 40–45°C 低温慢干 24–48 小时。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

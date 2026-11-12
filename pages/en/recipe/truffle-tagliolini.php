@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Tagliolini with White or Black Truffle | LuxurEat</title>
-<meta name="description" content="An elegant, memorable first course made for special occasions. Fresh egg pasta is tossed with butter and Parmesan, then finished generously with white or black truffle for an unforgettable aroma.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Tagliolini with White or Black Truffle | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'An elegant, memorable first course made for special occasions. Fresh egg pasta is tossed with butter and Parmesan, then finished generously with white or black truffle for an unforgettable aroma.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

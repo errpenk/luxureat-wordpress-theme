@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>FHC 上海 2026｜让松露从早餐开始融入日常 | LuxurEat</title>
-<meta name="description" content="我们将在上海带来一个全新的理念：让松露融入日常生活，从早餐开始。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'FHC 上海 2026｜让松露从早餐开始融入日常 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '我们将在上海带来一个全新的理念：让松露融入日常生活，从早餐开始。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

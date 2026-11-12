@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>我们的产品 | LuxurEat（露意膳）</title>
-<meta name="description" content="浏览 LuxurEat（露意膳）精选意大利高端美食，包括松露、鱼子酱等产品。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '我们的产品 | LuxurEat（露意膳）')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '浏览 LuxurEat（露意膳）精选意大利高端美食，包括松露、鱼子酱等产品。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

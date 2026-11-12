@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Pairing: start with texture, then intensity | LuxurEat</title>
-<meta name="description" content="Good pairing is not stacking expensive ingredients; it balances aroma, texture, acidity, salt, sweetness and temperature.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Pairing: start with texture, then intensity | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Good pairing is not stacking expensive ingredients; it balances aroma, texture, acidity, salt, sweetness and temperature.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>From Region to Flavour: Italy&#39;s Olive-Oil Landscapes | LuxurEat</title>
-<meta name="description" content="Starting from the climate, topography and local varieties, understand why there is no unified &quot;standard taste&quot; for Italian olive oil.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'From Region to Flavour: Italy&#39;s Olive-Oil Landscapes | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Starting from the climate, topography and local varieties, understand why there is no unified &quot;standard taste&quot; for Italian olive oil.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

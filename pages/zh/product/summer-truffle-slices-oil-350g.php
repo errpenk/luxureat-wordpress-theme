@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>葵花籽油浸夏季黑松露片 · 350 g | LuxurEat</title>
-<meta name="description" content="夏季黑松露含量40%，以葵花籽油浸渍，风味柔和，适合餐饮批量应用与成品装饰。 产品规格为 350 g。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '葵花籽油浸夏季黑松露片 · 350 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '夏季黑松露含量40%，以葵花籽油浸渍，风味柔和，适合餐饮批量应用与成品装饰。 产品规格为 350 g。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

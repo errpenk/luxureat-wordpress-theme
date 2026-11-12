@@ -3,8 +3,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>China Market Insights | LuxurEat</title>
-<meta name="description" content="Explore China's market scale, cities and economic centres, Italy–China trade, and market data for Italian food, beverages and wine.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'China Market Insights | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Explore China\'s market scale, cities and economic centres, Italy–China trade, and market data for Italian food, beverages and wine.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/market-services/china-market-hero-mobile.webp?v=20261110-truffelixir-photos-news'); ?>" as="image" type="image/webp" media="(max-width: 640px)" fetchpriority="high">

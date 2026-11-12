@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Tagliatelle di Campofilone · 250 g | LuxurEat</title>
-<meta name="description" content="Made with Italian durum wheat semolina and fresh eggs. The wide, flat strands are slowly dried at low temperature, giving the pasta a delicate texture and a rough, porous surface that holds sauces well.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Tagliatelle di Campofilone · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Made with Italian durum wheat semolina and fresh eggs. The wide, flat strands are slowly dried at low temperature, giving the pasta a delicate texture and a rough, porous surface that holds sauces well.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

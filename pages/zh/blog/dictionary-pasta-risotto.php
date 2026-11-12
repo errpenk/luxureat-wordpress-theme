@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意面与烩饭词典：这些意大利词到底是在说形状、酱汁还是做法？ | LuxurEat</title>
-<meta name="description" content="意大利意面的名字非常多。对于第一次接触的人来说，它们很容易全部变成一个模糊概念：反正都是意面。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意面与烩饭词典：这些意大利词到底是在说形状、酱汁还是做法？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '意大利意面的名字非常多。对于第一次接触的人来说，它们很容易全部变成一个模糊概念：反正都是意面。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

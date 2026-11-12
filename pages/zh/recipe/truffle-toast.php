@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>水煮蛋配松露烤面包片 | LuxurEat</title>
-<meta name="description" content="烤面包片配水煮蛋和松露，是一道精致的餐桌小点，非常适合招待客人或打造优雅的周日早午餐。金黄酥脆的面包与绵密的鸡蛋和浓郁的松露香气完美融合，带来令人难以抗拒的美味和口感。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '水煮蛋配松露烤面包片 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '烤面包片配水煮蛋和松露，是一道精致的餐桌小点，非常适合招待客人或打造优雅的周日早午餐。金黄酥脆的面包与绵密的鸡蛋和浓郁的松露香气完美融合，带来令人难以抗拒的美味和口感。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

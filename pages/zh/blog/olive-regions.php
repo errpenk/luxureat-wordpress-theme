@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>从产区到风味：意大利橄榄油的区域差异 | LuxurEat</title>
-<meta name="description" content="从气候、地形与本地品种出发，理解意大利橄榄油为何不存在一种统一的“标准味道”。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '从产区到风味：意大利橄榄油的区域差异 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '从气候、地形与本地品种出发，理解意大利橄榄油为何不存在一种统一的“标准味道”。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

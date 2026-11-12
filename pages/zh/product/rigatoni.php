@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>粗通心粉 · 6 × 500 g | LuxurEat</title>
-<meta name="description" content="选用 100% 意大利硬质小麦粗面粉与大萨索山和蒙蒂德拉拉加国家公园附近的纯净泉水制作。经青铜模具拉制形成粗糙多孔的表面，并在 40–45°C 下低温慢干 24–48 小时。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '粗通心粉 · 6 × 500 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '选用 100% 意大利硬质小麦粗面粉与大萨索山和蒙蒂德拉拉加国家公园附近的纯净泉水制作。经青铜模具拉制形成粗糙多孔的表面，并在 40–45°C 下低温慢干 24–48 小时。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

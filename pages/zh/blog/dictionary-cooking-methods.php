@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意大利烹饪方法词典：煎、烤、炖、焗在意大利菜单上怎么说？ | LuxurEat</title>
-<meta name="description" content="看懂一道菜，不只是看懂食材。菜单上的烹饪方法同样会直接告诉我们一道菜大概是什么口感。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意大利烹饪方法词典：煎、烤、炖、焗在意大利菜单上怎么说？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '看懂一道菜，不只是看懂食材。菜单上的烹饪方法同样会直接告诉我们一道菜大概是什么口感。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

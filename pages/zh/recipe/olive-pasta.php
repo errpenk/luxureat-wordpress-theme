@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>蒜香辣椒橄榄油意面 | LuxurEat</title>
-<meta name="description" content="经典的 蒜香辣椒橄榄油意面 依靠蒜、辣椒、特级初榨橄榄油和富含淀粉的面水形成轻薄乳化，而不是用大量油把意面浸湿。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '蒜香辣椒橄榄油意面 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '经典的 蒜香辣椒橄榄油意面 依靠蒜、辣椒、特级初榨橄榄油和富含淀粉的面水形成轻薄乳化，而不是用大量油把意面浸湿。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

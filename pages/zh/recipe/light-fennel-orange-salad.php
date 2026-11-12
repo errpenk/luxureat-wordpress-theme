@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>西西里茴香橙子黑橄榄沙拉 | LuxurEat</title>
-<meta name="description" content="清脆茴香、鲜甜橙子与黑橄榄组成西西里风格沙拉，以橙汁和特级初榨橄榄油完成清爽调味。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '西西里茴香橙子黑橄榄沙拉 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '清脆茴香、鲜甜橙子与黑橄榄组成西西里风格沙拉，以橙汁和特级初榨橄榄油完成清爽调味。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

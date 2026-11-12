@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>荨麻宽面 · 250 g | LuxurEat</title>
-<meta name="description" content="加入 3.2% 荨麻的鸡蛋宽面，具有独特的草本风味与自然色泽。以硬质小麦粗面粉和鸡蛋为基础，经低温缓慢干燥。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '荨麻宽面 · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '加入 3.2% 荨麻的鸡蛋宽面，具有独特的草本风味与自然色泽。以硬质小麦粗面粉和鸡蛋为基础，经低温缓慢干燥。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

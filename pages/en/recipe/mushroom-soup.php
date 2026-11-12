@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Creamy Mushroom Soup | LuxurEat</title>
-<meta name="description" content="A warm and comforting first course for autumn. This silky mushroom soup carries deep woodland aromas and is especially good with golden croutons or a drizzle of truffle oil.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Creamy Mushroom Soup | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'A warm and comforting first course for autumn. This silky mushroom soup carries deep woodland aromas and is especially good with golden croutons or a drizzle of truffle oil.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

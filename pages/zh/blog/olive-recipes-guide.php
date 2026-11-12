@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>橄榄油进入日常：从面包到意面 | LuxurEat</title>
-<meta name="description" content="从面包、沙拉、豆类到意面和烤制，理解橄榄油在调味、传热、乳化与完成菜中的不同角色。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '橄榄油进入日常：从面包到意面 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '从面包、沙拉、豆类到意面和烤制，理解橄榄油在调味、传热、乳化与完成菜中的不同角色。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

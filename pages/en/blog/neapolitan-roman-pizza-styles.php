@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Neapolitan vs Roman Pizza: Italian Styles Explained | LuxurEat</title>
-<meta name="description" content="Outside Italy, pizza is often treated as one universal dish. Inside Italy, dough texture, baking method, shape and eating occasion can change dramatically from one city and style to another. Naples and Rome offer two of the clearest examples.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Neapolitan vs Roman Pizza: Italian Styles Explained | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Outside Italy, pizza is often treated as one universal dish. Inside Italy, dough texture, baking method, shape and eating occasion can change dramatically from one city and style to another. Naples and Rome offer two of the clearest examples.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

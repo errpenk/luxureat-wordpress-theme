@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>读懂一张食品配料表 | LuxurEat</title>
-<meta name="description" content="按食品名称、配料、营养、致敏物质、日期、储存与责任主体的顺序，读懂一张预包装食品标签。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '读懂一张食品配料表 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '按食品名称、配料、营养、致敏物质、日期、储存与责任主体的顺序，读懂一张预包装食品标签。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>看懂意大利菜单：从前菜到甜点，常见菜单词是什么意思？ | LuxurEat</title>
-<meta name="description" content="第一次打开意大利餐厅菜单时，即使认识“披萨”和“意面”，很多人仍然会被菜单结构弄得有些困惑。为什么“第一道菜”里没有前菜？为什么意面属于“第一道”，肉和鱼却属于“第二道”？">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '看懂意大利菜单：从前菜到甜点，常见菜单词是什么意思？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '第一次打开意大利餐厅菜单时，即使认识“披萨”和“意面”，很多人仍然会被菜单结构弄得有些困惑。为什么“第一道菜”里没有前菜？为什么意面属于“第一道”，肉和鱼却属于“第二道”？')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

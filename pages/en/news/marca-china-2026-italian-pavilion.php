@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Marca China 2026: Italian Pavilion and Its 10 Companies | LuxurEat</title>
-<meta name="description" content="The Italian Trade Agency will participate with an official Italian National Pavilion for the first time, bringing 10 Italian companies to Marca China 2026. LuxurEat will be at Booth 1D04.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Marca China 2026: Italian Pavilion and Its 10 Companies | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'The Italian Trade Agency will participate with an official Italian National Pavilion for the first time, bringing 10 Italian companies to Marca China 2026. LuxurEat will be at Booth 1D04.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

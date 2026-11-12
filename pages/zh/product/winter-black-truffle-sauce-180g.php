@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>冬季黑松露酱 · 180 g | LuxurEat</title>
-<meta name="description" content="含2.9%冬季黑松露与5%黑喇叭菌，层次深沉且不含麸质，适合精细餐饮调味。 产品规格为 180 g。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '冬季黑松露酱 · 180 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '含2.9%冬季黑松露与5%黑喇叭菌，层次深沉且不含麸质，适合精细餐饮调味。 产品规格为 180 g。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

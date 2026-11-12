@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Understanding an Italian Menu: From Antipasto to Dolce | LuxurEat</title>
-<meta name="description" content="Opening an Italian restaurant menu for the first time can be confusing even if words such as pizza and pasta are already familiar. Why does the “first course” come after the starter?">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Understanding an Italian Menu: From Antipasto to Dolce | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Opening an Italian restaurant menu for the first time can be confusing even if words such as pizza and pasta are already familiar. Why does the “first course” come after the starter?')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

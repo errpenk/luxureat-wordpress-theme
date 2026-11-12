@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Italian table culture: slow down and share flavour | LuxurEat</title>
-<meta name="description" content="Table etiquette is not about distance; it gives food, time and conversation the attention they deserve.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Italian table culture: slow down and share flavour | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Table etiquette is not about distance; it gives food, time and conversation the attention they deserve.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

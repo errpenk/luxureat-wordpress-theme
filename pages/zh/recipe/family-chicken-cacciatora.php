@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意式猎人烩鸡 | LuxurEat</title>
-<meta name="description" content="鸡腿与洋葱、胡萝卜、西芹、番茄、白葡萄酒和香草慢炖，是中部意大利风格浓郁而适合家庭操作的主菜。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意式猎人烩鸡 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '鸡腿与洋葱、胡萝卜、西芹、番茄、白葡萄酒和香草慢炖，是中部意大利风格浓郁而适合家庭操作的主菜。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

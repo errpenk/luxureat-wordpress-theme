@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Neapolitan Pizza Makers and Their Cultural Heritage | LuxurEat</title>
-<meta name="description" content="Pizza has become one of the world&#39;s most common foods. In Naples, however, a pizzaiuolo is more than someone whose job is to place dough in an oven. In 2017, the Art of the Neapolitan Pizzaiuolo was inscribed on UNESCO&#39;s Representative List of the Intangible Cultural Heritage of Humanity.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Neapolitan Pizza Makers and Their Cultural Heritage | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Pizza has become one of the world&#39;s most common foods. In Naples, however, a pizzaiuolo is more than someone whose job is to place dough in an oven. In 2017, the Art of the Neapolitan Pizzaiuolo was inscribed on UNESCO&#39;s Representative List of the Intangible Cultural Heritage of Humanity.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

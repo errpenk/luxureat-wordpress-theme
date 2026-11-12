@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>那不勒斯披萨与罗马披萨：为什么“意大利披萨”并不是一种东西 | LuxurEat</title>
-<meta name="description" content="在意大利以外，披萨常被当成一种统一菜式。但在意大利，不同城市和不同风格之间，面团质地、烘烤方式、形状甚至食用场景都可能发生巨大变化。那不勒斯和罗马就是最清楚的两个例子。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '那不勒斯披萨与罗马披萨：为什么“意大利披萨”并不是一种东西 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '在意大利以外，披萨常被当成一种统一菜式。但在意大利，不同城市和不同风格之间，面团质地、烘烤方式、形状甚至食用场景都可能发生巨大变化。那不勒斯和罗马就是最清楚的两个例子。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

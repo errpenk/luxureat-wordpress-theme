@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意大利餐桌礼仪：慢下来，分享风味 | LuxurEat</title>
-<meta name="description" content="餐桌礼仪不是僵硬规则，而是通过节奏、份量、分享和交谈，让食物与共同用餐得到应有的注意。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意大利餐桌礼仪：慢下来，分享风味 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '餐桌礼仪不是僵硬规则，而是通过节奏、份量、分享和交谈，让食物与共同用餐得到应有的注意。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

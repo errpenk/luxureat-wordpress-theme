@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>The History of Italian Gelato | LuxurEat</title>
-<meta name="description" content="The history of gelato is not the story of a single invention. It is a gradual evolution in which older frozen preparations, Italian court culture, technical experimentation and artisan practice eventually came together in the modern gelateria.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'The History of Italian Gelato | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'The history of gelato is not the story of a single invention. It is a gradual evolution in which older frozen preparations, Italian court culture, technical experimentation and artisan practice eventually came together in the modern gelateria.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

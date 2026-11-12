@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>森林里的大师：意大利松露采集者如何读懂地下世界？ | LuxurEat</title>
-<meta name="description" content="松露抵达餐桌之前，并不存在整齐排列的果园，也没有一条能够准确预测每一颗松露位置的生产线。真正的故事往往从森林开始。意大利传统松露采集者被称为 tartufai。他们的工作不是简单地“找到昂贵食材”，而是理解树木、土壤、湿度、季节和动物之间复杂的关系。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '森林里的大师：意大利松露采集者如何读懂地下世界？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '松露抵达餐桌之前，并不存在整齐排列的果园，也没有一条能够准确预测每一颗松露位置的生产线。真正的故事往往从森林开始。意大利传统松露采集者被称为 tartufai。他们的工作不是简单地“找到昂贵食材”，而是理解树木、土壤、湿度、季节和动物之间复杂的关系。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Buying Fresh Truffles, Truffle Sauce and Flavoured Oil | LuxurEat</title>
-<meta name="description" content="The world of truffle products is much broader than fresh truffle. An Italian food shop may offer fresh truffle, truffle sauces, creamy truffle spreads, truffle-flavoured oils, truffle salt, truffle honey, cheeses, condiments, and many other processed products.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Buying Fresh Truffles, Truffle Sauce and Flavoured Oil | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'The world of truffle products is much broader than fresh truffle. An Italian food shop may offer fresh truffle, truffle sauces, creamy truffle spreads, truffle-flavoured oils, truffle salt, truffle honey, cheeses, condiments, and many other processed products.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

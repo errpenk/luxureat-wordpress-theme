@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Coming Soon: LuxurEat (露意膳) Italian Gelato Base Mix | LuxurEat</title>
-<meta name="description" content="LuxurEat (露意膳)&#39;s new Italian gelato powder base series will be launched soon, providing more flexible and convenient gelato making options for households, shops and food industry customers. For specific flavours, specifications and listing information, please refer to the final product information.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Coming Soon: LuxurEat (露意膳) Italian Gelato Base Mix | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'LuxurEat (露意膳)&#39;s new Italian gelato powder base series will be launched soon, providing more flexible and convenient gelato making options for households, shops and food industry customers. For specific flavours, specifications and listing information, please refer to the final product information.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

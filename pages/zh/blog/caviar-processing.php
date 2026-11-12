@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>鱼子酱加工工艺 | LuxurEat</title>
-<meta name="description" content="鱼子酱加工全程以手工完成，从鱼卵甄选、Malossol轻盐法，到装罐与熟成都需要精确控制。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '鱼子酱加工工艺 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '鱼子酱加工全程以手工完成，从鱼卵甄选、Malossol轻盐法，到装罐与熟成都需要精确控制。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

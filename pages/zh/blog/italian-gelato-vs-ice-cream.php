@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意式手工冰淇淋与普通冰淇淋：意大利传统究竟有何不同？ | LuxurEat</title>
-<meta name="description" content="意式手工冰淇淋和普通冰淇淋都属于冷冻甜品，但传统意式手工冰淇淋在空气含量、脂肪比例、食用温度和风味表达之间形成了不同的平衡。因此，差别并不只是“配方不同”，而是带来了一种不同的冷冻甜品体验。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意式手工冰淇淋与普通冰淇淋：意大利传统究竟有何不同？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '意式手工冰淇淋和普通冰淇淋都属于冷冻甜品，但传统意式手工冰淇淋在空气含量、脂肪比例、食用温度和风味表达之间形成了不同的平衡。因此，差别并不只是“配方不同”，而是带来了一种不同的冷冻甜品体验。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

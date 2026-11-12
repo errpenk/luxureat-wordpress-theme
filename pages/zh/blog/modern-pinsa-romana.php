@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>经典披萨之外：认识现代罗马品萨 | LuxurEat</title>
-<meta name="description" content="更准确的理解方式，是把罗马品萨看成一种现代罗马烘焙创新，而不是一份从古罗马时代原封不动流传下来的古老配方。它的身份来自独特的面团思路、细长形状，以及介于熟悉披萨印象与现代烘焙技术之间的质地。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '经典披萨之外：认识现代罗马品萨 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '更准确的理解方式，是把罗马品萨看成一种现代罗马烘焙创新，而不是一份从古罗马时代原封不动流传下来的古老配方。它的身份来自独特的面团思路、细长形状，以及介于熟悉披萨印象与现代烘焙技术之间的质地。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

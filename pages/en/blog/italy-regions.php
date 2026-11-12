@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Italy&#39;s twenty regions: a map of the table | LuxurEat</title>
-<meta name="description" content="From Piedmont to Sicily, twenty regions carry distinct climates, ingredients, traditions and table languages.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Italy&#39;s twenty regions: a map of the table | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'From Piedmont to Sicily, twenty regions carry distinct climates, ingredients, traditions and table languages.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

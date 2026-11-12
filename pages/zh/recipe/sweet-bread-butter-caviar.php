@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>甜面包配黄油和鱼子酱 | LuxurEat</title>
-<meta name="description" content="甜面包配黄油和鱼子酱是一种优雅的小食，柔软香甜的奶油蛋卷面包、醇厚的黄油与鱼子酱的鲜美风味完美融合。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '甜面包配黄油和鱼子酱 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '甜面包配黄油和鱼子酱是一种优雅的小食，柔软香甜的奶油蛋卷面包、醇厚的黄油与鱼子酱的鲜美风味完美融合。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

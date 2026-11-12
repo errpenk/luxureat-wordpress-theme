@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>经典玛格丽特披萨 | LuxurEat</title>
-<meta name="description" content="以耐心发酵的面团、番茄、马苏里拉奶酪与罗勒，完成一张配料克制、饼边轻盈的经典披萨。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '经典玛格丽特披萨 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '以耐心发酵的面团、番茄、马苏里拉奶酪与罗勒，完成一张配料克制、饼边轻盈的经典披萨。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

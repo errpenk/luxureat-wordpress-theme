@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Extra Virgin Olive Oil vs Common Cooking Oil | LuxurEat</title>
-<meta name="description" content="“Olive oil” is not one single product category. Extra Virgin Olive Oil (EVO) is defined by how it is obtained and by chemical and sensory criteria, while refined oils and olive-pomace oils are produced through different processes and have different characteristics.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Extra Virgin Olive Oil vs Common Cooking Oil | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '“Olive oil” is not one single product category. Extra Virgin Olive Oil (EVO) is defined by how it is obtained and by chemical and sensory criteria, while refined oils and olive-pomace oils are produced through different processes and have different characteristics.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

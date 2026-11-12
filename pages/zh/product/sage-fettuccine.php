@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>鼠尾草宽面 · 250 g | LuxurEat</title>
-<meta name="description" content="加入 2.3% 鼠尾草的鸡蛋宽面，自带清新而富有辨识度的草本香气。采用硬质小麦粗面粉与鸡蛋制成，并经低温慢干。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '鼠尾草宽面 · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '加入 2.3% 鼠尾草的鸡蛋宽面，自带清新而富有辨识度的草本香气。采用硬质小麦粗面粉与鸡蛋制成，并经低温慢干。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

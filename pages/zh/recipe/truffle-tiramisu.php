@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>松露提拉米苏 | LuxurEat</title>
-<meta name="description" content="松露提拉米苏是传统甜点的精致演绎，将经典提拉米苏的绵密奶香与松露的浓郁香气融合，呈现独特而优雅的风味。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '松露提拉米苏 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '松露提拉米苏是传统甜点的精致演绎，将经典提拉米苏的绵密奶香与松露的浓郁香气融合，呈现独特而优雅的风味。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

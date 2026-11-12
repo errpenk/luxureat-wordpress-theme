@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Pasta and Risotto: Shapes, Sauces and Cooking Methods | LuxurEat</title>
-<meta name="description" content="Italy has an enormous variety of pasta names. For someone discovering Italian cuisine for the first time, they can easily become one vague category: pasta is pasta.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Pasta and Risotto: Shapes, Sauces and Cooking Methods | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Italy has an enormous variety of pasta names. For someone discovering Italian cuisine for the first time, they can easily become one vague category: pasta is pasta.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

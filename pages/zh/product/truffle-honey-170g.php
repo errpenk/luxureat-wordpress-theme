@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>松露蜂蜜 · 170 g | LuxurEat</title>
-<meta name="description" content="以99%洋槐蜜融合白松露风味，适合搭配奶酪、烤肉、甜点与礼赠组合。 产品规格为 170 g。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '松露蜂蜜 · 170 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '以99%洋槐蜜融合白松露风味，适合搭配奶酪、烤肉、甜点与礼赠组合。 产品规格为 170 g。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

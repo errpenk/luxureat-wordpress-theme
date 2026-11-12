@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Olive Oil in Everyday Cooking: From Bread to Pasta | LuxurEat</title>
-<meta name="description" content="From breads, salads, and beans to pasta and grilling, understand the different roles olive oil plays in seasoning, transferring heat, emulsifying, and finishing dishes.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Olive Oil in Everyday Cooking: From Bread to Pasta | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'From breads, salads, and beans to pasta and grilling, understand the different roles olive oil plays in seasoning, transferring heat, emulsifying, and finishing dishes.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

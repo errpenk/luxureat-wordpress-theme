@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>松露奶油酱馄饨 | LuxurEat</title>
-<meta name="description" content="松露奶油酱汁馄饨，将新鲜意面的细腻口感与松露独特的香气完美融合。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '松露奶油酱馄饨 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '松露奶油酱汁馄饨，将新鲜意面的细腻口感与松露独特的香气完美融合。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

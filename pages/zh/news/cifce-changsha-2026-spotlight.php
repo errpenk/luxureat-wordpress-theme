@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>展商推介｜TRUFFLE EAT S.R.L：携 LuxurEat 露意膳登陆长沙 | LuxurEat</title>
-<meta name="description" content="第十一届中国国际食品餐饮博览会将于2026年9月18日至20日在长沙国际会展中心举行。TRUFFLE EAT S.R.L 将携 LuxurEat（露意膳）亮相 W2展馆 M10展位。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '展商推介｜TRUFFLE EAT S.R.L：携 LuxurEat 露意膳登陆长沙 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '第十一届中国国际食品餐饮博览会将于2026年9月18日至20日在长沙国际会展中心举行。TRUFFLE EAT S.R.L 将携 LuxurEat（露意膳）亮相 W2展馆 M10展位。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

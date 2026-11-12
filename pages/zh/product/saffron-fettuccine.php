@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>藏红花宽面 · 250 g | LuxurEat</title>
-<meta name="description" content="在传统坎波菲洛内鸡蛋面中加入 0.2% 藏红花，带来优雅香气与鲜明色泽。以硬质小麦粗面粉和鸡蛋为基础，经低温缓慢干燥形成粗糙多孔的面体。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '藏红花宽面 · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '在传统坎波菲洛内鸡蛋面中加入 0.2% 藏红花，带来优雅香气与鲜明色泽。以硬质小麦粗面粉和鸡蛋为基础，经低温缓慢干燥形成粗糙多孔的面体。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

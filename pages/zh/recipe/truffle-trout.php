@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>翁布里亚黑松露鳟鱼 | LuxurEat</title>
-<meta name="description" content="来自翁布里亚 瓦尔内里纳 的传统搭配，以温和烹调的鳟鱼承接黑松露和蒜香橄榄油。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '翁布里亚黑松露鳟鱼 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '来自翁布里亚 瓦尔内里纳 的传统搭配，以温和烹调的鳟鱼承接黑松露和蒜香橄榄油。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

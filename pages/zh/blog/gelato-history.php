@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意式手工冰淇淋：从城市传统到现代工艺 | LuxurEat</title>
-<meta name="description" content="从意大利冷冻甜品传统、城市门店到现代设备，理解意式手工冰淇淋如何成为日常文化与专业工艺。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意式手工冰淇淋：从城市传统到现代工艺 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '从意大利冷冻甜品传统、城市门店到现代设备，理解意式手工冰淇淋如何成为日常文化与专业工艺。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

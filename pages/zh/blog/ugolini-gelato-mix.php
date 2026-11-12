@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>新品：Luxureat（露意膳）意式手工冰淇淋粉末基底即将上线 | LuxurEat</title>
-<meta name="description" content="Luxureat（露意膳）全新意式手工冰淇淋粉末基底系列即将推出，面向家庭、店铺及食品业客户，提供更灵活、便捷的意式冰淇淋制作选择。具体口味、规格及上市信息，请以最终产品资料为准。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '新品：Luxureat（露意膳）意式手工冰淇淋粉末基底即将上线 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Luxureat（露意膳）全新意式手工冰淇淋粉末基底系列即将推出，面向家庭、店铺及食品业客户，提供更灵活、便捷的意式冰淇淋制作选择。具体口味、规格及上市信息，请以最终产品资料为准。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

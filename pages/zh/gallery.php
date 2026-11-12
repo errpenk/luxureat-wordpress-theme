@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- lux:seo:start -->
-<title>企业画廊 | LuxurEat（露意膳）</title>
-<meta name="description" content="按时间、地点、展会与名称浏览 LuxurEat（露意膳）的现场图片和视频。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '企业画廊 | LuxurEat（露意膳）')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '按时间、地点、展会与名称浏览 LuxurEat（露意膳）的现场图片和视频。')); ?>">
 <!-- lux:seo:end -->
   <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Salsa al tartufo nero invernale · 180 g | LuxurEat</title>
-<meta name="description" content="A gluten-free sauce with 2.9% winter black truffle and 5% black trumpet mushrooms for refined savoury applications. Format: 180 g.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Salsa al tartufo nero invernale · 180 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'A gluten-free sauce with 2.9% winter black truffle and 5% black trumpet mushrooms for refined savoury applications. Format: 180 g.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

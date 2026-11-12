@@ -3,8 +3,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>中国市场洞察 | LuxurEat（露意膳）</title>
-<meta name="description" content="了解中国市场规模、城市与经济中心、意中贸易，以及意大利食品、饮料和葡萄酒的市场数据。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '中国市场洞察 | LuxurEat（露意膳）')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '了解中国市场规模、城市与经济中心、意中贸易，以及意大利食品、饮料和葡萄酒的市场数据。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/market-services/china-market-hero-mobile.webp?v=20261110-truffelixir-photos-news'); ?>" as="image" type="image/webp" media="(max-width: 640px)" fetchpriority="high">

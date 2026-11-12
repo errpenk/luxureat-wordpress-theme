@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Olio extravergine al tartufo bianco · 250 ml | LuxurEat</title>
-<meta name="description" content="Extra virgin olive oil blended with 0.2% dried spring white truffle and flavouring for a rounded truffle finish. Format: 250 ml.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Olio extravergine al tartufo bianco · 250 ml | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Extra virgin olive oil blended with 0.2% dried spring white truffle and flavouring for a rounded truffle finish. Format: 250 ml.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Truffle Aroma, Portions and Food Pairings | LuxurEat</title>
-<meta name="description" content="When people buy truffle or truffle products for the first time, a very natural question often appears: If truffle is so precious, shouldn&#39;t we use more of it?">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Truffle Aroma, Portions and Food Pairings | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'When people buy truffle or truffle products for the first time, a very natural question often appears: If truffle is so precious, shouldn&#39;t we use more of it?')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

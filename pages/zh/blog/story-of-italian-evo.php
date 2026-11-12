@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意大利特级初榨橄榄油的故事：从地中海日常食材到地域手工传统 | LuxurEat</title>
-<meta name="description" content="橄榄油的历史远早于现代意大利国家的形成，但意大利半岛围绕橄榄种植、压榨、烹饪与品鉴发展出了极其丰富的地域文化。今天的特级初榨橄榄油，正是这段漫长农业与饮食历史的现代延续。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意大利特级初榨橄榄油的故事：从地中海日常食材到地域手工传统 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '橄榄油的历史远早于现代意大利国家的形成，但意大利半岛围绕橄榄种植、压榨、烹饪与品鉴发展出了极其丰富的地域文化。今天的特级初榨橄榄油，正是这段漫长农业与饮食历史的现代延续。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

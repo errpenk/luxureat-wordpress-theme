@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Breakfast Pancake Toppings Beyond Maple Syrup | LuxurEat</title>
-<meta name="description" content="This November, LuxurEat will bring its TrufflElixir range of truffle-flavoured drizzles to FHC Shanghai 2026, with fresh ideas for the family breakfast table.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Breakfast Pancake Toppings Beyond Maple Syrup | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'This November, LuxurEat will bring its TrufflElixir range of truffle-flavoured drizzles to FHC Shanghai 2026, with fresh ideas for the family breakfast table.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

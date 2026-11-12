@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>扇贝松露牛肉薄片 | LuxurEat</title>
-<meta name="description" content="牛肉薄片配扇贝和松露，将生牛肉的浓郁、扇贝的鲜嫩与黑松露的馥郁香气完美融合，是一道优雅而赏心悦目的菜肴。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '扇贝松露牛肉薄片 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '牛肉薄片配扇贝和松露，将生牛肉的浓郁、扇贝的鲜嫩与黑松露的馥郁香气完美融合，是一道优雅而赏心悦目的菜肴。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意大利料理的基础技法 | LuxurEat</title>
-<meta name="description" content="从火候、乳化、烘烤和静置理解基础技法：少依赖堆叠调味，多观察原料在温度与时间中的变化。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意大利料理的基础技法 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '从火候、乳化、烘烤和静置理解基础技法：少依赖堆叠调味，多观察原料在温度与时间中的变化。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

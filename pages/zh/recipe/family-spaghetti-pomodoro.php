@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>经典番茄意面 | LuxurEat</title>
-<meta name="description" content="以番茄、蒜、罗勒和橄榄油完成的意大利国民经典，材料容易获得，关键在于酱汁收浓与面水乳化。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '经典番茄意面 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '以番茄、蒜、罗勒和橄榄油完成的意大利国民经典，材料容易获得，关键在于酱汁收浓与面水乳化。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

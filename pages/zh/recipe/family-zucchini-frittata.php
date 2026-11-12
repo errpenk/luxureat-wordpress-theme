@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>西葫芦意式煎蛋 | LuxurEat</title>
-<meta name="description" content="先炒去西葫芦多余水分，再与鸡蛋和帕玛森凝固成柔嫩烘蛋，是适合家庭平底锅完成的意大利日常菜。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '西葫芦意式煎蛋 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '先炒去西葫芦多余水分，再与鸡蛋和帕玛森凝固成柔嫩烘蛋，是适合家庭平底锅完成的意大利日常菜。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

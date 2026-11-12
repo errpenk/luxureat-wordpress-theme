@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>整颗夏季黑松露 · 35 g | LuxurEat</title>
-<meta name="description" content="整颗夏季黑松露以水和食用盐保存，便于切片、刨削或加入酱汁，保留完整食材形态。 产品规格为 35 g。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '整颗夏季黑松露 · 35 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '整颗夏季黑松露以水和食用盐保存，便于切片、刨削或加入酱汁，保留完整食材形态。 产品规格为 35 g。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

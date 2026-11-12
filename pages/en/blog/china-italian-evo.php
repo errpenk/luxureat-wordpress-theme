@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Why China Is Discovering Italian Extra Virgin Olive Oil | LuxurEat</title>
-<meta name="description" content="Olive oil is no longer presented in China only as an imported health-oriented product. As consumers become more familiar with international cooking, EVO has more room to be understood as a flavour ingredient with regional identity, culinary applications and measurable production standards.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Why China Is Discovering Italian Extra Virgin Olive Oil | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Olive oil is no longer presented in China only as an imported health-oriented product. As consumers become more familiar with international cooking, EVO has more room to be understood as a flavour ingredient with regional identity, culinary applications and measurable production standards.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

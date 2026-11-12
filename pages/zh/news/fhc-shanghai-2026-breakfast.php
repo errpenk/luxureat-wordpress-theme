@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>LuxurEat亮相2026 FHC上海环球食品展：从早餐开始，探索意式风味 | LuxurEat</title>
-<meta name="description" content="2026年11月10日至12日，上海新国际博览中心，N3馆 · N3A10展位，期待与您相见。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'LuxurEat亮相2026 FHC上海环球食品展：从早餐开始，探索意式风味 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '2026年11月10日至12日，上海新国际博览中心，N3馆 · N3A10展位，期待与您相见。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

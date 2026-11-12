@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>坎波菲洛内鸡蛋面皮 · 250 g | LuxurEat</title>
-<meta name="description" content="以意大利硬质小麦粗面粉与新鲜鸡蛋制成的传统鸡蛋面皮，质地薄而细腻，经过低温缓慢干燥，兼具良好的烹饪表现与可塑性。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '坎波菲洛内鸡蛋面皮 · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '以意大利硬质小麦粗面粉与新鲜鸡蛋制成的传统鸡蛋面皮，质地薄而细腻，经过低温缓慢干燥，兼具良好的烹饪表现与可塑性。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

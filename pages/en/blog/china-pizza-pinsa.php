@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Italian Pizza and Pinsa: New Opportunities in China | LuxurEat</title>
-<meta name="description" content="Pizza is already widely known in China, which changes the challenge completely. The opportunity is not to introduce pizza itself, but to move the conversation from generic fast food toward regional styles, dough technique, ingredient quality and newer Italian formats such as Pinsa.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Italian Pizza and Pinsa: New Opportunities in China | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Pizza is already widely known in China, which changes the challenge completely. The opportunity is not to introduce pizza itself, but to move the conversation from generic fast food toward regional styles, dough technique, ingredient quality and newer Italian formats such as Pinsa.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

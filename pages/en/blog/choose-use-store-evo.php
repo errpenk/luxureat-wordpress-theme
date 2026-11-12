@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>How to Choose, Use and Store Extra Virgin Olive Oil | LuxurEat</title>
-<meta name="description" content="Choosing a good EVO does not require professional tasting training. A few practical habits - reading the category correctly, checking origin information, protecting the oil from light and heat, and matching intensity to the dish - make a much bigger difference than judging the bottle by colour alone.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'How to Choose, Use and Store Extra Virgin Olive Oil | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Choosing a good EVO does not require professional tasting training. A few practical habits - reading the category correctly, checking origin information, protecting the oil from light and heat, and matching intensity to the dish - make a much bigger difference than judging the bottle by colour alone.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

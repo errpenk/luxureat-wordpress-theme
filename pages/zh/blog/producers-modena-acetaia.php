@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>屋顶下的时间：摩德纳传统香醋与一座家庭醋坊 | LuxurEat</title>
-<meta name="description" content="有些意大利食品靠火候完成。有些靠发酵。而摩德纳传统香醋最重要的原料之一，是时间。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '屋顶下的时间：摩德纳传统香醋与一座家庭醋坊 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '有些意大利食品靠火候完成。有些靠发酵。而摩德纳传统香醋最重要的原料之一，是时间。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

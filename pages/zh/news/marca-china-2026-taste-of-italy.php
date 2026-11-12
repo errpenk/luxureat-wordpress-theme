@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意大利好味道来了！一站式探索自有品牌食品的意式创新 | LuxurEat</title>
-<meta name="description" content="当意大利悠久的美食传统遇见不断升级的消费需求，一场关于风味、品质与创新的碰撞正在发生。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意大利好味道来了！一站式探索自有品牌食品的意式创新 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '当意大利悠久的美食传统遇见不断升级的消费需求，一场关于风味、品质与创新的碰撞正在发生。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

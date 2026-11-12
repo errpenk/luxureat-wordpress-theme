@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>翁布里亚黑松露烩羊肉 | LuxurEat</title>
-<meta name="description" content="翁布里亚 瓦尔内里纳 风格慢炖羊肉，以白葡萄酒、迷迭香和黑松露完成；松露在最后加入，避免香气流失。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '翁布里亚黑松露烩羊肉 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '翁布里亚 瓦尔内里纳 风格慢炖羊肉，以白葡萄酒、迷迭香和黑松露完成；松露在最后加入，避免香气流失。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

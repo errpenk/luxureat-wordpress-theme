@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>白松露或黑松露细面 | LuxurEat</title>
-<meta name="description" content="精致而令人回味无穷的头盘，是庆祝特殊场合的完美之选。新鲜的鸡蛋细面拌入黄油和帕玛森奶酪，再撒上大量的白松露或黑松露碎，带来令人难忘的香气体验。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '白松露或黑松露细面 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '精致而令人回味无穷的头盘，是庆祝特殊场合的完美之选。新鲜的鸡蛋细面拌入黄油和帕玛森奶酪，再撒上大量的白松露或黑松露碎，带来令人难忘的香气体验。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

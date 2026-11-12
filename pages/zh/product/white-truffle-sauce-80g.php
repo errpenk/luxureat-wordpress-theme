@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>白松露酱 · 80 g | LuxurEat</title>
-<meta name="description" content="以双孢蘑菇、橄榄油和1%意大利白松露制成的细腻复合酱料，可用于意面、烩饭、肉类和酱汁调配。 产品规格为 80 g。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '白松露酱 · 80 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '以双孢蘑菇、橄榄油和1%意大利白松露制成的细腻复合酱料，可用于意面、烩饭、肉类和酱汁调配。 产品规格为 80 g。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

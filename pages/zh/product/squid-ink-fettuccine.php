@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>鱿鱼墨汁宽面 · 250 g | LuxurEat</title>
-<meta name="description" content="加入 2% 鱿鱼墨的鸡蛋宽面，拥有醒目的深色外观与鲜明海洋风味。以硬质小麦粗面粉和鸡蛋制成，经低温慢干形成适合挂汁的粗糙表面。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '鱿鱼墨汁宽面 · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '加入 2% 鱿鱼墨的鸡蛋宽面，拥有醒目的深色外观与鲜明海洋风味。以硬质小麦粗面粉和鸡蛋制成，经低温慢干形成适合挂汁的粗糙表面。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

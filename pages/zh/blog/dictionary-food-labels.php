@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意大利食品标签词典：原产地保护、有机、特级初榨到底代表什么？ | LuxurEat</title>
-<meta name="description" content="意大利食品包装上经常出现很多看起来很“高级”的词。但真正重要的不是这些词看起来有多专业，而是理解：哪些属于正式食品分类或认证，哪些只是普通营销表达。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意大利食品标签词典：原产地保护、有机、特级初榨到底代表什么？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '意大利食品包装上经常出现很多看起来很“高级”的词。但真正重要的不是这些词看起来有多专业，而是理解：哪些属于正式食品分类或认证，哪些只是普通营销表达。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Chili Pepper Fettuccine · 250 g | LuxurEat</title>
-<meta name="description" content="Traditional egg fettuccine with 3.6% chili pepper, giving the pasta a distinctive spicy character. Slow low-temperature drying preserves its rough and porous texture.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Chili Pepper Fettuccine · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Traditional egg fettuccine with 3.6% chili pepper, giving the pasta a distinctive spicy character. Slow low-temperature drying preserves its rough and porous texture.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

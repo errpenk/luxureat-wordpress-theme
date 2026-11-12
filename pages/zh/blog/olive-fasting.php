@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>空腹喝橄榄油：营养价值、正确方法与常见误区 | LuxurEat</title>
-<meta name="description" content="从能量、耐受性与饮食结构解释空腹喝橄榄油，区分个人习惯、营养事实和未经证实的功效。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '空腹喝橄榄油：营养价值、正确方法与常见误区 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '从能量、耐受性与饮食结构解释空腹喝橄榄油，区分个人习惯、营养事实和未经证实的功效。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

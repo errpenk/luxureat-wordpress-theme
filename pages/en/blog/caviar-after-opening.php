@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>How to Keep Your Caviar at Its Best After Opening | LuxurEat</title>
-<meta name="description" content="Opened your caviar but can’t finish it? Here’s how to keep it at its best.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'How to Keep Your Caviar at Its Best After Opening | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Opened your caviar but can’t finish it? Here’s how to keep it at its best.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

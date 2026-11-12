@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Classic Italian Gelato Flavours and Ingredients | LuxurEat</title>
-<meta name="description" content="Start with milk, vanilla, chocolate, coffee, hazelnuts, pistachios and fruits to understand how different ingredients change sweetness, texture and aroma.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Classic Italian Gelato Flavours and Ingredients | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Start with milk, vanilla, chocolate, coffee, hazelnuts, pistachios and fruits to understand how different ingredients change sweetness, texture and aroma.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

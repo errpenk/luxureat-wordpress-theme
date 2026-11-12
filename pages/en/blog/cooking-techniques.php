@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Fundamental techniques of Italian cooking | LuxurEat</title>
-<meta name="description" content="Temperature, emulsion, reduction and resting determine whether an ingredient keeps a clear flavour.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Fundamental techniques of Italian cooking | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Temperature, emulsion, reduction and resting determine whether an ingredient keeps a clear flavour.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

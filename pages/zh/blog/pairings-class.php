@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>风味搭配：从质地到味觉的平衡 | LuxurEat</title>
-<meta name="description" content="真正出色的搭配，不在于堆叠昂贵食材，而在于让香气、质地、酸度、盐度与温度彼此协调，相互成就。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '风味搭配：从质地到味觉的平衡 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '真正出色的搭配，不在于堆叠昂贵食材，而在于让香气、质地、酸度、盐度与温度彼此协调，相互成就。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

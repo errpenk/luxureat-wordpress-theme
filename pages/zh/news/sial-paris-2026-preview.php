@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>LuxurEat、Truffleat、Caviareat 与 Ugolini Gourmet 携手亮相 SIAL Paris 2026 | LuxurEat</title>
-<meta name="description" content="2026年10月17日至21日，四大品牌将齐聚巴黎，在这一全球食品行业的重要国际舞台上，呈现松露、鱼子酱及意大利特色美食。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'LuxurEat、Truffleat、Caviareat 与 Ugolini Gourmet 携手亮相 SIAL Paris 2026 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '2026年10月17日至21日，四大品牌将齐聚巴黎，在这一全球食品行业的重要国际舞台上，呈现松露、鱼子酱及意大利特色美食。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

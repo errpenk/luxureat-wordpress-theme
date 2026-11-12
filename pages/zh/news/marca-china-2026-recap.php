@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>从广州出发，探索全球食品原料新体验——Truffleat、Luxureat 与 Ugolini 亮相 Marca China Private Label Fair 2026 | LuxurEat</title>
-<meta name="description" content="9月8日至9日，Truffleat Thailand 团队前往广州参加 Marca China Private Label Fair 2026，并携四个品牌集中展示集团的产品实力。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '从广州出发，探索全球食品原料新体验——Truffleat、Luxureat 与 Ugolini 亮相 Marca China Private Label Fair 2026 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '9月8日至9日，Truffleat Thailand 团队前往广州参加 Marca China Private Label Fair 2026，并携四个品牌集中展示集团的产品实力。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

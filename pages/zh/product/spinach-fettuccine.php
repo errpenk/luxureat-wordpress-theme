@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>菠菜宽面 · 250 g | LuxurEat</title>
-<meta name="description" content="在鸡蛋宽面中加入 1.9% 菠菜，呈现自然色泽与清新的蔬菜风味。面体粗糙多孔，能够很好地承载酱汁。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '菠菜宽面 · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '在鸡蛋宽面中加入 1.9% 菠菜，呈现自然色泽与清新的蔬菜风味。面体粗糙多孔，能够很好地承载酱汁。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

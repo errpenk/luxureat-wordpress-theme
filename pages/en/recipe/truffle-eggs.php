@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Truffle Eggs | LuxurEat</title>
-<meta name="description" content="Truffle eggs bring together the freshness of eggs and the unmistakable aroma of truffle. Ideal for breakfast, brunch, or a refined appetizer, this quick recipe delivers an elegant texture and deeply fragrant finish.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Truffle Eggs | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Truffle eggs bring together the freshness of eggs and the unmistakable aroma of truffle. Ideal for breakfast, brunch, or a refined appetizer, this quick recipe delivers an elegant texture and deeply fragrant finish.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

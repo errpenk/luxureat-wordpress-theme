@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>奶油蘑菇浓汤 | LuxurEat</title>
-<meta name="description" content="一道温暖舒适的开胃菜，非常适合秋日享用。这款奶油蘑菇汤口感顺滑，散发着浓郁的森林香气，搭配金黄酥脆的烤面包丁或淋上少许松露油，风味更佳。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '奶油蘑菇浓汤 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '一道温暖舒适的开胃菜，非常适合秋日享用。这款奶油蘑菇汤口感顺滑，散发着浓郁的森林香气，搭配金黄酥脆的烤面包丁或淋上少许松露油，风味更佳。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

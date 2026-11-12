@@ -3,8 +3,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>中国进出口与市场服务 | LuxurEat（露意膳）</title>
-<meta name="description" content="了解 LuxurEat China 的进口中国、中国采购与出口、市场落地、品牌数字化与商务拓展服务。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '中国进出口与市场服务 | LuxurEat（露意膳）')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '了解 LuxurEat China 的进口中国、中国采购与出口、市场落地、品牌数字化与商务拓展服务。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/market-services/china-services-hero-mobile.webp?v=20261110-truffelixir-photos-news'); ?>" as="image" type="image/webp" media="(max-width: 640px)" fetchpriority="high">

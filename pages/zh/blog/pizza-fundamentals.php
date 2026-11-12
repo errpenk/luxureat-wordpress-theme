@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>一张意式披萨，从面团开始 | LuxurEat</title>
-<meta name="description" content="从面粉、含水、发酵、整形到炉温，理解一张意式披萨如何获得轻盈饼边、柔韧中心与清晰配料。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '一张意式披萨，从面团开始 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '从面粉、含水、发酵、整形到炉温，理解一张意式披萨如何获得轻盈饼边、柔韧中心与清晰配料。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

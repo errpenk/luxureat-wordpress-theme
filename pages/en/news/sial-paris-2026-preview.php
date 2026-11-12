@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>LuxurEat Group Brands at SIAL Paris 2026 | LuxurEat</title>
-<meta name="description" content="From 17 to 21 October 2026, four brands will come together in Paris to present truffles, caviar and Italian gourmet specialties at one of the international food industry’s major global events.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'LuxurEat Group Brands at SIAL Paris 2026 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'From 17 to 21 October 2026, four brands will come together in Paris to present truffles, caviar and Italian gourmet specialties at one of the international food industry’s major global events.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

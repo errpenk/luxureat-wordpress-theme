@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意式番茄水煮海鲈鱼 | LuxurEat</title>
-<meta name="description" content="海鲈鱼在番茄、蒜、白葡萄酒和少量水构成的浅汤中轻柔煮熟，是坎帕尼亚经典的清淡鱼料理。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意式番茄水煮海鲈鱼 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '海鲈鱼在番茄、蒜、白葡萄酒和少量水构成的浅汤中轻柔煮熟，是坎帕尼亚经典的清淡鱼料理。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

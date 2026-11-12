@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>翁布里亚夏季黑松露烤面包 | LuxurEat</title>
-<meta name="description" content="翁布里亚风格烤面包以蒜香橄榄油承接夏季松露，低温处理并在最后刨片，保留易挥发香气。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '翁布里亚夏季黑松露烤面包 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '翁布里亚风格烤面包以蒜香橄榄油承接夏季松露，低温处理并在最后刨片，保留易挥发香气。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

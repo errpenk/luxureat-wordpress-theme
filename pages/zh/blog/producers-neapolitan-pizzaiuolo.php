@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>那不勒斯披萨师：为什么做披萨也可以是一门文化遗产？ | LuxurEat</title>
-<meta name="description" content="在全世界，披萨已经变得极其普遍。但在那不勒斯，“披萨师”并不仅仅意味着一个负责把面团送进烤炉的人。真正的传统职业叫做：pizzaiuolo。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '那不勒斯披萨师：为什么做披萨也可以是一门文化遗产？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '在全世界，披萨已经变得极其普遍。但在那不勒斯，“披萨师”并不仅仅意味着一个负责把面团送进烤炉的人。真正的传统职业叫做：pizzaiuolo。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>什么是松露？为什么它会生长在地下？ | LuxurEat</title>
-<meta name="description" content="提到松露，很多人首先想到的是“昂贵”“稀有”或“高级餐厅”。但如果真正想理解这种食材，最好的起点并不是价格，而是先弄清楚一件事：松露究竟是什么？松露是一类在地下形成子实体的真菌。与我们平时在地面上看到的蘑菇不同，成熟松露隐藏在土壤之中，因此仅靠肉眼很难发现。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '什么是松露？为什么它会生长在地下？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '提到松露，很多人首先想到的是“昂贵”“稀有”或“高级餐厅”。但如果真正想理解这种食材，最好的起点并不是价格，而是先弄清楚一件事：松露究竟是什么？松露是一类在地下形成子实体的真菌。与我们平时在地面上看到的蘑菇不同，成熟松露隐藏在土壤之中，因此仅靠肉眼很难发现。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>为什么中国正在重新认识意式手工冰淇淋 | LuxurEat</title>
-<meta name="description" content="中国已经拥有成熟的冷冻甜品市场。因此，意式手工冰淇淋的机会并不是从零向消费者解释“什么是冰淇淋”，而是让人理解意式手工冰淇淋为什么能代表一种不同的工艺、风味、质地与意大利饮食文化组合。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '为什么中国正在重新认识意式手工冰淇淋 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '中国已经拥有成熟的冷冻甜品市场。因此，意式手工冰淇淋的机会并不是从零向消费者解释“什么是冰淇淋”，而是让人理解意式手工冰淇淋为什么能代表一种不同的工艺、风味、质地与意大利饮食文化组合。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

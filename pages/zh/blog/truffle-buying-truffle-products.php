@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>新鲜松露、松露酱、松露调味油：购买松露产品时到底应该看什么？ | LuxurEat</title>
-<meta name="description" content="松露产品的世界远比“新鲜松露”复杂。走进一家意大利食品店，可以看到新鲜松露、松露酱、奶油类松露酱、松露调味油、松露盐、松露蜂蜜以及各种含松露的加工食品。它们都可以与松露有关，但它们显然不是同一种产品。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '新鲜松露、松露酱、松露调味油：购买松露产品时到底应该看什么？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '松露产品的世界远比“新鲜松露”复杂。走进一家意大利食品店，可以看到新鲜松露、松露酱、奶油类松露酱、松露调味油、松露盐、松露蜂蜜以及各种含松露的加工食品。它们都可以与松露有关，但它们显然不是同一种产品。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

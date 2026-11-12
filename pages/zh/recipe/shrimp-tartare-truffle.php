@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>脆爽蔬菜松露虾仁鞑靼 | LuxurEat</title>
-<meta name="description" content="一道清新精致的菜肴，生虾的鲜甜与蔬菜的爽脆、松露的浓郁香气完美融合，兼具视觉美感和味觉享受。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '脆爽蔬菜松露虾仁鞑靼 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '一道清新精致的菜肴，生虾的鲜甜与蔬菜的爽脆、松露的浓郁香气完美融合，兼具视觉美感和味觉享受。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

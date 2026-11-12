@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>松露不只属于咸味料理：当松露遇见甜点 | LuxurEat</title>
-<meta name="description" content="提到松露，人们通常想到意面、烩饭、鸡蛋和奶酪。但松露首先是一种以香气见长的食材，而香气完全可以与甜味、乳制品、巧克力以及其他甜点元素形成出人意料却协调的组合。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '松露不只属于咸味料理：当松露遇见甜点 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '提到松露，人们通常想到意面、烩饭、鸡蛋和奶酪。但松露首先是一种以香气见长的食材，而香气完全可以与甜味、乳制品、巧克力以及其他甜点元素形成出人意料却协调的组合。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

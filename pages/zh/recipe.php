@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>食谱艺术 | LuxurEat（露意膳）</title>
-<meta name="description" content="从意大利地域风味到家庭餐桌，探索 LuxurEat（露意膳）的中英文食谱与烹饪灵感。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '食谱艺术 | LuxurEat（露意膳）')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '从意大利地域风味到家庭餐桌，探索 LuxurEat（露意膳）的中英文食谱与烹饪灵感。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

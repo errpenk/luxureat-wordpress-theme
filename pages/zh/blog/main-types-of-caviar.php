@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>鱼子酱的主要种类 | LuxurEat</title>
-<meta name="description" content="主要鱼子酱品种包括欧鳇、奥西特拉、贝氏鲟、卡露伽、闪光鲟与白鲟，它们各自拥有不同的产地与感官特点。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '鱼子酱的主要种类 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '主要鱼子酱品种包括欧鳇、奥西特拉、贝氏鲟、卡露伽、闪光鲟与白鲟，它们各自拥有不同的产地与感官特点。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

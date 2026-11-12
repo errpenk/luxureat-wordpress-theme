@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>TrufflElixir：当松露邂逅甜蜜世界 | LuxurEat</title>
-<meta name="description" content="提到松露，人们往往会联想到咸味菜肴和成人餐桌上的精致料理。而通过 TrufflElixir，我们希望开辟一条全新的道路：推出一款以甜点搭配为主要用途的松露风味糖浆，让松露独特的香气融入日常生活中的每一个简单时刻。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'TrufflElixir：当松露邂逅甜蜜世界 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '提到松露，人们往往会联想到咸味菜肴和成人餐桌上的精致料理。而通过 TrufflElixir，我们希望开辟一条全新的道路：推出一款以甜点搭配为主要用途的松露风味糖浆，让松露独特的香气融入日常生活中的每一个简单时刻。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

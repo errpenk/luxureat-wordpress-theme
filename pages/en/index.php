@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>LuxurEat Group | Premium Italian Food &amp; Brand Partnerships</title>
-<meta name="description" content="Discover premium Italian food, authentic regional flavours, recipes, brand stories and professional market partnerships from LuxurEat Group.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'LuxurEat Group | Premium Italian Food &amp; Brand Partnerships')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Discover premium Italian food, authentic regional flavours, recipes, brand stories and professional market partnerships from LuxurEat Group.')); ?>">
 <!-- lux:seo:end -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/home-hero-truffle-poster-lite-v2.webp'); ?>" as="image" type="image/webp" fetchpriority="high">
 <!-- lux:fonts:start -->

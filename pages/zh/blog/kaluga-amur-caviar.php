@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>卡露伽与阿穆尔鱼子酱 | LuxurEat</title>
-<meta name="description" content="卡露伽与阿穆尔鱼子酱被视为珍贵贝鲁迦鱼子酱（Beluga caviar）的优质替代选择，主要优势在于价格更亲民。卡露伽鲟仅栖息于中俄之间的黑龙江及其支流。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '卡露伽与阿穆尔鱼子酱 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '卡露伽与阿穆尔鱼子酱被视为珍贵贝鲁迦鱼子酱（Beluga caviar）的优质替代选择，主要优势在于价格更亲民。卡露伽鲟仅栖息于中俄之间的黑龙江及其支流。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>How to Prepare Italian-Inspired Truffle Gelato at Home | LuxurEat</title>
-<meta name="description" content="Truffle Gelato is an unusual dessert, but the preparation experience does not need to be complicated. The LuxurEat (露意膳) concept uses a powdered mix to move the technically difficult part - formulation - away from the consumer and make the final dessert easier to prepare close to the moment it will be served.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'How to Prepare Italian-Inspired Truffle Gelato at Home | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Truffle Gelato is an unusual dessert, but the preparation experience does not need to be complicated. The LuxurEat (露意膳) concept uses a powdered mix to move the technically difficult part - formulation - away from the consumer and make the final dessert easier to prepare close to the moment it will be served.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

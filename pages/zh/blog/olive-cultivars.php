@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>品种如何改变橄榄油的香气 | LuxurEat</title>
-<meta name="description" content="从品种差异理解青草、番茄、果仁与辛香的来源，同时避免把品种名称当成固定风味公式。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '品种如何改变橄榄油的香气 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '从品种差异理解青草、番茄、果仁与辛香的来源，同时避免把品种名称当成固定风味公式。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

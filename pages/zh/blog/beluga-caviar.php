@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>贝鲁迦鱼子酱 | LuxurEat</title>
-<meta name="description" content="贝鲁迦鱼子酱（Beluga caviar）被视为最奢华、最稀有的鱼子酱之一，取自欧鳇（Beluga sturgeon，Huso huso），以硕大的灰色颗粒和细腻、奶油般的口感闻名。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '贝鲁迦鱼子酱 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '贝鲁迦鱼子酱（Beluga caviar）被视为最奢华、最稀有的鱼子酱之一，取自欧鳇（Beluga sturgeon，Huso huso），以硕大的灰色颗粒和细腻、奶油般的口感闻名。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

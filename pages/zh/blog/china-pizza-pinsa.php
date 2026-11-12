@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>为什么中国正在进一步理解意大利披萨——以及品萨如何创造新的入口 | LuxurEat</title>
-<meta name="description" content="披萨在中国已经拥有很高认知度，因此挑战完全不同。机会不在于再次介绍“什么是披萨”，而在于把讨论从泛化的快餐概念，带向地域风格、面团技术、食材品质，以及品萨这类更新的意大利形式。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '为什么中国正在进一步理解意大利披萨——以及品萨如何创造新的入口 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '披萨在中国已经拥有很高认知度，因此挑战完全不同。机会不在于再次介绍“什么是披萨”，而在于把讨论从泛化的快餐概念，带向地域风格、面团技术、食材品质，以及品萨这类更新的意大利形式。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

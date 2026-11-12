@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意大利二十个大区：一张餐桌地图 | LuxurEat</title>
-<meta name="description" content="从阿尔卑斯山到地中海岛屿，用二十个大区建立餐桌坐标，而不是用简单的南北二分概括意大利。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意大利二十个大区：一张餐桌地图 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '从阿尔卑斯山到地中海岛屿，用二十个大区建立餐桌坐标，而不是用简单的南北二分概括意大利。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

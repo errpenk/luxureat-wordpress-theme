@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>松露鸡蛋 | LuxurEat</title>
-<meta name="description" content="松露鸡蛋是一道美味佳肴，它将新鲜鸡蛋的清爽与松露浓郁的香气完美融合。无论是早餐、早午餐，还是作为精致的开胃菜，这道菜都堪称完美之选。做法简单快捷，其香气和精致口感定会让您爱不释手。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '松露鸡蛋 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '松露鸡蛋是一道美味佳肴，它将新鲜鸡蛋的清爽与松露浓郁的香气完美融合。无论是早餐、早午餐，还是作为精致的开胃菜，这道菜都堪称完美之选。做法简单快捷，其香气和精致口感定会让您爱不释手。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

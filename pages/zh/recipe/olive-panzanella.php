@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>托斯卡纳面包沙拉 | LuxurEat</title>
-<meta name="description" content="托斯卡纳面包沙拉 是托斯卡纳及意大利中部经典的陈面包沙拉。略微回软的面包吸收番茄、醋和特级初榨橄榄油的风味，形成清爽又保留结构感的夏季料理。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '托斯卡纳面包沙拉 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '托斯卡纳面包沙拉 是托斯卡纳及意大利中部经典的陈面包沙拉。略微回软的面包吸收番茄、醋和特级初榨橄榄油的风味，形成清爽又保留结构感的夏季料理。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

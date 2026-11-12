@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>坎波菲洛内宽扁面 · 250 g | LuxurEat</title>
-<meta name="description" content="采用意大利硬质小麦粗面粉与新鲜鸡蛋制作，宽扁面体经低温缓慢干燥，口感细腻而富有韧性，粗糙多孔的表面能够充分包裹酱汁。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '坎波菲洛内宽扁面 · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '采用意大利硬质小麦粗面粉与新鲜鸡蛋制作，宽扁面体经低温缓慢干燥，口感细腻而富有韧性，粗糙多孔的表面能够充分包裹酱汁。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

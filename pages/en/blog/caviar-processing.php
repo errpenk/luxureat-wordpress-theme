@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Caviar Processing | LuxurEat</title>
-<meta name="description" content="Caviar processing is carried out by hand — from the selection of roe to the Malossol salting method, followed by packaging and maturation.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Caviar Processing | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'Caviar processing is carried out by hand — from the selection of roe to the Malossol salting method, followed by packaging and maturation.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

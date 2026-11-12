@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>番茄罗勒意式烤面包 | LuxurEat</title>
-<meta name="description" content="成熟番茄、烤面包、蒜与特级初榨橄榄油构成最经典的意式前菜之一。重点在于面包的酥脆、番茄的新鲜度，以及出餐前加入的橄榄油果香。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '番茄罗勒意式烤面包 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '成熟番茄、烤面包、蒜与特级初榨橄榄油构成最经典的意式前菜之一。重点在于面包的酥脆、番茄的新鲜度，以及出餐前加入的橄榄油果香。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>What is extra virgin olive oil? | LuxurEat</title>
-<meta name="description" content="From legal grade, mechanical processing, sensory evaluation to daily use, establish a complete basis for judging extra virgin olive oil.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'What is extra virgin olive oil? | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'From legal grade, mechanical processing, sensory evaluation to daily use, establish a complete basis for judging extra virgin olive oil.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

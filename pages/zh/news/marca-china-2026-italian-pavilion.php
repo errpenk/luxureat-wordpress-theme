@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意大利国家展团首度亮相 Marca China 2026，携10家本土品牌集中呈现“意式制造”品质实力 | LuxurEat</title>
-<meta name="description" content="意大利对外贸易委员会首次以国家展团形式参展，携10家意大利本土优质企业亮相 Marca China 2026。LuxurEat 展位号为 1D04。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意大利国家展团首度亮相 Marca China 2026，携10家本土品牌集中呈现“意式制造”品质实力 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '意大利对外贸易委员会首次以国家展团形式参展，携10家意大利本土优质企业亮相 Marca China 2026。LuxurEat 展位号为 1D04。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

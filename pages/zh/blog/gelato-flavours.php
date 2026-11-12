@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>经典口味：意式手工冰淇淋如何表达原料 | LuxurEat</title>
-<meta name="description" content="从牛奶、香草、巧克力、咖啡、榛子、开心果和水果出发，理解不同原料如何改变甜度、质地与香气。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '经典口味：意式手工冰淇淋如何表达原料 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '从牛奶、香草、巧克力、咖啡、榛子、开心果和水果出发，理解不同原料如何改变甜度、质地与香气。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

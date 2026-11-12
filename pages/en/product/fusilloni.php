@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>Fusilloni · 6 × 350 g | LuxurEat</title>
-<meta name="description" content="The large spiral shape is designed to hold sauces effectively. Made with 100% Italian durum wheat semolina and pure local spring water, bronze-drawn and slowly dried for 24–48 hours at 40–45°C.">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'Fusilloni · 6 × 350 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', 'The large spiral shape is designed to hold sauces effectively. Made with 100% Italian durum wheat semolina and pure local spring water, bronze-drawn and slowly dried for 24–48 hours at 40–45°C.')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/NyghtSerif-Regular.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

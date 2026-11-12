@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>柠檬宽面 · 250 g | LuxurEat</title>
-<meta name="description" content="加入 5.3% 柠檬的鸡蛋宽面，带来清新明亮的柑橘香气。粗糙多孔的面体能够与酱汁充分融合，同时保留轻盈风味。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '柠檬宽面 · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '加入 5.3% 柠檬的鸡蛋宽面，带来清新明亮的柑橘香气。粗糙多孔的面体能够与酱汁充分融合，同时保留轻盈风味。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

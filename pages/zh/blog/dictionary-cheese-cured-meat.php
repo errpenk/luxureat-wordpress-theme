@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>奶酪与意大利腌肉词典：帕尔马干酪、莫扎里拉和火腿到底有什么区别？ | LuxurEat</title>
-<meta name="description" content="意大利奶酪和腌肉拥有大量地方名称。这些名字并不只是“不同品牌”。很多时候，它们分别代表不同原料、生产方式、成熟时间和地域传统。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '奶酪与意大利腌肉词典：帕尔马干酪、莫扎里拉和火腿到底有什么区别？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '意大利奶酪和腌肉拥有大量地方名称。这些名字并不只是“不同品牌”。很多时候，它们分别代表不同原料、生产方式、成熟时间和地域传统。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

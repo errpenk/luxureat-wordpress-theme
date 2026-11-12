@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>香草柠檬腌烤西葫芦 | LuxurEat</title>
-<meta name="description" content="薄切西葫芦经高温快速烤制，再以柠檬、薄荷、蒜与橄榄油短暂腌渍，保留清脆质地。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '香草柠檬腌烤西葫芦 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '薄切西葫芦经高温快速烤制，再以柠檬、薄荷、蒜与橄榄油短暂腌渍，保留清脆质地。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

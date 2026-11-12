@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>早餐松饼上，除了枫糖浆，还可以淋上什么？ | LuxurEat</title>
-<meta name="description" content="今年11月，LuxurEat将携TrufflElixir松露风味淋酱系列亮相2026 FHC上海环球食品展，为家庭早餐带来新的搭配灵感。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '早餐松饼上，除了枫糖浆，还可以淋上什么？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '今年11月，LuxurEat将携TrufflElixir松露风味淋酱系列亮相2026 FHC上海环球食品展，为家庭早餐带来新的搭配灵感。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-news-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

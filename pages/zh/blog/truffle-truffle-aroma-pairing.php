@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>为什么松露只需要一点？理解松露的香气与风味搭配 | LuxurEat</title>
-<meta name="description" content="很多人在第一次购买松露产品时都会有一种很自然的想法：既然松露这么珍贵，是不是放得越多越好？答案并不是这样。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '为什么松露只需要一点？理解松露的香气与风味搭配 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '很多人在第一次购买松露产品时都会有一种很自然的想法：既然松露这么珍贵，是不是放得越多越好？答案并不是这样。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

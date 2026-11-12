@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>牛肝菌宽面 · 250 g | LuxurEat</title>
-<meta name="description" content="在鸡蛋面中加入 5.6% 牛肝菌，赋予面体浓郁而自然的菌菇香气。采用硬质小麦粗面粉和鸡蛋制作，并经低温慢干保持粗糙多孔的质地。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '牛肝菌宽面 · 250 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '在鸡蛋面中加入 5.6% 牛肝菌，赋予面体浓郁而自然的菌菇香气。采用硬质小麦粗面粉和鸡蛋制作，并经低温慢干保持粗糙多孔的质地。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

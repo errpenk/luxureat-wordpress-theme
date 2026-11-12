@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>如何品鉴、保存和使用橄榄油 | LuxurEat</title>
-<meta name="description" content="用可重复的闻香、入口与记录方法品鉴橄榄油，并把保存和烹饪纳入同一套判断。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '如何品鉴、保存和使用橄榄油 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '用可重复的闻香、入口与记录方法品鉴橄榄油，并把保存和烹饪纳入同一套判断。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

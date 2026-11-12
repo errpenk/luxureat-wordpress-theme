@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>在家如何选择、使用和保存意大利特级初榨橄榄油 | LuxurEat</title>
-<meta name="description" content="挑选一瓶好的特级初榨橄榄油并不需要专业品油师训练。正确读懂产品类别、查看产地信息、避光避热保存，并根据菜肴选择合适的风味强度，这些实用习惯远比单纯看油的颜色更重要。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '在家如何选择、使用和保存意大利特级初榨橄榄油 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '挑选一瓶好的特级初榨橄榄油并不需要专业品油师训练。正确读懂产品类别、查看产地信息、避光避热保存，并根据菜肴选择合适的风味强度，这些实用习惯远比单纯看油的颜色更重要。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

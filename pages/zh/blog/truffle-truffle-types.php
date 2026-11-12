@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>白松露、黑松露、夏季松露：它们到底有什么区别？ | LuxurEat</title>
-<meta name="description" content="第一次接触松露时，最容易产生的误解之一就是：“松露不都是一样的吗，只是颜色不同？”实际上，白松露、珍贵黑松露、夏季黑松露等属于不同种类，它们的成熟时期、香气特点、市场定位和料理方法都存在差异。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '白松露、黑松露、夏季松露：它们到底有什么区别？ | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '第一次接触松露时，最容易产生的误解之一就是：“松露不都是一样的吗，只是颜色不同？”实际上，白松露、珍贵黑松露、夏季黑松露等属于不同种类，它们的成熟时期、香气特点、市场定位和料理方法都存在差异。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

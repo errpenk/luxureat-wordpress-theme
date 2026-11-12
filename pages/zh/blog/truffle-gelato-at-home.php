@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>在家如何制作意大利风格松露意式手工冰淇淋 | LuxurEat</title>
-<meta name="description" content="松露意式手工冰淇淋是一种不常见的甜品，但制作体验本身并不需要复杂。LuxurEat（露意膳） 的思路是用粉末基底把配方平衡这一技术难度从消费者端移走，让最终甜品能够更方便地在接近食用时间时完成。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '在家如何制作意大利风格松露意式手工冰淇淋 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '松露意式手工冰淇淋是一种不常见的甜品，但制作体验本身并不需要复杂。LuxurEat（露意膳） 的思路是用粉末基底把配方平衡这一技术难度从消费者端移走，让最终甜品能够更方便地在接近食用时间时完成。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

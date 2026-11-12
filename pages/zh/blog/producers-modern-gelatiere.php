@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意式冰淇淋师：从经验手艺到现代配方技术 | LuxurEat</title>
-<meta name="description" content="站在意式冰淇淋柜台前，我们看到的是一排颜色、口味和柔软质地。但柜台后面的工作远比“把牛奶和糖冻起来”复杂。制作意式手工冰淇淋的专业人员被称为 gelatiere。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意式冰淇淋师：从经验手艺到现代配方技术 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '站在意式冰淇淋柜台前，我们看到的是一排颜色、口味和柔软质地。但柜台后面的工作远比“把牛奶和糖冻起来”复杂。制作意式手工冰淇淋的专业人员被称为 gelatiere。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-blog-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>

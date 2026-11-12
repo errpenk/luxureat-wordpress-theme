@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>意式生蔬菜配橄榄油蘸汁 | LuxurEat</title>
-<meta name="description" content="意式生蔬菜配橄榄油蘸汁 以新鲜、脆爽的时令蔬菜搭配特级初榨橄榄油、盐、黑胡椒和少量柠檬汁，直接展现优质橄榄油的果香、苦味和辛香感。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', '意式生蔬菜配橄榄油蘸汁 | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '意式生蔬菜配橄榄油蘸汁 以新鲜、脆爽的时令蔬菜搭配特级初榨橄榄油、盐、黑胡椒和少量柠檬汁，直接展现优质橄榄油的果香、苦味和辛香感。')); ?>">
 <!-- lux:seo:end -->
 <!-- Fonts -->
 

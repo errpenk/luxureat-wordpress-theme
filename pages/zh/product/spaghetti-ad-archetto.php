@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- lux:seo:start -->
-<title>U型长面 · 12 × 500 g | LuxurEat</title>
-<meta name="description" content="采用 100% 意大利硬质小麦粗面粉和当地纯净泉水制成，保留传统 U 型长面造型。青铜模具拉制赋予面体粗糙多孔的表面，并经 40–45°C 低温慢干 24–48 小时。">
+<title><?php echo esc_html(luxureat_static_seo_value('title', 'U型长面 · 12 × 500 g | LuxurEat')); ?></title>
+<meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '采用 100% 意大利硬质小麦粗面粉和当地纯净泉水制成，保留传统 U 型长面造型。青铜模具拉制赋予面体粗糙多孔的表面，并经 40–45°C 低温慢干 24–48 小时。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-caviar-critical.woff2?v=20261110-truffelixir-photos-news'); ?>" as="font" type="font/woff2" crossorigin>
