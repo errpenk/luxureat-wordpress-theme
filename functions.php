@@ -981,6 +981,24 @@ function luxureat_static_seo_value($field, $fallback) {
     return isset($values[$field]) ? $values[$field] : html_entity_decode($fallback, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 }
 
+function luxureat_cms_canonical($canonical) {
+    if (!is_singular('post') || is_preview()) return $canonical;
+    $post = get_queried_object();
+    if (!$post || $post->post_status !== 'publish') return $canonical;
+    $source = get_post_meta($post->ID, '_luxureat_source_id', true);
+    $lang = get_post_meta($post->ID, '_luxureat_lang', true);
+    $kind = get_post_meta($post->ID, '_luxureat_kind', true);
+    if (!$source || !$lang || !$kind) return $canonical;
+    foreach (luxureat_static_seo_catalog() as $route => $meta) {
+        if (($meta['cms_source'] ?? '') === $source && ($meta['cms_kind'] ?? '') === $kind && $meta['lang'] === $lang) {
+            return luxureat_static_url($route);
+        }
+    }
+    return $canonical;
+}
+add_filter('wpseo_canonical', 'luxureat_cms_canonical');
+add_filter('wpseo_opengraph_url', 'luxureat_cms_canonical');
+
 function luxureat_static_disable_yoast_output() {
     $path = luxureat_static_current_path();
     $path = $path === '' || $path === '__home' ? 'zh' : $path;
@@ -1000,7 +1018,7 @@ function luxureat_static_public_plugin_output() {
     $path = $path === '' || $path === '__home' ? 'zh' : $path;
     $aliases = luxureat_static_aliases();
     $route = isset($aliases[$path]) ? $aliases[$path] : $path;
-    if (!isset(luxureat_static_seo_catalog()[$route])) return;
+    if (!isset(luxureat_static_seo_catalog()[$route]) && !is_singular('post')) return;
     add_filter('jetpack_photon_skip_image', '__return_true');
     if (!is_user_logged_in() && in_array($_SERVER['REQUEST_METHOD'] ?? 'GET', array('GET', 'HEAD'), true)) {
         // Newsletter proofs expire in 15 minutes, so cached HTML must stay younger.
@@ -1934,7 +1952,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'de586ee98b577b238b60c0c4fe8afa4df5688c0d')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'bb6e2e7a7be5f8128cafb6345c084079be883571')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
