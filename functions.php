@@ -1074,8 +1074,9 @@ function luxureat_static_seo_head() {
         echo '<link rel="alternate" hreflang="en" href="' . esc_url(luxureat_static_url($en_route)) . '">' . "
 ";
     }
+    $content_type = isset($meta['contentType']) ? $meta['contentType'] : $meta['type'];
     $is_article = in_array($meta['type'], array('Article', 'NewsArticle'), true);
-    $og_type = $is_article ? 'article' : ($meta['type'] === 'Product' ? 'product' : 'website');
+    $og_type = $is_article ? 'article' : ($content_type === 'Product' ? 'product' : 'website');
     echo '<meta property="og:type" content="' . esc_attr($og_type) . '">' . "
 ";
     echo '<meta property="og:site_name" content="LuxurEat">' . "
@@ -1100,18 +1101,17 @@ function luxureat_static_seo_head() {
 ";
     $schema = array(
         '@context' => 'https://schema.org',
-        '@type' => $meta['type'],
+        '@type' => $content_type,
         'name' => $meta['title'],
         'headline' => $is_article ? $meta['title'] : null,
         'description' => $meta['description'],
         'keywords' => ($is_article || $meta['type'] === 'Recipe') && isset($meta['keywords']) ? $meta['keywords'] : null,
         'url' => $canonical,
         'image' => $image,
-        'inLanguage' => $meta['lang'] === 'zh' ? 'zh-CN' : 'en',
-        'isPartOf' => array('@type' => 'WebSite', 'name' => 'LuxurEat', 'url' => luxureat_static_url('zh')),
-        'sku' => $meta['type'] === 'Product' ? $meta['sku'] : null,
-        'category' => in_array($meta['type'], array('Product', 'Recipe'), true) ? $meta['category'] : null,
-        'brand' => $meta['type'] === 'Product' ? array('@type' => 'Brand', 'name' => 'LuxurEat') : null,
+        'inLanguage' => $content_type === 'Product' ? null : ($meta['lang'] === 'zh' ? 'zh-CN' : 'en'),
+        'isPartOf' => $content_type === 'Product' ? null : array('@type' => 'WebSite', 'name' => 'LuxurEat', 'url' => luxureat_static_url('zh')),
+        'sku' => $content_type === 'Product' ? $meta['sku'] : null,
+        'category' => in_array($content_type, array('Product', 'Recipe'), true) ? $meta['category'] : null,
         'startDate' => $meta['type'] === 'Event' ? $meta['startDate'] : null,
         'endDate' => $meta['type'] === 'Event' ? $meta['endDate'] : null,
         'eventStatus' => $meta['type'] === 'Event' ? 'https://schema.org/EventScheduled' : null,
@@ -1126,12 +1126,11 @@ function luxureat_static_seo_head() {
         'author' => $meta['type'] === 'Recipe' || $is_article ? array('@type' => 'Organization', 'name' => isset($meta['author']) ? $meta['author'] : 'LuxurEat', 'url' => luxureat_static_url('zh')) : null,
         'datePublished' => $is_article && !empty($meta['datePublished']) ? $meta['datePublished'] : null,
         'dateModified' => $is_article && !empty($meta['datePublished']) ? $meta['datePublished'] : null,
-        'publisher' => $is_article || $meta['type'] === 'WebPage' ? array('@type' => 'Organization', 'name' => 'LuxurEat', 'url' => luxureat_static_url('zh'), 'logo' => array('@type' => 'ImageObject', 'url' => get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png')) : null,
+        'publisher' => $is_article || $content_type === 'WebPage' ? array('@type' => 'Organization', 'name' => 'LuxurEat', 'url' => luxureat_static_url('zh'), 'logo' => array('@type' => 'ImageObject', 'url' => get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png')) : null,
     );
     $schema = array_filter($schema, function ($value) { return $value !== null; });
     echo '<script type="application/ld+json">' . wp_json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>' . "
 ";
-    $content_type = isset($meta['contentType']) ? $meta['contentType'] : $meta['type'];
     $parent_slugs = array('Article' => 'blog', 'NewsArticle' => 'brand', 'Product' => 'product', 'Event' => 'brand', 'Recipe' => 'recipe');
     if (isset($parent_slugs[$content_type])) {
         $is_zh = $meta['lang'] === 'zh';
@@ -1793,10 +1792,10 @@ function luxureat_static_contact_ajax() {
         'Brand & Media Partnerships' => 'Collaborazioni con brand e media',
         'Other' => 'Altro',
     );
-    if ($name === '' || ($raw_email === '' && $phone === '') || $content === '' || !isset($inquiry_labels[$inquiry_type])) {
+    if ($name === '' || ($raw_email === '' && $phone === '') || (!$is_b2b_quote && $content === '') || !isset($inquiry_labels[$inquiry_type])) {
         wp_send_json_error(array('message' => $message('请填写所有必填信息。', 'Please complete all required fields.')), 400);
     }
-    if ($is_b2b_quote && ($company === '' || $product_industry === '' || $estimated_quantity === '' || $delivery_market === '')) {
+    if ($is_b2b_quote && $product_industry === '') {
         wp_send_json_error(array('message' => $message('请填写所有必填报价信息。', 'Please complete all required quote details.')), 400);
     }
     if (strlen($name) > 240 || strlen($company) > 360 || strlen($product_industry) > 360 || strlen($estimated_quantity) > 240 || strlen($delivery_market) > 360 || strlen($target_date) > 120 || strlen($phone) > 120 || strlen($content) > 12000 || ($raw_email !== '' && !is_email($email))) {
@@ -1961,7 +1960,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '1683ac8a8d7589e2eee883545aef260835f441df')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'ce681243f5d1acca12fbcd9cb268531b101039d0')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
