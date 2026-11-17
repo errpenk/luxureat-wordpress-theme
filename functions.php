@@ -73,7 +73,7 @@ function luxureat_cms_payload($kind) {
         $record = array(
             'title' => html_entity_decode(get_the_title($post), ENT_QUOTES | ENT_HTML5, 'UTF-8'),
             'intro' => html_entity_decode(get_the_excerpt($post), ENT_QUOTES | ENT_HTML5, 'UTF-8'),
-            'image' => $image ? $image : '',
+            'image' => $image ? luxureat_origin_upload_images($image) : '',
         );
         if ($kind !== 'blog') {
             $record['cmsHtml'] = apply_filters('the_content', $post->post_content);
@@ -1961,7 +1961,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '7a51c46357b38163a380546182f6ca75f6e62e50')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '9e96e06b4ae996fd01445bf0b982b62961d21e0f')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
