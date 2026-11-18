@@ -972,6 +972,7 @@ function luxureat_cms_seo_overrides($route) {
         if (!is_string($value) || trim($value) === '') continue;
         if (function_exists('wpseo_replace_vars')) $value = wpseo_replace_vars($value, $post);
         $value = trim(wp_strip_all_tags($value));
+        if ($field === 'description' && in_array($route, array('zh', 'zh/product', 'zh/about-us', 'zh/contact', 'en/brand', 'en/about-us'), true) && strlen($value) < strlen($meta['description'])) continue;
         if ($value !== '') $cache[$route][$field] = $value;
     }
     if (($meta['cms_kind'] ?? '') !== 'page') {
@@ -1960,7 +1961,7 @@ add_action('after_switch_theme', 'luxureat_static_flush_rewrites');
 add_action('switch_theme', 'flush_rewrite_rules');
 
 function luxureat_static_refresh_changed_routes() {
-    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), 'ce681243f5d1acca12fbcd9cb268531b101039d0')));
+    $route_version = md5(wp_json_encode(array(luxureat_static_routes(), luxureat_static_aliases(), '5a53aa5e96d4f5ae10bbcfbdf6be7a00c410d899')));
     if (get_option('luxureat_static_route_version') === $route_version) {
         return;
     }
