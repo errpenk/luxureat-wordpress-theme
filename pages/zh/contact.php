@@ -289,7 +289,7 @@ roberto@ugolinigroup.com
 
 
 <!-- lux:footer:start -->
-<!-- lux:related:start --><nav class="lux-related-pages" aria-label="相关页面"><strong>继续探索</strong><div><a href="<?php echo esc_url(luxureat_static_url('zh/cooperation')); ?>">商务合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/product')); ?>">我们的产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/about-us')); ?>">关于我们</a><a href="<?php echo esc_url(luxureat_static_url('zh/gallery')); ?>">企业画廊</a><a href="<?php echo esc_url(luxureat_static_url('zh/brand')); ?>">品牌新闻</a><a href="<?php echo esc_url(luxureat_static_url('news/fhc-shanghai-2026-new-products')); ?>">FHC 上海 2026｜让松露从早餐开始融入日常</a><a href="<?php echo esc_url(luxureat_static_url('blog/italian-food-culture')); ?>">意大利美食，不止一种味道</a></div></nav><!-- lux:related:end -->
+<!-- lux:related:start --><nav class="lux-related-pages" aria-label="相关页面"><strong>继续探索</strong><div><a href="<?php echo esc_url(luxureat_static_url('zh/cooperation', '')); ?>">商务合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/product', '')); ?>">我们的产品</a><a href="<?php echo esc_url(luxureat_static_url('zh/about-us', '')); ?>">关于我们</a></div></nav><!-- lux:related:end -->
 <section class="lux-newsletter" aria-labelledby="lux-newsletter-title-zh">
   <div class="lux-newsletter-inner">
     <div class="lux-newsletter-intro"><img width="1024" height="1024" class="lux-newsletter-icon" loading="eager" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/newsletter-envelope.svg'); ?>" alt="" aria-hidden="true"><div class="lux-newsletter-copy"><h2 id="lux-newsletter-title-zh">LUXUREAT（露意膳）通讯｜订阅我们的更新</h2><p>接收产品上新、品牌活动与意式风味资讯。提交后，请通过邮件完成确认。</p></div></div>
