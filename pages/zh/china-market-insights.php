@@ -7,18 +7,18 @@
 <meta name="description" content="<?php echo esc_attr(luxureat_static_seo_value('description', '了解中国市场规模、城市与经济中心、意中贸易，以及意大利食品、饮料和葡萄酒的市场数据。')); ?>">
 <!-- lux:seo:end -->
 <!-- lux:fonts:start -->
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/market-services/china-market-hero-mobile.webp?v=20261120-mobile-links3'); ?>" as="image" type="image/webp" media="(max-width: 640px)" fetchpriority="high">
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/market-services/china-market-hero-mobile.webp?v=20261120-home-topics4'); ?>" as="image" type="image/webp" media="(max-width: 640px)" fetchpriority="high">
 <link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/market-services/china-market-hero.webp'); ?>" as="image" type="image/webp" media="(min-width: 641px)" fetchpriority="high">
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-hero-critical.woff2?v=20261120-mobile-links3'); ?>" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-market-critical.woff2?v=20261120-mobile-links3'); ?>" as="font" type="font/woff2" crossorigin>
-<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Market Hero Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-hero-critical.woff2?v=20261120-mobile-links3'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Market Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-critical.woff2?v=20261120-mobile-links3'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-market-critical.woff2?v=20261120-mobile-links3'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Market Hero Critical","KingHwa Market Critical"!important;--lux-zh-headline:"KingHwa Market Hero Critical","KingHwa Market Critical"!important;--lux-zh-body:"LuxurEat ZhiSong Site"!important}</style>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-hero-critical.woff2?v=20261120-home-topics4'); ?>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-market-critical.woff2?v=20261120-home-topics4'); ?>" as="font" type="font/woff2" crossorigin>
+<style data-lux-critical-fonts>@font-face{font-family:"KingHwa Market Hero Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-hero-critical.woff2?v=20261120-home-topics4'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"KingHwa Market Critical";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/KingHwaOldSong-market-critical.woff2?v=20261120-home-topics4'); ?>") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"LuxurEat ZhiSong Site";src:url("<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/LuxurEatZhiSong-market-critical.woff2?v=20261120-home-topics4'); ?>") format("woff2");font-weight:400;font-style:normal;font-display:swap}html[lang^="zh"]{--lux-page-heading:"KingHwa Market Hero Critical","KingHwa Market Critical"!important;--lux-zh-headline:"KingHwa Market Hero Critical","KingHwa Market Critical"!important;--lux-zh-body:"LuxurEat ZhiSong Site"!important}</style>
 <!-- lux:fonts:end -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261120-mobile-links3'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/tailwind-site.css?v=20261120-home-topics4'); ?>">
 
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261120-mobile-links3'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/market-services.css?v=20261120-mobile-links3-final-italic1'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/newsletter.css?v=20261120-home-topics4'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/market-services.css?v=20261120-home-topics4-final-italic1'); ?>">
 <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/luxureat-logo.png'); ?>">
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/mobile-sections.css?v=20261120-mobile-links3'); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/mobile-sections.css?v=20261120-home-topics4'); ?>">
 <link rel="ard" href="https://luxureat.cn/.well-known/ard.json">
 <?php wp_head(); ?>
 </head>
@@ -129,7 +129,6 @@
 <section class="lux-ms-cta" id="market-consultation"><div class="lux-ms-shell"><span class="lux-ms-eyebrow" lang="en">LuxurEat China</span><h2>计划进入<em>中国市场？</em></h2><p>如果您希望进一步评估产品进口、中国采购或本地业务机会，可与 LuxurEat China 沟通具体项目。</p><a href="<?php echo esc_url(luxureat_static_url('zh/import-export-services', '')); ?>">查看中国服务 <span aria-hidden="true">→︎</span></a></div></section>
 </main>
 <!-- lux:footer:start -->
-<!-- lux:related:start --><nav class="lux-related-pages" aria-label="相关页面"><strong>继续探索</strong><div><a href="<?php echo esc_url(luxureat_static_url('zh/import-export-services', '')); ?>">中国进出口与市场服务</a><a href="<?php echo esc_url(luxureat_static_url('zh/cooperation', '')); ?>">商务合作</a><a href="<?php echo esc_url(luxureat_static_url('zh/blog', '')); ?>">知识博客</a></div></nav><!-- lux:related:end -->
 <section class="lux-newsletter" aria-labelledby="lux-newsletter-title-zh">
   <div class="lux-newsletter-inner">
     <div class="lux-newsletter-intro"><img width="1024" height="1024" class="lux-newsletter-icon" loading="lazy" fetchpriority="low" decoding="async" src="<?php echo esc_url(get_template_directory_uri() . '/assets/media/brand/newsletter-envelope.svg'); ?>" alt="" aria-hidden="true"><div class="lux-newsletter-copy"><h2 id="lux-newsletter-title-zh">LUXUREAT（露意膳）通讯｜订阅我们的更新</h2><p>接收产品上新、品牌活动与意式风味资讯。提交后，请通过邮件完成确认。</p></div></div>
