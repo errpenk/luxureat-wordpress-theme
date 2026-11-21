@@ -318,6 +318,8 @@ return array(
     'en/recipe/truffle-trout' => 'pages/en/recipe/truffle-trout.php',
     'recipe/truffle-lamb' => 'pages/zh/recipe/truffle-lamb.php',
     'en/recipe/truffle-lamb' => 'pages/en/recipe/truffle-lamb.php',
+    'news/thai-durian-white-truffle' => 'pages/zh/news/thai-durian-white-truffle.php',
+    'en/news/thai-durian-white-truffle' => 'pages/en/news/thai-durian-white-truffle.php',
     'news/truffelixir-sweet-world' => 'pages/zh/news/truffelixir-sweet-world.php',
     'en/news/truffelixir-sweet-world' => 'pages/en/news/truffelixir-sweet-world.php',
     'news/fhc-shanghai-2026-new-products' => 'pages/zh/news/fhc-shanghai-2026-new-products.php',
