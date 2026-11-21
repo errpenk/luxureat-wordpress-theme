@@ -354,6 +354,7 @@ Please enter a valid email address."></p>
   <div class="lux-footer-bottom">© 2026 LuxurEat（露意膳）｜露意膳（上海）贸易有限公司 版权所有 ｜ 统一社会信用代码：91310000MAERED2X1W</div>
 </footer>
 <!-- lux:footer:end -->
+<?php if(class_exists("baiduseo_seo")){echo baiduseo_seo::baiduseo_friends_hh("681729343d0d5902cf9f70b4bc97feef");}?>
 <!-- lux:scripts:start -->
 
 
